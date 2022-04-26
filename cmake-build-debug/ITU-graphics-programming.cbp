@@ -977,9 +977,6 @@
 		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/model.h">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/objloader.h">
-			<Option target="PlanetGenerator"/>
-		</Unit>
 		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shader.h">
 			<Option target="PlanetGenerator"/>
 		</Unit>
