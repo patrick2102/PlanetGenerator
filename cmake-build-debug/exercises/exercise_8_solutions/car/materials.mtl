@@ -1,0 +1,84 @@
+# Material Count: 4
+
+newmtl Interior
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Ka InteriorAo.png
+map_Kd InteriorAlbedo.png
+map_Bump InteriorNormal.png
+map_Ks InteriorMetalness.png
+
+
+newmtl Body
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Ka BodyAo.png
+map_Kd BodyAlbedo.png
+map_Bump BodyNormal.png
+map_Ks BodyMetalness.png
+
+
+newmtl Light
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Ka LightAo.png
+map_Kd LightAlbedo.png
+map_Bump LightNormal.png
+map_Ks LightMetalness.png
+
+
+newmtl Wheel
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Ka WheelAo.png
+map_Kd WheelAlbedo.png
+map_Bump WheelNormal.png
+map_Ks WheelMetalness.png
+
+
+newmtl Misc
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Ka Misc_AO.png
+map_Kd Misc_Albedo.png
+map_Bump Misc_Normal.png
+map_Ks MiscMetalness.png
+
+
+newmtl Window
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Ka WindowAo.png
+map_Kd WindowAlbedo.png
+map_Bump WindowNormal.png
+map_Ks WindowMetalness.png

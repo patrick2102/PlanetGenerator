@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:upstream" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="ITU-graphics-programming" targetName="glad" />
+      <config projectName="ITU-graphics-programming" targetName="glfw" />
+      <config projectName="ITU-graphics-programming" targetName="imgui" />
+      <config projectName="ITU-graphics-programming" targetName="PlanetGenerator" />
+      <config projectName="ITU-graphics-programming" targetName="uninstall" />
+      <config projectName="ITU-graphics-programming" targetName="assimp" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c39d72e8-cbd4-4906-87b5-2af953ed1ddc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitmodules" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_1/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_1/exercise_1_1_and_1_2/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_1/exercise_1_3/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_1/exercise_1_4/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_1/exercise_1_5/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_1/exercise_1_6/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_1/exercise_1_7/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_1/exercise_1_8/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_1/exercise_1_9/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10/RayMarcher.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10/RayMarcher.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10/SDFCamera.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10/SDFCamera.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10/SDFGeometry.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10/SDFGeometry.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10/SDFMaterial.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10/SDFMaterial.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10/SDFObject.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10/SDFObject.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10/SDFShader.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10/SDFShader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10/shaders/empty.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10/shaders/exercise10_1.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10/shaders/raymarcher.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10/shaders/raymarcher.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10/shaders/sdflibrary.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10/shaders/sphere_lit.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10_solutions/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10_solutions/RayMarcher.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10_solutions/RayMarcher.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10_solutions/SDFCamera.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10_solutions/SDFCamera.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10_solutions/SDFGeometry.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10_solutions/SDFGeometry.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10_solutions/SDFMaterial.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10_solutions/SDFMaterial.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10_solutions/SDFObject.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10_solutions/SDFObject.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10_solutions/SDFShader.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10_solutions/SDFShader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10_solutions/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10_solutions/shaders/empty.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10_solutions/shaders/exercise10_1.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10_solutions/shaders/exercise10_2.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10_solutions/shaders/raymarcher.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10_solutions/shaders/raymarcher.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10_solutions/shaders/sdflibrary.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_10_solutions/shaders/sphere_lit.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_11.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_11/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_11/exercise_11/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_11/exercise_11/camera.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_11/exercise_11/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_11/exercise_11/primitives.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_11/exercise_11/renderer/frame_buffer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_11/exercise_11/renderer/rt_renderer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_11/exercise_11/renderer/rt_types.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_1_solutions/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_1_solutions/exercise_1_1_and_1_2_sol/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_1_solutions/exercise_1_3_sol/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_1_solutions/exercise_1_4_sol/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_1_solutions/exercise_1_5_sol/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_1_solutions/exercise_1_6_sol/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_1_solutions/exercise_1_7_sol/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_1_solutions/exercise_1_8_sol/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_1_solutions/exercise_1_9_sol/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_2/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_2/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_2/shader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_2/shaders/color.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_2/shaders/distance.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_2/shaders/distance_color.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_2/shaders/shader.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_2_solutions/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_2_solutions/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_2_solutions/shader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_2_solutions/shaders/color.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_2_solutions/shaders/distance.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_2_solutions/shaders/distance_color.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_2_solutions/shaders/shader.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_3/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_3/exercise_3/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_3/exercise_3/glmutils.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_3/exercise_3/glmutils.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_3/exercise_3/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_3/exercise_3/plane_model.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_3/exercise_3/shader_s.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_3/exercise_3/shaders/shader.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_3/exercise_3/shaders/shader.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_3_solutions/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_3_solutions/glmutils.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_3_solutions/glmutils.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_3_solutions/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_3_solutions/plane_model.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_3_solutions/shader_s.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_3_solutions/shaders/shader.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_3_solutions/shaders/shader.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4/exercise_4_1/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4/exercise_4_1/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4/exercise_4_1/shader_s.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4/exercise_4_1/shaders/shader.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4/exercise_4_1/shaders/shader.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4/exercise_4_2_to_4_7/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4/exercise_4_2_to_4_7/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4/exercise_4_2_to_4_7/shader_s.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4/exercise_4_2_to_4_7/shaders/shader.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4/exercise_4_2_to_4_7/shaders/shader.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4_solutions/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4_solutions/exercise_4_1_sol/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4_solutions/exercise_4_1_sol/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4_solutions/exercise_4_1_sol/shader_s.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4_solutions/exercise_4_1_sol/shaders/shader.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4_solutions/exercise_4_1_sol/shaders/shader.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4_solutions/exercise_4_2_to_4_7_sol/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4_solutions/exercise_4_2_to_4_7_sol/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4_solutions/exercise_4_2_to_4_7_sol/shader_s.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4_solutions/exercise_4_2_to_4_7_sol/shaders/shader.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_4_solutions/exercise_4_2_to_4_7_sol/shaders/shader.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5/exercise_5_1_to_5_7/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5/exercise_5_1_to_5_7/camera.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5/exercise_5_1_to_5_7/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5/exercise_5_1_to_5_7/mesh.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5/exercise_5_1_to_5_7/model.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5/exercise_5_1_to_5_7/objloader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5/exercise_5_1_to_5_7/shader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5/exercise_5_1_to_5_7/shaders/gouraud_shading.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5/exercise_5_1_to_5_7/shaders/gouraud_shading.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5/exercise_5_1_to_5_7/shaders/phong_shading.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5/exercise_5_1_to_5_7/shaders/phong_shading.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5_solutions/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5_solutions/exercise_5_1_to_5_7_sol/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5_solutions/exercise_5_1_to_5_7_sol/camera.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5_solutions/exercise_5_1_to_5_7_sol/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5_solutions/exercise_5_1_to_5_7_sol/mesh.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5_solutions/exercise_5_1_to_5_7_sol/model.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5_solutions/exercise_5_1_to_5_7_sol/objloader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5_solutions/exercise_5_1_to_5_7_sol/shader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5_solutions/exercise_5_1_to_5_7_sol/shaders/gouraud_shading.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5_solutions/exercise_5_1_to_5_7_sol/shaders/gouraud_shading.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5_solutions/exercise_5_1_to_5_7_sol/shaders/phong_shading.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_5_solutions/exercise_5_1_to_5_7_sol/shaders/phong_shading.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/.vsconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/CelShading.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/CelShading/CelShading.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/CelShading/CelShading.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Hatching.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Hatching/hatchArray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Hatching/hatchArray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Hatching/hatch_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Hatching/hatch_0.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Hatching/hatch_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Hatching/hatch_1.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Hatching/hatch_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Hatching/hatch_2.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Hatching/hatch_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Hatching/hatch_3.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Hatching/hatch_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Hatching/hatch_4.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Hatching/hatch_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Hatching/hatch_5.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Ball.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Ball/Ball.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Ball/Ball.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Ball/ball.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Ball/ball.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Ball/ball.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Ball/ball.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Ball/rock-slab-wall_albedo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Ball/rock-slab-wall_albedo.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Ball/rock-slab-wall_height.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Ball/rock-slab-wall_height.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Ball/rock-slab-wall_normal-ogl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Ball/rock-slab-wall_normal-ogl.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Cow.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Cow/Cow.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Cow/Cow.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Cow/Cow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Cow/Cow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Cow/Cow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Cow/Cow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Cow/cow_Diff.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Cow/cow_Diff.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Man.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Man/Man.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Man/Man.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Man/Man.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Man/Man.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Plane.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Plane/White.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Plane/White.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Teapot.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Teapot/Teapot.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Teapot/Teapot.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Teapot/Teapot.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Teapot/Teapot.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Teapot/daytime.hdr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Teapot/daytime.hdr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Teapot/teapot.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Teapot/teapot.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Trees.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Trees/Bark.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Trees/Bark.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Trees/Cartoon trees.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Trees/Cartoon trees.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Trees/Leaves.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Trees/Leaves.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Trees/Tree1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Trees/Tree1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Trees/Tree2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Trees/Tree2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Trees/Tree3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Models/Trees/Tree3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/CelShading.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/CelShading.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/CelShading.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/CelShading.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/CelShadingSolution.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/CelShadingSolution.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/DisplacementMap.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/DisplacementMap.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/Hatching 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/Hatching 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/Hatching 1.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/Hatching 1.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/Hatching.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/Hatching.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/Hatching.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/Hatching.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/HatchingSolution.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/HatchingSolution.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/ITUCG.glslinc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/ITUCG.glslinc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/NormalMap.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/NormalMap.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/Reflection.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/Reflection.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/Refraction.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/Refraction.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/SampleLit.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/SampleLit.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/SampleUnlit.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/SampleUnlit.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/TemplateLit.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/TemplateLit.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/TemplateUnlit.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Assets/Shaders/TemplateUnlit.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Packages/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/Packages/packages-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/ProjectSettings/AudioManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/ProjectSettings/ClusterInputManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/ProjectSettings/DynamicsManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/ProjectSettings/EditorSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/ProjectSettings/GraphicsSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/ProjectSettings/InputManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/ProjectSettings/NavMeshAreas.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/ProjectSettings/Physics2DSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/ProjectSettings/PresetManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/ProjectSettings/ProjectSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/ProjectSettings/ProjectVersion.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/ProjectSettings/QualitySettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/ProjectSettings/TagManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/ProjectSettings/TimeManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/ProjectSettings/VFXManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/ProjectSettings/VersionControlSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6/ProjectSettings/XRSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6_solutions/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6_solutions/CelShadingSolution.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_6_solutions/HatchingSolution.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7/exercise_7/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7/exercise_7/camera.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7/exercise_7/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7/exercise_7/mesh.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7/exercise_7/model.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7/exercise_7/objloader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7/exercise_7/shader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7/exercise_7/shaders/deferred_shading.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7/exercise_7/shaders/deferred_shading.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7/exercise_7/shaders/forward_shading.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7/exercise_7/shaders/forward_shading.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7/exercise_7/shaders/lighting.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7/exercise_7/shaders/lighting.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7_solutions/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7_solutions/exercise_7_sol/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7_solutions/exercise_7_sol/camera.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7_solutions/exercise_7_sol/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7_solutions/exercise_7_sol/mesh.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7_solutions/exercise_7_sol/model.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7_solutions/exercise_7_sol/objloader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7_solutions/exercise_7_sol/shader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7_solutions/exercise_7_sol/shaders/deferred_shading.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7_solutions/exercise_7_sol/shaders/deferred_shading.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7_solutions/exercise_7_sol/shaders/forward_shading.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7_solutions/exercise_7_sol/shaders/forward_shading.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7_solutions/exercise_7_sol/shaders/lighting.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_7_solutions/exercise_7_sol/shaders/lighting.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8/camera.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8/mesh.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8/model.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8/objloader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8/shader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8/shaders/common_shading.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8/shaders/pbr_shading.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8/shaders/phong_shading.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8/shaders/shadowmap.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8/shaders/shadowmap.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8/shaders/skybox.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8/shaders/skybox.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8_solutions/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8_solutions/camera.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8_solutions/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8_solutions/mesh.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8_solutions/model.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8_solutions/objloader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8_solutions/shader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8_solutions/shaders/common_shading.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8_solutions/shaders/pbr_shading.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8_solutions/shaders/phong_shading.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8_solutions/shaders/shadowmap.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8_solutions/shaders/shadowmap.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8_solutions/shaders/skybox.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_8_solutions/shaders/skybox.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/camera.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/mesh.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/model.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/objloader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/shader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/shaders/bloom.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/shaders/blur.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/shaders/celshading.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/shaders/compose.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/shaders/copy.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/shaders/deferred_shading.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/shaders/deferred_shading.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/shaders/fullscreen.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/shaders/lighting.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/shaders/lighting.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/shaders/outline.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/shaders/shadowmap.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/shaders/shadowmap.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/shaders/skybox.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9/shaders/skybox.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/camera.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/mesh.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/model.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/objloader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/shader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/shaders/bloom.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/shaders/blur.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/shaders/celshading.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/shaders/compose.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/shaders/copy.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/shaders/deferred_shading.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/shaders/deferred_shading.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/shaders/fullscreen.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/shaders/lighting.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/shaders/lighting.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/shaders/outline.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/shaders/shadowmap.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/shaders/shadowmap.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/shaders/skybox.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_9_solutions/shaders/skybox.vert" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="24Yiz4dIRYkeirBXOXAsaAGsl2y" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/student_projects/PlanetGenerator" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\student_projects\PlanetGenerator" />
+      <recent name="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\student_projects" />
+      <recent name="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\PlanetGenerator" />
+      <recent name="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\graphics-programming-2022\exercises\exercise_1\exercise_1_8" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.PlanetGenerator">
+    <configuration name="PlanetGenerator" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ITU-graphics-programming" TARGET_NAME="PlanetGenerator" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ITU-graphics-programming" RUN_TARGET_NAME="PlanetGenerator">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="assimp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ITU-graphics-programming" TARGET_NAME="assimp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="glad" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ITU-graphics-programming" TARGET_NAME="glad" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="glfw" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ITU-graphics-programming" TARGET_NAME="glfw" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="imgui" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ITU-graphics-programming" TARGET_NAME="imgui" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="uninstall" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ITU-graphics-programming" TARGET_NAME="uninstall" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.assimp" />
+      <item itemvalue="CMake Application.glad" />
+      <item itemvalue="CMake Application.uninstall" />
+      <item itemvalue="CMake Application.glfw" />
+      <item itemvalue="CMake Application.imgui" />
+      <item itemvalue="CMake Application.PlanetGenerator" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c39d72e8-cbd4-4906-87b5-2af953ed1ddc" name="Default Changelist" comment="" />
+      <created>1643814179412</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1643814179412</updated>
+      <workItem from="1643814180535" duration="14706000" />
+      <workItem from="1643874176157" duration="21873000" />
+      <workItem from="1643991651821" duration="12480000" />
+      <workItem from="1644056713334" duration="3180000" />
+      <workItem from="1644090893351" duration="1817000" />
+      <workItem from="1644175232718" duration="8023000" />
+      <workItem from="1644263342789" duration="2371000" />
+      <workItem from="1644339884003" duration="5666000" />
+      <workItem from="1644420556734" duration="5058000" />
+      <workItem from="1644425740517" duration="405000" />
+      <workItem from="1644426160781" duration="88000" />
+      <workItem from="1644426259681" duration="8436000" />
+      <workItem from="1644506892997" duration="7582000" />
+      <workItem from="1645009522607" duration="13706000" />
+      <workItem from="1645604372331" duration="12843000" />
+      <workItem from="1646217164604" duration="18404000" />
+      <workItem from="1646832320866" duration="1801000" />
+      <workItem from="1647444523993" duration="7619000" />
+      <workItem from="1648048308353" duration="8259000" />
+      <workItem from="1648645379745" duration="9905000" />
+      <workItem from="1649260372730" duration="5889000" />
+      <workItem from="1650458726488" duration="7116000" />
+      <workItem from="1650996274844" duration="5184000" />
+      <workItem from="1651005598228" duration="1894000" />
+      <workItem from="1651007716921" duration="451000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2610" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1651005859853">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2610" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651005859853" />
+    <state width="467" height="466" key="DebuggerActiveHint" timestamp="1650469654987">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="467" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650469654987" />
+    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1651007762676">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651007762676" />
+    <state width="1877" height="133" key="GridCell.Tab.0.bottom" timestamp="1651008131191">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="181" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648669933949" />
+    <state width="1877" height="133" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651008131191" />
+    <state width="1877" height="133" key="GridCell.Tab.0.center" timestamp="1651008131191">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="181" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648669933949" />
+    <state width="1877" height="133" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651008131191" />
+    <state width="1877" height="133" key="GridCell.Tab.0.left" timestamp="1651008131191">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="181" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648669933948" />
+    <state width="1877" height="133" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651008131191" />
+    <state width="1877" height="133" key="GridCell.Tab.0.right" timestamp="1651008131191">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="181" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648669933949" />
+    <state width="1877" height="133" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651008131191" />
+    <state width="1877" height="240" key="GridCell.Tab.1.bottom" timestamp="1650487149516">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="181" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648669933950" />
+    <state width="1877" height="240" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650487149516" />
+    <state width="1877" height="240" key="GridCell.Tab.1.center" timestamp="1650487149516">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="181" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648669933949" />
+    <state width="1877" height="240" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650487149516" />
+    <state width="1877" height="240" key="GridCell.Tab.1.left" timestamp="1650487149516">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="181" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648669933949" />
+    <state width="1877" height="240" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650487149516" />
+    <state width="1877" height="240" key="GridCell.Tab.1.right" timestamp="1650487149516">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="181" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648669933950" />
+    <state width="1877" height="240" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650487149516" />
+    <state x="2381" y="165" key="SettingsEditor" timestamp="1644426247291">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2381" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644426247291" />
+    <state x="568" y="209" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1645021317367">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="568" y="209" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1645021317367" />
+    <state x="2536" y="240" key="run.anything.popup" timestamp="1649261360974">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648653278418" />
+    <state x="2536" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1649261360974" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1648648489945">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648648489945" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644426114602" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/exercises/exercise_1/exercise_1_1_and_1_2/main.cpp</url>
+          <line>42</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/exercises/exercise_1/exercise_1_3/main.cpp</url>
+          <line>139</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/exercises/exercise_1/exercise_1_6/main.cpp</url>
+          <line>213</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/exercises/exercise_1/exercise_1_8/main.cpp</url>
+          <line>223</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/exercises/exercise_1/exercise_1_8/main.cpp</url>
+          <line>216</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/exercises/exercise_1/exercise_1_9/main.cpp</url>
+          <line>211</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/exercises/exercise_1/exercise_1_9/main.cpp</url>
+          <line>139</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/exercises/exercise_1/exercise_1_9/main.cpp</url>
+          <line>169</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/exercises/exercise_1/exercise_1_5/main.cpp</url>
+          <line>184</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/exercises/exercise_9/main.cpp</url>
+          <line>719</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/exercises/exercise_9/main.cpp</url>
+          <line>708</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/exercises/exercise_9/main.cpp</url>
+          <line>365</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/exercises/exercise_10/main.cpp</url>
+          <line>111</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/exercises/exercise_11/exercise_11/renderer/rt_renderer.h</url>
+          <line>80</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/exercises/exercise_11/exercise_11/renderer/rt_renderer.h</url>
+          <line>38</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

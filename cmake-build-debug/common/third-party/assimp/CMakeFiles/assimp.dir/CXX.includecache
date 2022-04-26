@@ -1,0 +1,2770 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../common/third-party/assimp/assimp/config.h
+
+../common/third-party/assimp/code/CApi/CInterfaceIOWrapper.h
+assimp/cfileio.h
+-
+assimp/IOStream.hpp
+-
+assimp/IOSystem.hpp
+-
+
+../common/third-party/assimp/code/Common/BaseProcess.h
+map
+-
+assimp/GenericProperty.h
+-
+
+../common/third-party/assimp/code/Common/DefaultProgressHandler.h
+assimp/ProgressHandler.hpp
+-
+
+../common/third-party/assimp/code/Common/Importer.h
+map
+-
+vector
+-
+string
+-
+assimp/matrix4x4.h
+-
+
+../common/third-party/assimp/code/Common/PolyTools.h
+assimp/material.h
+-
+assimp/ai_assert.h
+-
+
+../common/third-party/assimp/code/Common/ScenePreprocessor.h
+assimp/defs.h
+-
+stddef.h
+-
+
+../common/third-party/assimp/code/Common/ScenePrivate.h
+assimp/ai_assert.h
+-
+assimp/scene.h
+-
+
+../common/third-party/assimp/code/Common/SplitByBoneCountProcess.h
+vector
+-
+BaseProcess.h
+../common/third-party/assimp/code/Common/BaseProcess.h
+assimp/mesh.h
+-
+assimp/scene.h
+-
+
+../common/third-party/assimp/code/Common/VertexTriangleAdjacency.h
+BaseProcess.h
+../common/third-party/assimp/code/Common/BaseProcess.h
+assimp/types.h
+-
+assimp/ai_assert.h
+-
+
+../common/third-party/assimp/code/Common/assbin_chunks.h
+
+../common/third-party/assimp/code/FBX/FBXImportSettings.h
+
+../common/third-party/assimp/code/FBX/FBXImporter.h
+assimp/BaseImporter.h
+-
+assimp/LogAux.h
+-
+FBXImportSettings.h
+../common/third-party/assimp/code/FBX/FBXImportSettings.h
+
+../common/third-party/assimp/code/Material/MaterialSystem.h
+stdint.h
+-
+
+../common/third-party/assimp/code/Obj/ObjFileImporter.h
+assimp/BaseImporter.h
+-
+assimp/material.h
+-
+vector
+-
+
+../common/third-party/assimp/code/PostProcessing/ArmaturePopulate.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/BaseImporter.h
+-
+vector
+-
+map
+-
+
+../common/third-party/assimp/code/PostProcessing/CalcTangentsProcess.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+
+../common/third-party/assimp/code/PostProcessing/ComputeUVMappingProcess.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+assimp/material.h
+-
+assimp/types.h
+-
+
+../common/third-party/assimp/code/PostProcessing/ConvertToLHProcess.h
+assimp/types.h
+-
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+
+../common/third-party/assimp/code/PostProcessing/DeboneProcess.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+assimp/scene.h
+-
+vector
+-
+utility
+-
+
+../common/third-party/assimp/code/PostProcessing/DropFaceNormalsProcess.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+
+../common/third-party/assimp/code/PostProcessing/EmbedTexturesProcess.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+string
+-
+
+../common/third-party/assimp/code/PostProcessing/FindDegenerates.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+
+../common/third-party/assimp/code/PostProcessing/FindInstancesProcess.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+PostProcessing/ProcessHelper.h
+../common/third-party/assimp/code/PostProcessing/PostProcessing/ProcessHelper.h
+
+../common/third-party/assimp/code/PostProcessing/FindInvalidDataProcess.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/types.h
+-
+assimp/anim.h
+-
+
+../common/third-party/assimp/code/PostProcessing/FixNormalsStep.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+
+../common/third-party/assimp/code/PostProcessing/GenBoundingBoxesProcess.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+
+../common/third-party/assimp/code/PostProcessing/GenFaceNormalsProcess.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+
+../common/third-party/assimp/code/PostProcessing/GenVertexNormalsProcess.h
+Common/assbin_chunks.h
+../common/third-party/assimp/code/PostProcessing/Common/assbin_chunks.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+
+../common/third-party/assimp/code/PostProcessing/ImproveCacheLocality.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/types.h
+-
+
+../common/third-party/assimp/code/PostProcessing/JoinVerticesProcess.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/types.h
+-
+
+../common/third-party/assimp/code/PostProcessing/LimitBoneWeightsProcess.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+
+../common/third-party/assimp/code/PostProcessing/MakeVerboseFormat.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+
+../common/third-party/assimp/code/PostProcessing/OptimizeGraph.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+PostProcessing/ProcessHelper.h
+../common/third-party/assimp/code/PostProcessing/PostProcessing/ProcessHelper.h
+assimp/types.h
+-
+set
+-
+
+../common/third-party/assimp/code/PostProcessing/OptimizeMeshes.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/types.h
+-
+vector
+-
+
+../common/third-party/assimp/code/PostProcessing/PretransformVertices.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+list
+-
+vector
+-
+
+../common/third-party/assimp/code/PostProcessing/ProcessHelper.h
+assimp/postprocess.h
+-
+assimp/anim.h
+-
+assimp/mesh.h
+-
+assimp/material.h
+-
+assimp/DefaultLogger.hpp
+-
+assimp/scene.h
+-
+assimp/SpatialSort.h
+-
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/ParsingUtils.h
+-
+list
+-
+
+../common/third-party/assimp/code/PostProcessing/RemoveRedundantMaterials.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+
+../common/third-party/assimp/code/PostProcessing/RemoveVCProcess.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+
+../common/third-party/assimp/code/PostProcessing/ScaleProcess.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+
+../common/third-party/assimp/code/PostProcessing/SortByPTypeProcess.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+
+../common/third-party/assimp/code/PostProcessing/SplitLargeMeshes.h
+vector
+-
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+assimp/scene.h
+-
+
+../common/third-party/assimp/code/PostProcessing/TextureTransform.h
+assimp/BaseImporter.h
+-
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/material.h
+-
+list
+-
+
+../common/third-party/assimp/code/PostProcessing/TriangulateProcess.h
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+
+../common/third-party/assimp/code/PostProcessing/ValidateDataStructure.h
+assimp/types.h
+-
+assimp/material.h
+-
+Common/BaseProcess.h
+../common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+
+../common/third-party/assimp/code/revision.h
+
+../common/third-party/assimp/contrib/utf8cpp/source/utf8.h
+utf8/checked.h
+../common/third-party/assimp/contrib/utf8cpp/source/utf8/checked.h
+utf8/unchecked.h
+../common/third-party/assimp/contrib/utf8cpp/source/utf8/unchecked.h
+
+../common/third-party/assimp/contrib/utf8cpp/source/utf8/checked.h
+core.h
+../common/third-party/assimp/contrib/utf8cpp/source/utf8/core.h
+stdexcept
+-
+
+../common/third-party/assimp/contrib/utf8cpp/source/utf8/core.h
+iterator
+-
+
+../common/third-party/assimp/contrib/utf8cpp/source/utf8/unchecked.h
+core.h
+../common/third-party/assimp/contrib/utf8cpp/source/utf8/core.h
+
+../common/third-party/assimp/contrib/zlib/zconf.h
+stddef.h
+-
+windows.h
+-
+limits.h
+-
+sys/types.h
+-
+stdarg.h
+-
+stddef.h
+-
+unistd.h
+-
+unixio.h
+-
+
+../common/third-party/assimp/contrib/zlib/zlib.h
+zconf.h
+../common/third-party/assimp/contrib/zlib/zconf.h
+
+../common/third-party/assimp/include/assimp/BaseImporter.h
+Exceptional.h
+../common/third-party/assimp/include/assimp/Exceptional.h
+vector
+-
+set
+-
+map
+-
+assimp/types.h
+-
+assimp/ProgressHandler.hpp
+-
+assimp/ai_assert.h
+-
+
+../common/third-party/assimp/include/assimp/Bitmap.h
+defs.h
+../common/third-party/assimp/include/assimp/defs.h
+stdint.h
+-
+cstddef
+-
+
+../common/third-party/assimp/include/assimp/BlobIOSystem.h
+assimp/IOStream.hpp
+-
+assimp/cexport.h
+-
+assimp/IOSystem.hpp
+-
+assimp/DefaultLogger.hpp
+-
+stdint.h
+-
+set
+-
+vector
+-
+
+../common/third-party/assimp/include/assimp/ByteSwapper.h
+assimp/ai_assert.h
+-
+assimp/types.h
+-
+stdint.h
+-
+stdlib.h
+-
+
+../common/third-party/assimp/include/assimp/Compiler/poppack1.h
+
+../common/third-party/assimp/include/assimp/Compiler/pstdint.h
+stddef.h
+-
+limits.h
+-
+signal.h
+-
+stdint.h
+-
+sys/inttypes.h
+-
+wchar.h
+-
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+
+../common/third-party/assimp/include/assimp/Compiler/pushpack1.h
+
+../common/third-party/assimp/include/assimp/CreateAnimMesh.h
+assimp/mesh.h
+-
+
+../common/third-party/assimp/include/assimp/DefaultIOStream.h
+stdio.h
+-
+assimp/IOStream.hpp
+-
+assimp/importerdesc.h
+-
+assimp/Defines.h
+-
+
+../common/third-party/assimp/include/assimp/DefaultIOSystem.h
+assimp/IOSystem.hpp
+-
+
+../common/third-party/assimp/include/assimp/DefaultLogger.hpp
+Logger.hpp
+../common/third-party/assimp/include/assimp/Logger.hpp
+LogStream.hpp
+../common/third-party/assimp/include/assimp/LogStream.hpp
+NullLogger.hpp
+../common/third-party/assimp/include/assimp/NullLogger.hpp
+vector
+-
+
+../common/third-party/assimp/include/assimp/Defines.h
+
+../common/third-party/assimp/include/assimp/Exceptional.h
+stdexcept
+-
+assimp/DefaultIOStream.h
+-
+
+../common/third-party/assimp/include/assimp/Exporter.hpp
+cexport.h
+../common/third-party/assimp/include/assimp/cexport.h
+map
+-
+
+../common/third-party/assimp/include/assimp/GenericProperty.h
+assimp/Importer.hpp
+-
+assimp/ai_assert.h
+-
+assimp/Hash.h
+-
+map
+-
+
+../common/third-party/assimp/include/assimp/Hash.h
+stdint.h
+-
+string.h
+-
+
+../common/third-party/assimp/include/assimp/IOStream.hpp
+assimp/types.h
+-
+
+../common/third-party/assimp/include/assimp/IOStreamBuffer.h
+assimp/types.h
+-
+assimp/IOStream.hpp
+-
+assimp/ParsingUtils.h
+-
+vector
+-
+
+../common/third-party/assimp/include/assimp/IOSystem.hpp
+types.h
+../common/third-party/assimp/include/assimp/types.h
+direct.h
+-
+stdlib.h
+-
+stdio.h
+-
+sys/stat.h
+-
+sys/types.h
+-
+unistd.h
+-
+vector
+-
+
+../common/third-party/assimp/include/assimp/Importer.hpp
+assimp/types.h
+-
+
+../common/third-party/assimp/include/assimp/LogAux.h
+assimp/TinyFormatter.h
+-
+assimp/Exceptional.h
+-
+assimp/DefaultLogger.hpp
+-
+
+../common/third-party/assimp/include/assimp/LogStream.hpp
+types.h
+../common/third-party/assimp/include/assimp/types.h
+
+../common/third-party/assimp/include/assimp/Logger.hpp
+assimp/types.h
+-
+assimp/TinyFormatter.h
+-
+
+../common/third-party/assimp/include/assimp/MathFunctions.h
+limits
+-
+
+../common/third-party/assimp/include/assimp/MemoryIOWrapper.h
+assimp/IOStream.hpp
+-
+assimp/IOSystem.hpp
+-
+assimp/ai_assert.h
+-
+stdint.h
+-
+
+../common/third-party/assimp/include/assimp/NullLogger.hpp
+Logger.hpp
+../common/third-party/assimp/include/assimp/Logger.hpp
+
+../common/third-party/assimp/include/assimp/ParsingUtils.h
+assimp/StringComparison.h
+-
+assimp/StringUtils.h
+-
+assimp/defs.h
+-
+
+../common/third-party/assimp/include/assimp/Profiler.h
+chrono
+-
+assimp/DefaultLogger.hpp
+-
+assimp/TinyFormatter.h
+-
+map
+-
+
+../common/third-party/assimp/include/assimp/ProgressHandler.hpp
+assimp/types.h
+-
+
+../common/third-party/assimp/include/assimp/RemoveComments.h
+assimp/defs.h
+-
+
+../common/third-party/assimp/include/assimp/SGSpatialSort.h
+assimp/types.h
+-
+vector
+-
+stdint.h
+-
+
+../common/third-party/assimp/include/assimp/SceneCombiner.h
+assimp/ai_assert.h
+-
+assimp/types.h
+-
+assimp/Defines.h
+-
+stddef.h
+-
+set
+-
+list
+-
+stdint.h
+-
+vector
+-
+
+../common/third-party/assimp/include/assimp/SkeletonMeshBuilder.h
+vector
+-
+assimp/mesh.h
+-
+
+../common/third-party/assimp/include/assimp/SpatialSort.h
+vector
+-
+assimp/types.h
+-
+
+../common/third-party/assimp/include/assimp/StandardShapes.h
+assimp/vector3.h
+-
+vector
+-
+
+../common/third-party/assimp/include/assimp/StreamReader.h
+assimp/IOStream.hpp
+-
+assimp/Defines.h
+-
+assimp/ByteSwapper.h
+-
+assimp/Exceptional.h
+-
+memory
+-
+
+../common/third-party/assimp/include/assimp/StreamWriter.h
+assimp/ByteSwapper.h
+-
+assimp/IOStream.hpp
+-
+memory
+-
+vector
+-
+
+../common/third-party/assimp/include/assimp/StringComparison.h
+assimp/ai_assert.h
+-
+assimp/defs.h
+-
+assimp/StringComparison.h
+-
+string.h
+-
+stdint.h
+-
+string
+-
+
+../common/third-party/assimp/include/assimp/StringUtils.h
+assimp/defs.h
+-
+sstream
+-
+stdarg.h
+-
+cstdlib
+-
+
+../common/third-party/assimp/include/assimp/Subdivision.h
+assimp/types.h
+-
+
+../common/third-party/assimp/include/assimp/TinyFormatter.h
+sstream
+-
+
+../common/third-party/assimp/include/assimp/Vertex.h
+assimp/vector3.h
+-
+assimp/mesh.h
+-
+assimp/ai_assert.h
+-
+functional
+-
+
+../common/third-party/assimp/include/assimp/aabb.h
+assimp/vector3.h
+-
+
+../common/third-party/assimp/include/assimp/ai_assert.h
+assert.h
+-
+
+../common/third-party/assimp/include/assimp/anim.h
+assimp/types.h
+-
+assimp/quaternion.h
+-
+
+../common/third-party/assimp/include/assimp/camera.h
+types.h
+../common/third-party/assimp/include/assimp/types.h
+
+../common/third-party/assimp/include/assimp/cexport.h
+assimp/types.h
+-
+
+../common/third-party/assimp/include/assimp/cfileio.h
+assimp/types.h
+-
+
+../common/third-party/assimp/include/assimp/cimport.h
+assimp/types.h
+-
+assimp/importerdesc.h
+-
+
+../common/third-party/assimp/include/assimp/color4.h
+assimp/defs.h
+-
+
+../common/third-party/assimp/include/assimp/color4.inl
+assimp/color4.h
+-
+
+../common/third-party/assimp/include/assimp/defs.h
+assimp/config.h
+-
+
+../common/third-party/assimp/include/assimp/fast_atof.h
+cmath
+-
+limits
+-
+stdint.h
+-
+stdexcept
+-
+assimp/defs.h
+-
+StringComparison.h
+../common/third-party/assimp/include/assimp/StringComparison.h
+assimp/DefaultLogger.hpp
+-
+stdint.h
+-
+assimp/Compiler/pstdint.h
+-
+
+../common/third-party/assimp/include/assimp/importerdesc.h
+
+../common/third-party/assimp/include/assimp/light.h
+assimp/types.h
+-
+
+../common/third-party/assimp/include/assimp/material.h
+assimp/types.h
+-
+./Compiler/pushpack1.h
+../common/third-party/assimp/include/assimp/Compiler/pushpack1.h
+./Compiler/poppack1.h
+../common/third-party/assimp/include/assimp/Compiler/poppack1.h
+material.inl
+../common/third-party/assimp/include/assimp/material.inl
+
+../common/third-party/assimp/include/assimp/material.inl
+
+../common/third-party/assimp/include/assimp/matrix3x3.h
+assimp/defs.h
+-
+
+../common/third-party/assimp/include/assimp/matrix3x3.inl
+assimp/matrix3x3.h
+-
+assimp/matrix4x4.h
+-
+algorithm
+-
+cmath
+-
+limits
+-
+
+../common/third-party/assimp/include/assimp/matrix4x4.h
+assimp/vector3.h
+-
+assimp/defs.h
+-
+
+../common/third-party/assimp/include/assimp/matrix4x4.inl
+matrix4x4.h
+../common/third-party/assimp/include/assimp/matrix4x4.h
+matrix3x3.h
+../common/third-party/assimp/include/assimp/matrix3x3.h
+quaternion.h
+../common/third-party/assimp/include/assimp/quaternion.h
+MathFunctions.h
+../common/third-party/assimp/include/assimp/MathFunctions.h
+algorithm
+-
+limits
+-
+cmath
+-
+
+../common/third-party/assimp/include/assimp/mesh.h
+assimp/types.h
+-
+assimp/aabb.h
+-
+
+../common/third-party/assimp/include/assimp/metadata.h
+Compiler/pstdint.h
+../common/third-party/assimp/include/assimp/Compiler/pstdint.h
+stdint.h
+-
+string
+-
+
+../common/third-party/assimp/include/assimp/postprocess.h
+assimp/types.h
+-
+
+../common/third-party/assimp/include/assimp/qnan.h
+assimp/defs.h
+-
+limits
+-
+stdint.h
+-
+
+../common/third-party/assimp/include/assimp/quaternion.h
+assimp/defs.h
+-
+
+../common/third-party/assimp/include/assimp/quaternion.inl
+assimp/quaternion.h
+-
+cmath
+-
+
+../common/third-party/assimp/include/assimp/scene.h
+assimp/types.h
+-
+assimp/texture.h
+-
+assimp/mesh.h
+-
+assimp/light.h
+-
+assimp/camera.h
+-
+assimp/material.h
+-
+assimp/anim.h
+-
+assimp/metadata.h
+-
+cstdlib
+-
+
+../common/third-party/assimp/include/assimp/texture.h
+assimp/types.h
+-
+./Compiler/pushpack1.h
+../common/third-party/assimp/include/assimp/Compiler/pushpack1.h
+./Compiler/poppack1.h
+../common/third-party/assimp/include/assimp/Compiler/poppack1.h
+
+../common/third-party/assimp/include/assimp/types.h
+sys/types.h
+-
+stddef.h
+-
+string.h
+-
+limits.h
+-
+stdint.h
+-
+assimp/defs.h
+-
+assimp/vector3.h
+-
+assimp/vector2.h
+-
+assimp/color4.h
+-
+assimp/matrix3x3.h
+-
+assimp/matrix4x4.h
+-
+assimp/quaternion.h
+-
+cstring
+-
+new
+-
+string
+-
+vector2.inl
+../common/third-party/assimp/include/assimp/vector2.inl
+vector3.inl
+../common/third-party/assimp/include/assimp/vector3.inl
+color4.inl
+../common/third-party/assimp/include/assimp/color4.inl
+quaternion.inl
+../common/third-party/assimp/include/assimp/quaternion.inl
+matrix3x3.inl
+../common/third-party/assimp/include/assimp/matrix3x3.inl
+matrix4x4.inl
+../common/third-party/assimp/include/assimp/matrix4x4.inl
+
+../common/third-party/assimp/include/assimp/vector2.h
+cmath
+-
+math.h
+-
+defs.h
+../common/third-party/assimp/include/assimp/defs.h
+
+../common/third-party/assimp/include/assimp/vector2.inl
+assimp/vector2.h
+-
+cmath
+-
+
+../common/third-party/assimp/include/assimp/vector3.h
+cmath
+-
+math.h
+-
+assimp/defs.h
+-
+
+../common/third-party/assimp/include/assimp/vector3.inl
+assimp/vector3.h
+-
+cmath
+-
+
+../common/third-party/assimp/include/assimp/version.h
+assimp/defs.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Assimp.cpp
+assimp/cimport.h
+-
+assimp/LogStream.hpp
+-
+assimp/DefaultLogger.hpp
+-
+assimp/Importer.hpp
+-
+assimp/importerdesc.h
+-
+assimp/scene.h
+-
+assimp/GenericProperty.h
+-
+assimp/Exceptional.h
+-
+assimp/BaseImporter.h
+-
+CApi/CInterfaceIOWrapper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/CApi/CInterfaceIOWrapper.h
+Importer.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Importer.h
+ScenePrivate.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/ScenePrivate.h
+list
+-
+thread
+-
+mutex
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/BaseImporter.cpp
+assimp/BaseImporter.h
+-
+assimp/ParsingUtils.h
+-
+FileSystemFilter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/FileSystemFilter.h
+Importer.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Importer.h
+assimp/ByteSwapper.h
+-
+assimp/scene.h
+-
+assimp/Importer.hpp
+-
+assimp/postprocess.h
+-
+assimp/importerdesc.h
+-
+ios
+-
+list
+-
+memory
+-
+sstream
+-
+cctype
+-
+utf8/utf8.h
+-
+../contrib/utf8cpp/source/utf8.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/contrib/utf8cpp/source/utf8.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/BaseProcess.cpp
+assimp/BaseImporter.h
+-
+BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/BaseProcess.h
+assimp/DefaultLogger.hpp
+-
+assimp/scene.h
+-
+Importer.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Importer.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/BaseProcess.h
+map
+-
+assimp/GenericProperty.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Bitmap.cpp
+assimp/Bitmap.h
+-
+assimp/texture.h
+-
+assimp/IOStream.hpp
+-
+assimp/ByteSwapper.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/CreateAnimMesh.cpp
+assimp/CreateAnimMesh.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/DefaultIOStream.cpp
+assimp/ai_assert.h
+-
+assimp/DefaultIOStream.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/DefaultIOSystem.cpp
+assimp/StringComparison.h
+-
+assimp/DefaultIOSystem.h
+-
+assimp/DefaultIOStream.h
+-
+assimp/DefaultLogger.hpp
+-
+assimp/ai_assert.h
+-
+stdlib.h
+-
+sys/param.h
+-
+stdlib.h
+-
+windows.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/DefaultLogger.cpp
+Win32DebugLogStream.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Win32DebugLogStream.h
+StdOStreamLogStream.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/StdOStreamLogStream.h
+FileLogStream.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/FileLogStream.h
+assimp/StringUtils.h
+-
+assimp/DefaultIOSystem.h
+-
+assimp/NullLogger.hpp
+-
+assimp/DefaultLogger.hpp
+-
+assimp/ai_assert.h
+-
+iostream
+-
+stdio.h
+-
+thread
+-
+mutex
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Exporter.cpp
+assimp/BlobIOSystem.h
+-
+assimp/SceneCombiner.h
+-
+assimp/DefaultIOSystem.h
+-
+assimp/Exporter.hpp
+-
+assimp/mesh.h
+-
+assimp/postprocess.h
+-
+assimp/scene.h
+-
+assimp/Exceptional.h
+-
+Common/DefaultProgressHandler.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Common/DefaultProgressHandler.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Common/BaseProcess.h
+Common/ScenePrivate.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Common/ScenePrivate.h
+PostProcessing/CalcTangentsProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/CalcTangentsProcess.h
+PostProcessing/MakeVerboseFormat.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/MakeVerboseFormat.h
+PostProcessing/JoinVerticesProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/JoinVerticesProcess.h
+PostProcessing/ConvertToLHProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/ConvertToLHProcess.h
+PostProcessing/PretransformVertices.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/PretransformVertices.h
+memory
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/FileLogStream.h
+assimp/LogStream.hpp
+-
+assimp/IOStream.hpp
+-
+assimp/DefaultIOSystem.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/FileSystemFilter.h
+assimp/IOSystem.hpp
+-
+assimp/DefaultLogger.hpp
+-
+assimp/fast_atof.h
+-
+assimp/ParsingUtils.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Importer.cpp
+assimp/version.h
+-
+assimp/config.h
+-
+assimp/importerdesc.h
+-
+Common/Importer.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Common/Importer.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Common/BaseProcess.h
+Common/DefaultProgressHandler.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Common/DefaultProgressHandler.h
+PostProcessing/ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/ProcessHelper.h
+Common/ScenePreprocessor.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Common/ScenePreprocessor.h
+Common/ScenePrivate.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Common/ScenePrivate.h
+assimp/BaseImporter.h
+-
+assimp/GenericProperty.h
+-
+assimp/MemoryIOWrapper.h
+-
+assimp/Profiler.h
+-
+assimp/TinyFormatter.h
+-
+assimp/Exceptional.h
+-
+assimp/Profiler.h
+-
+set
+-
+memory
+-
+cctype
+-
+assimp/DefaultIOStream.h
+-
+assimp/DefaultIOSystem.h
+-
+PostProcessing/ValidateDataStructure.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/ValidateDataStructure.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Importer.h
+map
+-
+vector
+-
+string
+-
+assimp/matrix4x4.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/ImporterRegistry.cpp
+vector
+-
+assimp/BaseImporter.h
+-
+X/XFileImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/X/XFileImporter.h
+AMF/AMFImporter.hpp
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/AMF/AMFImporter.hpp
+3DS/3DSLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/3DS/3DSLoader.h
+MD3/MD3Loader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/MD3/MD3Loader.h
+MDL/MDLLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/MDL/MDLLoader.h
+MD2/MD2Loader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/MD2/MD2Loader.h
+Ply/PlyLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Ply/PlyLoader.h
+ASE/ASELoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/ASE/ASELoader.h
+Obj/ObjFileImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Obj/ObjFileImporter.h
+HMP/HMPLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/HMP/HMPLoader.h
+SMD/SMDLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/SMD/SMDLoader.h
+MDC/MDCLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/MDC/MDCLoader.h
+MD5/MD5Loader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/MD5/MD5Loader.h
+STL/STLLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/STL/STLLoader.h
+LWO/LWOLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/LWO/LWOLoader.h
+DXF/DXFLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/DXF/DXFLoader.h
+NFF/NFFLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/NFF/NFFLoader.h
+Raw/RawLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Raw/RawLoader.h
+SIB/SIBImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/SIB/SIBImporter.h
+OFF/OFFLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/OFF/OFFLoader.h
+AC/ACLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/AC/ACLoader.h
+BVH/BVHLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/BVH/BVHLoader.h
+Irr/IRRMeshLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Irr/IRRMeshLoader.h
+Irr/IRRLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Irr/IRRLoader.h
+Q3D/Q3DLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Q3D/Q3DLoader.h
+B3D/B3DImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/B3D/B3DImporter.h
+Collada/ColladaLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Collada/ColladaLoader.h
+Terragen/TerragenLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Terragen/TerragenLoader.h
+CSM/CSMLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/CSM/CSMLoader.h
+Unreal/UnrealLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Unreal/UnrealLoader.h
+LWS/LWSLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/LWS/LWSLoader.h
+Ogre/OgreImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Ogre/OgreImporter.h
+OpenGEX/OpenGEXImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/OpenGEX/OpenGEXImporter.h
+MS3D/MS3DLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/MS3D/MS3DLoader.h
+COB/COBLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/COB/COBLoader.h
+Blender/BlenderLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Blender/BlenderLoader.h
+Q3BSP/Q3BSPFileImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Q3BSP/Q3BSPFileImporter.h
+NDO/NDOLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/NDO/NDOLoader.h
+Importer/IFC/IFCLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Importer/IFC/IFCLoader.h
+XGL/XGLLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/XGL/XGLLoader.h
+FBX/FBXImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/FBX/FBXImporter.h
+Assbin/AssbinLoader.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Assbin/AssbinLoader.h
+glTF/glTFImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/glTF/glTFImporter.h
+glTF2/glTF2Importer.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/glTF2/glTF2Importer.h
+C4D/C4DImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/C4D/C4DImporter.h
+3MF/D3MFImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/3MF/D3MFImporter.h
+X3D/X3DImporter.hpp
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/X3D/X3DImporter.hpp
+MMD/MMDImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/MMD/MMDImporter.h
+M3D/M3DImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/M3D/M3DImporter.h
+Importer/StepFile/StepFileImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Importer/StepFile/StepFileImporter.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostStepRegistry.cpp
+PostProcessing/ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/ProcessHelper.h
+PostProcessing/CalcTangentsProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/CalcTangentsProcess.h
+PostProcessing/JoinVerticesProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/JoinVerticesProcess.h
+PostProcessing/ConvertToLHProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/ConvertToLHProcess.h
+PostProcessing/TriangulateProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/TriangulateProcess.h
+PostProcessing/DropFaceNormalsProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/DropFaceNormalsProcess.h
+PostProcessing/GenFaceNormalsProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/GenFaceNormalsProcess.h
+PostProcessing/GenVertexNormalsProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/GenVertexNormalsProcess.h
+PostProcessing/RemoveVCProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/RemoveVCProcess.h
+PostProcessing/SplitLargeMeshes.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/SplitLargeMeshes.h
+PostProcessing/PretransformVertices.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/PretransformVertices.h
+PostProcessing/LimitBoneWeightsProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/LimitBoneWeightsProcess.h
+PostProcessing/ValidateDataStructure.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/ValidateDataStructure.h
+PostProcessing/ImproveCacheLocality.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/ImproveCacheLocality.h
+PostProcessing/FixNormalsStep.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/FixNormalsStep.h
+PostProcessing/RemoveRedundantMaterials.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/RemoveRedundantMaterials.h
+PostProcessing/EmbedTexturesProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/EmbedTexturesProcess.h
+PostProcessing/FindInvalidDataProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/FindInvalidDataProcess.h
+PostProcessing/FindDegenerates.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/FindDegenerates.h
+PostProcessing/SortByPTypeProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/SortByPTypeProcess.h
+PostProcessing/ComputeUVMappingProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/ComputeUVMappingProcess.h
+PostProcessing/TextureTransform.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/TextureTransform.h
+PostProcessing/FindInstancesProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/FindInstancesProcess.h
+PostProcessing/OptimizeMeshes.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/OptimizeMeshes.h
+PostProcessing/OptimizeGraph.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/OptimizeGraph.h
+Common/SplitByBoneCountProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Common/SplitByBoneCountProcess.h
+PostProcessing/DeboneProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/DeboneProcess.h
+PostProcessing/ScaleProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/ScaleProcess.h
+PostProcessing/ArmaturePopulate.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/ArmaturePopulate.h
+PostProcessing/GenBoundingBoxesProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/GenBoundingBoxesProcess.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/RemoveComments.cpp
+assimp/RemoveComments.h
+-
+assimp/ParsingUtils.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/SGSpatialSort.cpp
+assimp/SGSpatialSort.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/SceneCombiner.cpp
+assimp/SceneCombiner.h
+-
+assimp/StringUtils.h
+-
+assimp/fast_atof.h
+-
+assimp/metadata.h
+-
+assimp/Hash.h
+-
+time.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/time.h
+assimp/DefaultLogger.hpp
+-
+assimp/scene.h
+-
+assimp/mesh.h
+-
+stdio.h
+-
+ScenePrivate.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/ScenePrivate.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/ScenePreprocessor.cpp
+ScenePreprocessor.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/ScenePreprocessor.h
+assimp/ai_assert.h
+-
+assimp/scene.h
+-
+assimp/DefaultLogger.hpp
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/ScenePreprocessor.h
+assimp/defs.h
+-
+stddef.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/ScenePrivate.h
+assimp/ai_assert.h
+-
+assimp/scene.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/SkeletonMeshBuilder.cpp
+assimp/scene.h
+-
+assimp/SkeletonMeshBuilder.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/SpatialSort.cpp
+assimp/SpatialSort.h
+-
+assimp/ai_assert.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/SplitByBoneCountProcess.cpp
+SplitByBoneCountProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/SplitByBoneCountProcess.h
+assimp/postprocess.h
+-
+assimp/DefaultLogger.hpp
+-
+limits
+-
+assimp/TinyFormatter.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/SplitByBoneCountProcess.h
+vector
+-
+BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/BaseProcess.h
+assimp/mesh.h
+-
+assimp/scene.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/StandardShapes.cpp
+assimp/StandardShapes.h
+-
+assimp/StringComparison.h
+-
+stddef.h
+-
+assimp/Defines.h
+-
+assimp/mesh.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/StdOStreamLogStream.h
+assimp/LogStream.hpp
+-
+ostream
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Subdivision.cpp
+assimp/Subdivision.h
+-
+assimp/SceneCombiner.h
+-
+assimp/SpatialSort.h
+-
+assimp/Vertex.h
+-
+assimp/ai_assert.h
+-
+PostProcessing/ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostProcessing/ProcessHelper.h
+stdio.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/TargetAnimation.cpp
+TargetAnimation.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/TargetAnimation.h
+algorithm
+-
+assimp/ai_assert.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/TargetAnimation.h
+assimp/anim.h
+-
+vector
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Version.cpp
+assimp/version.h
+-
+assimp/scene.h
+-
+ScenePrivate.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/ScenePrivate.h
+revision.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/revision.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/VertexTriangleAdjacency.cpp
+VertexTriangleAdjacency.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/VertexTriangleAdjacency.h
+assimp/mesh.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/VertexTriangleAdjacency.h
+BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/BaseProcess.h
+assimp/types.h
+-
+assimp/ai_assert.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Win32DebugLogStream.h
+assimp/LogStream.hpp
+-
+windows.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/windows.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/scene.cpp
+assimp/scene.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/simd.cpp
+simd.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/simd.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/simd.h
+assimp/defs.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXAnimation.cpp
+FBXParser.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXParser.h
+FBXDocument.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocument.h
+FBXImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXImporter.h
+FBXDocumentUtil.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocumentUtil.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXBinaryTokenizer.cpp
+FBXTokenizer.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXTokenizer.h
+FBXUtil.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXUtil.h
+assimp/defs.h
+-
+stdint.h
+-
+assimp/Exceptional.h
+-
+assimp/ByteSwapper.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXCommon.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXCompileConfig.h
+map
+-
+set
+-
+unordered_map
+-
+unordered_set
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXConverter.cpp
+FBXConverter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXConverter.h
+FBXParser.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXParser.h
+FBXMeshGeometry.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXMeshGeometry.h
+FBXDocument.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocument.h
+FBXUtil.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXUtil.h
+FBXProperties.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXProperties.h
+FBXImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXImporter.h
+assimp/StringComparison.h
+-
+assimp/MathFunctions.h
+-
+assimp/scene.h
+-
+assimp/CreateAnimMesh.h
+-
+tuple
+-
+memory
+-
+iterator
+-
+vector
+-
+sstream
+-
+iomanip
+-
+cstdint
+-
+iostream
+-
+stdlib.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXConverter.h
+FBXParser.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXParser.h
+FBXMeshGeometry.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXMeshGeometry.h
+FBXDocument.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocument.h
+FBXUtil.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXUtil.h
+FBXProperties.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXProperties.h
+FBXImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXImporter.h
+assimp/anim.h
+-
+assimp/material.h
+-
+assimp/light.h
+-
+assimp/texture.h
+-
+assimp/camera.h
+-
+assimp/StringComparison.h
+-
+unordered_map
+-
+unordered_set
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDeformer.cpp
+FBXParser.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXParser.h
+FBXDocument.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocument.h
+FBXMeshGeometry.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXMeshGeometry.h
+FBXImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXImporter.h
+FBXDocumentUtil.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocumentUtil.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocument.cpp
+FBXDocument.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocument.h
+FBXMeshGeometry.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXMeshGeometry.h
+FBXParser.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXParser.h
+FBXUtil.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXUtil.h
+FBXImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXImporter.h
+FBXImportSettings.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXImportSettings.h
+FBXDocumentUtil.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocumentUtil.h
+FBXProperties.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXProperties.h
+memory
+-
+functional
+-
+map
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocument.h
+numeric
+-
+stdint.h
+-
+assimp/mesh.h
+-
+FBXProperties.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXProperties.h
+FBXParser.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXParser.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocumentUtil.cpp
+FBXParser.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXParser.h
+FBXDocument.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocument.h
+FBXUtil.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXUtil.h
+FBXDocumentUtil.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocumentUtil.h
+FBXProperties.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXProperties.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocumentUtil.h
+assimp/defs.h
+-
+string
+-
+memory
+-
+FBXDocument.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocument.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExportNode.cpp
+FBXExportNode.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExportNode.h
+FBXCommon.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXCommon.h
+assimp/StreamWriter.h
+-
+assimp/Exceptional.h
+-
+assimp/ai_assert.h
+-
+assimp/StringUtils.h
+-
+string
+-
+ostream
+-
+sstream
+-
+memory
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExportNode.h
+FBXExportProperty.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExportProperty.h
+assimp/StreamWriter.h
+-
+string
+-
+vector
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExportProperty.cpp
+FBXExportProperty.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExportProperty.h
+assimp/StreamWriter.h
+-
+assimp/Exceptional.h
+-
+string
+-
+vector
+-
+ostream
+-
+locale
+-
+sstream
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExportProperty.h
+assimp/types.h
+-
+assimp/StreamWriter.h
+-
+string
+-
+vector
+-
+ostream
+-
+type_traits
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExporter.cpp
+FBXExporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExporter.h
+FBXExportNode.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExportNode.h
+FBXExportProperty.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExportProperty.h
+FBXCommon.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXCommon.h
+FBXUtil.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXUtil.h
+assimp/version.h
+-
+assimp/IOSystem.hpp
+-
+assimp/Exporter.hpp
+-
+assimp/DefaultLogger.hpp
+-
+assimp/StreamWriter.h
+-
+assimp/Exceptional.h
+-
+assimp/material.h
+-
+assimp/scene.h
+-
+assimp/mesh.h
+-
+memory
+-
+string
+-
+sstream
+-
+ctime
+-
+map
+-
+set
+-
+vector
+-
+array
+-
+unordered_set
+-
+numeric
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExporter.h
+FBXExportNode.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExportNode.h
+FBXCommon.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXCommon.h
+assimp/types.h
+-
+assimp/StreamWriter.h
+-
+assimp/Exceptional.h
+-
+vector
+-
+map
+-
+unordered_set
+-
+memory
+-
+sstream
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXImportSettings.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXImporter.cpp
+FBXImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXImporter.h
+FBXConverter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXConverter.h
+FBXDocument.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocument.h
+FBXParser.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXParser.h
+FBXTokenizer.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXTokenizer.h
+FBXUtil.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXUtil.h
+assimp/MemoryIOWrapper.h
+-
+assimp/StreamReader.h
+-
+assimp/importerdesc.h
+-
+assimp/Importer.hpp
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXImporter.h
+assimp/BaseImporter.h
+-
+assimp/LogAux.h
+-
+FBXImportSettings.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXImportSettings.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXMaterial.cpp
+FBXParser.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXParser.h
+FBXDocument.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocument.h
+FBXImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXImporter.h
+FBXImportSettings.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXImportSettings.h
+FBXDocumentUtil.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocumentUtil.h
+FBXProperties.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXProperties.h
+assimp/ByteSwapper.h
+-
+algorithm
+-
+FBXUtil.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXUtil.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXMeshGeometry.cpp
+functional
+-
+FBXMeshGeometry.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXMeshGeometry.h
+FBXDocument.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocument.h
+FBXImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXImporter.h
+FBXImportSettings.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXImportSettings.h
+FBXDocumentUtil.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocumentUtil.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXMeshGeometry.h
+FBXParser.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXParser.h
+FBXDocument.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocument.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXModel.cpp
+FBXParser.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXParser.h
+FBXMeshGeometry.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXMeshGeometry.h
+FBXDocument.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocument.h
+FBXImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXImporter.h
+FBXDocumentUtil.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocumentUtil.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXNodeAttribute.cpp
+FBXParser.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXParser.h
+FBXDocument.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocument.h
+FBXImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXImporter.h
+FBXDocumentUtil.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocumentUtil.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXParser.cpp
+zlib.h
+-
+../contrib/zlib/zlib.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/contrib/zlib/zlib.h
+FBXTokenizer.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXTokenizer.h
+FBXParser.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXParser.h
+FBXUtil.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXUtil.h
+assimp/ParsingUtils.h
+-
+assimp/fast_atof.h
+-
+assimp/ByteSwapper.h
+-
+iostream
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXParser.h
+stdint.h
+-
+map
+-
+memory
+-
+assimp/LogAux.h
+-
+assimp/fast_atof.h
+-
+FBXCompileConfig.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXCompileConfig.h
+FBXTokenizer.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXTokenizer.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXProperties.cpp
+FBXTokenizer.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXTokenizer.h
+FBXParser.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXParser.h
+FBXDocument.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocument.h
+FBXDocumentUtil.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocumentUtil.h
+FBXProperties.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXProperties.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXProperties.h
+FBXCompileConfig.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXCompileConfig.h
+memory
+-
+string
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXTokenizer.cpp
+assimp/ParsingUtils.h
+-
+FBXTokenizer.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXTokenizer.h
+FBXUtil.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXUtil.h
+assimp/Exceptional.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXTokenizer.h
+FBXCompileConfig.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXCompileConfig.h
+assimp/ai_assert.h
+-
+vector
+-
+string
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXUtil.cpp
+FBXUtil.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXUtil.h
+FBXTokenizer.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXTokenizer.h
+assimp/TinyFormatter.h
+-
+string
+-
+cstring
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXUtil.h
+FBXCompileConfig.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXCompileConfig.h
+FBXTokenizer.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXTokenizer.h
+stdint.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Material/MaterialSystem.cpp
+assimp/Hash.h
+-
+assimp/fast_atof.h
+-
+assimp/ParsingUtils.h
+-
+MaterialSystem.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Material/MaterialSystem.h
+assimp/types.h
+-
+assimp/material.h
+-
+assimp/DefaultLogger.hpp
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Material/MaterialSystem.h
+stdint.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjExporter.cpp
+ObjExporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjExporter.h
+assimp/Exceptional.h
+-
+assimp/StringComparison.h
+-
+assimp/version.h
+-
+assimp/IOSystem.hpp
+-
+assimp/Exporter.hpp
+-
+assimp/material.h
+-
+assimp/scene.h
+-
+memory
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjExporter.h
+assimp/types.h
+-
+sstream
+-
+vector
+-
+map
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileData.h
+vector
+-
+map
+-
+assimp/types.h
+-
+assimp/mesh.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileImporter.cpp
+ObjFileImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileImporter.h
+ObjFileParser.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileParser.h
+ObjFileData.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileData.h
+assimp/IOStreamBuffer.h
+-
+memory
+-
+assimp/DefaultIOSystem.h
+-
+assimp/Importer.hpp
+-
+assimp/scene.h
+-
+assimp/ai_assert.h
+-
+assimp/DefaultLogger.hpp
+-
+assimp/importerdesc.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileImporter.h
+assimp/BaseImporter.h
+-
+assimp/material.h
+-
+vector
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileMtlImporter.cpp
+stdlib.h
+-
+ObjFileMtlImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileMtlImporter.h
+ObjTools.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjTools.h
+ObjFileData.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileData.h
+assimp/fast_atof.h
+-
+assimp/ParsingUtils.h
+-
+assimp/material.h
+-
+assimp/DefaultLogger.hpp
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileMtlImporter.h
+vector
+-
+string
+-
+assimp/defs.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileParser.cpp
+ObjFileParser.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileParser.h
+ObjFileMtlImporter.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileMtlImporter.h
+ObjTools.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjTools.h
+ObjFileData.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileData.h
+assimp/ParsingUtils.h
+-
+assimp/BaseImporter.h
+-
+assimp/DefaultIOSystem.h
+-
+assimp/DefaultLogger.hpp
+-
+assimp/material.h
+-
+assimp/Importer.hpp
+-
+cstdlib
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileParser.h
+vector
+-
+string
+-
+map
+-
+memory
+-
+assimp/vector2.h
+-
+assimp/vector3.h
+-
+assimp/mesh.h
+-
+assimp/IOStreamBuffer.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjTools.h
+assimp/fast_atof.h
+-
+assimp/ParsingUtils.h
+-
+vector
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ArmaturePopulate.cpp
+ArmaturePopulate.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ArmaturePopulate.h
+assimp/BaseImporter.h
+-
+assimp/DefaultLogger.hpp
+-
+assimp/postprocess.h
+-
+assimp/scene.h
+-
+iostream
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ArmaturePopulate.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/BaseImporter.h
+-
+vector
+-
+map
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/CalcTangentsProcess.cpp
+CalcTangentsProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/CalcTangentsProcess.h
+ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.h
+assimp/TinyFormatter.h
+-
+assimp/qnan.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/CalcTangentsProcess.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ComputeUVMappingProcess.cpp
+ComputeUVMappingProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ComputeUVMappingProcess.h
+ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.h
+assimp/Exceptional.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ComputeUVMappingProcess.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+assimp/material.h
+-
+assimp/types.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ConvertToLHProcess.cpp
+ConvertToLHProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ConvertToLHProcess.h
+assimp/scene.h
+-
+assimp/postprocess.h
+-
+assimp/DefaultLogger.hpp
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ConvertToLHProcess.h
+assimp/types.h
+-
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/DeboneProcess.cpp
+ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.h
+DeboneProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/DeboneProcess.h
+stdio.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/DeboneProcess.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+assimp/scene.h
+-
+vector
+-
+utility
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/DropFaceNormalsProcess.cpp
+DropFaceNormalsProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/DropFaceNormalsProcess.h
+assimp/postprocess.h
+-
+assimp/scene.h
+-
+assimp/DefaultLogger.hpp
+-
+assimp/Exceptional.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/DropFaceNormalsProcess.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/EmbedTexturesProcess.cpp
+EmbedTexturesProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/EmbedTexturesProcess.h
+assimp/ParsingUtils.h
+-
+ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.h
+fstream
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/EmbedTexturesProcess.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+string
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FindDegenerates.cpp
+ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.h
+FindDegenerates.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FindDegenerates.h
+assimp/Exceptional.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FindDegenerates.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FindInstancesProcess.cpp
+FindInstancesProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FindInstancesProcess.h
+memory
+-
+stdio.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FindInstancesProcess.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+PostProcessing/ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/PostProcessing/ProcessHelper.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FindInvalidDataProcess.cpp
+FindInvalidDataProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FindInvalidDataProcess.h
+ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.h
+assimp/Exceptional.h
+-
+assimp/qnan.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FindInvalidDataProcess.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/types.h
+-
+assimp/anim.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FixNormalsStep.cpp
+FixNormalsStep.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FixNormalsStep.h
+assimp/StringUtils.h
+-
+assimp/DefaultLogger.hpp
+-
+assimp/postprocess.h
+-
+assimp/scene.h
+-
+stdio.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FixNormalsStep.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/GenBoundingBoxesProcess.cpp
+PostProcessing/GenBoundingBoxesProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/PostProcessing/GenBoundingBoxesProcess.h
+assimp/postprocess.h
+-
+assimp/scene.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/GenFaceNormalsProcess.cpp
+GenFaceNormalsProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/GenFaceNormalsProcess.h
+assimp/postprocess.h
+-
+assimp/scene.h
+-
+assimp/DefaultLogger.hpp
+-
+assimp/Exceptional.h
+-
+assimp/qnan.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/GenFaceNormalsProcess.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/GenVertexNormalsProcess.cpp
+GenVertexNormalsProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/GenVertexNormalsProcess.h
+ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.h
+assimp/Exceptional.h
+-
+assimp/qnan.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/GenVertexNormalsProcess.h
+Common/assbin_chunks.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/assbin_chunks.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ImproveCacheLocality.cpp
+PostProcessing/ImproveCacheLocality.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/PostProcessing/ImproveCacheLocality.h
+Common/VertexTriangleAdjacency.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/VertexTriangleAdjacency.h
+assimp/StringUtils.h
+-
+assimp/postprocess.h
+-
+assimp/scene.h
+-
+assimp/DefaultLogger.hpp
+-
+stdio.h
+-
+stack
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/JoinVerticesProcess.cpp
+JoinVerticesProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/JoinVerticesProcess.h
+ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.h
+assimp/Vertex.h
+-
+assimp/TinyFormatter.h
+-
+stdio.h
+-
+unordered_set
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/JoinVerticesProcess.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/types.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/LimitBoneWeightsProcess.cpp
+LimitBoneWeightsProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/LimitBoneWeightsProcess.h
+assimp/StringUtils.h
+-
+assimp/postprocess.h
+-
+assimp/DefaultLogger.hpp
+-
+assimp/scene.h
+-
+stdio.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/LimitBoneWeightsProcess.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/MakeVerboseFormat.cpp
+MakeVerboseFormat.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/MakeVerboseFormat.h
+assimp/scene.h
+-
+assimp/DefaultLogger.hpp
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/MakeVerboseFormat.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/OptimizeGraph.cpp
+OptimizeGraph.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/OptimizeGraph.h
+ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.h
+assimp/SceneCombiner.h
+-
+assimp/Exceptional.h
+-
+stdio.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/OptimizeGraph.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+PostProcessing/ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/PostProcessing/ProcessHelper.h
+assimp/types.h
+-
+set
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/OptimizeMeshes.cpp
+OptimizeMeshes.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/OptimizeMeshes.h
+ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.h
+assimp/SceneCombiner.h
+-
+assimp/Exceptional.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/OptimizeMeshes.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/types.h
+-
+vector
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/PretransformVertices.cpp
+PretransformVertices.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/PretransformVertices.h
+ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.h
+assimp/SceneCombiner.h
+-
+assimp/Exceptional.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/PretransformVertices.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+list
+-
+vector
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.cpp
+ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.h
+limits
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.h
+assimp/postprocess.h
+-
+assimp/anim.h
+-
+assimp/mesh.h
+-
+assimp/material.h
+-
+assimp/DefaultLogger.hpp
+-
+assimp/scene.h
+-
+assimp/SpatialSort.h
+-
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/ParsingUtils.h
+-
+list
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/RemoveRedundantMaterials.cpp
+RemoveRedundantMaterials.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/RemoveRedundantMaterials.h
+assimp/ParsingUtils.h
+-
+ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.h
+Material/MaterialSystem.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Material/MaterialSystem.h
+stdio.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/RemoveRedundantMaterials.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/RemoveVCProcess.cpp
+RemoveVCProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/RemoveVCProcess.h
+assimp/postprocess.h
+-
+assimp/DefaultLogger.hpp
+-
+assimp/scene.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/RemoveVCProcess.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ScaleProcess.cpp
+ScaleProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ScaleProcess.h
+assimp/scene.h
+-
+assimp/postprocess.h
+-
+assimp/BaseImporter.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ScaleProcess.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/SortByPTypeProcess.cpp
+ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.h
+SortByPTypeProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/SortByPTypeProcess.h
+assimp/Exceptional.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/SortByPTypeProcess.h
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/SplitLargeMeshes.cpp
+SplitLargeMeshes.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/SplitLargeMeshes.h
+ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.h
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/SplitLargeMeshes.h
+vector
+-
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/mesh.h
+-
+assimp/scene.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/TextureTransform.cpp
+assimp/Importer.hpp
+-
+assimp/postprocess.h
+-
+assimp/DefaultLogger.hpp
+-
+assimp/scene.h
+-
+TextureTransform.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/TextureTransform.h
+assimp/StringUtils.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/TextureTransform.h
+assimp/BaseImporter.h
+-
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+assimp/material.h
+-
+list
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/TriangulateProcess.cpp
+PostProcessing/TriangulateProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/PostProcessing/TriangulateProcess.h
+PostProcessing/ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/PostProcessing/ProcessHelper.h
+Common/PolyTools.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/PolyTools.h
+memory
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ValidateDataStructure.cpp
+ValidateDataStructure.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ValidateDataStructure.h
+assimp/BaseImporter.h
+-
+assimp/fast_atof.h
+-
+ProcessHelper.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.h
+memory
+-
+stdarg.h
+-
+
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ValidateDataStructure.h
+assimp/types.h
+-
+assimp/material.h
+-
+Common/BaseProcess.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/Common/BaseProcess.h
+

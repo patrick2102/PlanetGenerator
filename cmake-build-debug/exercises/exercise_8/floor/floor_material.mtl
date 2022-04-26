@@ -1,0 +1,13 @@
+# Material Count: 1
+
+newmtl Floor
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Ka FloorAo.png
+map_Kd FloorAlbedo.jpg
+map_Bump FloorNormal.jpg

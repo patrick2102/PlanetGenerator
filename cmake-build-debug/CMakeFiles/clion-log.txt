@@ -1,0 +1,6 @@
+"D:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator"
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- Using Win32 for window creation
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug
