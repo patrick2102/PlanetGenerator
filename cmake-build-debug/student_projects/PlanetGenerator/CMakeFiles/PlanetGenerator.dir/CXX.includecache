@@ -1476,6 +1476,14 @@ iostream
 vector
 -
 
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/CubeSphere.h
+vector
+-
+glm/glm.hpp
+-
+glm/gtc/matrix_transform.hpp
+-
+
 C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/camera.h
 glad/glad.h
 -
@@ -1488,6 +1496,8 @@ vector
 
 C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/main.cpp
 glad/glad.h
+-
+GLFW/glfw3.h
 -
 GLFW/glfw3.h
 -
@@ -1507,6 +1517,8 @@ imgui_impl_glfw.h
 C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/imgui_impl_glfw.h
 imgui_impl_opengl3.h
 C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/imgui_impl_opengl3.h
+CubeSphere.h
+C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/CubeSphere.h
 
 C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/model.h
 glad/glad.h

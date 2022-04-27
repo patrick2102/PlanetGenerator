@@ -1,5 +1,6 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <GLFW/glfw3.h>
 #include <iostream>
 
 #include <vector>
@@ -14,6 +15,7 @@
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
+#include "CubeSphere.h"
 
 // glfw and input functions
 // ------------------------
@@ -31,8 +33,7 @@ const unsigned int SCR_HEIGHT = 900;
 // global variables used for rendering
 // -----------------------------------
 Shader* shader;
-Shader* phong_shading;
-Shader* pbr_shading;
+Shader* simple_shader;
 Camera camera(glm::vec3(0.0f, 1.6f, 5.0f));
 
 Shader* skyboxShader;
@@ -53,6 +54,14 @@ void drawObjects();
 void drawGui();
 unsigned int initSkyboxBuffers();
 unsigned int loadCubemap(vector<std::string> faces);
+
+// Functions for solar system
+CubeSphere initializeSun();
+std::vector<CubeSphere> initializePlanets(int);
+void drawSun(CubeSphere sun);
+void drawPlanets(std::vector<CubeSphere>);
+
+
 
 int main()
 {
@@ -94,9 +103,8 @@ int main()
 
     // load the shaders and the 3D models
     // ----------------------------------
-    phong_shading = new Shader("shaders/common_shading.vert", "shaders/phong_shading.frag");
-    pbr_shading = new Shader("shaders/common_shading.vert", "shaders/pbr_shading.frag");
-    shader = pbr_shading;
+    simple_shader = new Shader("shaders/simple.vert", "shaders/simple.frag");
+    shader = simple_shader;
 
     // init skybox
     vector<std::string> faces
@@ -132,6 +140,13 @@ int main()
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 330 core");
 
+
+    //Initialize planets:
+    int numOfPlanets = 1;
+
+    auto sun = initializeSun();
+    auto planets = initializePlanets(numOfPlanets);
+
     // render loop
     // -----------
     while (!glfwWindowShouldClose(window))
@@ -152,6 +167,9 @@ int main()
 
         drawSkybox();
 
+        drawSun(sun);
+        //drawPlanets();
+
         // render the cones
         //glUseProgram(activeShader->ID);
 
@@ -170,14 +188,14 @@ int main()
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
 
-    delete phong_shading;
-    delete pbr_shading;
+    delete simple_shader;
 
     // glfw: terminate, clearing all previously allocated GLFW resources.
     // ------------------------------------------------------------------
     glfwTerminate();
     return 0;
 }
+
 
 void drawGui(){
     glDisable(GL_FRAMEBUFFER_SRGB);
@@ -200,8 +218,7 @@ void drawGui(){
 
         ImGui::Text("Shading model: ");
         {
-            if (ImGui::RadioButton("Blinn-Phong Shading", shader == phong_shading)) { shader = phong_shading; }
-            if (ImGui::RadioButton("PBR Shading", shader == pbr_shading)) { shader = pbr_shading; }
+            if (ImGui::RadioButton("Simple shader", shader == simple_shader)) { shader = simple_shader; }
         }
 
         ImGui::End();
@@ -430,4 +447,34 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     // make sure the viewport matches the new window dimensions; note that width and
     // height will be significantly larger than specified on retina displays.
     glViewport(0, 0, width, height);
+}
+
+CubeSphere initializeSun()
+{
+    auto sun = CubeSphere(glm::vec3(0.0f), 1.0f);
+    return sun;
+}
+
+std::vector<CubeSphere> initializePlanets(int n)
+{
+    std::vector<CubeSphere> planets;
+
+    for(int i = 0; i < n; i++)
+    {
+        auto planet =  CubeSphere(glm::vec3(2.0f, 0.0f, 0.0f), 1.0f);
+        planets.insert(planets.end(), planet);
+    }
+
+    return planets;
+}
+
+void drawSun(CubeSphere sun)
+{
+    //sun.Draw(shader);
+}
+
+void drawPlanets(std::vector<CubeSphere> planets)
+{
+
+
 }

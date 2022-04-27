@@ -965,6 +965,9 @@
 		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui_widgets.cpp">
 			<Option target="imgui"/>
 		</Unit>
+		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/CubeSphere.h">
+			<Option target="PlanetGenerator"/>
+		</Unit>
 		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/camera.h">
 			<Option target="PlanetGenerator"/>
 		</Unit>
@@ -980,19 +983,10 @@
 		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shader.h">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/common_shading.vert">
+		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/simple.frag">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/pbr_shading.frag">
-			<Option target="PlanetGenerator"/>
-		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/phong_shading.frag">
-			<Option target="PlanetGenerator"/>
-		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/shadowmap.frag">
-			<Option target="PlanetGenerator"/>
-		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/shadowmap.vert">
+		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/simple.vert">
 			<Option target="PlanetGenerator"/>
 		</Unit>
 		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/skybox.frag">

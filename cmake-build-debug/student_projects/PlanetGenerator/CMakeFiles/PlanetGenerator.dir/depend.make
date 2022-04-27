@@ -203,6 +203,7 @@ student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\main.cpp.obj: ..
 student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\main.cpp.obj: ..\common\third-party\imgui\include\imgui_impl_glfw.h
 student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\main.cpp.obj: ..\common\third-party\imgui\include\imgui_impl_opengl3.h
 student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\main.cpp.obj: ..\student_projects\PlanetGenerator\mesh.h
+student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\main.cpp.obj: ..\student_projects\PlanetGenerator\CubeSphere.h
 student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\main.cpp.obj: ..\student_projects\PlanetGenerator\camera.h
 student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\main.cpp.obj: ..\student_projects\PlanetGenerator\main.cpp
 student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\main.cpp.obj: ..\student_projects\PlanetGenerator\model.h
