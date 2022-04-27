@@ -151,7 +151,7 @@ int main()
     int numOfPlanets = 1;
 
     auto sun = initializeSun();
-    auto planets = initializePlanets(numOfPlanets);
+    //auto planets = initializePlanets(numOfPlanets);
 
     // render loop
     // -----------
@@ -165,6 +165,8 @@ int main()
         glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
         glm::mat4 view = camera.GetViewMatrix();
         glm::mat4 viewProjection = projection * view;
+
+        shader->setMat4("viewProjection", viewProjection);
 
         processInput(window);
 
@@ -387,7 +389,6 @@ void drawObjects()
     glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
 }
 
-
 void processInput(GLFWwindow *window) {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
@@ -457,7 +458,7 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 
 CubeSphere initializeSun()
 {
-    auto sun = CubeSphere(glm::vec3(0.0f), 1.0f);
+    auto sun = CubeSphere(glm::vec3(0.0f), 1.0f, shader);
     return sun;
 }
 
@@ -467,7 +468,7 @@ std::vector<CubeSphere> initializePlanets(int n)
 
     for(int i = 0; i < n; i++)
     {
-        auto planet =  CubeSphere(glm::vec3(2.0f, 0.0f, 0.0f), 1.0f);
+        auto planet =  CubeSphere(glm::vec3(2.0f, 0.0f, 0.0f), 1.0f, shader);
         planets.insert(planets.end(), planet);
     }
 
@@ -476,7 +477,7 @@ std::vector<CubeSphere> initializePlanets(int n)
 
 void drawSun(CubeSphere sun)
 {
-    //sun.Draw(shader);
+    sun.Draw();
 }
 
 void drawPlanets(std::vector<CubeSphere> planets)

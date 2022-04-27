@@ -16,34 +16,62 @@ struct Vertex
 {
     // Position
     glm::vec3 Position;
+
+    // Color
+    //glm::vec4 Color;
 };
 
 class Side
 {
 public:
+    unsigned int VAO;
     unsigned int VBO;
     glm::vec3 normal;
-    std::vector<glm::vec3> vboVec;
+    std::vector<Vertex> vboVec;
 
 
-    Side(std::vector<glm::vec3> vboVec, glm::vec3 normal)
+    Side(std::vector<Vertex> vboVec, glm::vec3 normal, Shader* shader)
     {
         this->normal = normal;
         this->vboVec = std::move(vboVec);
-        Setup();
+        Setup(shader);
     }
 
-    void Setup()
+    void Draw()
+    {
+        glBindVertexArray(VAO);
+        glDrawArrays(GL_TRIANGLES, 0, vboVec.size());
+    }
+
+private:
+    void Setup(Shader* shader)
     {
         glGenBuffers(1, &VBO);
         glBindBuffer(GL_ARRAY_BUFFER, VBO);
         glBufferData(GL_ARRAY_BUFFER, vboVec.size() * sizeof(Vertex), &vboVec[0], GL_STATIC_DRAW);
 
-    }
+        glGenVertexArrays(1, &VAO);
+        glBindVertexArray(VAO);
 
-    void Draw()
-    {
-        //glBindBuffer(GL_ARRAY_BUFFER, VBO);
+        int offset = 0;
+        //int posAttributeLocation = glGetAttribLocation(shader->ID, "pos");
+        int posAttributeLocation = 0;
+
+        glEnableVertexAttribArray(posAttributeLocation);
+        glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*) offset);
+
+        GLenum code = glGetError();
+        if (code != GL_NO_ERROR)
+            std::cerr << "glVertexAttribPointer() with a stride of " << sizeof(Vertex) << " failed with code " << code << std::endl;
+        /*
+        offset += sizeof(glm::vec3);
+        posAttributeLocation = glGetAttribLocation(shader->ID, "color");
+
+        glEnableVertexAttribArray(posAttributeLocation);
+        glVertexAttribPointer(posAttributeLocation, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*) offset);
+        */
+        glBindVertexArray(0);
+        glBindBuffer(GL_ARRAY_BUFFER, 0);
     }
 };
 
@@ -54,21 +82,23 @@ public:
     glm::vec3 position;
     glm::vec3 normal;
     std::vector<Side> sides;
+    Shader* shader;
     float radius;
 
-    CubeSphere(glm::vec3 position, float radius)
+    CubeSphere(glm::vec3 position, float radius, Shader* shader)
     {
         this->position = position;
         this->radius = radius;
-        normal = glm::vec3(0.0f, 0.0f, -0.0f);
+        this->shader = shader;
+        normal = glm::vec3(0.0f, 0.0f, -1.0f);
         CreateCube(radius);
     }
 
-    void Draw(Shader* shader)
+    void Draw()
     {
         glm::mat4 model = glm::mat4(1.0f);
 
-        glUseProgram(shader->ID);
+        shader->use();
 
         for(auto side : sides)
         {
@@ -112,6 +142,9 @@ private:
         model = glm::rotate(model, rotation, rotationAxis);
 
         glm::vec3 sideNormal = model * glm::vec4(normal,0.0f);
+
+        sideNormal = round(sideNormal);
+
         model = glm::translate(model, sideNormal);
 
         glm::vec3 topLeft = model * glm::vec4 (p0x, p1y, p0z, 1.0f);
@@ -119,21 +152,22 @@ private:
         glm::vec3 bottomLeft = model * glm::vec4 (p0x, p0y, p0z, 1.0f);
         glm::vec3 bottomRight = model * glm::vec4 (p1x, p0y, p0z, 1.0f);
 
-        std::vector<glm::vec3> coords;
+        //std::vector<glm::vec3> coords;
+        std::vector<Vertex> vertices;
+
+        glm::vec4 red = glm::vec4 (1.0f, 0.0f, 0.0f, 1.0f);
 
         // Top left triangle
-        coords.insert(coords.end(), topLeft); // Top left corner
-        coords.insert(coords.end(), topRight); // Top right corner
-        coords.insert(coords.end(), bottomLeft); // Bottom left corner
+        vertices.insert(vertices.end(), {topLeft});
+        vertices.insert(vertices.end(), {topRight});
+        vertices.insert(vertices.end(), {bottomLeft});
 
         //Bottom right triangle
-        coords.insert(coords.end(), bottomRight); // Bottom right corner
-        coords.insert(coords.end(), bottomLeft); // Bottom left corner
-        coords.insert(coords.end(), topRight); // Top right corner
+        vertices.insert(vertices.end(), {bottomRight});
+        vertices.insert(vertices.end(), {bottomLeft});
+        vertices.insert(vertices.end(), {topRight});
 
-        Side side = Side(coords, sideNormal);
-
+        Side side = Side(vertices, sideNormal, shader);
         return side;
     }
-
 };
