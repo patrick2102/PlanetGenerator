@@ -10,12 +10,18 @@
 //  lessons to this implementation
 #include "shader.h"
 #include "camera.h"
-#include "model.h"
 
+#define STB_IMAGE_IMPLEMENTATION
+#include <stb_image.h>
+#include <assimp/Importer.hpp>
+#include <assimp/scene.h>
+#include <assimp/postprocess.h>
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 #include "CubeSphere.h"
+
+using namespace std;
 
 // glfw and input functions
 // ------------------------
@@ -53,7 +59,7 @@ void drawSkybox();
 void drawObjects();
 void drawGui();
 unsigned int initSkyboxBuffers();
-unsigned int loadCubemap(vector<std::string> faces);
+unsigned int loadCubeMap(vector<std::string> faces);
 
 // Functions for solar system
 CubeSphere initializeSun();
@@ -117,7 +123,7 @@ int main()
             "skybox/back.png"
     };
 
-    cubemapTexture = loadCubemap(faces);
+    cubemapTexture = loadCubeMap(faces);
     skyboxVAO = initSkyboxBuffers();
     skyboxShader = new Shader("shaders/skybox.vert", "shaders/skybox.frag");
 
@@ -304,7 +310,7 @@ unsigned int initSkyboxBuffers() {
 // +Z (front)
 // -Z (back)
 // -------------------------------------------------------
-unsigned int loadCubemap(vector<std::string> faces)
+unsigned int loadCubeMap(vector<std::string> faces)
 {
     unsigned int textureID;
     glGenTextures(1, &textureID);
