@@ -968,6 +968,12 @@
 		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/CubeSphere.h">
 			<Option target="PlanetGenerator"/>
 		</Unit>
+		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/Mesh.h">
+			<Option target="PlanetGenerator"/>
+		</Unit>
+		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/Sphere.h">
+			<Option target="PlanetGenerator"/>
+		</Unit>
 		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/camera.h">
 			<Option target="PlanetGenerator"/>
 		</Unit>
@@ -975,6 +981,12 @@
 			<Option target="PlanetGenerator"/>
 		</Unit>
 		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shader.h">
+			<Option target="PlanetGenerator"/>
+		</Unit>
+		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/cube_sphere.frag">
+			<Option target="PlanetGenerator"/>
+		</Unit>
+		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/cube_sphere.vert">
 			<Option target="PlanetGenerator"/>
 		</Unit>
 		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/simple.frag">

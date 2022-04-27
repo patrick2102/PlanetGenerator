@@ -19,7 +19,7 @@
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
-#include "CubeSphere.h"
+#include "Sphere.h"
 
 using namespace std;
 
@@ -40,6 +40,7 @@ const unsigned int SCR_HEIGHT = 900;
 // -----------------------------------
 Shader* shader;
 Shader* simple_shader;
+Shader* cube_sphere_shader;
 Camera camera(glm::vec3(0.0f, 1.6f, 5.0f));
 
 Shader* skyboxShader;
@@ -62,10 +63,10 @@ unsigned int initSkyboxBuffers();
 unsigned int loadCubeMap(vector<std::string> faces);
 
 // Functions for solar system
-CubeSphere initializeSun();
-std::vector<CubeSphere> initializePlanets(int);
-void drawSun(CubeSphere sun);
-void drawPlanets(std::vector<CubeSphere>);
+Sphere initializeSun(int);
+std::vector<Sphere> initializePlanets(int);
+void drawSun(Sphere sun);
+void drawPlanets(std::vector<Sphere>);
 
 
 
@@ -110,6 +111,7 @@ int main()
     // load the shaders and the 3D models
     // ----------------------------------
     simple_shader = new Shader("shaders/simple.vert", "shaders/simple.frag");
+    cube_sphere_shader = new Shader("shaders/cube_sphere.vert", "shaders/cube_sphere.frag");
     shader = simple_shader;
 
     // init skybox
@@ -146,13 +148,16 @@ int main()
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 330 core");
 
+    //Details of cube
+    int cubeDivisions = 32;
 
     //Initialize planets:
     int numOfPlanets = 1;
 
-    auto sun = initializeSun();
+    auto sun = initializeSun(cubeDivisions);
     //auto planets = initializePlanets(numOfPlanets);
 
+    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     // render loop
     // -----------
     while (!glfwWindowShouldClose(window))
@@ -197,6 +202,7 @@ int main()
     ImGui::DestroyContext();
 
     delete simple_shader;
+    delete cube_sphere_shader;
 
     // glfw: terminate, clearing all previously allocated GLFW resources.
     // ------------------------------------------------------------------
@@ -227,6 +233,7 @@ void drawGui(){
         ImGui::Text("Shading model: ");
         {
             if (ImGui::RadioButton("Simple shader", shader == simple_shader)) { shader = simple_shader; }
+            if (ImGui::RadioButton("Cube sphere shader", shader == cube_sphere_shader)) { shader = cube_sphere_shader; }
         }
 
         ImGui::End();
@@ -390,7 +397,7 @@ void drawObjects()
 }
 
 void processInput(GLFWwindow *window) {
-    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+    if (glfwGetKey(window, GLFW_KEY_K) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
 
     if (isPaused)
@@ -456,31 +463,31 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     glViewport(0, 0, width, height);
 }
 
-CubeSphere initializeSun()
+Sphere initializeSun(int n)
 {
-    auto sun = CubeSphere(glm::vec3(0.0f), 1.0f, shader);
+    auto sun = Sphere(glm::vec3(0.0f), 1.0f, n, shader);
     return sun;
 }
 
-std::vector<CubeSphere> initializePlanets(int n)
+std::vector<Sphere> initializePlanets(int n)
 {
-    std::vector<CubeSphere> planets;
+    std::vector<Sphere> planets;
 
     for(int i = 0; i < n; i++)
     {
-        auto planet =  CubeSphere(glm::vec3(2.0f, 0.0f, 0.0f), 1.0f, shader);
+        auto planet =  Sphere(glm::vec3(2.0f, 0.0f, 0.0f), 1.0f, n, shader);
         planets.insert(planets.end(), planet);
     }
 
     return planets;
 }
 
-void drawSun(CubeSphere sun)
+void drawSun(Sphere sun)
 {
     sun.Draw();
 }
 
-void drawPlanets(std::vector<CubeSphere> planets)
+void drawPlanets(std::vector<Sphere> planets)
 {
 
 

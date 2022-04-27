@@ -203,7 +203,8 @@ student_projects/PlanetGenerator/CMakeFiles/PlanetGenerator.dir/main.cpp.obj
  ../common/third-party/imgui/include/imgui.h
  ../common/third-party/imgui/include/imgui_impl_glfw.h
  ../common/third-party/imgui/include/imgui_impl_opengl3.h
- C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/CubeSphere.h
+ C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/Mesh.h
+ C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/Sphere.h
  C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/camera.h
  C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/main.cpp
  C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shader.h
