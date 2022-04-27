@@ -18,7 +18,7 @@ struct Vertex
     glm::vec3 Position;
 
     // Color
-    //glm::vec4 Color;
+    glm::vec4 Color;
 };
 
 class Side
@@ -63,13 +63,13 @@ private:
         GLenum code = glGetError();
         if (code != GL_NO_ERROR)
             std::cerr << "glVertexAttribPointer() with a stride of " << sizeof(Vertex) << " failed with code " << code << std::endl;
-        /*
+
         offset += sizeof(glm::vec3);
         posAttributeLocation = glGetAttribLocation(shader->ID, "color");
 
         glEnableVertexAttribArray(posAttributeLocation);
         glVertexAttribPointer(posAttributeLocation, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*) offset);
-        */
+
         glBindVertexArray(0);
         glBindBuffer(GL_ARRAY_BUFFER, 0);
     }
@@ -114,6 +114,7 @@ private:
 
         float rotation = 0.0f;
         glm::vec3 rotationAxis = glm::vec3(0.0f, 1.0f, 0.0f);
+
         for(int i = 0; i < 4; i++)
         {
             Side side = SideOfSquare(width, rotation, rotationAxis);
@@ -139,13 +140,15 @@ private:
         float p1x = width/2, p1y = width/2; // p1x and p1y are the highest x and y values.
 
         glm::mat4 model = glm::mat4(1.0f);
-        model = glm::rotate(model, rotation, rotationAxis);
+        auto rotateTransform = glm::rotate(model, rotation, rotationAxis);
 
-        glm::vec3 sideNormal = model * glm::vec4(normal,0.0f);
+        glm::vec3 sideNormal = rotateTransform * glm::vec4(normal,0.0f);
 
-        sideNormal = round(sideNormal);
+        //sideNormal = round(sideNormal);
 
-        model = glm::translate(model, sideNormal);
+        auto translateTransform = glm::translate(model, sideNormal*(width/2));
+        
+        model = glm::rotate(translateTransform, rotation, rotationAxis);
 
         glm::vec3 topLeft = model * glm::vec4 (p0x, p1y, p0z, 1.0f);
         glm::vec3 topRight = model * glm::vec4 (p1x, p1y, p0z, 1.0f);
@@ -158,14 +161,14 @@ private:
         glm::vec4 red = glm::vec4 (1.0f, 0.0f, 0.0f, 1.0f);
 
         // Top left triangle
-        vertices.insert(vertices.end(), {topLeft});
-        vertices.insert(vertices.end(), {topRight});
-        vertices.insert(vertices.end(), {bottomLeft});
+        vertices.insert(vertices.end(), {topLeft, red});
+        vertices.insert(vertices.end(), {topRight, red});
+        vertices.insert(vertices.end(), {bottomLeft, red});
 
         //Bottom right triangle
-        vertices.insert(vertices.end(), {bottomRight});
-        vertices.insert(vertices.end(), {bottomLeft});
-        vertices.insert(vertices.end(), {topRight});
+        vertices.insert(vertices.end(), {bottomRight, red});
+        vertices.insert(vertices.end(), {bottomLeft, red});
+        vertices.insert(vertices.end(), {topRight, red});
 
         Side side = Side(vertices, sideNormal, shader);
         return side;
