@@ -35,27 +35,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c39d72e8-cbd4-4906-87b5-2af953ed1ddc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/CubeSphere.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/simple.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/simple.vert" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ITU-graphics-programming.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ITU-graphics-programming.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/CMakeFiles/PlanetGenerator.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/CMakeFiles/PlanetGenerator.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/CMakeFiles/PlanetGenerator.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/CMakeFiles/PlanetGenerator.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/CMakeFiles/PlanetGenerator.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/CMakeFiles/PlanetGenerator.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/skybox/back.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/skybox/back.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/skybox/bottom.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/skybox/bottom.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/skybox/front.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/skybox/front.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/skybox/left.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/skybox/left.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/skybox/right.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/skybox/right.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/skybox/top.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/skybox/top.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/common_shading.vert" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/pbr_shading.frag" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/phong_shading.frag" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/shadowmap.frag" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/shadowmap.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/skybox/back2.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/skybox/bottom2.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/skybox/front2.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/skybox/left2.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/skybox/right2.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/skybox/top2.tga" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +163,7 @@
       <workItem from="1650996274844" duration="5184000" />
       <workItem from="1651005598228" duration="1894000" />
       <workItem from="1651007716921" duration="5748000" />
-      <workItem from="1651048980269" duration="8073000" />
+      <workItem from="1651048980269" duration="8140000" />
     </task>
     <servers />
   </component>
@@ -210,26 +195,26 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651054682909" />
-    <state width="1877" height="133" key="GridCell.Tab.0.bottom" timestamp="1651057077473">
+    <state width="1877" height="133" key="GridCell.Tab.0.bottom" timestamp="1651057134822">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="181" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648669933949" />
-    <state width="1877" height="133" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651057077473" />
-    <state width="1877" height="133" key="GridCell.Tab.0.center" timestamp="1651057077473">
+    <state width="1877" height="133" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651057134822" />
+    <state width="1877" height="133" key="GridCell.Tab.0.center" timestamp="1651057134822">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="181" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648669933949" />
-    <state width="1877" height="133" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651057077473" />
-    <state width="1877" height="133" key="GridCell.Tab.0.left" timestamp="1651057077473">
+    <state width="1877" height="133" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651057134822" />
+    <state width="1877" height="133" key="GridCell.Tab.0.left" timestamp="1651057134822">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="181" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648669933948" />
-    <state width="1877" height="133" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651057077473" />
-    <state width="1877" height="133" key="GridCell.Tab.0.right" timestamp="1651057077473">
+    <state width="1877" height="133" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651057134822" />
+    <state width="1877" height="133" key="GridCell.Tab.0.right" timestamp="1651057134822">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="181" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648669933949" />
-    <state width="1877" height="133" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651057077473" />
+    <state width="1877" height="133" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651057134822" />
     <state width="1877" height="240" key="GridCell.Tab.1.bottom" timestamp="1651014836477">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
