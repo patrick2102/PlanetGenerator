@@ -1001,6 +1001,12 @@
 		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/skybox.vert">
 			<Option target="PlanetGenerator"/>
 		</Unit>
+		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/sun_shading.frag">
+			<Option target="PlanetGenerator"/>
+		</Unit>
+		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/sun_shading.vert">
+			<Option target="PlanetGenerator"/>
+		</Unit>
 		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

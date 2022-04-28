@@ -19,7 +19,7 @@ public:
     }
     void Draw()
     {
-        sphere.Draw();
+        //sphere.Draw();
     }
 
 };

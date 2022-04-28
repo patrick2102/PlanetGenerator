@@ -1,7 +1,5 @@
 #version 330 core
 
-in  vec4 vtxColor;
-
 out vec4 FragColor;
 /*
 uniform vec3 camPosition; // so we can compute the view vector
@@ -61,5 +59,5 @@ void main()
    FragColor = vec4(ambient + (diffuse + specular) * attenuation + (diffuse2 + specular2) * attenuation2, 1.0);
    */
 
-   FragColor = vtxColor;
+   FragColor = vec4(1.0f);
 }

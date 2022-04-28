@@ -41,7 +41,8 @@ const unsigned int SHADOW_WIDTH = 2048, SHADOW_HEIGHT = 2048;
 // global variables used for rendering
 // -----------------------------------
 Shader* shader;
-Shader* phong_shading;
+//Shader* phong_shading;
+Shader* sun_shading;
 Camera camera(glm::vec3(0.0f, 1.6f, 5.0f));
 
 Shader* skyboxShader;
@@ -146,8 +147,9 @@ int main()
 
     // load the shaders and the 3D models
     // ----------------------------------
-    phong_shading = new Shader("shaders/phong_shading.vert", "shaders/phong_shading.frag");
-    shader = phong_shading;
+    //phong_shading = new Shader("shaders/phong_shading.vert", "shaders/phong_shading.frag");
+    sun_shading = new Shader("shaders/sun_shading.vert", "shaders/sun_shading.frag");
+    shader = sun_shading;
 
     // init skybox
     vector<std::string> faces
@@ -191,7 +193,7 @@ int main()
     int numOfPlanets = 1;
 
     Sun sun = initializeSun(cubeDivisions);
-    initializePlanets(numOfPlanets, cubeDivisions);
+    //initializePlanets(numOfPlanets, cubeDivisions);
 
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     // render loop
@@ -203,10 +205,14 @@ int main()
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
 
+        // camera parameters
         glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
         glm::mat4 view = camera.GetViewMatrix();
         glm::mat4 viewProjection = projection * view;
+
+        // set viewProjection matrix uniform
         shader->setMat4("viewProjection", viewProjection);
+        //sun_shading->setMat4("viewProjection", viewProjection);
 
         processInput(window);
 
@@ -218,7 +224,6 @@ int main()
         //shader->use();
         //setLightUniforms();
         //drawSolarSystem(sun);
-        phong_shading->use();
         drawSun(sun);
 
         if (isPaused) {
@@ -236,7 +241,8 @@ int main()
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
 
-    delete phong_shading;
+    delete sun_shading;
+    //delete phong_shading;
 
     // glfw: terminate, clearing all previously allocated GLFW resources.
     // ------------------------------------------------------------------
@@ -266,7 +272,7 @@ void drawGui(){
 
         ImGui::Text("Shading model: ");
         {
-            if (ImGui::RadioButton("phong shading", shader == phong_shading)) { shader = phong_shading; }
+            //if (ImGui::RadioButton("phong shading", shader == phong_shading)) { shader = phong_shading; }
         }
 
         ImGui::End();
@@ -509,30 +515,33 @@ Sun initializeSun(int divisions)
 {
     glm::vec3 pos = glm::vec3(0.0f);
     glm::vec4 color = glm::vec4(0.75f);
-    auto sphere = Sphere(pos, 1, divisions, color, shader);
+    auto sphere = Sphere(1, divisions);
     //auto light = Light(pos, color, 1, 1);
 
     //auto sun = Sun(sphere, light);
 
-    auto sun = Sun(sphere);
+    auto sun = Sun(sphere, pos, color, shader);
 
     return sun;
 }
 
 void initializePlanets(int n, int divisions)
 {
+    /*
     for(int i = 0; i < n; i++)
     {
         auto planet = Planet(Sphere(glm::vec3((3.0f * (float) i) + 3.0f, 0.0f, 0.0f), 1.0f,
                                     divisions, glm::vec4 (0.0f, 0.0f, 1.0f, 0.0f), shader));
         planets.insert(planets.end(), planet);
     }
+    */
 }
 
 void drawSolarSystem(Sun sun)
 {
+    shader->use();
     drawSun(sun);
-    drawPlanets();
+    //drawPlanets();
 }
 
 void drawSun(Sun sun)

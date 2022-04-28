@@ -7,14 +7,16 @@
 #ifndef ITU_GRAPHICS_PROGRAMMING_MISC_H
 #define ITU_GRAPHICS_PROGRAMMING_MISC_H
 
+/*
 struct Vertex
 {
     // Position
     glm::vec3 Position;
 
     // Normal
-    glm::vec4 Color;
+    glm::vec3 Normal;
 };
+*/
 
 
 #endif //ITU_GRAPHICS_PROGRAMMING_MISC_H

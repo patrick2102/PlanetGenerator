@@ -12,23 +12,14 @@ class Sphere
 {
 public:
     float pi = glm::pi<float>();
-
-    glm::vec3 position;
-    glm::vec4 color = glm::vec4 (1.0f, 0.0f, 0.0f, 0.0f);
-
     float radius;
-    std::vector<Vertex> vboVec;
-    Shader* shader;
+    std::vector<glm::vec3> vertices;
 
-    Sphere(glm::vec3 position, float radius, int divisions, glm::vec4 baseColor, Shader* shader)
+    Sphere(float radius, int divisions)
     {
-        this-> position = position;
         this-> radius = radius;
-        this-> shader = shader;
-        this-> color = baseColor;
 
         CreateSphere(divisions);
-        SetupBuffers();
     }
 
     glm::vec3 GetPointOnSphere(float angleY, float angleZ)
@@ -37,7 +28,7 @@ public:
         float y = radius * glm::sin(angleY) * glm::sin(angleZ);
         float z = radius * glm::cos(angleY);
 
-        return glm::vec3(x, y, z) + position;
+        return glm::vec3(x, y, z);
     }
 
     void CreateSphere(int divisions)
@@ -63,52 +54,10 @@ public:
                 glm::vec3 normal1 = glm::cross(p1-p2, p1-p3);
                 glm::vec3 normal2 = glm::cross(p4-p5, p4-p6);
 
-                vboVec.insert(vboVec.end(), {{p1, color}, {p2, color}, {p3, color}, {p4, color}, {p5, color}, {p6, color}});
+                vertices.insert(vertices.end(), {p1, p2, p3, p4, p5, p6});
             }
             angleZ -= increment;
         }
     }
-
-    void SetupBuffers()
-    {
-        glGenBuffers(1, &VBO);
-        glBindBuffer(GL_ARRAY_BUFFER, VBO);
-        glBufferData(GL_ARRAY_BUFFER, vboVec.size() * sizeof(Vertex), &vboVec[0], GL_STATIC_DRAW);
-
-        glGenVertexArrays(1, &VAO);
-        glBindVertexArray(VAO);
-
-        int offset = 0;
-        int posAttributeLocation = glGetAttribLocation(shader->ID, "vertex");
-
-        glEnableVertexAttribArray(posAttributeLocation);
-        glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) offset);
-
-        GLenum code = glGetError();
-        if (code != GL_NO_ERROR)
-            std::cerr << "glVertexAttribPointer() with a stride of " << sizeof(Vertex) << " failed with code " << code
-                      << std::endl;
-
-        offset += sizeof(glm::vec3);
-        posAttributeLocation = glGetAttribLocation(shader->ID, "color");
-
-        glEnableVertexAttribArray(posAttributeLocation);
-        glVertexAttribPointer(posAttributeLocation, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) offset);
-
-        glBindVertexArray(0);
-    }
-
-    void Draw()
-    {
-        shader->use();
-        glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, vboVec.size());
-        glBindVertexArray(0);
-    }
-
-
-private:
-    unsigned int VAO;
-    unsigned int VBO;
 };
 #endif //ITU_GRAPHICS_PROGRAMMING_SPHERE_H
