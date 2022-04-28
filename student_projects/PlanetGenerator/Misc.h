@@ -7,7 +7,6 @@
 #ifndef ITU_GRAPHICS_PROGRAMMING_MISC_H
 #define ITU_GRAPHICS_PROGRAMMING_MISC_H
 
-/*
 struct Vertex
 {
     // Position
@@ -16,7 +15,6 @@ struct Vertex
     // Normal
     glm::vec3 Normal;
 };
-*/
 
 
 #endif //ITU_GRAPHICS_PROGRAMMING_MISC_H

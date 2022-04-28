@@ -4,14 +4,10 @@ out vec4 FragColor;
 /*
 uniform vec3 camPosition; // so we can compute the view vector
 out vec4 FragColor; // the output color of this fragment
-
+*/
 // light uniform variables
 uniform vec3 ambientLightColor;
-uniform vec3 light1Position;
-uniform vec3 light1Color;
-uniform vec3 light2Position;
-uniform vec3 light2Color;
-
+/*
 // material properties
 uniform vec3 reflectionColor;
 uniform float ambientReflectance;
@@ -19,9 +15,10 @@ uniform float diffuseReflectance;
 uniform float specularReflectance;
 uniform float specularExponent;
 
+*/
 in vec4 worldPos;
 in vec3 worldNormal;
-*/
+
 void main()
 {
    /*
@@ -58,6 +55,11 @@ void main()
 
    FragColor = vec4(ambient + (diffuse + specular) * attenuation + (diffuse2 + specular2) * attenuation2, 1.0);
    */
+   vec4 P = worldPos;
+   vec3 N = normalize(worldNormal);
+   //vec3 ambient = ambientLightColor * ambientReflectance * reflectionColor;
+
+   vec3 ambient = ambientLightColor;
 
    FragColor = vec4(1.0f);
 }

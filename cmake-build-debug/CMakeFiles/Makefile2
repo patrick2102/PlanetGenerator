@@ -350,9 +350,9 @@ common\third-party\assimp\CMakeFiles\assimp.dir\clean:
 
 # All Build rule for target.
 student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\all: common\third-party\glfw\src\CMakeFiles\glfw.dir\all
-student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\all: common\third-party\imgui\CMakeFiles\imgui.dir\all
 student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\all: common\third-party\glad\CMakeFiles\glad.dir\all
 student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\all: common\third-party\assimp\CMakeFiles\assimp.dir\all
+student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\all: common\third-party\imgui\CMakeFiles\imgui.dir\all
 	$(MAKE) $(MAKESILENT) -f student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\build.make /nologo -$(MAKEFLAGS) student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\depend
 	$(MAKE) $(MAKESILENT) -f student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\build.make /nologo -$(MAKEFLAGS) student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=1 "Built target PlanetGenerator"

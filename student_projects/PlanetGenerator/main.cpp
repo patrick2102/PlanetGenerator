@@ -41,8 +41,7 @@ const unsigned int SHADOW_WIDTH = 2048, SHADOW_HEIGHT = 2048;
 // global variables used for rendering
 // -----------------------------------
 Shader* shader;
-//Shader* phong_shading;
-Shader* sun_shading;
+Shader* phong_shading;
 Camera camera(glm::vec3(0.0f, 1.6f, 5.0f));
 
 Shader* skyboxShader;
@@ -147,9 +146,8 @@ int main()
 
     // load the shaders and the 3D models
     // ----------------------------------
-    //phong_shading = new Shader("shaders/phong_shading.vert", "shaders/phong_shading.frag");
-    sun_shading = new Shader("shaders/sun_shading.vert", "shaders/sun_shading.frag");
-    shader = sun_shading;
+    phong_shading = new Shader("shaders/phong_shading.vert", "shaders/phong_shading.frag");
+    shader = phong_shading;
 
     // init skybox
     vector<std::string> faces
@@ -193,7 +191,7 @@ int main()
     int numOfPlanets = 1;
 
     Sun sun = initializeSun(cubeDivisions);
-    //initializePlanets(numOfPlanets, cubeDivisions);
+    initializePlanets(numOfPlanets, cubeDivisions);
 
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     // render loop
@@ -224,7 +222,8 @@ int main()
         //shader->use();
         //setLightUniforms();
         //drawSolarSystem(sun);
-        drawSun(sun);
+        //drawSun(sun);
+        drawSolarSystem(sun);
 
         if (isPaused) {
             drawGui();
@@ -241,8 +240,7 @@ int main()
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
 
-    delete sun_shading;
-    //delete phong_shading;
+    delete phong_shading;
 
     // glfw: terminate, clearing all previously allocated GLFW resources.
     // ------------------------------------------------------------------
@@ -288,10 +286,6 @@ void setLightUniforms()
 {
     // light uniforms
     shader->setVec3("ambientLightColor", config.ambientLightColor * config.ambientLightIntensity);
-    shader->setVec3("light1Position", config.light1Position);
-    shader->setVec3("light1Color", config.light1Color * config.light1Intensity);
-    shader->setVec3("light2Position", config.light2Position);
-    shader->setVec3("light2Color", config.light2Color * config.light2Intensity);
 }
 
 // init the VAO of the skybox
@@ -514,11 +508,8 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 Sun initializeSun(int divisions)
 {
     glm::vec3 pos = glm::vec3(0.0f);
-    glm::vec4 color = glm::vec4(0.75f);
+    glm::vec4 color = glm::vec4(0.9f);
     auto sphere = Sphere(1, divisions);
-    //auto light = Light(pos, color, 1, 1);
-
-    //auto sun = Sun(sphere, light);
 
     auto sun = Sun(sphere, pos, color, shader);
 
@@ -527,21 +518,22 @@ Sun initializeSun(int divisions)
 
 void initializePlanets(int n, int divisions)
 {
-    /*
     for(int i = 0; i < n; i++)
     {
-        auto planet = Planet(Sphere(glm::vec3((3.0f * (float) i) + 3.0f, 0.0f, 0.0f), 1.0f,
-                                    divisions, glm::vec4 (0.0f, 0.0f, 1.0f, 0.0f), shader));
+        glm::vec3 pos = glm::vec3(3.0f * float(i) + 3.0f, 0.0f, 0.0f);
+        auto sphere = Sphere(1, divisions);
+        auto planet = Planet(sphere, pos, shader);
+
+        //auto planet = Planet(Sphere(glm::vec3((3.0f * (float) i) + 3.0f, 0.0f, 0.0f), 1.0f,divisions, glm::vec4 (0.0f, 0.0f, 1.0f, 0.0f), shader));
+
         planets.insert(planets.end(), planet);
     }
-    */
 }
 
 void drawSolarSystem(Sun sun)
 {
-    shader->use();
     drawSun(sun);
-    //drawPlanets();
+    drawPlanets();
 }
 
 void drawSun(Sun sun)
