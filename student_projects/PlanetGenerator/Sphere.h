@@ -18,16 +18,18 @@ public:
     glm::vec4 color = glm::vec4 (1.0f, 0.0f, 0.0f, 0.0f);
 
     float radius;
-    std::vector<Mesh> meshes;
+    std::vector<Vertex> vboVec;
     Shader* shader;
 
-    Sphere(glm::vec3 position, float radius, int divisions, Shader* shader)
+    Sphere(glm::vec3 position, float radius, int divisions, glm::vec4 baseColor, Shader* shader)
     {
         this-> position = position;
         this-> radius = radius;
         this-> shader = shader;
+        this-> color = baseColor;
 
         CreateSphere(divisions);
+        SetupBuffers();
     }
 
     glm::vec3 GetPointOnSphere(float angleY, float angleZ)
@@ -36,19 +38,17 @@ public:
         float y = radius * glm::sin(angleY) * glm::sin(angleZ);
         float z = radius * glm::cos(angleY);
 
-        return glm::vec3(x, y, z);
+        return glm::vec3(x, y, z) + position;
     }
 
     void CreateSphere(int divisions)
     {
         float increment = pi * (1.0f/(float)divisions);
 
-        //float angleZ = pi/2;
-        float angleZ = pi;
+        float angleZ = pi/2;
 
-        for(int j = 0; j < (divisions*2); j++)
+        for(int j = 0; j < divisions*2; j++)
         {
-
             for(int i = 0; i < divisions; i++)
             {
                 float angleY = 2 * pi * ((float)i)/(float)divisions;
@@ -61,38 +61,52 @@ public:
                 glm::vec3 p5 = GetPointOnSphere(angleY-increment, angleZ+increment);
                 glm::vec3 p6 = GetPointOnSphere(angleY, angleZ+increment);
 
-                Mesh topLeft = Mesh(std::vector<Vertex>({{p1, color}, {p2, color}, {p3, color}}),
-                                    glm::cross(p1, p2), shader);
-
-                Mesh bottomRight = Mesh(std::vector<Vertex>({{p4, color}, {p5, color}, {p6, color}}),
-                                    glm::cross(p4, p5), shader);
-
-                meshes.insert(meshes.end(), {topLeft, bottomRight});
-
-                /*
-                glm::vec3 p1 = GetPointOnSphere(angleY, angleZ);
-                glm::vec3 p2 = GetPointOnSphere(angleY-increment, angleZ);
-                glm::vec3 p3 = GetPointOnSphere(angleY-increment, angleZ+increment);
-
-                Mesh temp = Mesh(std::vector<Vertex>({{p1, color}, {p2, color}, {p3, color}}),
-                                 glm::cross(p1, p2), shader);
-
-                meshes.insert(meshes.end(), {temp});
-                */
-
+                vboVec.insert(vboVec.end(), {{p1, color}, {p2, color}, {p3, color}, {p4, color}, {p5, color}, {p6, color}});
             }
-            angleZ -= (increment);
+            angleZ -= increment;
         }
+    }
+
+    void SetupBuffers()
+    {
+        glGenBuffers(1, &VBO);
+        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+        glBufferData(GL_ARRAY_BUFFER, vboVec.size() * sizeof(Vertex), &vboVec[0], GL_STATIC_DRAW);
+
+        glGenVertexArrays(1, &VAO);
+        glBindVertexArray(VAO);
+
+        int offset = 0;
+        //int posAttributeLocation = glGetAttribLocation(shader->ID, "pos");
+        int posAttributeLocation = 0;
+
+        glEnableVertexAttribArray(posAttributeLocation);
+        glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) offset);
+
+        GLenum code = glGetError();
+        if (code != GL_NO_ERROR)
+            std::cerr << "glVertexAttribPointer() with a stride of " << sizeof(Vertex) << " failed with code " << code
+                      << std::endl;
+
+        offset += sizeof(glm::vec3);
+        posAttributeLocation = glGetAttribLocation(shader->ID, "color");
+
+        glEnableVertexAttribArray(posAttributeLocation);
+        glVertexAttribPointer(posAttributeLocation, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) offset);
+
+        glBindVertexArray(0);
     }
 
     void Draw()
     {
-
         shader->use();
-        for(auto mesh : meshes)
-        {
-            mesh.Draw();
-        }
+        glBindVertexArray(VAO);
+        glDrawArrays(GL_TRIANGLES, 0, vboVec.size());
+        glBindVertexArray(0);
     }
 
+
+private:
+    unsigned int VAO;
+    unsigned int VBO;
 };

@@ -1,0 +1,8 @@
+//
+// Created by Patrick on 28/04/2022.
+//
+
+#ifndef ITU_GRAPHICS_PROGRAMMING_SUN_H
+#define ITU_GRAPHICS_PROGRAMMING_SUN_H
+
+#endif //ITU_GRAPHICS_PROGRAMMING_SUN_H

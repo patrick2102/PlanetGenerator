@@ -64,10 +64,37 @@ unsigned int loadCubeMap(vector<std::string> faces);
 
 // Functions for solar system
 Sphere initializeSun(int);
-std::vector<Sphere> initializePlanets(int);
+std::vector<Sphere> initializePlanets(int, int);
 void drawSun(Sphere sun);
 void drawPlanets(std::vector<Sphere>);
 
+struct Light
+{
+    Light(glm::vec3 position, glm::vec3 color, float intensity, float radius)
+            : position(position), color(color), intensity(intensity), radius(radius)
+    {
+    }
+
+    glm::vec3 position;
+    glm::vec3 color;
+    float intensity;
+    float radius;
+};
+
+struct Config
+{
+    // material
+    glm::vec3 reflectionColor = {0.9f, 0.9f, 0.2f};
+    //float ambientReflectance = 0.75f;
+    //float diffuseReflectance = 0.75f;
+    //float specularReflectance = 0.5f;
+    //float specularExponent = 10.0f;
+    //float roughness = 0.5f;
+    //float metalness = 0.0f;
+
+    std::vector<Light> lights;
+
+} config;
 
 
 int main()
@@ -148,14 +175,15 @@ int main()
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 330 core");
 
+
     //Details of cube
-    int cubeDivisions = 32;
+    int cubeDivisions = 64;
 
     //Initialize planets:
     int numOfPlanets = 1;
 
     auto sun = initializeSun(cubeDivisions);
-    //auto planets = initializePlanets(numOfPlanets);
+    auto planets = initializePlanets(numOfPlanets, cubeDivisions);
 
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     // render loop
@@ -181,7 +209,7 @@ int main()
         drawSkybox();
 
         drawSun(sun);
-        //drawPlanets();
+        drawPlanets(planets);
 
         // render the cones
         //glUseProgram(activeShader->ID);
@@ -463,19 +491,19 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     glViewport(0, 0, width, height);
 }
 
-Sphere initializeSun(int n)
+Sphere initializeSun(int divisions)
 {
-    auto sun = Sphere(glm::vec3(0.0f), 1.0f, n, shader);
+    auto sun = Sphere(glm::vec3(0.0f), 1.0f, divisions, glm::vec4(0.7f, 0.7f, 0.7f, 1.0f), shader);
     return sun;
 }
 
-std::vector<Sphere> initializePlanets(int n)
+std::vector<Sphere> initializePlanets(int n, int divisions)
 {
     std::vector<Sphere> planets;
 
     for(int i = 0; i < n; i++)
     {
-        auto planet =  Sphere(glm::vec3(2.0f, 0.0f, 0.0f), 1.0f, n, shader);
+        auto planet =  Sphere(glm::vec3((3.0f * (float)i)+3.0f, 0.0f, 0.0f), 1.0f, divisions, glm::vec4(0.0f, 0.0f, 1.0f, 1.0f), shader);
         planets.insert(planets.end(), planet);
     }
 
@@ -489,6 +517,9 @@ void drawSun(Sphere sun)
 
 void drawPlanets(std::vector<Sphere> planets)
 {
-
+    for(auto p : planets)
+    {
+        p.Draw();
+    }
 
 }
