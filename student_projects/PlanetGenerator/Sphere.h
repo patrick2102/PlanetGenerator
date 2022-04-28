@@ -2,12 +2,11 @@
 // Created by Patrick on 27/04/2022.
 //
 #include "shader.h"
-#include "Mesh.h"
+#include "Misc.h"
 
 #ifndef ITU_GRAPHICS_PROGRAMMING_SPHERE_H
 #define ITU_GRAPHICS_PROGRAMMING_SPHERE_H
 
-#endif //ITU_GRAPHICS_PROGRAMMING_SPHERE_H
 
 class Sphere
 {
@@ -61,6 +60,9 @@ public:
                 glm::vec3 p5 = GetPointOnSphere(angleY-increment, angleZ+increment);
                 glm::vec3 p6 = GetPointOnSphere(angleY, angleZ+increment);
 
+                glm::vec3 normal1 = glm::cross(p1-p2, p1-p3);
+                glm::vec3 normal2 = glm::cross(p4-p5, p4-p6);
+
                 vboVec.insert(vboVec.end(), {{p1, color}, {p2, color}, {p3, color}, {p4, color}, {p5, color}, {p6, color}});
             }
             angleZ -= increment;
@@ -77,8 +79,7 @@ public:
         glBindVertexArray(VAO);
 
         int offset = 0;
-        //int posAttributeLocation = glGetAttribLocation(shader->ID, "pos");
-        int posAttributeLocation = 0;
+        int posAttributeLocation = glGetAttribLocation(shader->ID, "vertex");
 
         glEnableVertexAttribArray(posAttributeLocation);
         glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) offset);
@@ -110,3 +111,4 @@ private:
     unsigned int VAO;
     unsigned int VBO;
 };
+#endif //ITU_GRAPHICS_PROGRAMMING_SPHERE_H

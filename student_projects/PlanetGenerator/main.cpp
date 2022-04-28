@@ -19,7 +19,8 @@
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
-#include "Sphere.h"
+#include "Sun.h"
+#include "Planet.h"
 
 using namespace std;
 
@@ -35,17 +36,20 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 // ---------------
 const unsigned int SCR_WIDTH = 1600;
 const unsigned int SCR_HEIGHT = 900;
+const unsigned int SHADOW_WIDTH = 2048, SHADOW_HEIGHT = 2048;
 
 // global variables used for rendering
 // -----------------------------------
 Shader* shader;
-Shader* simple_shader;
-Shader* cube_sphere_shader;
+Shader* phong_shading;
 Camera camera(glm::vec3(0.0f, 1.6f, 5.0f));
 
 Shader* skyboxShader;
 unsigned int skyboxVAO; // skybox handle
 unsigned int cubemapTexture; // skybox texture handle
+
+unsigned int shadowMap, shadowMapFBO;
+glm::mat4 lightSpaceMatrix;
 
 // global variables used for control
 // ---------------------------------
@@ -54,47 +58,52 @@ float lastY = (float)SCR_HEIGHT / 2.0;
 float deltaTime;
 bool isPaused = false; // stop camera movement when GUI is open
 
+struct Config {
+
+    // ambient light
+    glm::vec3 ambientLightColor = {1.0f, 1.0f, 1.0f};
+    float ambientLightIntensity = 0.2f;
+
+    // light 1
+    glm::vec3 light1Position = {-0.8f, 2.4f, 0.0f};
+    glm::vec3 light1Color = {1.0f, 1.0f, 1.0f};
+    float light1Intensity = 1.0f;
+
+    // light 2
+    glm::vec3 light2Position = {1.8f, .7f, 2.2f};
+    glm::vec3 light2Color = {0.5f, 0.0f, 1.0f};
+    float light2Intensity = 1.0f;
+
+    // material
+    glm::vec3 reflectionColor = {1.0f, 1.0f, 0.0f};
+    float ambientReflectance = 0.5f;
+    float diffuseReflectance = 0.5f;
+    float specularReflectance = 0.7f;
+    float specularExponent = 20.0f;
+
+} config;
+
 // function declarations
 // ---------------------
-void drawSkybox();
+void setLightUniforms();
 void drawObjects();
 void drawGui();
+void drawSkybox();
 unsigned int initSkyboxBuffers();
 unsigned int loadCubeMap(vector<std::string> faces);
 
+// Variables for solar system
+std::vector<Planet> planets;
+
 // Functions for solar system
-Sphere initializeSun(int);
-std::vector<Sphere> initializePlanets(int, int);
-void drawSun(Sphere sun);
-void drawPlanets(std::vector<Sphere>);
+Sun initializeSun(int);
+void initializePlanets(int, int);
 
-struct Light
-{
-    Light(glm::vec3 position, glm::vec3 color, float intensity, float radius)
-            : position(position), color(color), intensity(intensity), radius(radius)
-    {
-    }
+void drawSolarSystem(Sun);
+void drawSun(Sun);
+void drawPlanets();
 
-    glm::vec3 position;
-    glm::vec3 color;
-    float intensity;
-    float radius;
-};
 
-struct Config
-{
-    // material
-    glm::vec3 reflectionColor = {0.9f, 0.9f, 0.2f};
-    //float ambientReflectance = 0.75f;
-    //float diffuseReflectance = 0.75f;
-    //float specularReflectance = 0.5f;
-    //float specularExponent = 10.0f;
-    //float roughness = 0.5f;
-    //float metalness = 0.0f;
-
-    std::vector<Light> lights;
-
-} config;
 
 
 int main()
@@ -137,9 +146,8 @@ int main()
 
     // load the shaders and the 3D models
     // ----------------------------------
-    simple_shader = new Shader("shaders/simple.vert", "shaders/simple.frag");
-    cube_sphere_shader = new Shader("shaders/cube_sphere.vert", "shaders/cube_sphere.frag");
-    shader = simple_shader;
+    phong_shading = new Shader("shaders/phong_shading.vert", "shaders/phong_shading.frag");
+    shader = phong_shading;
 
     // init skybox
     vector<std::string> faces
@@ -177,13 +185,13 @@ int main()
 
 
     //Details of cube
-    int cubeDivisions = 64;
+    int cubeDivisions = 32;
 
     //Initialize planets:
     int numOfPlanets = 1;
 
-    auto sun = initializeSun(cubeDivisions);
-    auto planets = initializePlanets(numOfPlanets, cubeDivisions);
+    Sun sun = initializeSun(cubeDivisions);
+    initializePlanets(numOfPlanets, cubeDivisions);
 
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     // render loop
@@ -198,21 +206,20 @@ int main()
         glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
         glm::mat4 view = camera.GetViewMatrix();
         glm::mat4 viewProjection = projection * view;
-
         shader->setMat4("viewProjection", viewProjection);
 
         processInput(window);
 
-        glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+        glClearColor(0.3f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         drawSkybox();
 
+        //shader->use();
+        //setLightUniforms();
+        //drawSolarSystem(sun);
+        phong_shading->use();
         drawSun(sun);
-        drawPlanets(planets);
-
-        // render the cones
-        //glUseProgram(activeShader->ID);
 
         if (isPaused) {
             drawGui();
@@ -229,8 +236,7 @@ int main()
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
 
-    delete simple_shader;
-    delete cube_sphere_shader;
+    delete phong_shading;
 
     // glfw: terminate, clearing all previously allocated GLFW resources.
     // ------------------------------------------------------------------
@@ -260,8 +266,7 @@ void drawGui(){
 
         ImGui::Text("Shading model: ");
         {
-            if (ImGui::RadioButton("Simple shader", shader == simple_shader)) { shader = simple_shader; }
-            if (ImGui::RadioButton("Cube sphere shader", shader == cube_sphere_shader)) { shader = cube_sphere_shader; }
+            if (ImGui::RadioButton("phong shading", shader == phong_shading)) { shader = phong_shading; }
         }
 
         ImGui::End();
@@ -271,6 +276,16 @@ void drawGui(){
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
     glEnable(GL_FRAMEBUFFER_SRGB);
+}
+
+void setLightUniforms()
+{
+    // light uniforms
+    shader->setVec3("ambientLightColor", config.ambientLightColor * config.ambientLightIntensity);
+    shader->setVec3("light1Position", config.light1Position);
+    shader->setVec3("light1Color", config.light1Color * config.light1Intensity);
+    shader->setVec3("light2Position", config.light2Position);
+    shader->setVec3("light2Color", config.light2Color * config.light2Intensity);
 }
 
 // init the VAO of the skybox
@@ -466,7 +481,6 @@ void cursor_input_callback(GLFWwindow* window, double posX, double posY){
     camera.ProcessMouseMovement(xoffset, yoffset);
 }
 
-
 void key_input_callback(GLFWwindow* window, int button, int other, int action, int mods){
     // controls pause mode
     if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS){
@@ -482,7 +496,6 @@ void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
     camera.ProcessMouseScroll((float)yoffset);
 }
 
-
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
@@ -491,31 +504,43 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     glViewport(0, 0, width, height);
 }
 
-Sphere initializeSun(int divisions)
+
+Sun initializeSun(int divisions)
 {
-    auto sun = Sphere(glm::vec3(0.0f), 1.0f, divisions, glm::vec4(0.7f, 0.7f, 0.7f, 1.0f), shader);
+    glm::vec3 pos = glm::vec3(0.0f);
+    glm::vec4 color = glm::vec4(0.75f);
+    auto sphere = Sphere(pos, 1, divisions, color, shader);
+    //auto light = Light(pos, color, 1, 1);
+
+    //auto sun = Sun(sphere, light);
+
+    auto sun = Sun(sphere);
+
     return sun;
 }
 
-std::vector<Sphere> initializePlanets(int n, int divisions)
+void initializePlanets(int n, int divisions)
 {
-    std::vector<Sphere> planets;
-
     for(int i = 0; i < n; i++)
     {
-        auto planet =  Sphere(glm::vec3((3.0f * (float)i)+3.0f, 0.0f, 0.0f), 1.0f, divisions, glm::vec4(0.0f, 0.0f, 1.0f, 1.0f), shader);
+        auto planet = Planet(Sphere(glm::vec3((3.0f * (float) i) + 3.0f, 0.0f, 0.0f), 1.0f,
+                                    divisions, glm::vec4 (0.0f, 0.0f, 1.0f, 0.0f), shader));
         planets.insert(planets.end(), planet);
     }
-
-    return planets;
 }
 
-void drawSun(Sphere sun)
+void drawSolarSystem(Sun sun)
+{
+    drawSun(sun);
+    drawPlanets();
+}
+
+void drawSun(Sun sun)
 {
     sun.Draw();
 }
 
-void drawPlanets(std::vector<Sphere> planets)
+void drawPlanets()
 {
     for(auto p : planets)
     {

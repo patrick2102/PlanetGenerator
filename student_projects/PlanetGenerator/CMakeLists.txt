@@ -1,7 +1,7 @@
 ## set target project
 file(GLOB target_src "*.h" "*.cpp") # look for source files
 file(GLOB target_shaders "shaders/*.vert" "shaders/*.frag") # look for shaders
-add_executable(${subdir} ${target_src} ${target_shaders} CubeSphere.h Sphere.h Mesh.h Sun.h Planet.h)
+add_executable(${subdir} ${target_src} ${target_shaders} CubeSphere.h Sphere.h Sun.h Planet.h Misc.h)
 
 # list of libraries
 set(libraries glad glfw imgui assimp)
