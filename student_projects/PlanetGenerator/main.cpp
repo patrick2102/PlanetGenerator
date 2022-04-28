@@ -178,7 +178,7 @@ int main()
     int numOfPlanets = 1;
 
     Sun sun = initializeSun(cubeDivisions);
-    //initializePlanets(numOfPlanets, cubeDivisions);
+    initializePlanets(numOfPlanets, cubeDivisions);
 
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     // render loop
@@ -274,7 +274,8 @@ void drawGui(){
 void setLightUniforms(Sun sun)
 {
     // light uniforms
-    shader->setVec3("ambientLightColor", sun.getLight().lightColor * sun.getLight().lightIntensity);
+    //shader->setVec3("ambientLightColor", sun.getLight().lightColor * sun.getLight().lightIntensity);
+    shader->setVec3("ambientLightColor", glm::vec3(0.0f));
     shader->setVec3("sunPosition", sun.getLight().position);
     shader->setVec3("sunColor", sun.getLight().lightColor);
 }
@@ -518,8 +519,6 @@ void initializePlanets(int n, int divisions)
         auto sphere = Sphere(1, divisions);
         auto material = planetMaterial;
         auto planet = Planet(pos, shader, sphere, material);
-
-        //auto planet = Planet(Sphere(glm::vec3((3.0f * (float) i) + 3.0f, 0.0f, 0.0f), 1.0f,divisions, glm::vec4 (0.0f, 0.0f, 1.0f, 0.0f), shader));
 
         planets.insert(planets.end(), planet);
     }

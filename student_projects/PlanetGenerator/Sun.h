@@ -24,6 +24,8 @@ public:
     {
         shader->use();
 
+        shader->setVec3("ambientLightColor", light.lightColor * light.lightIntensity);
+
         shader->setVec3("reflectionColor", material.reflectionColor);
         shader->setFloat("ambientReflectance", material.ambientReflectance);
         shader->setFloat("diffuseReflectance", material.diffuseReflectance);
@@ -38,6 +40,8 @@ public:
         glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, vertices.size());
         glBindVertexArray(0);
+
+        shader->setVec3("ambientLightColor", glm::vec3(0.0f));
     }
 
     Light getLight()
@@ -66,8 +70,8 @@ private:
 
             auto v1 = p2-p1;
             auto v2 = p3-p1;
-            
-            auto normal = glm::cross(v1, v2);
+
+            auto normal = glm::normalize(glm::cross(v1, v2));
 
             vertices.insert(vertices.end(), {p1, normal});
             vertices.insert(vertices.end(), {p2, normal});

@@ -19,6 +19,16 @@ public:
     void Draw()
     {
         shader->use();
+        shader->setVec3("reflectionColor", material.reflectionColor);
+        shader->setFloat("ambientReflectance", material.ambientReflectance);
+        shader->setFloat("diffuseReflectance", material.diffuseReflectance);
+        shader->setFloat("specularReflectance", material.specularReflectance);
+        shader->setFloat("specularExponent", material.specularExponent);
+
+        auto model = glm::mat4 (1.0f);
+        //model = glm::translate(model, center);
+
+        shader->use();
         glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, vertices.size());
         glBindVertexArray(0);
@@ -42,7 +52,10 @@ private:
             auto p2 = sphere.vertices[i+1];
             auto p3 = sphere.vertices[i+2];
 
-            auto normal = glm::cross(p1, p2);
+            auto v1 = p2-p1;
+            auto v2 = p3-p1;
+
+            auto normal = glm::normalize(glm::cross(v1, v2));
 
             vertices.insert(vertices.end(), {p1+center, normal});
             vertices.insert(vertices.end(), {p2+center, normal});
