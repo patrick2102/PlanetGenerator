@@ -39,6 +39,4 @@ void main()
    float attenuation = 1.0f / (distToSun * distToSun);
 
    FragColor = vec4(ambient + (diffuse + specular) * attenuation, 1.0);
-
-   //FragColor = vec4(ambient, 1.0);
 }

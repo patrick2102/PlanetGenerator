@@ -968,6 +968,9 @@
 		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/CubeSphere.h">
 			<Option target="PlanetGenerator"/>
 		</Unit>
+		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/HeightMapGenerator.h">
+			<Option target="PlanetGenerator"/>
+		</Unit>
 		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/Misc.h">
 			<Option target="PlanetGenerator"/>
 		</Unit>

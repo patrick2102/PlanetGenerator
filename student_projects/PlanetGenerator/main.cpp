@@ -175,7 +175,7 @@ int main()
     int cubeDivisions = 32;
 
     //Initialize planets:
-    int numOfPlanets = 1;
+    int numOfPlanets = 3;
 
     Sun sun = initializeSun(cubeDivisions);
     initializePlanets(numOfPlanets, cubeDivisions);
@@ -501,7 +501,7 @@ Sun initializeSun(int divisions)
 {
     glm::vec3 pos = glm::vec3(0.0f);
     glm::vec3 color = glm::vec4(0.9f);
-    float intensity = 1.0f;
+    float intensity = 10.0f;
     auto sphere = Sphere(1, divisions);
     Light light = Light(pos, color, intensity);
     Material material = sunMaterial;
