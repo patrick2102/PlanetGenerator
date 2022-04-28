@@ -1,6 +1,7 @@
 #version 330 core
 
 uniform vec3 camPosition; // so we can compute the view vector
+
 out vec4 FragColor; // the output color of this fragment
 
 // light uniform variables
@@ -14,32 +15,16 @@ uniform vec3 reflectionColor;
 uniform float roughness;
 uniform float metalness;
 
-// legacy uniforms, not needed for PBR
-uniform float ambientReflectance;
-uniform float diffuseReflectance;
-uniform float specularReflectance;
-uniform float specularExponent;
-
-// material textures
-uniform sampler2D texture_diffuse1;
-uniform sampler2D texture_normal1;
-uniform sampler2D texture_ambient1;
-uniform sampler2D texture_specular1;
-uniform samplerCube skybox;
-uniform sampler2D shadowMap;
-
 // 'in' variables to receive the interpolated Position and Normal from the vertex shader
 in vec4 worldPos;
 in vec3 worldNormal;
-in vec3 worldTangent;
-in vec2 textureCoordinates;
 
 in vec4 lightPos;
 
 // Constant Pi
 const float PI = 3.14159265359;
 
-
+/*
 // Schlick approximation of the Fresnel term
 vec3 FresnelSchlick(vec3 F0, float cosTheta)
 {
@@ -98,27 +83,6 @@ vec3 GetCookTorranceSpecularLighting(vec3 N, vec3 L, vec3 V)
    return vec3(specular);
 }
 
-vec3 GetNormalMap()
-{
-   //NEW! Normal map
-
-   // Sample normal map
-   vec3 normalMap = texture(texture_normal1, textureCoordinates).rgb;
-   // Unpack from range [0, 1] to [-1 , 1]
-   normalMap = normalMap * 2.0 - 1.0;
-
-   // This time we are storing Z component in the texture, no need to compute it. Instead we normalize just in case
-   normalMap = normalize(normalMap);
-
-   // Create tangent space matrix
-   vec3 N = normalize(worldNormal);
-   vec3 B = normalize(cross(worldTangent, N)); // Orthogonal to both N and T
-   vec3 T = cross(N, B); // Orthogonal to both N and B. Since N and B are normalized and orthogonal, T is already normalized
-   mat3 TBN = mat3(T, B, N);
-
-   // Transform normal map from tangent space to world space
-   return TBN * normalMap;
-}
 
 vec3 GetAmbientLighting(vec3 albedo, vec3 normal)
 {
@@ -129,7 +93,7 @@ vec3 GetAmbientLighting(vec3 albedo, vec3 normal)
    ambient *= albedo / PI;
 
    // Only apply ambient during the first light pass
-   ambient *= ambientLightColor.a; 
+   ambient *= ambientLightColor.a;
 
    // NEW! Ambient occlusion (try disabling it to see how it affects the visual result)
    float ambientOcclusion = texture(texture_ambient1, textureCoordinates).r;
@@ -151,7 +115,7 @@ vec3 GetEnvironmentLighting(vec3 N, vec3 V)
 
    // We packed the amount of reflection in ambientLightColor.a
    // Only apply reflection (and ambient) during the first light pass
-   reflection *= ambientLightColor.a; 
+   reflection *= ambientLightColor.a;
 
    return reflection;
 }
@@ -193,6 +157,30 @@ float GetShadow()
 
    return depth + 0.01f <= clamp(shadowMapSpacePos.z, -1, 1) ? 0.0 : 1.0;
 }
+
+vec3 GetNormalMap()
+{
+   //NEW! Normal map
+
+   // Sample normal map
+   vec3 normalMap = texture(texture_normal1, textureCoordinates).rgb;
+   // Unpack from range [0, 1] to [-1 , 1]
+   normalMap = normalMap * 2.0 - 1.0;
+
+   // This time we are storing Z component in the texture, no need to compute it. Instead we normalize just in case
+   normalMap = normalize(normalMap);
+
+   // Create tangent space matrix
+   vec3 N = normalize(worldNormal);
+   vec3 B = normalize(cross(worldTangent, N)); // Orthogonal to both N and T
+   vec3 T = cross(N, B); // Orthogonal to both N and B. Since N and B are normalized and orthogonal, T is already normalized
+   mat3 TBN = mat3(T, B, N);
+
+   // Transform normal map from tangent space to world space
+   return TBN * normalMap;
+}
+
+*/
 
 
 void main()

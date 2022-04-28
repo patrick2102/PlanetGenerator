@@ -7,6 +7,37 @@
 #ifndef ITU_GRAPHICS_PROGRAMMING_MISC_H
 #define ITU_GRAPHICS_PROGRAMMING_MISC_H
 
+struct Material
+{
+    Material(glm::vec3 reflectionColor, float ambientReflectance, float diffuseReflectance,
+             float specularReflectance, float specularExponent) {
+        this->reflectionColor = reflectionColor;
+        this->ambientReflectance = ambientReflectance;
+        this->diffuseReflectance = diffuseReflectance;
+        this->specularReflectance = specularReflectance;
+        this->specularExponent = specularExponent;
+    }
+
+    glm::vec3 reflectionColor;
+    float ambientReflectance;
+    float diffuseReflectance;
+    float specularReflectance;
+    float specularExponent;
+};
+
+struct Light
+{
+    Light(glm::vec3 p, glm::vec3 lc, float li) {
+        position = p;
+        lightColor = lc;
+        lightIntensity = li;
+    }
+
+    glm::vec3 position;
+    glm::vec3 lightColor;
+    float lightIntensity;
+};
+
 struct Vertex
 {
     // Position
@@ -15,6 +46,9 @@ struct Vertex
     // Normal
     glm::vec3 Normal;
 };
+
+Material sunMaterial = Material(glm::vec3(1.0f), 1.0f, 1.0f, 1.0f, 1.0f);
+Material planetMaterial = Material(glm::vec3(0.50f, 0.25f, 0.10f), 0.1f, 0.1f, 0.1f, 0.1f);
 
 
 #endif //ITU_GRAPHICS_PROGRAMMING_MISC_H

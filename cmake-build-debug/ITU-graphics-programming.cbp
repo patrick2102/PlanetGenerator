@@ -989,6 +989,12 @@
 		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shader.h">
 			<Option target="PlanetGenerator"/>
 		</Unit>
+		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/pbr_shading.frag">
+			<Option target="PlanetGenerator"/>
+		</Unit>
+		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/pbr_shading.vert">
+			<Option target="PlanetGenerator"/>
+		</Unit>
 		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/phong_shading.frag">
 			<Option target="PlanetGenerator"/>
 		</Unit>

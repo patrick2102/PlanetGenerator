@@ -12,10 +12,9 @@ class Sun
 {
 public:
 
-    Sun(Sphere sphere, glm::vec3 position, glm::vec3 color, Shader* shader) : sphere(sphere)
-    {
+    Sun(glm::vec3 position, Shader *shader, Sphere sphere, Light light, Material material)
+            : sphere(sphere), light(light), material(material) {
         this->center = position;
-        this->baseColor = color;
         this->shader = shader;
         SetUpVertices();
         SetUpBuffers();
@@ -24,20 +23,38 @@ public:
     void Draw()
     {
         shader->use();
+
+        shader->setVec3("reflectionColor", material.reflectionColor);
+        shader->setFloat("ambientReflectance", material.ambientReflectance);
+        shader->setFloat("diffuseReflectance", material.diffuseReflectance);
+        shader->setFloat("specularReflectance", material.specularReflectance);
+        shader->setFloat("specularExponent", material.specularExponent);
+
+        auto model = glm::mat4 (1.0f);
+        model = glm::translate(model, center);
+        shader->setMat4("model", model);
+
+
         glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, vertices.size());
         glBindVertexArray(0);
+    }
+
+    Light getLight()
+    {
+        return light;
     }
 
 private:
     unsigned int VAO;
     unsigned int VBO;
 
+    Light light;
     Sphere sphere;
     glm::vec3 center;
-    glm::vec3 baseColor;
     Shader* shader;
     std::vector<Vertex> vertices;
+    Material material;
 
     void SetUpVertices()
     {
@@ -47,11 +64,14 @@ private:
             auto p2 = sphere.vertices[i+1];
             auto p3 = sphere.vertices[i+2];
 
-            auto normal = glm::cross(p1, p2);
+            auto v1 = p2-p1;
+            auto v2 = p3-p1;
+            
+            auto normal = glm::cross(v1, v2);
 
-            vertices.insert(vertices.end(), {p1+center, normal});
-            vertices.insert(vertices.end(), {p2+center, normal});
-            vertices.insert(vertices.end(), {p3+center, normal});
+            vertices.insert(vertices.end(), {p1, normal});
+            vertices.insert(vertices.end(), {p2, normal});
+            vertices.insert(vertices.end(), {p3, normal});
         }
 
         //Clear sphere vertices to not use up wasteful memory.

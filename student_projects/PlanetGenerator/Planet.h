@@ -9,8 +9,8 @@
 class Planet
 {
 public:
-    Planet(Sphere sphere, glm::vec3 position, Shader* shader) : sphere(sphere)
-    {
+    Planet(glm::vec3 position, Shader *shader, Sphere sphere, Material material)
+            : sphere(sphere), material(material) {
         this->center = position;
         this->shader = shader;
         SetUpVertices();
@@ -28,9 +28,10 @@ private:
     unsigned int VAO;
     unsigned int VBO;
 
-    Sphere sphere;
     glm::vec3 center;
     Shader* shader;
+    Sphere sphere;
+    Material material;
     std::vector<Vertex> vertices;
 
     void SetUpVertices()

@@ -64,16 +64,6 @@ struct Config {
     glm::vec3 ambientLightColor = {1.0f, 1.0f, 1.0f};
     float ambientLightIntensity = 0.2f;
 
-    // light 1
-    glm::vec3 light1Position = {-0.8f, 2.4f, 0.0f};
-    glm::vec3 light1Color = {1.0f, 1.0f, 1.0f};
-    float light1Intensity = 1.0f;
-
-    // light 2
-    glm::vec3 light2Position = {1.8f, .7f, 2.2f};
-    glm::vec3 light2Color = {0.5f, 0.0f, 1.0f};
-    float light2Intensity = 1.0f;
-
     // material
     glm::vec3 reflectionColor = {1.0f, 1.0f, 0.0f};
     float ambientReflectance = 0.5f;
@@ -85,7 +75,7 @@ struct Config {
 
 // function declarations
 // ---------------------
-void setLightUniforms();
+void setLightUniforms(Sun);
 void drawObjects();
 void drawGui();
 void drawSkybox();
@@ -102,9 +92,6 @@ void initializePlanets(int, int);
 void drawSolarSystem(Sun);
 void drawSun(Sun);
 void drawPlanets();
-
-
-
 
 int main()
 {
@@ -191,7 +178,7 @@ int main()
     int numOfPlanets = 1;
 
     Sun sun = initializeSun(cubeDivisions);
-    initializePlanets(numOfPlanets, cubeDivisions);
+    //initializePlanets(numOfPlanets, cubeDivisions);
 
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     // render loop
@@ -210,6 +197,8 @@ int main()
 
         // set viewProjection matrix uniform
         shader->setMat4("viewProjection", viewProjection);
+        shader->setVec3("camPosition", camera.Position);
+
         //sun_shading->setMat4("viewProjection", viewProjection);
 
         processInput(window);
@@ -219,8 +208,8 @@ int main()
 
         drawSkybox();
 
-        //shader->use();
-        //setLightUniforms();
+        shader->use();
+        setLightUniforms(sun);
         //drawSolarSystem(sun);
         //drawSun(sun);
         drawSolarSystem(sun);
@@ -282,10 +271,12 @@ void drawGui(){
     glEnable(GL_FRAMEBUFFER_SRGB);
 }
 
-void setLightUniforms()
+void setLightUniforms(Sun sun)
 {
     // light uniforms
-    shader->setVec3("ambientLightColor", config.ambientLightColor * config.ambientLightIntensity);
+    shader->setVec3("ambientLightColor", sun.getLight().lightColor * sun.getLight().lightIntensity);
+    shader->setVec3("sunPosition", sun.getLight().position);
+    shader->setVec3("sunColor", sun.getLight().lightColor);
 }
 
 // init the VAO of the skybox
@@ -508,10 +499,13 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 Sun initializeSun(int divisions)
 {
     glm::vec3 pos = glm::vec3(0.0f);
-    glm::vec4 color = glm::vec4(0.9f);
+    glm::vec3 color = glm::vec4(0.9f);
+    float intensity = 1.0f;
     auto sphere = Sphere(1, divisions);
+    Light light = Light(pos, color, intensity);
+    Material material = sunMaterial;
 
-    auto sun = Sun(sphere, pos, color, shader);
+    auto sun = Sun(pos, shader, sphere, light, material);
 
     return sun;
 }
@@ -522,7 +516,8 @@ void initializePlanets(int n, int divisions)
     {
         glm::vec3 pos = glm::vec3(3.0f * float(i) + 3.0f, 0.0f, 0.0f);
         auto sphere = Sphere(1, divisions);
-        auto planet = Planet(sphere, pos, shader);
+        auto material = planetMaterial;
+        auto planet = Planet(pos, shader, sphere, material);
 
         //auto planet = Planet(Sphere(glm::vec3((3.0f * (float) i) + 3.0f, 0.0f, 0.0f), 1.0f,divisions, glm::vec4 (0.0f, 0.0f, 1.0f, 0.0f), shader));
 

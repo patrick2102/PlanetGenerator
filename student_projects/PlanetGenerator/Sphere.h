@@ -22,11 +22,21 @@ public:
         CreateSphere(divisions);
     }
 
-    glm::vec3 GetPointOnSphere(float angleY, float angleZ)
+    /*
+    glm::vec3 GetPointOnSphere(float a1, float a2)
     {
-        float x = radius * glm::sin(angleY) * glm::cos(angleZ);
-        float y = radius * glm::sin(angleY) * glm::sin(angleZ);
-        float z = radius * glm::cos(angleY);
+        float x = radius * glm::sin(a1) * glm::cos(a2);
+        float y = radius * glm::cos(a1);
+        float z = radius * glm::sin(a1) * glm::sin(a2);
+
+        return glm::vec3(x, y, z);
+    }*/
+
+    glm::vec3 GetPointOnSphere(float a1, float a2)
+    {
+        float x = radius * glm::cos(a1) * glm::cos(a2);
+        float y = radius * glm::sin(a1);
+        float z = radius * glm::cos(a1) * glm::sin(a2);
 
         return glm::vec3(x, y, z);
     }
@@ -35,29 +45,30 @@ public:
     {
         float increment = pi * (1.0f/(float)divisions);
 
-        float angleZ = pi/2;
+        float a1 = pi/2;
 
-        for(int j = 0; j < divisions*2; j++)
+        for(int j = 0; j < divisions; j++)
         {
-            for(int i = 0; i < divisions; i++)
+            for(int i = 0; i < divisions*2; i++)
             {
-                float angleY = 2 * pi * ((float)i)/(float)divisions;
+                float a2 = pi * ((float)i)/(float)divisions;
 
-                glm::vec3 p1 = GetPointOnSphere(angleY, angleZ);
-                glm::vec3 p2 = GetPointOnSphere(angleY-increment, angleZ);
-                glm::vec3 p3 = GetPointOnSphere(angleY-increment, angleZ+increment);
+                glm::vec3 p1 = GetPointOnSphere(a1, a2);
+                glm::vec3 p2 = GetPointOnSphere(a1-increment, a2);
+                glm::vec3 p3 = GetPointOnSphere(a1-increment, a2+increment);
 
-                glm::vec3 p4 = GetPointOnSphere(angleY, angleZ);
-                glm::vec3 p5 = GetPointOnSphere(angleY-increment, angleZ+increment);
-                glm::vec3 p6 = GetPointOnSphere(angleY, angleZ+increment);
+                vertices.insert(vertices.end(), {p2, p1, p3});
 
-                glm::vec3 normal1 = glm::cross(p1-p2, p1-p3);
-                glm::vec3 normal2 = glm::cross(p4-p5, p4-p6);
-
-                vertices.insert(vertices.end(), {p1, p2, p3, p4, p5, p6});
+                if(j != 0 && j != divisions-1)
+                {
+                    glm::vec3 p4 = GetPointOnSphere(a1, a2+increment);
+                    vertices.insert(vertices.end(), {p3, p1, p4});
+                }
             }
-            angleZ -= increment;
+            a1 -= increment;
         }
+
+        std::cout << "triangles: " << vertices.size()/3;
     }
 };
 #endif //ITU_GRAPHICS_PROGRAMMING_SPHERE_H
