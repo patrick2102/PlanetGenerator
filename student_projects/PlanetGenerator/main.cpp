@@ -58,6 +58,10 @@ float lastY = (float)SCR_HEIGHT / 2.0;
 float deltaTime;
 bool isPaused = false; // stop camera movement when GUI is open
 
+// solar system variables
+// --------------------------------
+Sun* sun;
+
 struct Config {
 
     // ambient light
@@ -75,7 +79,7 @@ struct Config {
 
 // function declarations
 // ---------------------
-void setLightUniforms(Sun);
+void setLightUniforms();
 void drawObjects();
 void drawGui();
 void drawSkybox();
@@ -86,11 +90,11 @@ unsigned int loadCubeMap(vector<std::string> faces);
 std::vector<Planet> planets;
 
 // Functions for solar system
-Sun initializeSun(int);
+void initializeSun(int);
 void initializePlanets(int, int);
 
-void drawSolarSystem(Sun);
-void drawSun(Sun);
+void drawSolarSystem();
+void drawSun();
 void drawPlanets();
 
 int main()
@@ -172,12 +176,12 @@ int main()
 
 
     //Details of cube
-    int cubeDivisions = 32;
+    int cubeDivisions = 256;
 
     //Initialize planets:
     int numOfPlanets = 3;
 
-    Sun sun = initializeSun(cubeDivisions);
+    initializeSun(cubeDivisions);
     initializePlanets(numOfPlanets, cubeDivisions);
 
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -209,10 +213,8 @@ int main()
         drawSkybox();
 
         shader->use();
-        setLightUniforms(sun);
-        //drawSolarSystem(sun);
-        //drawSun(sun);
-        drawSolarSystem(sun);
+        setLightUniforms();
+        drawSolarSystem();
 
         if (isPaused) {
             drawGui();
@@ -223,13 +225,16 @@ int main()
         glfwPollEvents();
     }
 
+    delete shader;
+    delete skyboxShader;
+    delete sun;
+
     // Cleanup
     // -------
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
 
-    delete phong_shading;
 
     // glfw: terminate, clearing all previously allocated GLFW resources.
     // ------------------------------------------------------------------
@@ -271,13 +276,13 @@ void drawGui(){
     glEnable(GL_FRAMEBUFFER_SRGB);
 }
 
-void setLightUniforms(Sun sun)
+void setLightUniforms()
 {
     // light uniforms
     //shader->setVec3("ambientLightColor", sun.getLight().lightColor * sun.getLight().lightIntensity);
     shader->setVec3("ambientLightColor", glm::vec3(0.0f));
-    shader->setVec3("sunPosition", sun.getLight().position);
-    shader->setVec3("sunColor", sun.getLight().lightColor);
+    shader->setVec3("sunPosition", sun->getLight().position);
+    shader->setVec3("sunColor", sun->getLight().lightColor);
 }
 
 // init the VAO of the skybox
@@ -497,18 +502,16 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 }
 
 
-Sun initializeSun(int divisions)
+void initializeSun(int divisions)
 {
     glm::vec3 pos = glm::vec3(0.0f);
     glm::vec3 color = glm::vec4(0.9f);
-    float intensity = 10.0f;
+    float intensity = 1.0f;
     auto sphere = Sphere(1, divisions);
     Light light = Light(pos, color, intensity);
     Material material = sunMaterial;
 
-    auto sun = Sun(pos, shader, sphere, light, material);
-
-    return sun;
+    sun = new Sun(pos, shader, sphere, light, material);
 }
 
 void initializePlanets(int n, int divisions)
@@ -524,15 +527,15 @@ void initializePlanets(int n, int divisions)
     }
 }
 
-void drawSolarSystem(Sun sun)
+void drawSolarSystem()
 {
-    drawSun(sun);
+    drawSun();
     drawPlanets();
 }
 
-void drawSun(Sun sun)
+void drawSun()
 {
-    sun.Draw();
+    sun->Draw();
 }
 
 void drawPlanets()

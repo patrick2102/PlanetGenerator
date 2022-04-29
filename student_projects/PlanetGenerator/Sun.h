@@ -22,7 +22,6 @@ public:
 
     void Draw()
     {
-        shader->use();
 
         shader->setVec3("ambientLightColor", light.lightColor * light.lightIntensity);
 

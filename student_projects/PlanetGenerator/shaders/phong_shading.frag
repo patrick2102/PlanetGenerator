@@ -36,7 +36,8 @@ void main()
    vec3 specular = sunColor * specularReflectance * specModulation;
 
    float distToSun = distance(sunPosition, P.xyz);
-   float attenuation = 1.0f / (distToSun * distToSun);
+   //float attenuation = 1.0f / (distToSun * distToSun);
+   float attenuation = 1.0f;
 
    FragColor = vec4(ambient + (diffuse + specular) * attenuation, 1.0);
 }

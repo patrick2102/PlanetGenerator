@@ -12,6 +12,7 @@
 class HeightMapGenerator
 {
 public:
+    /*
     HeightMapGenerator(int lacunarity, float persistance)
     {
         this->lacunarity = lacunarity;
@@ -73,6 +74,7 @@ public:
         value = interpolate(ix0, ix1, sy);
         return value;
     }
+    */
 
 private:
     int lacunarity;

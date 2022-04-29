@@ -48,7 +48,7 @@ struct Vertex
 };
 
 Material sunMaterial = Material(glm::vec3(1.0f), 1.0f, 0.0f, 0.0f, 1.0f);
-Material planetMaterial = Material(glm::vec3(0.50f, 0.25f, 0.10f), 0.1f, 0.1f, 0.0f, 0.1f);
+Material planetMaterial = Material(glm::vec3(0.50f, 0.25f, 0.10f), 0.25f, 0.25f, 0.0f, 0.1f);
 
 
 #endif //ITU_GRAPHICS_PROGRAMMING_MISC_H

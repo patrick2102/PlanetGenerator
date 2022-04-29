@@ -35,12 +35,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c39d72e8-cbd4-4906-87b5-2af953ed1ddc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/HeightMapGenerator.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ITU-graphics-programming.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ITU-graphics-programming.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/shaders/phong_shading.frag" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/shaders/phong_shading.frag" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/HeightMapGenerator.h" beforeDir="false" afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/HeightMapGenerator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/Misc.h" beforeDir="false" afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/Misc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/Planet.h" beforeDir="false" afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/Planet.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/Sun.h" beforeDir="false" afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/Sun.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/phong_shading.frag" beforeDir="false" afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/phong_shading.frag" afterDir="false" />
     </list>
@@ -85,12 +86,12 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.PlanetGenerator">
-    <configuration name="PlanetGenerator" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ITU-graphics-programming" TARGET_NAME="PlanetGenerator" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ITU-graphics-programming" RUN_TARGET_NAME="PlanetGenerator">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="PlanetGenerator" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ITU-graphics-programming" TARGET_NAME="PlanetGenerator" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ITU-graphics-programming" RUN_TARGET_NAME="PlanetGenerator">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -168,7 +169,8 @@
       <workItem from="1651005598228" duration="1894000" />
       <workItem from="1651007716921" duration="5748000" />
       <workItem from="1651048980269" duration="35363000" />
-      <workItem from="1651132238326" duration="44308000" />
+      <workItem from="1651132238326" duration="44911000" />
+      <workItem from="1651216325072" duration="6199000" />
     </task>
     <servers />
   </component>
@@ -192,54 +194,54 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2610" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651143903964" />
-    <state width="672" height="466" key="DebuggerActiveHint" timestamp="1651148250426">
+    <state width="672" height="466" key="DebuggerActiveHint" timestamp="1651225154363">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="672" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651148250426" />
+    <state width="672" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651225154363" />
     <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1651054682909">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651054682909" />
-    <state width="1877" height="218" key="GridCell.Tab.0.bottom" timestamp="1651175880460">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1651225236613">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="181" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648669933949" />
-    <state width="1877" height="218" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651175880460" />
-    <state width="1877" height="218" key="GridCell.Tab.0.center" timestamp="1651175880460">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651225236613" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1651225236613">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="181" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648669933949" />
-    <state width="1877" height="218" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651175880460" />
-    <state width="1877" height="218" key="GridCell.Tab.0.left" timestamp="1651175880460">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651225236613" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1651225236613">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="181" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648669933948" />
-    <state width="1877" height="218" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651175880460" />
-    <state width="1877" height="218" key="GridCell.Tab.0.right" timestamp="1651175880460">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651225236613" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1651225236613">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="181" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648669933949" />
-    <state width="1877" height="218" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651175880460" />
-    <state width="1877" height="239" key="GridCell.Tab.1.bottom" timestamp="1651168920331">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651225236613" />
+    <state width="1877" height="239" key="GridCell.Tab.1.bottom" timestamp="1651225233296">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="181" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648669933950" />
-    <state width="1877" height="239" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651168920331" />
-    <state width="1877" height="239" key="GridCell.Tab.1.center" timestamp="1651168920331">
+    <state width="1877" height="239" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651225233296" />
+    <state width="1877" height="239" key="GridCell.Tab.1.center" timestamp="1651225233296">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="181" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648669933949" />
-    <state width="1877" height="239" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651168920331" />
-    <state width="1877" height="239" key="GridCell.Tab.1.left" timestamp="1651168920331">
+    <state width="1877" height="239" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651225233296" />
+    <state width="1877" height="239" key="GridCell.Tab.1.left" timestamp="1651225233296">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="181" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648669933949" />
-    <state width="1877" height="239" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651168920331" />
-    <state width="1877" height="239" key="GridCell.Tab.1.right" timestamp="1651168920331">
+    <state width="1877" height="239" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651225233296" />
+    <state width="1877" height="239" key="GridCell.Tab.1.right" timestamp="1651225233296">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="181" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648669933950" />
-    <state width="1877" height="239" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651168920331" />
+    <state width="1877" height="239" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651225233296" />
     <state x="2381" y="165" key="SettingsEditor" timestamp="1644426247291">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -248,6 +250,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="568" y="209" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1645021317367" />
+    <state x="2777" y="277" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1651224428554">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2777" y="277" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651224428554" />
     <state x="2723" y="305" key="refactoring.ChangeSignatureDialog" timestamp="1651163506456">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -266,105 +272,30 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/exercises/exercise_1/exercise_1_1_and_1_2/main.cpp</url>
-          <line>42</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/exercises/exercise_1/exercise_1_3/main.cpp</url>
-          <line>139</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/exercises/exercise_1/exercise_1_6/main.cpp</url>
-          <line>213</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/exercises/exercise_1/exercise_1_8/main.cpp</url>
-          <line>223</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/exercises/exercise_1/exercise_1_8/main.cpp</url>
-          <line>216</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/exercises/exercise_1/exercise_1_9/main.cpp</url>
-          <line>211</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/exercises/exercise_1/exercise_1_9/main.cpp</url>
-          <line>139</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/exercises/exercise_1/exercise_1_9/main.cpp</url>
-          <line>169</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/exercises/exercise_1/exercise_1_5/main.cpp</url>
-          <line>184</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/exercises/exercise_9/main.cpp</url>
-          <line>719</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/exercises/exercise_9/main.cpp</url>
-          <line>708</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/exercises/exercise_9/main.cpp</url>
-          <line>365</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/exercises/exercise_10/main.cpp</url>
-          <line>111</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/exercises/exercise_11/exercise_11/renderer/rt_renderer.h</url>
-          <line>80</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/exercises/exercise_11/exercise_11/renderer/rt_renderer.h</url>
-          <line>38</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/student_projects/PlanetGenerator/CubeSphere.h</url>
           <line>63</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/student_projects/PlanetGenerator/CubeSphere.h</url>
           <line>70</line>
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/student_projects/PlanetGenerator/Sun.h</url>
-          <line>93</line>
-          <option name="timeStamp" value="75" />
+          <url>file://$PROJECT_DIR$/student_projects/PlanetGenerator/main.cpp</url>
+          <line>233</line>
+          <option name="timeStamp" value="86" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/student_projects/PlanetGenerator/main.cpp</url>
-          <line>214</line>
-          <option name="timeStamp" value="79" />
+          <line>229</line>
+          <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/student_projects/PlanetGenerator/Sun.h</url>
-          <line>18</line>
-          <option name="timeStamp" value="82" />
+          <url>file://$PROJECT_DIR$/student_projects/PlanetGenerator/Planet.h</url>
+          <line>27</line>
+          <option name="timeStamp" value="88" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
