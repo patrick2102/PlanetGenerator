@@ -501,6 +501,11 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     glViewport(0, 0, width, height);
 }
 
+void initializeSun2(int divisions)
+{
+    //auto cubeSphere = CubeSphere(1, divisions);
+}
+
 
 void initializeSun(int divisions)
 {

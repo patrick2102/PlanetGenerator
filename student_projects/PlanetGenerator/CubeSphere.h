@@ -6,136 +6,80 @@
 #include <vector>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-#include "Mesh.h"
+#include "Misc.h"
 
 #ifndef ITU_GRAPHICS_PROGRAMMING_CUBESPHERE_H
 #define ITU_GRAPHICS_PROGRAMMING_CUBESPHERE_H
 
-#endif //ITU_GRAPHICS_PROGRAMMING_CUBESPHERE_H
+#include <shader.h>
+
+const int cubeDivisions = 1;
 
 class CubeSphere
 {
 public:
-    float pi = glm::pi<float>();
-    glm::vec3 position;
-    glm::vec3 normal;
-    std::vector<Mesh> sides;
-    Shader* shader;
-    float radius;
+	float pi = glm::pi<float>();
+	Shader* shader;
+	float radius;
+	std::vector<glm::vec3> vertices;
 
-    CubeSphere(glm::vec3 position, float radius, int divisions, Shader* shader)
-    {
-        this->position = position;
-        this->radius = radius;
-        this->shader = shader;
-        normal = glm::vec3(0.0f, 0.0f, -1.0f);
-        CreateSphereCube(radius, divisions);
-    }
+	CubeSphere(float radius, int divisions, Shader* shader)
+	{
+		this->radius = radius;
+		this->shader = shader;
+		CreateCubeSphere();
+	}
 
-    void Draw()
-    {
-        glm::mat4 model = glm::mat4(1.0f);
+	void Draw()
+	{
+		glm::mat4 model = glm::mat4(1.0f);
 
-        shader->use();
-
-        for(auto side : sides)
-        {
-            side.Draw();
-        }
-    }
+		shader->use();
+	}
 
 private:
-    int divisions;
+	void CreateCubeSphere()
+	{
+		float latAngle;
+		float lonAngle;
 
-    void CreateCube(float width)
-    {
-        sides.clear();
+		int pointsNum = (int)pow(2, cubeDivisions) + 1;
 
-        float rotation = 0.0f;
-        glm::vec3 rotationAxis = glm::vec3(0.0f, 1.0f, 0.0f);
+		glm::vec3 points[cubeDivisions * cubeDivisions + 1][cubeDivisions * cubeDivisions + 1];
 
-        for(int i = 0; i < 4; i++)
-        {
-            Mesh side = SideOfSquare(width, rotation, rotationAxis);
-            sides.insert(sides.end(), side);
-            rotation += pi/2;
-        }
+		for (int i = 0; i < pointsNum; i++)
+		{
+			latAngle = (pi / 4 - pi / 2 * (float)i) / ((float)pointsNum - 1);
+			glm::vec3 latNormal = glm::vec3(glm::cos(latAngle), -glm::sin(latAngle), 0);
+			for (int j = 0; j < pointsNum; j++)
+			{
+				lonAngle = (pi / 4 - pi / 2 * (float)j) / ((float)pointsNum - 1);
+				glm::vec3 lonNormal = glm::vec3(glm::cos(lonAngle), 0, -glm::sin(lonAngle));
 
-        rotation = pi/2;
-        rotationAxis = glm::vec3(1.0f, 0.0f, 0.0f);
 
-        for(int i = 0; i < 2; i++)
-        {
-            Mesh side = SideOfSquare(width, rotation, rotationAxis);
-            sides.insert(sides.end(), side);
-            rotation += pi;
-        }
-    }
+				glm::vec3 v_dir = glm::normalize(glm::cross(latNormal, lonNormal));
 
-    Mesh SideOfSquare(float width, float rotation, glm::vec3 rotationAxis) {
-        // The 4 different corners of the square
-        float p0x = -width / 2, p0y =
-                -width / 2, p0z = 0; // p0x, p0y are the lowest x and y values, p0z is 0 before transformation.
-        float p1x = width / 2, p1y = width / 2; // p1x and p1y are the highest x and y values.
+				points[j][i] = v_dir;
+			}
+		}
 
-        glm::mat4 model = glm::mat4(1.0f);
-        auto rotateTransform = glm::rotate(model, rotation, rotationAxis);
+		for (int y = 0; y < (pointsNum - 1); y++)
+		{
+			for (int x = 0; x < (pointsNum - 1); x++)
+			{
+				int index1 = x + (y + 1) * pointsNum;
 
-        glm::vec3 sideNormal = rotateTransform * glm::vec4(normal, 0.0f);
+				glm::vec3 p1 = points[x][y + 1];
+				glm::vec3 p2 = points[x][y];
+				glm::vec3 p3 = points[x + 1][y + 1];
+				glm::vec3 p4 = points[x][y + 1];
 
-        auto translateTransform = glm::translate(model, sideNormal * (width / 2));
+				vertices.insert(vertices.end(), { p1, p2, p3 });
+				vertices.insert(vertices.end(), { p3, p1, p4 });
+			}
+		}
 
-        model = glm::rotate(translateTransform, rotation, rotationAxis);
-
-        glm::vec3 topLeft = model * glm::vec4(p0x, p1y, p0z, 1.0f);
-        glm::vec3 topRight = model * glm::vec4(p1x, p1y, p0z, 1.0f);
-        glm::vec3 bottomLeft = model * glm::vec4(p0x, p0y, p0z, 1.0f);
-        glm::vec3 bottomRight = model * glm::vec4(p1x, p0y, p0z, 1.0f);
-
-        //std::vector<glm::vec3> coords;
-        std::vector<Vertex> vertices;
-
-        glm::vec4 red = glm::vec4(1.0f, 0.0f, 0.0f, 1.0f);
-
-        // Top left triangle
-        vertices.insert(vertices.end(), {topLeft, red});
-        vertices.insert(vertices.end(), {topRight, red});
-        vertices.insert(vertices.end(), {bottomLeft, red});
-
-        //Bottom right triangle
-        vertices.insert(vertices.end(), {bottomRight, red});
-        vertices.insert(vertices.end(), {bottomLeft, red});
-        vertices.insert(vertices.end(), {topRight, red});
-
-        Mesh side = Mesh(vertices, sideNormal, shader);
-        return side;
-    }
-
-    void CreateSphereFromCube(int cubeDivisions)
-    {
-
-        float lonAngle;
-        float latAngle;
-
-        int intersections = (int)pow(2, cubeDivisions);
-
-        for (int i = 0; i <= intersections; i++)
-        {
-            lonAngle = (pi/4 - pi/2 * (float)i)/((float)intersections);
-            glm::vec3 lonNormal = glm::vec3 (-glm::sin(lonAngle), glm::cos(lonAngle), 0);
-            for (int j = 0; j < intersections; j++)
-            {
-                latAngle = (pi/4 - pi/2 * (float)j)/((float)intersections);
-                glm::vec3 latNormal = glm::vec3 (-glm::sin(latAngle), 0, glm::cos(latAngle));
-
-                glm::vec3 v_dir = glm::normalize(glm::cross(lonNormal, latNormal));
-            }
-        }
-    }
-
-    void CreateSphereCube(float radius, int divisions)
-    {
-        CreateCube(radius);
-        this->divisions = divisions;
-    }
+	}
 };
+
+#endif //ITU_GRAPHICS_PROGRAMMING_CUBESPHERE_H
