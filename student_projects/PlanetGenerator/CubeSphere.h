@@ -60,13 +60,15 @@ private:
             for (int i = 0; i < pointsNum; ++i)
             {
                 latAngle = DEG2RAD * (45.0f - 90.0f * i / (pointsNum - 1));
-                glm::vec3 latNormal = GetLatitudeNormalForSide(cubeSphereSide[sideNum], latAngle);
+                glm::vec3 latNormal = glm::vec3(-sin(latAngle), glm::cos(latAngle), 0);
                 for (int j = 0; j < pointsNum; ++j)
                 {
                     lonAngle = DEG2RAD * (-45.0f + 90.0f * j / (pointsNum - 1));
-                    glm::vec3 lonNormal = GetLongitudeNormalForSide(cubeSphereSide[sideNum], lonAngle);
+                    glm::vec3 lonNormal = glm::vec3(-glm::sin(lonAngle), 0, -glm::cos(lonAngle));
 
                     glm::vec3 v_dir = glm::normalize(glm::cross(lonNormal, latNormal));
+
+                    v_dir = RotateToSide(cubeSphereSide[sideNum], v_dir);
 
                     points[j][i] = v_dir;
                 }
@@ -108,34 +110,30 @@ private:
         }
 	}
 
-	glm::vec3 GetLatitudeNormalForSide(CubeSphereSide side, float latAngle)
+	glm::vec3 RotateToSide(CubeSphereSide side, glm::vec3 vector)
     {
+	    auto rotationMatrix = glm::mat4(1.0f);
+	    auto q = glm::rotate(rotationMatrix, 0.0f, glm::vec3(0,1,0));
 	    switch(side)
         {
             case positiveX:
-                return glm::vec3(-sin(latAngle), glm::cos(latAngle), 0);
+                    return vector;
             case negativeX:
-                return glm::vec3(-sin(latAngle), glm::cos(latAngle), 0);
+                return (glm::rotate(rotationMatrix, pi, glm::vec3(0,1,0)) * glm::vec4(vector, 1));
             case positiveY:
-                return glm::vec3(-sin(latAngle), 0, glm::cos(latAngle));
+                return (glm::rotate(rotationMatrix, pi/2, glm::vec3(0,0,1)) * glm::vec4(vector, 1));
+            case negativeY:
+                return (glm::rotate(rotationMatrix, -pi/2, glm::vec3(0,0,1)) * glm::vec4(vector, 1));
+            case positiveZ:
+                return (glm::rotate(rotationMatrix, pi/2, glm::vec3(0,1,0)) * glm::vec4(vector, 1));
+            case negativeZ:
+                return (glm::rotate(rotationMatrix, -pi/2, glm::vec3(0,1,0)) * glm::vec4(vector, 1));
             default:
-                return glm::vec3(0,0,0);
+                return vector;
         }
+
     }
-    glm::vec3 GetLongitudeNormalForSide(CubeSphereSide side, float lonAngle)
-    {
-        switch(side)
-        {
-            case positiveX:
-                return glm::vec3(-glm::sin(lonAngle), 0, -glm::cos(lonAngle));
-            case negativeX:
-                return glm::vec3(glm::sin(lonAngle), 0, glm::cos(lonAngle));
-            case positiveY:
-                return glm::vec3(0, -glm::sin(lonAngle), -glm::cos(lonAngle));
-            default:
-                return glm::vec3(0,0,0);
-        }
-    }
+
 };
 
 #endif //ITU_GRAPHICS_PROGRAMMING_CUBESPHERE_H
