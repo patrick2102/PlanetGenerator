@@ -17,7 +17,7 @@ public:
             :light(light), material(material) {
         this->center = position;
         this->shader = shader;
-        SetUpVertices(sphere);
+        SetUpVerticesSphere(sphere);
         SetUpBuffers();
     }
 
@@ -25,7 +25,7 @@ public:
         : light(light), material(material) {
         this->center = position;
         this->shader = shader;
-        SetUpVertices(cubeSphere);
+        SetUpVerticesCubeSphere(cubeSphere);
         SetUpBuffers();
     }
 
@@ -67,7 +67,7 @@ private:
     std::vector<Vertex> vertices;
     Material material;
 
-    void SetUpVertices(Sphere sphere)
+    void SetUpVerticesSphere(Sphere sphere)
     {
         for(int i = 0; i < sphere.vertices.size(); i += 3)
         {
@@ -89,7 +89,7 @@ private:
         sphere.vertices.clear();
     }
 
-    void SetUpVertices(CubeSphere sphere)
+    void SetUpVerticesCubeSphere(CubeSphere sphere)
     {
         for (int i = 0; i < sphere.vertices.size(); i += 3)
         {

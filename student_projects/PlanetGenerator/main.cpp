@@ -179,14 +179,14 @@ int main()
 
 
     //Details of cube
-    int cubeDivisions = 32;
+    int cubeDivisions = 1;
 
     //Initialize planets:
     int numOfPlanets = 3;
 
     //initializeSun2(cubeDivisions);
     initializeSun(cubeDivisions);
-    initializePlanets(numOfPlanets, cubeDivisions);
+    //initializePlanets(numOfPlanets, cubeDivisions);
 
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     // render loop
@@ -214,12 +214,12 @@ int main()
         glClearColor(0.3f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        drawSkybox();
+        //drawSkybox();
 
         shader->use();
-        //drawSun();
         setLightUniforms();
-        drawSolarSystem();
+        drawSun();
+        //drawSolarSystem();
 
         if (isPaused) {
             drawGui();
@@ -525,7 +525,8 @@ void initializeSun(int divisions)
     glm::vec3 pos = glm::vec3(0.0f);
     glm::vec3 color = glm::vec4(0.9f);
     float intensity = 1.0f;
-    auto sphere = Sphere(1, divisions);
+    //auto sphere = Sphere(1, divisions);
+    auto sphere = CubeSphere(1, divisions);
     Light light = Light(pos, color, intensity);
     Material material = sunMaterial;
 

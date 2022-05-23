@@ -44,7 +44,10 @@ private:
 
 		int pointsNum = (int)pow(2, divisions) + 1;
 
+        const float DEG2RAD = acos(-1) / 180.0f;
+
 		std::vector<std::vector<glm::vec3>> points(pointsNum, std::vector<glm::vec3>(pointsNum));
+        //std::vector<glm::vec3> points;
 
 		/*
 		for (int i = 0; i < pointsNum; i++)
@@ -116,44 +119,70 @@ private:
             }
         }
         */
-
-		for (int i = 0; i < pointsNum; i++)
+        //std::cout << "printing angles: " << std::endl;
+		for (int i = 0; i < pointsNum; ++i)
 		{
-			latAngle = (pi / 4 - pi / 2 * (float)i) / ((float)pointsNum - 1);
-			glm::vec3 latNormal = glm::vec3(glm::cos(latAngle), -glm::sin(latAngle), 0);
-			for (int j = 0; j < pointsNum; j++)
+			latAngle = DEG2RAD * (45.0f - 90.0f * i / (pointsNum - 1));
+			glm::vec3 latNormal = glm::vec3(-sin(latAngle), glm::cos(latAngle), 0);
+			for (int j = 0; j < pointsNum; ++j)
 			{
-				lonAngle = (pi / 4 - pi / 2 * (float)j) / ((float)pointsNum - 1);
-				glm::vec3 lonNormal = glm::vec3(glm::cos(lonAngle), 0, -glm::sin(lonAngle));
+				lonAngle = DEG2RAD * (-45.0f + 90.0f * j / (pointsNum - 1));
+				glm::vec3 lonNormal = glm::vec3(-glm::sin(lonAngle), 0, -glm::cos(lonAngle));
 
+                //std::cout << "angle lon: " << lonAngle  << ", angle lat: " << latAngle  <<std::endl;
 
-				glm::vec3 v_dir = glm::normalize(glm::cross(latNormal, lonNormal));
+				glm::vec3 v_dir = glm::normalize(glm::cross(lonNormal, latNormal));
 
 				points[j][i] = v_dir; //Might switch around for performance reasons maybe?
+
+                //points.insert(points.end(), v_dir);
+
+				//vertices.insert(vertices.end(), {v_dir.x, v_dir.y, v_dir.z});
 			}
 		}
 
-		for (int i = 0; i < (pointsNum - 1); i++)
-		{
-			for (int j = 0; j < (pointsNum - 1); j++)
-			{
+        /*
+		for(int i = 0; i < points.size(); i++)
+        {
+		    vertices.insert(vertices.end(), points[i]);
+            vertices.insert(points[i])
+        }
+		*/
+
+        std::cout << "printing points: " << std::endl;
+
+        for (int i = 0; i < (pointsNum); i++)
+        {
+            for (int j = 0; j < (pointsNum); j++)
+            {
+                std::cout << "P" << j+i*pointsNum << " = (" << points[j][i].x << ", " << points[j][i].y << ", "
+                << points[j][i].z << ")" << std::endl;
+            }
+        }
+
+
+        for (int i = 0; i < (pointsNum - 1); i++)
+        {
+            for (int j = 0; j < (pointsNum - 1); j++)
+            {
                 glm::vec3 p1 = points[i][j];
                 glm::vec3 p2 = points[i + 1][j];
                 glm::vec3 p3 = points[i][j + 1];
                 glm::vec3 p4 = points[i + 1][j + 1];
 
-				vertices.insert(vertices.end(), { p1, p2, p3 });
-				vertices.insert(vertices.end(), { p3, p2, p4 });
-			}
-		}
+                vertices.insert(vertices.end(), { p1, p2, p3 });
+                vertices.insert(vertices.end(), { p3, p2, p4 });
+            }
+        }
 
-		std::cout << "printing vectors: " << std::endl;
+        //std::cout << "printing vectors: " << std::endl;
 
-		for (int i = 0; i < vertices.size(); i++)
-		{
-			//std::cout << "v" << std::to_string(i) << " {" << std::to_string(vertices[i].x) << ", " <<
-			//std::to_string(vertices[i].y) << ", " << std::to_string(vertices[i].z) << "}" << std::endl;
-		}
+        /*for (int i = 0; i < vertices.size(); i++)
+        {
+            //std::cout << "v" << std::to_string(i) << " {" << std::to_string(vertices[i].x) << ", " <<
+            //std::to_string(vertices[i].y) << ", " << std::to_string(vertices[i].z) << "}" << std::endl;
+        }
+         */
 	}
 };
 
