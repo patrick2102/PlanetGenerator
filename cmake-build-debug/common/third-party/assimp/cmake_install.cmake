@@ -1,4 +1,4 @@
-# Install script for directory: C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp
+# Install script for directory: D:/uni/PlanetGenerator/common/third-party/assimp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

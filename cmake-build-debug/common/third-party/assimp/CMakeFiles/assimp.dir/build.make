@@ -47,10 +47,10 @@ RM = "D:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator"
+CMAKE_SOURCE_DIR = D:\uni\PlanetGenerator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug"
+CMAKE_BINARY_DIR = D:\uni\PlanetGenerator\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include common\third-party\assimp\CMakeFiles\assimp.dir\depend.make
@@ -63,1978 +63,1978 @@ include common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Assimp.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Assimp.cpp.obj: ..\common\third-party\assimp\code\Common\Assimp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/Assimp.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/Assimp.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\Assimp.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\Assimp.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\Assimp.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\Assimp.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Assimp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/Assimp.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\Assimp.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\Assimp.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\Assimp.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Assimp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/Assimp.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\Assimp.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\Assimp.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\Assimp.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\Assimp.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\BaseImporter.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\BaseImporter.cpp.obj: ..\common\third-party\assimp\code\Common\BaseImporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/BaseImporter.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/BaseImporter.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\BaseImporter.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\BaseImporter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\BaseImporter.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\BaseImporter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\BaseImporter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/BaseImporter.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\BaseImporter.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\BaseImporter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\BaseImporter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\BaseImporter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/BaseImporter.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\BaseImporter.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\BaseImporter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\BaseImporter.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\BaseImporter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\BaseProcess.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\BaseProcess.cpp.obj: ..\common\third-party\assimp\code\Common\BaseProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/BaseProcess.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/BaseProcess.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\BaseProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\BaseProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\BaseProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\BaseProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\BaseProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/BaseProcess.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\BaseProcess.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\BaseProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\BaseProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\BaseProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/BaseProcess.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\BaseProcess.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\BaseProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\BaseProcess.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\BaseProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Bitmap.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Bitmap.cpp.obj: ..\common\third-party\assimp\code\Common\Bitmap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/Bitmap.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/Bitmap.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\Bitmap.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\Bitmap.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\Bitmap.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\Bitmap.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Bitmap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/Bitmap.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\Bitmap.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\Bitmap.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\Bitmap.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Bitmap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/Bitmap.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\Bitmap.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\Bitmap.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\Bitmap.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\Bitmap.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\CreateAnimMesh.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\CreateAnimMesh.cpp.obj: ..\common\third-party\assimp\code\Common\CreateAnimMesh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/CreateAnimMesh.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/CreateAnimMesh.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\CreateAnimMesh.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\CreateAnimMesh.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\CreateAnimMesh.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\CreateAnimMesh.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\CreateAnimMesh.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/CreateAnimMesh.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\CreateAnimMesh.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\CreateAnimMesh.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\CreateAnimMesh.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\CreateAnimMesh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/CreateAnimMesh.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\CreateAnimMesh.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\CreateAnimMesh.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\CreateAnimMesh.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\CreateAnimMesh.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\DefaultIOStream.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\DefaultIOStream.cpp.obj: ..\common\third-party\assimp\code\Common\DefaultIOStream.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/DefaultIOStream.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/DefaultIOStream.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\DefaultIOStream.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\DefaultIOStream.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\DefaultIOStream.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\DefaultIOStream.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\DefaultIOStream.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/DefaultIOStream.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\DefaultIOStream.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\DefaultIOStream.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\DefaultIOStream.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\DefaultIOStream.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/DefaultIOStream.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\DefaultIOStream.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\DefaultIOStream.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\DefaultIOStream.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\DefaultIOStream.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\DefaultIOSystem.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\DefaultIOSystem.cpp.obj: ..\common\third-party\assimp\code\Common\DefaultIOSystem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/DefaultIOSystem.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/DefaultIOSystem.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\DefaultIOSystem.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\DefaultIOSystem.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\DefaultIOSystem.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\DefaultIOSystem.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\DefaultIOSystem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/DefaultIOSystem.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\DefaultIOSystem.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\DefaultIOSystem.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\DefaultIOSystem.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\DefaultIOSystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/DefaultIOSystem.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\DefaultIOSystem.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\DefaultIOSystem.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\DefaultIOSystem.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\DefaultIOSystem.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\DefaultLogger.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\DefaultLogger.cpp.obj: ..\common\third-party\assimp\code\Common\DefaultLogger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/DefaultLogger.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/DefaultLogger.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\DefaultLogger.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\DefaultLogger.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\DefaultLogger.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\DefaultLogger.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\DefaultLogger.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/DefaultLogger.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\DefaultLogger.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\DefaultLogger.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\DefaultLogger.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\DefaultLogger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/DefaultLogger.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\DefaultLogger.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\DefaultLogger.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\DefaultLogger.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\DefaultLogger.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Exporter.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Exporter.cpp.obj: ..\common\third-party\assimp\code\Common\Exporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/Exporter.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/Exporter.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\Exporter.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\Exporter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\Exporter.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\Exporter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Exporter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/Exporter.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\Exporter.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\Exporter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\Exporter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Exporter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/Exporter.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\Exporter.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\Exporter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\Exporter.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\Exporter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Importer.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Importer.cpp.obj: ..\common\third-party\assimp\code\Common\Importer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/Importer.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/Importer.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\Importer.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\Importer.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\Importer.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\Importer.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Importer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/Importer.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\Importer.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\Importer.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\Importer.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Importer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/Importer.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\Importer.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\Importer.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\Importer.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\Importer.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\ImporterRegistry.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\ImporterRegistry.cpp.obj: ..\common\third-party\assimp\code\Common\ImporterRegistry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/ImporterRegistry.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/ImporterRegistry.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\ImporterRegistry.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\ImporterRegistry.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\ImporterRegistry.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\ImporterRegistry.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\ImporterRegistry.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/ImporterRegistry.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\ImporterRegistry.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\ImporterRegistry.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\ImporterRegistry.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\ImporterRegistry.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/ImporterRegistry.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\ImporterRegistry.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\ImporterRegistry.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\ImporterRegistry.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\ImporterRegistry.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\PostStepRegistry.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\PostStepRegistry.cpp.obj: ..\common\third-party\assimp\code\Common\PostStepRegistry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/PostStepRegistry.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/PostStepRegistry.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\PostStepRegistry.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\PostStepRegistry.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\PostStepRegistry.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\PostStepRegistry.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\PostStepRegistry.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/PostStepRegistry.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\PostStepRegistry.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\PostStepRegistry.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\PostStepRegistry.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\PostStepRegistry.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/PostStepRegistry.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\PostStepRegistry.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\PostStepRegistry.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\PostStepRegistry.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\PostStepRegistry.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\RemoveComments.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\RemoveComments.cpp.obj: ..\common\third-party\assimp\code\Common\RemoveComments.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/RemoveComments.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/RemoveComments.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\RemoveComments.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\RemoveComments.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\RemoveComments.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\RemoveComments.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\RemoveComments.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/RemoveComments.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\RemoveComments.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\RemoveComments.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\RemoveComments.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\RemoveComments.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/RemoveComments.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\RemoveComments.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\RemoveComments.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\RemoveComments.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\RemoveComments.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\SGSpatialSort.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\SGSpatialSort.cpp.obj: ..\common\third-party\assimp\code\Common\SGSpatialSort.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/SGSpatialSort.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/SGSpatialSort.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\SGSpatialSort.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\SGSpatialSort.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\SGSpatialSort.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\SGSpatialSort.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\SGSpatialSort.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/SGSpatialSort.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\SGSpatialSort.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\SGSpatialSort.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\SGSpatialSort.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\SGSpatialSort.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/SGSpatialSort.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\SGSpatialSort.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\SGSpatialSort.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\SGSpatialSort.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\SGSpatialSort.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\SceneCombiner.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\SceneCombiner.cpp.obj: ..\common\third-party\assimp\code\Common\SceneCombiner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/SceneCombiner.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/SceneCombiner.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\SceneCombiner.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\SceneCombiner.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\SceneCombiner.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\SceneCombiner.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\SceneCombiner.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/SceneCombiner.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\SceneCombiner.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\SceneCombiner.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\SceneCombiner.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\SceneCombiner.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/SceneCombiner.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\SceneCombiner.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\SceneCombiner.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\SceneCombiner.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\SceneCombiner.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\ScenePreprocessor.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\ScenePreprocessor.cpp.obj: ..\common\third-party\assimp\code\Common\ScenePreprocessor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/ScenePreprocessor.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/ScenePreprocessor.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\ScenePreprocessor.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\ScenePreprocessor.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\ScenePreprocessor.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\ScenePreprocessor.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\ScenePreprocessor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/ScenePreprocessor.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\ScenePreprocessor.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\ScenePreprocessor.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\ScenePreprocessor.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\ScenePreprocessor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/ScenePreprocessor.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\ScenePreprocessor.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\ScenePreprocessor.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\ScenePreprocessor.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\ScenePreprocessor.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\SkeletonMeshBuilder.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\SkeletonMeshBuilder.cpp.obj: ..\common\third-party\assimp\code\Common\SkeletonMeshBuilder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/SkeletonMeshBuilder.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/SkeletonMeshBuilder.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\SkeletonMeshBuilder.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\SkeletonMeshBuilder.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\SkeletonMeshBuilder.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\SkeletonMeshBuilder.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\SkeletonMeshBuilder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/SkeletonMeshBuilder.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\SkeletonMeshBuilder.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\SkeletonMeshBuilder.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\SkeletonMeshBuilder.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\SkeletonMeshBuilder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/SkeletonMeshBuilder.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\SkeletonMeshBuilder.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\SkeletonMeshBuilder.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\SkeletonMeshBuilder.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\SkeletonMeshBuilder.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\SpatialSort.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\SpatialSort.cpp.obj: ..\common\third-party\assimp\code\Common\SpatialSort.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/SpatialSort.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/SpatialSort.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\SpatialSort.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\SpatialSort.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\SpatialSort.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\SpatialSort.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\SpatialSort.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/SpatialSort.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\SpatialSort.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\SpatialSort.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\SpatialSort.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\SpatialSort.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/SpatialSort.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\SpatialSort.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\SpatialSort.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\SpatialSort.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\SpatialSort.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\SplitByBoneCountProcess.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\SplitByBoneCountProcess.cpp.obj: ..\common\third-party\assimp\code\Common\SplitByBoneCountProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/SplitByBoneCountProcess.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/SplitByBoneCountProcess.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\SplitByBoneCountProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\SplitByBoneCountProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\SplitByBoneCountProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\SplitByBoneCountProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\SplitByBoneCountProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/SplitByBoneCountProcess.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\SplitByBoneCountProcess.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\SplitByBoneCountProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\SplitByBoneCountProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\SplitByBoneCountProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/SplitByBoneCountProcess.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\SplitByBoneCountProcess.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\SplitByBoneCountProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\SplitByBoneCountProcess.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\SplitByBoneCountProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\StandardShapes.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\StandardShapes.cpp.obj: ..\common\third-party\assimp\code\Common\StandardShapes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/StandardShapes.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/StandardShapes.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\StandardShapes.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\StandardShapes.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\StandardShapes.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\StandardShapes.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\StandardShapes.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/StandardShapes.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\StandardShapes.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\StandardShapes.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\StandardShapes.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\StandardShapes.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/StandardShapes.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\StandardShapes.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\StandardShapes.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\StandardShapes.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\StandardShapes.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Subdivision.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Subdivision.cpp.obj: ..\common\third-party\assimp\code\Common\Subdivision.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/Subdivision.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/Subdivision.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\Subdivision.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\Subdivision.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\Subdivision.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\Subdivision.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Subdivision.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/Subdivision.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\Subdivision.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\Subdivision.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\Subdivision.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Subdivision.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/Subdivision.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\Subdivision.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\Subdivision.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\Subdivision.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\Subdivision.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\TargetAnimation.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\TargetAnimation.cpp.obj: ..\common\third-party\assimp\code\Common\TargetAnimation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/TargetAnimation.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/TargetAnimation.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\TargetAnimation.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\TargetAnimation.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\TargetAnimation.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\TargetAnimation.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\TargetAnimation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/TargetAnimation.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\TargetAnimation.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\TargetAnimation.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\TargetAnimation.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\TargetAnimation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/TargetAnimation.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\TargetAnimation.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\TargetAnimation.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\TargetAnimation.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\TargetAnimation.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Version.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Version.cpp.obj: ..\common\third-party\assimp\code\Common\Version.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/Version.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/Version.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\Version.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\Version.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\Version.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\Version.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Version.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/Version.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\Version.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\Version.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\Version.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\Version.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/Version.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\Version.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\Version.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\Version.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\Version.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\VertexTriangleAdjacency.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\VertexTriangleAdjacency.cpp.obj: ..\common\third-party\assimp\code\Common\VertexTriangleAdjacency.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/VertexTriangleAdjacency.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/VertexTriangleAdjacency.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\VertexTriangleAdjacency.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\VertexTriangleAdjacency.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\VertexTriangleAdjacency.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\VertexTriangleAdjacency.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\VertexTriangleAdjacency.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/VertexTriangleAdjacency.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\VertexTriangleAdjacency.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\VertexTriangleAdjacency.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\VertexTriangleAdjacency.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\VertexTriangleAdjacency.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/VertexTriangleAdjacency.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\VertexTriangleAdjacency.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\VertexTriangleAdjacency.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\VertexTriangleAdjacency.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\VertexTriangleAdjacency.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\scene.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\scene.cpp.obj: ..\common\third-party\assimp\code\Common\scene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/scene.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/scene.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\scene.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\scene.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\scene.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\scene.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\scene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/scene.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\scene.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\scene.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\scene.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\scene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/scene.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\scene.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\scene.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\scene.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\scene.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\simd.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\simd.cpp.obj: ..\common\third-party\assimp\code\Common\simd.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/simd.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Common/simd.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\simd.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\simd.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Common\simd.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\simd.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\simd.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Common/simd.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Common\simd.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\simd.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\simd.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Common\simd.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Common/simd.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\simd.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Common\simd.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Common\simd.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Common\simd.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXAnimation.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXAnimation.cpp.obj: ..\common\third-party\assimp\code\FBX\FBXAnimation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXAnimation.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXAnimation.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXAnimation.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXAnimation.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXAnimation.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXAnimation.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXAnimation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/FBX/FBXAnimation.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\FBX\FBXAnimation.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXAnimation.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXAnimation.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXAnimation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/FBX/FBXAnimation.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXAnimation.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXAnimation.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXAnimation.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXAnimation.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXBinaryTokenizer.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXBinaryTokenizer.cpp.obj: ..\common\third-party\assimp\code\FBX\FBXBinaryTokenizer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXBinaryTokenizer.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXBinaryTokenizer.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXBinaryTokenizer.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXBinaryTokenizer.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXBinaryTokenizer.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXBinaryTokenizer.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXBinaryTokenizer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/FBX/FBXBinaryTokenizer.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\FBX\FBXBinaryTokenizer.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXBinaryTokenizer.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXBinaryTokenizer.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXBinaryTokenizer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/FBX/FBXBinaryTokenizer.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXBinaryTokenizer.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXBinaryTokenizer.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXBinaryTokenizer.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXBinaryTokenizer.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXConverter.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXConverter.cpp.obj: ..\common\third-party\assimp\code\FBX\FBXConverter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXConverter.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXConverter.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXConverter.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXConverter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXConverter.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXConverter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXConverter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/FBX/FBXConverter.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\FBX\FBXConverter.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXConverter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXConverter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXConverter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/FBX/FBXConverter.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXConverter.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXConverter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXConverter.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXConverter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXDeformer.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXDeformer.cpp.obj: ..\common\third-party\assimp\code\FBX\FBXDeformer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXDeformer.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXDeformer.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXDeformer.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXDeformer.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXDeformer.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXDeformer.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXDeformer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/FBX/FBXDeformer.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\FBX\FBXDeformer.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXDeformer.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXDeformer.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXDeformer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/FBX/FBXDeformer.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXDeformer.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXDeformer.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXDeformer.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXDeformer.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXDocument.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXDocument.cpp.obj: ..\common\third-party\assimp\code\FBX\FBXDocument.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXDocument.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXDocument.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXDocument.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXDocument.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXDocument.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXDocument.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXDocument.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/FBX/FBXDocument.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\FBX\FBXDocument.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXDocument.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXDocument.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXDocument.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/FBX/FBXDocument.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXDocument.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXDocument.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXDocument.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXDocument.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXDocumentUtil.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXDocumentUtil.cpp.obj: ..\common\third-party\assimp\code\FBX\FBXDocumentUtil.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXDocumentUtil.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXDocumentUtil.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXDocumentUtil.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXDocumentUtil.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXDocumentUtil.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXDocumentUtil.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXDocumentUtil.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/FBX/FBXDocumentUtil.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\FBX\FBXDocumentUtil.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXDocumentUtil.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXDocumentUtil.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXDocumentUtil.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/FBX/FBXDocumentUtil.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXDocumentUtil.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXDocumentUtil.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXDocumentUtil.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXDocumentUtil.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXExportNode.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXExportNode.cpp.obj: ..\common\third-party\assimp\code\FBX\FBXExportNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXExportNode.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXExportNode.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXExportNode.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXExportNode.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXExportNode.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXExportNode.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXExportNode.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/FBX/FBXExportNode.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\FBX\FBXExportNode.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXExportNode.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXExportNode.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXExportNode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/FBX/FBXExportNode.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXExportNode.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXExportNode.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXExportNode.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXExportNode.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXExportProperty.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXExportProperty.cpp.obj: ..\common\third-party\assimp\code\FBX\FBXExportProperty.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXExportProperty.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXExportProperty.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXExportProperty.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXExportProperty.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXExportProperty.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXExportProperty.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXExportProperty.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/FBX/FBXExportProperty.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\FBX\FBXExportProperty.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXExportProperty.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXExportProperty.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXExportProperty.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/FBX/FBXExportProperty.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXExportProperty.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXExportProperty.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXExportProperty.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXExportProperty.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXExporter.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXExporter.cpp.obj: ..\common\third-party\assimp\code\FBX\FBXExporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXExporter.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXExporter.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXExporter.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXExporter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXExporter.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXExporter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXExporter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/FBX/FBXExporter.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\FBX\FBXExporter.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXExporter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXExporter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXExporter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/FBX/FBXExporter.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXExporter.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXExporter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXExporter.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXExporter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXImporter.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXImporter.cpp.obj: ..\common\third-party\assimp\code\FBX\FBXImporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXImporter.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXImporter.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXImporter.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXImporter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXImporter.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXImporter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXImporter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/FBX/FBXImporter.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\FBX\FBXImporter.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXImporter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXImporter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXImporter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/FBX/FBXImporter.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXImporter.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXImporter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXImporter.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXImporter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXMaterial.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXMaterial.cpp.obj: ..\common\third-party\assimp\code\FBX\FBXMaterial.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXMaterial.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXMaterial.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXMaterial.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXMaterial.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXMaterial.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXMaterial.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXMaterial.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/FBX/FBXMaterial.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\FBX\FBXMaterial.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXMaterial.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXMaterial.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXMaterial.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/FBX/FBXMaterial.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXMaterial.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXMaterial.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXMaterial.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXMaterial.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXMeshGeometry.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXMeshGeometry.cpp.obj: ..\common\third-party\assimp\code\FBX\FBXMeshGeometry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXMeshGeometry.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXMeshGeometry.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXMeshGeometry.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXMeshGeometry.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXMeshGeometry.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXMeshGeometry.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXMeshGeometry.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/FBX/FBXMeshGeometry.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\FBX\FBXMeshGeometry.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXMeshGeometry.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXMeshGeometry.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXMeshGeometry.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/FBX/FBXMeshGeometry.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXMeshGeometry.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXMeshGeometry.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXMeshGeometry.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXMeshGeometry.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXModel.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXModel.cpp.obj: ..\common\third-party\assimp\code\FBX\FBXModel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXModel.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXModel.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXModel.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXModel.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXModel.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXModel.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXModel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/FBX/FBXModel.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\FBX\FBXModel.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXModel.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXModel.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXModel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/FBX/FBXModel.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXModel.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXModel.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXModel.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXModel.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXNodeAttribute.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXNodeAttribute.cpp.obj: ..\common\third-party\assimp\code\FBX\FBXNodeAttribute.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXNodeAttribute.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXNodeAttribute.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXNodeAttribute.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXNodeAttribute.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXNodeAttribute.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXNodeAttribute.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXNodeAttribute.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/FBX/FBXNodeAttribute.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\FBX\FBXNodeAttribute.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXNodeAttribute.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXNodeAttribute.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXNodeAttribute.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/FBX/FBXNodeAttribute.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXNodeAttribute.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXNodeAttribute.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXNodeAttribute.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXNodeAttribute.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXParser.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXParser.cpp.obj: ..\common\third-party\assimp\code\FBX\FBXParser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXParser.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXParser.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXParser.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXParser.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXParser.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXParser.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXParser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/FBX/FBXParser.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\FBX\FBXParser.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXParser.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXParser.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXParser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/FBX/FBXParser.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXParser.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXParser.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXParser.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXParser.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXProperties.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXProperties.cpp.obj: ..\common\third-party\assimp\code\FBX\FBXProperties.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXProperties.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXProperties.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXProperties.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXProperties.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXProperties.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXProperties.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXProperties.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/FBX/FBXProperties.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\FBX\FBXProperties.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXProperties.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXProperties.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXProperties.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/FBX/FBXProperties.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXProperties.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXProperties.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXProperties.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXProperties.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXTokenizer.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXTokenizer.cpp.obj: ..\common\third-party\assimp\code\FBX\FBXTokenizer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXTokenizer.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXTokenizer.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXTokenizer.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXTokenizer.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXTokenizer.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXTokenizer.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXTokenizer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/FBX/FBXTokenizer.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\FBX\FBXTokenizer.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXTokenizer.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXTokenizer.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXTokenizer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/FBX/FBXTokenizer.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXTokenizer.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXTokenizer.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXTokenizer.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXTokenizer.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXUtil.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXUtil.cpp.obj: ..\common\third-party\assimp\code\FBX\FBXUtil.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXUtil.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/FBX/FBXUtil.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXUtil.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXUtil.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\FBX\FBXUtil.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXUtil.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXUtil.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/FBX/FBXUtil.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\FBX\FBXUtil.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXUtil.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXUtil.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\FBX\FBXUtil.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/FBX/FBXUtil.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXUtil.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\FBX\FBXUtil.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\FBX\FBXUtil.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\FBX\FBXUtil.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Material\MaterialSystem.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Material\MaterialSystem.cpp.obj: ..\common\third-party\assimp\code\Material\MaterialSystem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Material/MaterialSystem.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Material/MaterialSystem.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Material\MaterialSystem.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Material\MaterialSystem.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Material\MaterialSystem.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Material\MaterialSystem.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Material\MaterialSystem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Material/MaterialSystem.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Material\MaterialSystem.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Material\MaterialSystem.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Material\MaterialSystem.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Material\MaterialSystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Material/MaterialSystem.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Material\MaterialSystem.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Material\MaterialSystem.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Material\MaterialSystem.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Material\MaterialSystem.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Obj\ObjExporter.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Obj\ObjExporter.cpp.obj: ..\common\third-party\assimp\code\Obj\ObjExporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Obj/ObjExporter.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Obj/ObjExporter.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Obj\ObjExporter.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Obj\ObjExporter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Obj\ObjExporter.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Obj\ObjExporter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Obj\ObjExporter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Obj/ObjExporter.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Obj\ObjExporter.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Obj\ObjExporter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Obj\ObjExporter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Obj\ObjExporter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Obj/ObjExporter.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Obj\ObjExporter.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Obj\ObjExporter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Obj\ObjExporter.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Obj\ObjExporter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Obj\ObjFileImporter.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Obj\ObjFileImporter.cpp.obj: ..\common\third-party\assimp\code\Obj\ObjFileImporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Obj/ObjFileImporter.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Obj/ObjFileImporter.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Obj\ObjFileImporter.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Obj\ObjFileImporter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Obj\ObjFileImporter.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Obj\ObjFileImporter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Obj\ObjFileImporter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Obj/ObjFileImporter.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Obj\ObjFileImporter.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Obj\ObjFileImporter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Obj\ObjFileImporter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Obj\ObjFileImporter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Obj/ObjFileImporter.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Obj\ObjFileImporter.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Obj\ObjFileImporter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Obj\ObjFileImporter.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Obj\ObjFileImporter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Obj\ObjFileMtlImporter.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Obj\ObjFileMtlImporter.cpp.obj: ..\common\third-party\assimp\code\Obj\ObjFileMtlImporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Obj/ObjFileMtlImporter.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Obj/ObjFileMtlImporter.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Obj\ObjFileMtlImporter.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Obj\ObjFileMtlImporter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Obj\ObjFileMtlImporter.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Obj\ObjFileMtlImporter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Obj\ObjFileMtlImporter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Obj/ObjFileMtlImporter.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Obj\ObjFileMtlImporter.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Obj\ObjFileMtlImporter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Obj\ObjFileMtlImporter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Obj\ObjFileMtlImporter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Obj/ObjFileMtlImporter.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Obj\ObjFileMtlImporter.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Obj\ObjFileMtlImporter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Obj\ObjFileMtlImporter.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Obj\ObjFileMtlImporter.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Obj\ObjFileParser.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Obj\ObjFileParser.cpp.obj: ..\common\third-party\assimp\code\Obj\ObjFileParser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Obj/ObjFileParser.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/Obj/ObjFileParser.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Obj\ObjFileParser.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Obj\ObjFileParser.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\Obj\ObjFileParser.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\Obj\ObjFileParser.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Obj\ObjFileParser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/Obj/ObjFileParser.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\Obj\ObjFileParser.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Obj\ObjFileParser.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\Obj\ObjFileParser.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\Obj\ObjFileParser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/Obj/ObjFileParser.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Obj\ObjFileParser.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\Obj\ObjFileParser.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\Obj\ObjFileParser.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\Obj\ObjFileParser.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ArmaturePopulate.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ArmaturePopulate.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\ArmaturePopulate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/ArmaturePopulate.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/ArmaturePopulate.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\ArmaturePopulate.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ArmaturePopulate.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\ArmaturePopulate.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ArmaturePopulate.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ArmaturePopulate.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/ArmaturePopulate.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\ArmaturePopulate.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ArmaturePopulate.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ArmaturePopulate.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ArmaturePopulate.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/ArmaturePopulate.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\ArmaturePopulate.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ArmaturePopulate.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\ArmaturePopulate.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ArmaturePopulate.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\CalcTangentsProcess.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\CalcTangentsProcess.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\CalcTangentsProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/CalcTangentsProcess.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/CalcTangentsProcess.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\CalcTangentsProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\CalcTangentsProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\CalcTangentsProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\CalcTangentsProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\CalcTangentsProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/CalcTangentsProcess.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\CalcTangentsProcess.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\CalcTangentsProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\CalcTangentsProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\CalcTangentsProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/CalcTangentsProcess.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\CalcTangentsProcess.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\CalcTangentsProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\CalcTangentsProcess.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\CalcTangentsProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ComputeUVMappingProcess.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ComputeUVMappingProcess.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\ComputeUVMappingProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/ComputeUVMappingProcess.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/ComputeUVMappingProcess.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\ComputeUVMappingProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ComputeUVMappingProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\ComputeUVMappingProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ComputeUVMappingProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ComputeUVMappingProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/ComputeUVMappingProcess.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\ComputeUVMappingProcess.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ComputeUVMappingProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ComputeUVMappingProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ComputeUVMappingProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/ComputeUVMappingProcess.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\ComputeUVMappingProcess.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ComputeUVMappingProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\ComputeUVMappingProcess.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ComputeUVMappingProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ConvertToLHProcess.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ConvertToLHProcess.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\ConvertToLHProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/ConvertToLHProcess.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/ConvertToLHProcess.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\ConvertToLHProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ConvertToLHProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\ConvertToLHProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ConvertToLHProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ConvertToLHProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/ConvertToLHProcess.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\ConvertToLHProcess.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ConvertToLHProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ConvertToLHProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ConvertToLHProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/ConvertToLHProcess.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\ConvertToLHProcess.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ConvertToLHProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\ConvertToLHProcess.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ConvertToLHProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\DeboneProcess.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\DeboneProcess.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\DeboneProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/DeboneProcess.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/DeboneProcess.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\DeboneProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\DeboneProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\DeboneProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\DeboneProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\DeboneProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/DeboneProcess.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\DeboneProcess.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\DeboneProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\DeboneProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\DeboneProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/DeboneProcess.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\DeboneProcess.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\DeboneProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\DeboneProcess.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\DeboneProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\DropFaceNormalsProcess.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\DropFaceNormalsProcess.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\DropFaceNormalsProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/DropFaceNormalsProcess.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/DropFaceNormalsProcess.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\DropFaceNormalsProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\DropFaceNormalsProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\DropFaceNormalsProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\DropFaceNormalsProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\DropFaceNormalsProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/DropFaceNormalsProcess.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\DropFaceNormalsProcess.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\DropFaceNormalsProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\DropFaceNormalsProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\DropFaceNormalsProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/DropFaceNormalsProcess.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\DropFaceNormalsProcess.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\DropFaceNormalsProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\DropFaceNormalsProcess.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\DropFaceNormalsProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\EmbedTexturesProcess.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\EmbedTexturesProcess.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\EmbedTexturesProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/EmbedTexturesProcess.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/EmbedTexturesProcess.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\EmbedTexturesProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\EmbedTexturesProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\EmbedTexturesProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\EmbedTexturesProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\EmbedTexturesProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/EmbedTexturesProcess.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\EmbedTexturesProcess.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\EmbedTexturesProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\EmbedTexturesProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\EmbedTexturesProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/EmbedTexturesProcess.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\EmbedTexturesProcess.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\EmbedTexturesProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\EmbedTexturesProcess.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\EmbedTexturesProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\FindDegenerates.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\FindDegenerates.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\FindDegenerates.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/FindDegenerates.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/FindDegenerates.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\FindDegenerates.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FindDegenerates.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\FindDegenerates.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FindDegenerates.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\FindDegenerates.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/FindDegenerates.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\FindDegenerates.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FindDegenerates.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FindDegenerates.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\FindDegenerates.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/FindDegenerates.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\FindDegenerates.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FindDegenerates.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\FindDegenerates.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FindDegenerates.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\FindInstancesProcess.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\FindInstancesProcess.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\FindInstancesProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/FindInstancesProcess.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/FindInstancesProcess.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\FindInstancesProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FindInstancesProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\FindInstancesProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FindInstancesProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\FindInstancesProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/FindInstancesProcess.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\FindInstancesProcess.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FindInstancesProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FindInstancesProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\FindInstancesProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/FindInstancesProcess.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\FindInstancesProcess.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FindInstancesProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\FindInstancesProcess.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FindInstancesProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\FindInvalidDataProcess.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\FindInvalidDataProcess.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\FindInvalidDataProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/FindInvalidDataProcess.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/FindInvalidDataProcess.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\FindInvalidDataProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FindInvalidDataProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\FindInvalidDataProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FindInvalidDataProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\FindInvalidDataProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/FindInvalidDataProcess.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\FindInvalidDataProcess.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FindInvalidDataProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FindInvalidDataProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\FindInvalidDataProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/FindInvalidDataProcess.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\FindInvalidDataProcess.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FindInvalidDataProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\FindInvalidDataProcess.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FindInvalidDataProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\FixNormalsStep.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\FixNormalsStep.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\FixNormalsStep.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/FixNormalsStep.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/FixNormalsStep.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\FixNormalsStep.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FixNormalsStep.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\FixNormalsStep.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FixNormalsStep.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\FixNormalsStep.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/FixNormalsStep.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\FixNormalsStep.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FixNormalsStep.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FixNormalsStep.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\FixNormalsStep.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/FixNormalsStep.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\FixNormalsStep.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FixNormalsStep.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\FixNormalsStep.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\FixNormalsStep.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\GenBoundingBoxesProcess.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\GenBoundingBoxesProcess.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\GenBoundingBoxesProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/GenBoundingBoxesProcess.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/GenBoundingBoxesProcess.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\GenBoundingBoxesProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\GenBoundingBoxesProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\GenBoundingBoxesProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\GenBoundingBoxesProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\GenBoundingBoxesProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/GenBoundingBoxesProcess.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\GenBoundingBoxesProcess.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\GenBoundingBoxesProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\GenBoundingBoxesProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\GenBoundingBoxesProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/GenBoundingBoxesProcess.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\GenBoundingBoxesProcess.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\GenBoundingBoxesProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\GenBoundingBoxesProcess.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\GenBoundingBoxesProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\GenFaceNormalsProcess.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\GenFaceNormalsProcess.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\GenFaceNormalsProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/GenFaceNormalsProcess.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/GenFaceNormalsProcess.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\GenFaceNormalsProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\GenFaceNormalsProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\GenFaceNormalsProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\GenFaceNormalsProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\GenFaceNormalsProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/GenFaceNormalsProcess.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\GenFaceNormalsProcess.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\GenFaceNormalsProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\GenFaceNormalsProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\GenFaceNormalsProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/GenFaceNormalsProcess.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\GenFaceNormalsProcess.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\GenFaceNormalsProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\GenFaceNormalsProcess.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\GenFaceNormalsProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\GenVertexNormalsProcess.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\GenVertexNormalsProcess.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\GenVertexNormalsProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/GenVertexNormalsProcess.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/GenVertexNormalsProcess.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\GenVertexNormalsProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\GenVertexNormalsProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\GenVertexNormalsProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\GenVertexNormalsProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\GenVertexNormalsProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/GenVertexNormalsProcess.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\GenVertexNormalsProcess.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\GenVertexNormalsProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\GenVertexNormalsProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\GenVertexNormalsProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/GenVertexNormalsProcess.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\GenVertexNormalsProcess.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\GenVertexNormalsProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\GenVertexNormalsProcess.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\GenVertexNormalsProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ImproveCacheLocality.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ImproveCacheLocality.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\ImproveCacheLocality.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/ImproveCacheLocality.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/ImproveCacheLocality.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\ImproveCacheLocality.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ImproveCacheLocality.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\ImproveCacheLocality.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ImproveCacheLocality.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ImproveCacheLocality.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/ImproveCacheLocality.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\ImproveCacheLocality.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ImproveCacheLocality.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ImproveCacheLocality.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ImproveCacheLocality.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/ImproveCacheLocality.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\ImproveCacheLocality.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ImproveCacheLocality.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\ImproveCacheLocality.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ImproveCacheLocality.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\JoinVerticesProcess.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\JoinVerticesProcess.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\JoinVerticesProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/JoinVerticesProcess.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/JoinVerticesProcess.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\JoinVerticesProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\JoinVerticesProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\JoinVerticesProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\JoinVerticesProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\JoinVerticesProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/JoinVerticesProcess.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\JoinVerticesProcess.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\JoinVerticesProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\JoinVerticesProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\JoinVerticesProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/JoinVerticesProcess.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\JoinVerticesProcess.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\JoinVerticesProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\JoinVerticesProcess.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\JoinVerticesProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\LimitBoneWeightsProcess.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\LimitBoneWeightsProcess.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\LimitBoneWeightsProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/LimitBoneWeightsProcess.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/LimitBoneWeightsProcess.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\LimitBoneWeightsProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\LimitBoneWeightsProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\LimitBoneWeightsProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\LimitBoneWeightsProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\LimitBoneWeightsProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/LimitBoneWeightsProcess.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\LimitBoneWeightsProcess.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\LimitBoneWeightsProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\LimitBoneWeightsProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\LimitBoneWeightsProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/LimitBoneWeightsProcess.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\LimitBoneWeightsProcess.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\LimitBoneWeightsProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\LimitBoneWeightsProcess.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\LimitBoneWeightsProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\MakeVerboseFormat.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\MakeVerboseFormat.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\MakeVerboseFormat.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/MakeVerboseFormat.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/MakeVerboseFormat.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\MakeVerboseFormat.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\MakeVerboseFormat.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\MakeVerboseFormat.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\MakeVerboseFormat.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\MakeVerboseFormat.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/MakeVerboseFormat.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\MakeVerboseFormat.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\MakeVerboseFormat.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\MakeVerboseFormat.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\MakeVerboseFormat.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/MakeVerboseFormat.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\MakeVerboseFormat.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\MakeVerboseFormat.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\MakeVerboseFormat.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\MakeVerboseFormat.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\OptimizeGraph.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\OptimizeGraph.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\OptimizeGraph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/OptimizeGraph.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/OptimizeGraph.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\OptimizeGraph.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\OptimizeGraph.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\OptimizeGraph.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\OptimizeGraph.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\OptimizeGraph.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/OptimizeGraph.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\OptimizeGraph.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\OptimizeGraph.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\OptimizeGraph.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\OptimizeGraph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/OptimizeGraph.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\OptimizeGraph.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\OptimizeGraph.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\OptimizeGraph.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\OptimizeGraph.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\OptimizeMeshes.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\OptimizeMeshes.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\OptimizeMeshes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/OptimizeMeshes.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/OptimizeMeshes.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\OptimizeMeshes.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\OptimizeMeshes.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\OptimizeMeshes.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\OptimizeMeshes.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\OptimizeMeshes.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/OptimizeMeshes.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\OptimizeMeshes.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\OptimizeMeshes.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\OptimizeMeshes.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\OptimizeMeshes.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/OptimizeMeshes.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\OptimizeMeshes.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\OptimizeMeshes.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\OptimizeMeshes.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\OptimizeMeshes.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\PretransformVertices.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\PretransformVertices.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\PretransformVertices.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/PretransformVertices.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/PretransformVertices.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\PretransformVertices.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\PretransformVertices.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\PretransformVertices.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\PretransformVertices.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\PretransformVertices.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/PretransformVertices.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\PretransformVertices.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\PretransformVertices.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\PretransformVertices.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\PretransformVertices.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/PretransformVertices.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\PretransformVertices.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\PretransformVertices.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\PretransformVertices.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\PretransformVertices.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ProcessHelper.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ProcessHelper.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\ProcessHelper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/ProcessHelper.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/ProcessHelper.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\ProcessHelper.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ProcessHelper.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\ProcessHelper.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ProcessHelper.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ProcessHelper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/ProcessHelper.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\ProcessHelper.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ProcessHelper.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ProcessHelper.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ProcessHelper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/ProcessHelper.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\ProcessHelper.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ProcessHelper.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\ProcessHelper.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ProcessHelper.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\RemoveRedundantMaterials.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\RemoveRedundantMaterials.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\RemoveRedundantMaterials.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/RemoveRedundantMaterials.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/RemoveRedundantMaterials.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\RemoveRedundantMaterials.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\RemoveRedundantMaterials.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\RemoveRedundantMaterials.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\RemoveRedundantMaterials.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\RemoveRedundantMaterials.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/RemoveRedundantMaterials.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\RemoveRedundantMaterials.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\RemoveRedundantMaterials.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\RemoveRedundantMaterials.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\RemoveRedundantMaterials.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/RemoveRedundantMaterials.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\RemoveRedundantMaterials.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\RemoveRedundantMaterials.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\RemoveRedundantMaterials.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\RemoveRedundantMaterials.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\RemoveVCProcess.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\RemoveVCProcess.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\RemoveVCProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/RemoveVCProcess.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/RemoveVCProcess.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\RemoveVCProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\RemoveVCProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\RemoveVCProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\RemoveVCProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\RemoveVCProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/RemoveVCProcess.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\RemoveVCProcess.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\RemoveVCProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\RemoveVCProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\RemoveVCProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/RemoveVCProcess.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\RemoveVCProcess.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\RemoveVCProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\RemoveVCProcess.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\RemoveVCProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ScaleProcess.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ScaleProcess.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\ScaleProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/ScaleProcess.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/ScaleProcess.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\ScaleProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ScaleProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\ScaleProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ScaleProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ScaleProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/ScaleProcess.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\ScaleProcess.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ScaleProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ScaleProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ScaleProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/ScaleProcess.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\ScaleProcess.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ScaleProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\ScaleProcess.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ScaleProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\SortByPTypeProcess.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\SortByPTypeProcess.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\SortByPTypeProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/SortByPTypeProcess.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/SortByPTypeProcess.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\SortByPTypeProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\SortByPTypeProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\SortByPTypeProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\SortByPTypeProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\SortByPTypeProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/SortByPTypeProcess.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\SortByPTypeProcess.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\SortByPTypeProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\SortByPTypeProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\SortByPTypeProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/SortByPTypeProcess.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\SortByPTypeProcess.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\SortByPTypeProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\SortByPTypeProcess.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\SortByPTypeProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\SplitLargeMeshes.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\SplitLargeMeshes.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\SplitLargeMeshes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/SplitLargeMeshes.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/SplitLargeMeshes.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\SplitLargeMeshes.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\SplitLargeMeshes.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\SplitLargeMeshes.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\SplitLargeMeshes.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\SplitLargeMeshes.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/SplitLargeMeshes.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\SplitLargeMeshes.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\SplitLargeMeshes.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\SplitLargeMeshes.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\SplitLargeMeshes.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/SplitLargeMeshes.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\SplitLargeMeshes.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\SplitLargeMeshes.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\SplitLargeMeshes.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\SplitLargeMeshes.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\TextureTransform.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\TextureTransform.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\TextureTransform.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/TextureTransform.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/TextureTransform.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\TextureTransform.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\TextureTransform.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\TextureTransform.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\TextureTransform.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\TextureTransform.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/TextureTransform.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\TextureTransform.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\TextureTransform.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\TextureTransform.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\TextureTransform.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/TextureTransform.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\TextureTransform.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\TextureTransform.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\TextureTransform.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\TextureTransform.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\TriangulateProcess.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\TriangulateProcess.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\TriangulateProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/TriangulateProcess.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/TriangulateProcess.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\TriangulateProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\TriangulateProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\TriangulateProcess.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\TriangulateProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\TriangulateProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/TriangulateProcess.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\TriangulateProcess.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\TriangulateProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\TriangulateProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\TriangulateProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/TriangulateProcess.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\TriangulateProcess.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\TriangulateProcess.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\TriangulateProcess.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\TriangulateProcess.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ValidateDataStructure.cpp.obj: common\third-party\assimp\CMakeFiles\assimp.dir\flags.make
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ValidateDataStructure.cpp.obj: ..\common\third-party\assimp\code\PostProcessing\ValidateDataStructure.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/ValidateDataStructure.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object common/third-party/assimp/CMakeFiles/assimp.dir/code/PostProcessing/ValidateDataStructure.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\ValidateDataStructure.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ValidateDataStructure.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\assimp.dir\code\PostProcessing\ValidateDataStructure.cpp.obj /FdCMakeFiles\assimp.dir\assimp.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ValidateDataStructure.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ValidateDataStructure.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assimp.dir/code/PostProcessing/ValidateDataStructure.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\assimp.dir\code\PostProcessing\ValidateDataStructure.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ValidateDataStructure.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ValidateDataStructure.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ValidateDataStructure.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assimp.dir/code/PostProcessing/ValidateDataStructure.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\ValidateDataStructure.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ValidateDataStructure.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\assimp.dir\code\PostProcessing\ValidateDataStructure.cpp.s /c D:\uni\PlanetGenerator\common\third-party\assimp\code\PostProcessing\ValidateDataStructure.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 # Object files for target assimp
 assimp_OBJECTS = \
@@ -2202,13 +2202,13 @@ common\third-party\assimp\assimp.lib: common\third-party\assimp\CMakeFiles\assim
 common\third-party\assimp\assimp.lib: common\third-party\assimp\CMakeFiles\assimp.dir\code\PostProcessing\ValidateDataStructure.cpp.obj
 common\third-party\assimp\assimp.lib: common\third-party\assimp\CMakeFiles\assimp.dir\build.make
 common\third-party\assimp\assimp.lib: common\third-party\assimp\CMakeFiles\assimp.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_80) "Linking CXX static library assimp.lib"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Linking CXX static library assimp.lib"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	$(CMAKE_COMMAND) -P CMakeFiles\assimp.dir\cmake_clean_target.cmake
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\link.exe /lib /nologo /machine:X86 /out:assimp.lib @CMakeFiles\assimp.dir\objects1.rsp 
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 # Rule to build all files generated by this target.
 common\third-party\assimp\CMakeFiles\assimp.dir\build: common\third-party\assimp\assimp.lib
@@ -2216,12 +2216,12 @@ common\third-party\assimp\CMakeFiles\assimp.dir\build: common\third-party\assimp
 .PHONY : common\third-party\assimp\CMakeFiles\assimp.dir\build
 
 common\third-party\assimp\CMakeFiles\assimp.dir\clean:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\assimp
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp
 	$(CMAKE_COMMAND) -P CMakeFiles\assimp.dir\cmake_clean.cmake
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 .PHONY : common\third-party\assimp\CMakeFiles\assimp.dir\clean
 
 common\third-party\assimp\CMakeFiles\assimp.dir\depend:
-	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\assimp" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\assimp" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\assimp\CMakeFiles\assimp.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" D:\uni\PlanetGenerator D:\uni\PlanetGenerator\common\third-party\assimp D:\uni\PlanetGenerator\cmake-build-debug D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp\CMakeFiles\assimp.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : common\third-party\assimp\CMakeFiles\assimp.dir\depend
 

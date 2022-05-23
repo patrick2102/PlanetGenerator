@@ -6,5 +6,5 @@ CXX_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++1
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\include" -IC:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\common\THIRD-~1\glad\include -IC:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\common\THIRD-~1\glfw\include -IC:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\common\THIRD-~1\imgui\include -IC:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\common\THIRD-~1\glm -IC:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\common\THIRD-~1\STBImage -IC:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\common\THIRD-~1\assimp\include -IC:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\common\THIRD-~1\assimp -IC:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\STUDEN~1\PLANET~1 
+CXX_INCLUDES = -ID:\uni\PlanetGenerator\include -ID:\uni\PlanetGenerator\common\third-party\glad\include -ID:\uni\PlanetGenerator\common\third-party\glfw\include -ID:\uni\PlanetGenerator\common\third-party\imgui\include -ID:\uni\PlanetGenerator\common\third-party\glm -ID:\uni\PlanetGenerator\common\third-party\STBImage -ID:\uni\PlanetGenerator\common\third-party\assimp\include -ID:\uni\PlanetGenerator\common\third-party\assimp -ID:\uni\PlanetGenerator\student_projects\PlanetGenerator 
 

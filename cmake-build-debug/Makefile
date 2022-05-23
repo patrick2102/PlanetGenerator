@@ -52,10 +52,10 @@ RM = "D:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator"
+CMAKE_SOURCE_DIR = D:\uni\PlanetGenerator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug"
+CMAKE_BINARY_DIR = D:\uni\PlanetGenerator\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -118,9 +118,9 @@ list_install_components\fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target

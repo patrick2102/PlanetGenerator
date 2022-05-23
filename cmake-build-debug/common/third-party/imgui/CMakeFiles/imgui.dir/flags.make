@@ -6,5 +6,5 @@ CXX_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++1
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -IC:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\common\THIRD-~1\imgui\include -IC:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\common\THIRD-~1\glad\include -IC:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\common\THIRD-~1\glfw\include 
+CXX_INCLUDES = -ID:\uni\PlanetGenerator\common\third-party\imgui\include -ID:\uni\PlanetGenerator\common\third-party\glad\include -ID:\uni\PlanetGenerator\common\third-party\glfw\include 
 

@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;CMake Files\common\;CMake Files\common\third-party\;CMake Files\common\third-party\glfw\;CMake Files\common\third-party\glfw\src\;CMake Files\common\third-party\glad\;CMake Files\common\third-party\imgui\;CMake Files\common\third-party\assimp\;CMake Files\student_projects\;CMake Files\student_projects\PlanetGenerator\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw"/>
+				<Option working_dir="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile&quot; VERBOSE=1 all"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="uninstall">
-				<Option working_dir="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw"/>
+				<Option working_dir="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile&quot; VERBOSE=1 uninstall"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile VERBOSE=1 uninstall"/>
+					<CompileFile command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="glfw">
-				<Option output="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src/glfw3.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src"/>
+				<Option output="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src/glfw3.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
@@ -37,9 +37,9 @@
 					<Add option="-D_GLFW_USE_CONFIG_H"/>
 					<Add option="-D_UNICODE"/>
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/include"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/glfw/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/glfw/src"/>
+					<Add directory="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -50,15 +50,15 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile&quot; VERBOSE=1 glfw"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile VERBOSE=1 glfw"/>
+					<CompileFile command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="glfw/fast">
-				<Option output="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src/glfw3.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src"/>
+				<Option output="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src/glfw3.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
@@ -66,9 +66,9 @@
 					<Add option="-D_GLFW_USE_CONFIG_H"/>
 					<Add option="-D_UNICODE"/>
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/include"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/glfw/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/glfw/src"/>
+					<Add directory="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -79,122 +79,122 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile&quot; VERBOSE=1 glfw/fast"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile VERBOSE=1 glfw/fast"/>
+					<CompileFile command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src/glfw_config.h">
+		<Unit filename="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src/glfw_config.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/include/GLFW/glfw3.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/include/GLFW/glfw3.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/include/GLFW/glfw3native.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/include/GLFW/glfw3native.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/context.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/context.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/egl_context.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/egl_context.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/egl_context.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/egl_context.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/init.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/init.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/input.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/input.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/internal.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/internal.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/mappings.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/mappings.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/monitor.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/monitor.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/osmesa_context.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/osmesa_context.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/osmesa_context.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/osmesa_context.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/vulkan.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/vulkan.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/wgl_context.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/wgl_context.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/wgl_context.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/wgl_context.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/win32_init.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/win32_init.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/win32_joystick.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/win32_joystick.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/win32_joystick.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/win32_joystick.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/win32_monitor.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/win32_monitor.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/win32_platform.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/win32_platform.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/win32_thread.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/win32_thread.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/win32_time.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/win32_time.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/win32_window.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/win32_window.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/window.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/window.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/CMakeLists.txt">
+		<Unit filename="D:/uni/PlanetGenerator/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/CMakeLists.txt">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\common\third-party\glfw\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/cmake_uninstall.cmake.in">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/cmake_uninstall.cmake.in">
 			<Option virtualFolder="CMake Files\common\third-party\glfw\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/CMakeLists.txt">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\common\third-party\glfw\src\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/glfw3.pc.in">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/glfw3.pc.in">
 			<Option virtualFolder="CMake Files\common\third-party\glfw\src\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/glfw3Config.cmake.in">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/glfw3Config.cmake.in">
 			<Option virtualFolder="CMake Files\common\third-party\glfw\src\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/glfw_config.h.in">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/glfw_config.h.in">
 			<Option virtualFolder="CMake Files\common\third-party\glfw\src\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glad/CMakeLists.txt">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glad/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\common\third-party\glad\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/CMakeLists.txt">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/imgui/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\common\third-party\imgui\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/CMakeLists.txt">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\common\third-party\assimp\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/CMakeLists.txt">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\student_projects\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/CMakeLists.txt">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\student_projects\PlanetGenerator\"/>
 		</Unit>
 	</Project>

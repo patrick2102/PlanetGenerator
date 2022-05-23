@@ -3,6 +3,7 @@
 //
 
 #include "Sphere.h"
+#include "CubeSphere.h"
 #include "Misc.h"
 
 #ifndef ITU_GRAPHICS_PROGRAMMING_SUN_H
@@ -13,10 +14,18 @@ class Sun
 public:
 
     Sun(glm::vec3 position, Shader *shader, Sphere sphere, Light light, Material material)
-            : sphere(sphere), light(light), material(material) {
+            :light(light), material(material) {
         this->center = position;
         this->shader = shader;
-        SetUpVertices();
+        SetUpVertices(sphere);
+        SetUpBuffers();
+    }
+
+    Sun(glm::vec3 position, Shader* shader, CubeSphere cubeSphere, Light light, Material material)
+        : light(light), material(material) {
+        this->center = position;
+        this->shader = shader;
+        SetUpVertices(cubeSphere);
         SetUpBuffers();
     }
 
@@ -53,13 +62,12 @@ private:
     unsigned int VBO;
 
     Light light;
-    Sphere sphere;
     glm::vec3 center;
     Shader* shader;
     std::vector<Vertex> vertices;
     Material material;
 
-    void SetUpVertices()
+    void SetUpVertices(Sphere sphere)
     {
         for(int i = 0; i < sphere.vertices.size(); i += 3)
         {
@@ -75,6 +83,28 @@ private:
             vertices.insert(vertices.end(), {p1, normal});
             vertices.insert(vertices.end(), {p2, normal});
             vertices.insert(vertices.end(), {p3, normal});
+        }
+
+        //Clear sphere vertices to not use up wasteful memory.
+        sphere.vertices.clear();
+    }
+
+    void SetUpVertices(CubeSphere sphere)
+    {
+        for (int i = 0; i < sphere.vertices.size(); i += 3)
+        {
+            auto p1 = sphere.vertices[i];
+            auto p2 = sphere.vertices[i + 1];
+            auto p3 = sphere.vertices[i + 2];
+
+            auto v1 = p2 - p1;
+            auto v2 = p3 - p1;
+
+            auto normal = glm::normalize(glm::cross(v1, v2));
+
+            vertices.insert(vertices.end(), { p1, normal });
+            vertices.insert(vertices.end(), { p2, normal });
+            vertices.insert(vertices.end(), { p3, normal });
         }
 
         //Clear sphere vertices to not use up wasteful memory.

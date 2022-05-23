@@ -6,5 +6,5 @@ C_FLAGS = /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1
 
 C_DEFINES = 
 
-C_INCLUDES = -IC:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\common\THIRD-~1\glad\include 
+C_INCLUDES = -ID:\uni\PlanetGenerator\common\third-party\glad\include 
 

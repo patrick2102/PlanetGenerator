@@ -160,11 +160,11 @@ string.h
 string.h
 -
 
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui.cpp
+D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui.cpp
 imgui.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui.h
+D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui.h
 imgui_internal.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui_internal.h
+D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui_internal.h
 ctype.h
 -
 stdio.h
@@ -180,17 +180,17 @@ windows.h
 TargetConditionals.h
 -
 stb_sprintf.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/stb_sprintf.h
+D:/uni/PlanetGenerator/common/third-party/imgui/src/stb_sprintf.h
 Carbon/Carbon.h
 -
 imm.h
 -
 imgui_user.inl
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui_user.inl
+D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui_user.inl
 
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui_demo.cpp
+D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui_demo.cpp
 imgui.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui.h
+D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui.h
 ctype.h
 -
 limits.h
@@ -206,11 +206,11 @@ stddef.h
 stdint.h
 -
 
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui_draw.cpp
+D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui_draw.cpp
 imgui.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui.h
+D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui.h
 imgui_internal.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui_internal.h
+D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui_internal.h
 stdio.h
 -
 alloca.h
@@ -220,25 +220,25 @@ malloc.h
 stdlib.h
 -
 imstb_rectpack.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imstb_rectpack.h
+D:/uni/PlanetGenerator/common/third-party/imgui/src/imstb_rectpack.h
 imstb_truetype.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imstb_truetype.h
+D:/uni/PlanetGenerator/common/third-party/imgui/src/imstb_truetype.h
 
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui_impl_glfw.cpp
+D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui_impl_glfw.cpp
 imgui.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui.h
+D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui.h
 imgui_impl_glfw.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui_impl_glfw.h
+D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui_impl_glfw.h
 GLFW/glfw3.h
 -
 GLFW/glfw3native.h
 -
 
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui_impl_opengl3.cpp
+D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui_impl_opengl3.cpp
 imgui.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui.h
+D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui.h
 imgui_impl_opengl3.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui_impl_opengl3.h
+D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui_impl_opengl3.h
 stdio.h
 -
 stddef.h
@@ -268,11 +268,11 @@ glbinding/glbinding.h
 glbinding/gl/gl.h
 -
 
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui_widgets.cpp
+D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui_widgets.cpp
 imgui.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui.h
+D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui.h
 imgui_internal.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui_internal.h
+D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui_internal.h
 ctype.h
 -
 stddef.h
@@ -280,5 +280,5 @@ stddef.h
 stdint.h
 -
 imstb_textedit.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imstb_textedit.h
+D:/uni/PlanetGenerator/common/third-party/imgui/src/imstb_textedit.h
 

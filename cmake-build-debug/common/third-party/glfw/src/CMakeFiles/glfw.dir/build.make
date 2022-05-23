@@ -47,10 +47,10 @@ RM = "D:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator"
+CMAKE_SOURCE_DIR = D:\uni\PlanetGenerator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug"
+CMAKE_BINARY_DIR = D:\uni\PlanetGenerator\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include common\third-party\glfw\src\CMakeFiles\glfw.dir\depend.make
@@ -63,378 +63,378 @@ include common\third-party\glfw\src\CMakeFiles\glfw.dir\flags.make
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\context.c.obj: common\third-party\glfw\src\CMakeFiles\glfw.dir\flags.make
 common\third-party\glfw\src\CMakeFiles\glfw.dir\context.c.obj: ..\common\third-party\glfw\src\context.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/context.c.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/context.c.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\context.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\context.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\context.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\glfw\src\context.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\context.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glfw.dir/context.c.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\glfw.dir\context.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\context.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\glfw\src\context.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\context.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glfw.dir/context.c.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\context.c.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\context.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\context.c.s /c D:\uni\PlanetGenerator\common\third-party\glfw\src\context.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\init.c.obj: common\third-party\glfw\src\CMakeFiles\glfw.dir\flags.make
 common\third-party\glfw\src\CMakeFiles\glfw.dir\init.c.obj: ..\common\third-party\glfw\src\init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/init.c.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/init.c.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\init.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\init.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\init.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\glfw\src\init.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\init.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glfw.dir/init.c.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\glfw.dir\init.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\init.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\glfw\src\init.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glfw.dir/init.c.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\init.c.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\init.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\init.c.s /c D:\uni\PlanetGenerator\common\third-party\glfw\src\init.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\input.c.obj: common\third-party\glfw\src\CMakeFiles\glfw.dir\flags.make
 common\third-party\glfw\src\CMakeFiles\glfw.dir\input.c.obj: ..\common\third-party\glfw\src\input.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/input.c.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/input.c.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\input.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\input.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\input.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\glfw\src\input.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\input.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glfw.dir/input.c.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\glfw.dir\input.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\input.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\glfw\src\input.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\input.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glfw.dir/input.c.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\input.c.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\input.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\input.c.s /c D:\uni\PlanetGenerator\common\third-party\glfw\src\input.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\monitor.c.obj: common\third-party\glfw\src\CMakeFiles\glfw.dir\flags.make
 common\third-party\glfw\src\CMakeFiles\glfw.dir\monitor.c.obj: ..\common\third-party\glfw\src\monitor.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/monitor.c.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/monitor.c.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\monitor.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\monitor.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\monitor.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\glfw\src\monitor.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\monitor.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glfw.dir/monitor.c.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\glfw.dir\monitor.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\monitor.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\glfw\src\monitor.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\monitor.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glfw.dir/monitor.c.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\monitor.c.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\monitor.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\monitor.c.s /c D:\uni\PlanetGenerator\common\third-party\glfw\src\monitor.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\vulkan.c.obj: common\third-party\glfw\src\CMakeFiles\glfw.dir\flags.make
 common\third-party\glfw\src\CMakeFiles\glfw.dir\vulkan.c.obj: ..\common\third-party\glfw\src\vulkan.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\vulkan.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\vulkan.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\vulkan.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\glfw\src\vulkan.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\vulkan.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glfw.dir/vulkan.c.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\glfw.dir\vulkan.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\vulkan.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\glfw\src\vulkan.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\vulkan.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glfw.dir/vulkan.c.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\vulkan.c.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\vulkan.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\vulkan.c.s /c D:\uni\PlanetGenerator\common\third-party\glfw\src\vulkan.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\window.c.obj: common\third-party\glfw\src\CMakeFiles\glfw.dir\flags.make
 common\third-party\glfw\src\CMakeFiles\glfw.dir\window.c.obj: ..\common\third-party\glfw\src\window.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/window.c.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/window.c.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\window.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\window.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\window.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\glfw\src\window.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\window.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glfw.dir/window.c.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\glfw.dir\window.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\window.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\glfw\src\window.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\window.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glfw.dir/window.c.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\window.c.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\window.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\window.c.s /c D:\uni\PlanetGenerator\common\third-party\glfw\src\window.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_init.c.obj: common\third-party\glfw\src\CMakeFiles\glfw.dir\flags.make
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_init.c.obj: ..\common\third-party\glfw\src\win32_init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\win32_init.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\win32_init.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\win32_init.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\glfw\src\win32_init.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_init.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glfw.dir/win32_init.c.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\glfw.dir\win32_init.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\win32_init.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\glfw\src\win32_init.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glfw.dir/win32_init.c.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\win32_init.c.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\win32_init.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\win32_init.c.s /c D:\uni\PlanetGenerator\common\third-party\glfw\src\win32_init.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_joystick.c.obj: common\third-party\glfw\src\CMakeFiles\glfw.dir\flags.make
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_joystick.c.obj: ..\common\third-party\glfw\src\win32_joystick.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\win32_joystick.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\win32_joystick.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\win32_joystick.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\glfw\src\win32_joystick.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_joystick.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glfw.dir/win32_joystick.c.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\glfw.dir\win32_joystick.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\win32_joystick.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\glfw\src\win32_joystick.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_joystick.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glfw.dir/win32_joystick.c.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\win32_joystick.c.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\win32_joystick.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\win32_joystick.c.s /c D:\uni\PlanetGenerator\common\third-party\glfw\src\win32_joystick.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_monitor.c.obj: common\third-party\glfw\src\CMakeFiles\glfw.dir\flags.make
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_monitor.c.obj: ..\common\third-party\glfw\src\win32_monitor.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\win32_monitor.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\win32_monitor.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\win32_monitor.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\glfw\src\win32_monitor.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_monitor.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glfw.dir/win32_monitor.c.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\glfw.dir\win32_monitor.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\win32_monitor.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\glfw\src\win32_monitor.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_monitor.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glfw.dir/win32_monitor.c.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\win32_monitor.c.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\win32_monitor.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\win32_monitor.c.s /c D:\uni\PlanetGenerator\common\third-party\glfw\src\win32_monitor.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_time.c.obj: common\third-party\glfw\src\CMakeFiles\glfw.dir\flags.make
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_time.c.obj: ..\common\third-party\glfw\src\win32_time.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\win32_time.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\win32_time.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\win32_time.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\glfw\src\win32_time.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_time.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glfw.dir/win32_time.c.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\glfw.dir\win32_time.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\win32_time.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\glfw\src\win32_time.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_time.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glfw.dir/win32_time.c.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\win32_time.c.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\win32_time.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\win32_time.c.s /c D:\uni\PlanetGenerator\common\third-party\glfw\src\win32_time.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_thread.c.obj: common\third-party\glfw\src\CMakeFiles\glfw.dir\flags.make
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_thread.c.obj: ..\common\third-party\glfw\src\win32_thread.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\win32_thread.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\win32_thread.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\win32_thread.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\glfw\src\win32_thread.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_thread.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glfw.dir/win32_thread.c.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\glfw.dir\win32_thread.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\win32_thread.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\glfw\src\win32_thread.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_thread.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glfw.dir/win32_thread.c.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\win32_thread.c.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\win32_thread.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\win32_thread.c.s /c D:\uni\PlanetGenerator\common\third-party\glfw\src\win32_thread.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_window.c.obj: common\third-party\glfw\src\CMakeFiles\glfw.dir\flags.make
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_window.c.obj: ..\common\third-party\glfw\src\win32_window.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\win32_window.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\win32_window.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\win32_window.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\glfw\src\win32_window.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_window.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glfw.dir/win32_window.c.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\glfw.dir\win32_window.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\win32_window.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\glfw\src\win32_window.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\win32_window.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glfw.dir/win32_window.c.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\win32_window.c.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\win32_window.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\win32_window.c.s /c D:\uni\PlanetGenerator\common\third-party\glfw\src\win32_window.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\wgl_context.c.obj: common\third-party\glfw\src\CMakeFiles\glfw.dir\flags.make
 common\third-party\glfw\src\CMakeFiles\glfw.dir\wgl_context.c.obj: ..\common\third-party\glfw\src\wgl_context.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\wgl_context.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\wgl_context.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\wgl_context.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\glfw\src\wgl_context.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\wgl_context.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glfw.dir/wgl_context.c.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\glfw.dir\wgl_context.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\wgl_context.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\glfw\src\wgl_context.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\wgl_context.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glfw.dir/wgl_context.c.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\wgl_context.c.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\wgl_context.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\wgl_context.c.s /c D:\uni\PlanetGenerator\common\third-party\glfw\src\wgl_context.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\egl_context.c.obj: common\third-party\glfw\src\CMakeFiles\glfw.dir\flags.make
 common\third-party\glfw\src\CMakeFiles\glfw.dir\egl_context.c.obj: ..\common\third-party\glfw\src\egl_context.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\egl_context.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\egl_context.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\egl_context.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\glfw\src\egl_context.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\egl_context.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glfw.dir/egl_context.c.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\glfw.dir\egl_context.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\egl_context.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\glfw\src\egl_context.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\egl_context.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glfw.dir/egl_context.c.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\egl_context.c.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\egl_context.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\egl_context.c.s /c D:\uni\PlanetGenerator\common\third-party\glfw\src\egl_context.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\osmesa_context.c.obj: common\third-party\glfw\src\CMakeFiles\glfw.dir\flags.make
 common\third-party\glfw\src\CMakeFiles\glfw.dir\osmesa_context.c.obj: ..\common\third-party\glfw\src\osmesa_context.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object common/third-party/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\osmesa_context.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\osmesa_context.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glfw.dir\osmesa_context.c.obj /FdCMakeFiles\glfw.dir\glfw.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\glfw\src\osmesa_context.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\osmesa_context.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glfw.dir/osmesa_context.c.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\glfw.dir\osmesa_context.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\osmesa_context.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\glfw\src\osmesa_context.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\osmesa_context.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glfw.dir/osmesa_context.c.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\osmesa_context.c.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src\osmesa_context.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glfw.dir\osmesa_context.c.s /c D:\uni\PlanetGenerator\common\third-party\glfw\src\osmesa_context.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 # Object files for target glfw
 glfw_OBJECTS = \
@@ -474,13 +474,13 @@ common\third-party\glfw\src\glfw3.lib: common\third-party\glfw\src\CMakeFiles\gl
 common\third-party\glfw\src\glfw3.lib: common\third-party\glfw\src\CMakeFiles\glfw.dir\osmesa_context.c.obj
 common\third-party\glfw\src\glfw3.lib: common\third-party\glfw\src\CMakeFiles\glfw.dir\build.make
 common\third-party\glfw\src\glfw3.lib: common\third-party\glfw\src\CMakeFiles\glfw.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Linking C static library glfw3.lib"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking C static library glfw3.lib"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	$(CMAKE_COMMAND) -P CMakeFiles\glfw.dir\cmake_clean_target.cmake
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\link.exe /lib /nologo /machine:X86 /out:glfw3.lib @CMakeFiles\glfw.dir\objects1.rsp 
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 # Rule to build all files generated by this target.
 common\third-party\glfw\src\CMakeFiles\glfw.dir\build: common\third-party\glfw\src\glfw3.lib
@@ -488,12 +488,12 @@ common\third-party\glfw\src\CMakeFiles\glfw.dir\build: common\third-party\glfw\s
 .PHONY : common\third-party\glfw\src\CMakeFiles\glfw.dir\build
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\clean:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw\src
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src
 	$(CMAKE_COMMAND) -P CMakeFiles\glfw.dir\cmake_clean.cmake
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 .PHONY : common\third-party\glfw\src\CMakeFiles\glfw.dir\clean
 
 common\third-party\glfw\src\CMakeFiles\glfw.dir\depend:
-	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw\src" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\CMakeFiles\glfw.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" D:\uni\PlanetGenerator D:\uni\PlanetGenerator\common\third-party\glfw\src D:\uni\PlanetGenerator\cmake-build-debug D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\CMakeFiles\glfw.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : common\third-party\glfw\src\CMakeFiles\glfw.dir\depend
 

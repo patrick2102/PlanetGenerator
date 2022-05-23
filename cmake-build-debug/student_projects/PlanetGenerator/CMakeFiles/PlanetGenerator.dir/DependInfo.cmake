@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/main.cpp" "C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/student_projects/PlanetGenerator/CMakeFiles/PlanetGenerator.dir/main.cpp.obj"
+  "D:/uni/PlanetGenerator/student_projects/PlanetGenerator/main.cpp" "D:/uni/PlanetGenerator/cmake-build-debug/student_projects/PlanetGenerator/CMakeFiles/PlanetGenerator.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 
@@ -23,10 +23,10 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glad/CMakeFiles/glad.dir/DependInfo.cmake"
-  "C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
-  "C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/imgui/CMakeFiles/imgui.dir/DependInfo.cmake"
-  "C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/assimp/CMakeFiles/assimp.dir/DependInfo.cmake"
+  "D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glad/CMakeFiles/glad.dir/DependInfo.cmake"
+  "D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/imgui/CMakeFiles/imgui.dir/DependInfo.cmake"
+  "D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/assimp/CMakeFiles/assimp.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

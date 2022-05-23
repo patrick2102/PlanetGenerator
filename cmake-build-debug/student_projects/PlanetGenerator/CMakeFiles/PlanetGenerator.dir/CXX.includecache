@@ -1456,27 +1456,43 @@ imgui.h
 TargetConditionals.h
 ../common/third-party/imgui/include/TargetConditionals.h
 
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/Misc.h
+../student_projects/PlanetGenerator/CubeSphere.h
+utility
+-
+vector
+-
+glm/glm.hpp
+-
+glm/gtc/matrix_transform.hpp
+-
+Misc.h
+../student_projects/PlanetGenerator/Misc.h
+shader.h
+-
+
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Misc.h
 glm/glm.hpp
 -
 
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/Planet.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Planet.h
 Sphere.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/Sphere.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Sphere.h
 
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/Sphere.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Sphere.h
 shader.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shader.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shader.h
 Misc.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/Misc.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Misc.h
 
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/Sun.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Sun.h
 Sphere.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/Sphere.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Sphere.h
+CubeSphere.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/CubeSphere.h
 Misc.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/Misc.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Misc.h
 
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/camera.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/camera.h
 glad/glad.h
 -
 glm/glm.hpp
@@ -1486,7 +1502,7 @@ glm/gtc/matrix_transform.hpp
 vector
 -
 
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/main.cpp
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/main.cpp
 glad/glad.h
 -
 GLFW/glfw3.h
@@ -1498,9 +1514,9 @@ iostream
 vector
 -
 shader.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shader.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shader.h
 camera.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/camera.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/camera.h
 stb_image.h
 -
 assimp/Importer.hpp
@@ -1510,17 +1526,19 @@ assimp/scene.h
 assimp/postprocess.h
 -
 imgui.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/imgui.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/imgui.h
 imgui_impl_glfw.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/imgui_impl_glfw.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/imgui_impl_glfw.h
 imgui_impl_opengl3.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/imgui_impl_opengl3.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/imgui_impl_opengl3.h
 Sun.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/Sun.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Sun.h
 Planet.h
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/Planet.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Planet.h
+CubeSphere.h
+-
 
-C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shader.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shader.h
 glad/glad.h
 -
 glm/glm.hpp

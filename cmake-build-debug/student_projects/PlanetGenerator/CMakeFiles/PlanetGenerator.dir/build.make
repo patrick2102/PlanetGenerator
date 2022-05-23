@@ -47,10 +47,10 @@ RM = "D:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator"
+CMAKE_SOURCE_DIR = D:\uni\PlanetGenerator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug"
+CMAKE_BINARY_DIR = D:\uni\PlanetGenerator\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\depend.make
@@ -63,28 +63,28 @@ include student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\flags.ma
 
 student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\main.cpp.obj: student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\flags.make
 student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\main.cpp.obj: ..\student_projects\PlanetGenerator\main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object student_projects/PlanetGenerator/CMakeFiles/PlanetGenerator.dir/main.cpp.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\STUDEN~1\PLANET~1
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object student_projects/PlanetGenerator/CMakeFiles/PlanetGenerator.dir/main.cpp.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\PlanetGenerator.dir\main.cpp.obj /FdCMakeFiles\PlanetGenerator.dir\ /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\student_projects\PlanetGenerator\main.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\PlanetGenerator.dir\main.cpp.obj /FdCMakeFiles\PlanetGenerator.dir\ /FS -c D:\uni\PlanetGenerator\student_projects\PlanetGenerator\main.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlanetGenerator.dir/main.cpp.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\STUDEN~1\PLANET~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\PlanetGenerator.dir\main.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\student_projects\PlanetGenerator\main.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\uni\PlanetGenerator\student_projects\PlanetGenerator\main.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlanetGenerator.dir/main.cpp.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\STUDEN~1\PLANET~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\PlanetGenerator.dir\main.cpp.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\student_projects\PlanetGenerator\main.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\PlanetGenerator.dir\main.cpp.s /c D:\uni\PlanetGenerator\student_projects\PlanetGenerator\main.cpp
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 # Object files for target PlanetGenerator
 PlanetGenerator_OBJECTS = \
@@ -100,16 +100,16 @@ student_projects\PlanetGenerator\PlanetGenerator.exe: common\third-party\glfw\sr
 student_projects\PlanetGenerator\PlanetGenerator.exe: common\third-party\imgui\imgui.lib
 student_projects\PlanetGenerator\PlanetGenerator.exe: common\third-party\assimp\assimp.lib
 student_projects\PlanetGenerator\PlanetGenerator.exe: student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable PlanetGenerator.exe"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\STUDEN~1\PLANET~1
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable PlanetGenerator.exe"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator
 	"D:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\PlanetGenerator.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\PlanetGenerator.dir\objects1.rsp @<<
- /out:PlanetGenerator.exe /implib:PlanetGenerator.lib /pdb:"C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator\PlanetGenerator.pdb" /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  ..\..\common\third-party\glad\glad.lib ..\..\common\third-party\glfw\src\glfw3.lib ..\..\common\third-party\imgui\imgui.lib ..\..\common\third-party\assimp\assimp.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
+ /out:PlanetGenerator.exe /implib:PlanetGenerator.lib /pdb:D:\uni\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator\PlanetGenerator.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  ..\..\common\third-party\glad\glad.lib ..\..\common\third-party\glfw\src\glfw3.lib ..\..\common\third-party\imgui\imgui.lib ..\..\common\third-party\assimp\assimp.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Copying shaders"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\STUDEN~1\PLANET~1
-	echo >nul && "D:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E copy_directory "C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders" "C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/student_projects/PlanetGenerator/shaders"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator
+	echo >nul && "D:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E copy_directory D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders D:/uni/PlanetGenerator/cmake-build-debug/student_projects/PlanetGenerator/shaders
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 # Rule to build all files generated by this target.
 student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\build: student_projects\PlanetGenerator\PlanetGenerator.exe
@@ -117,12 +117,12 @@ student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\build: student_p
 .PHONY : student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\build
 
 student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\clean:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\STUDEN~1\PLANET~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator
 	$(CMAKE_COMMAND) -P CMakeFiles\PlanetGenerator.dir\cmake_clean.cmake
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 .PHONY : student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\clean
 
 student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\depend:
-	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\student_projects\PlanetGenerator" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" D:\uni\PlanetGenerator D:\uni\PlanetGenerator\student_projects\PlanetGenerator D:\uni\PlanetGenerator\cmake-build-debug D:\uni\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator D:\uni\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : student_projects\PlanetGenerator\CMakeFiles\PlanetGenerator.dir\depend
 

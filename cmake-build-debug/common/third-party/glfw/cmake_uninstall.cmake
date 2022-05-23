@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: \"C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw/install_manifest.txt\"")
+if (NOT EXISTS "D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: \"D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw/install_manifest.txt\"")
 endif()
 
-file(READ "C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw/install_manifest.txt" files)
+file(READ "D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

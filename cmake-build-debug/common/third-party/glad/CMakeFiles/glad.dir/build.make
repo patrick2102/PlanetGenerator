@@ -47,10 +47,10 @@ RM = "D:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator"
+CMAKE_SOURCE_DIR = D:\uni\PlanetGenerator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug"
+CMAKE_BINARY_DIR = D:\uni\PlanetGenerator\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include common\third-party\glad\CMakeFiles\glad.dir\depend.make
@@ -63,28 +63,28 @@ include common\third-party\glad\CMakeFiles\glad.dir\flags.make
 
 common\third-party\glad\CMakeFiles\glad.dir\src\glad.c.obj: common\third-party\glad\CMakeFiles\glad.dir\flags.make
 common\third-party\glad\CMakeFiles\glad.dir\src\glad.c.obj: ..\common\third-party\glad\src\glad.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object common/third-party/glad/CMakeFiles/glad.dir/src/glad.c.obj"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glad
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object common/third-party/glad/CMakeFiles/glad.dir/src/glad.c.obj"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glad.dir\src\glad.c.obj /FdCMakeFiles\glad.dir\glad.pdb /FS -c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glad\src\glad.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\glad.dir\src\glad.c.obj /FdCMakeFiles\glad.dir\glad.pdb /FS -c D:\uni\PlanetGenerator\common\third-party\glad\src\glad.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glad\CMakeFiles\glad.dir\src\glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glad.dir/src/glad.c.i"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glad
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\glad.dir\src\glad.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glad\src\glad.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\uni\PlanetGenerator\common\third-party\glad\src\glad.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 common\third-party\glad\CMakeFiles\glad.dir\src\glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glad.dir/src/glad.c.s"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glad
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glad.dir\src\glad.c.s /c "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glad\src\glad.c"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\glad.dir\src\glad.c.s /c D:\uni\PlanetGenerator\common\third-party\glad\src\glad.c
 <<
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 # Object files for target glad
 glad_OBJECTS = \
@@ -96,13 +96,13 @@ glad_EXTERNAL_OBJECTS =
 common\third-party\glad\glad.lib: common\third-party\glad\CMakeFiles\glad.dir\src\glad.c.obj
 common\third-party\glad\glad.lib: common\third-party\glad\CMakeFiles\glad.dir\build.make
 common\third-party\glad\glad.lib: common\third-party\glad\CMakeFiles\glad.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library glad.lib"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glad
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library glad.lib"
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad
 	$(CMAKE_COMMAND) -P CMakeFiles\glad.dir\cmake_clean_target.cmake
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glad
+	cd D:\uni\PlanetGenerator\cmake-build-debug
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\link.exe /lib /nologo /machine:X86 /out:glad.lib @CMakeFiles\glad.dir\objects1.rsp 
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 # Rule to build all files generated by this target.
 common\third-party\glad\CMakeFiles\glad.dir\build: common\third-party\glad\glad.lib
@@ -110,12 +110,12 @@ common\third-party\glad\CMakeFiles\glad.dir\build: common\third-party\glad\glad.
 .PHONY : common\third-party\glad\CMakeFiles\glad.dir\build
 
 common\third-party\glad\CMakeFiles\glad.dir\clean:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glad
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad
 	$(CMAKE_COMMAND) -P CMakeFiles\glad.dir\cmake_clean.cmake
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 .PHONY : common\third-party\glad\CMakeFiles\glad.dir\clean
 
 common\third-party\glad\CMakeFiles\glad.dir\depend:
-	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glad" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glad" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glad\CMakeFiles\glad.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" D:\uni\PlanetGenerator D:\uni\PlanetGenerator\common\third-party\glad D:\uni\PlanetGenerator\cmake-build-debug D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad\CMakeFiles\glad.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : common\third-party\glad\CMakeFiles\glad.dir\depend
 

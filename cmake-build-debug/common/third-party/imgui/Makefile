@@ -52,10 +52,10 @@ RM = "D:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator"
+CMAKE_SOURCE_DIR = D:\uni\PlanetGenerator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug"
+CMAKE_BINARY_DIR = D:\uni\PlanetGenerator\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -118,18 +118,18 @@ rebuild_cache\fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\imgui\CMakeFiles\progress.marks"
+	cd D:\uni\PlanetGenerator\cmake-build-debug
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) common\third-party\imgui\all
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" 0
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) common\third-party\imgui\clean
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : clean
 
 # The main clean target
@@ -139,30 +139,30 @@ clean\fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) common\third-party\imgui\preinstall
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall\fast:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) common\third-party\imgui\preinstall
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : preinstall\fast
 
 # clear depends
 depend:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : depend
 
 # Convenience name for target.
 common\third-party\imgui\CMakeFiles\imgui.dir\rule:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) common\third-party\imgui\CMakeFiles\imgui.dir\rule
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : common\third-party\imgui\CMakeFiles\imgui.dir\rule
 
 # Convenience name for target.
@@ -172,9 +172,9 @@ imgui: common\third-party\imgui\CMakeFiles\imgui.dir\rule
 
 # fast build rule for target.
 imgui\fast:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\imgui\CMakeFiles\imgui.dir\build
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : imgui\fast
 
 src\imgui.obj: src\imgui.cpp.obj
@@ -183,9 +183,9 @@ src\imgui.obj: src\imgui.cpp.obj
 
 # target to build an object file
 src\imgui.cpp.obj:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\imgui\CMakeFiles\imgui.dir\src\imgui.cpp.obj
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : src\imgui.cpp.obj
 
 src\imgui.i: src\imgui.cpp.i
@@ -194,9 +194,9 @@ src\imgui.i: src\imgui.cpp.i
 
 # target to preprocess a source file
 src\imgui.cpp.i:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\imgui\CMakeFiles\imgui.dir\src\imgui.cpp.i
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : src\imgui.cpp.i
 
 src\imgui.s: src\imgui.cpp.s
@@ -205,9 +205,9 @@ src\imgui.s: src\imgui.cpp.s
 
 # target to generate assembly for a file
 src\imgui.cpp.s:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\imgui\CMakeFiles\imgui.dir\src\imgui.cpp.s
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : src\imgui.cpp.s
 
 src\imgui_demo.obj: src\imgui_demo.cpp.obj
@@ -216,9 +216,9 @@ src\imgui_demo.obj: src\imgui_demo.cpp.obj
 
 # target to build an object file
 src\imgui_demo.cpp.obj:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\imgui\CMakeFiles\imgui.dir\src\imgui_demo.cpp.obj
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : src\imgui_demo.cpp.obj
 
 src\imgui_demo.i: src\imgui_demo.cpp.i
@@ -227,9 +227,9 @@ src\imgui_demo.i: src\imgui_demo.cpp.i
 
 # target to preprocess a source file
 src\imgui_demo.cpp.i:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\imgui\CMakeFiles\imgui.dir\src\imgui_demo.cpp.i
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : src\imgui_demo.cpp.i
 
 src\imgui_demo.s: src\imgui_demo.cpp.s
@@ -238,9 +238,9 @@ src\imgui_demo.s: src\imgui_demo.cpp.s
 
 # target to generate assembly for a file
 src\imgui_demo.cpp.s:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\imgui\CMakeFiles\imgui.dir\src\imgui_demo.cpp.s
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : src\imgui_demo.cpp.s
 
 src\imgui_draw.obj: src\imgui_draw.cpp.obj
@@ -249,9 +249,9 @@ src\imgui_draw.obj: src\imgui_draw.cpp.obj
 
 # target to build an object file
 src\imgui_draw.cpp.obj:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\imgui\CMakeFiles\imgui.dir\src\imgui_draw.cpp.obj
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : src\imgui_draw.cpp.obj
 
 src\imgui_draw.i: src\imgui_draw.cpp.i
@@ -260,9 +260,9 @@ src\imgui_draw.i: src\imgui_draw.cpp.i
 
 # target to preprocess a source file
 src\imgui_draw.cpp.i:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\imgui\CMakeFiles\imgui.dir\src\imgui_draw.cpp.i
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : src\imgui_draw.cpp.i
 
 src\imgui_draw.s: src\imgui_draw.cpp.s
@@ -271,9 +271,9 @@ src\imgui_draw.s: src\imgui_draw.cpp.s
 
 # target to generate assembly for a file
 src\imgui_draw.cpp.s:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\imgui\CMakeFiles\imgui.dir\src\imgui_draw.cpp.s
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : src\imgui_draw.cpp.s
 
 src\imgui_impl_glfw.obj: src\imgui_impl_glfw.cpp.obj
@@ -282,9 +282,9 @@ src\imgui_impl_glfw.obj: src\imgui_impl_glfw.cpp.obj
 
 # target to build an object file
 src\imgui_impl_glfw.cpp.obj:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\imgui\CMakeFiles\imgui.dir\src\imgui_impl_glfw.cpp.obj
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : src\imgui_impl_glfw.cpp.obj
 
 src\imgui_impl_glfw.i: src\imgui_impl_glfw.cpp.i
@@ -293,9 +293,9 @@ src\imgui_impl_glfw.i: src\imgui_impl_glfw.cpp.i
 
 # target to preprocess a source file
 src\imgui_impl_glfw.cpp.i:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\imgui\CMakeFiles\imgui.dir\src\imgui_impl_glfw.cpp.i
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : src\imgui_impl_glfw.cpp.i
 
 src\imgui_impl_glfw.s: src\imgui_impl_glfw.cpp.s
@@ -304,9 +304,9 @@ src\imgui_impl_glfw.s: src\imgui_impl_glfw.cpp.s
 
 # target to generate assembly for a file
 src\imgui_impl_glfw.cpp.s:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\imgui\CMakeFiles\imgui.dir\src\imgui_impl_glfw.cpp.s
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : src\imgui_impl_glfw.cpp.s
 
 src\imgui_impl_opengl3.obj: src\imgui_impl_opengl3.cpp.obj
@@ -315,9 +315,9 @@ src\imgui_impl_opengl3.obj: src\imgui_impl_opengl3.cpp.obj
 
 # target to build an object file
 src\imgui_impl_opengl3.cpp.obj:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\imgui\CMakeFiles\imgui.dir\src\imgui_impl_opengl3.cpp.obj
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : src\imgui_impl_opengl3.cpp.obj
 
 src\imgui_impl_opengl3.i: src\imgui_impl_opengl3.cpp.i
@@ -326,9 +326,9 @@ src\imgui_impl_opengl3.i: src\imgui_impl_opengl3.cpp.i
 
 # target to preprocess a source file
 src\imgui_impl_opengl3.cpp.i:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\imgui\CMakeFiles\imgui.dir\src\imgui_impl_opengl3.cpp.i
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : src\imgui_impl_opengl3.cpp.i
 
 src\imgui_impl_opengl3.s: src\imgui_impl_opengl3.cpp.s
@@ -337,9 +337,9 @@ src\imgui_impl_opengl3.s: src\imgui_impl_opengl3.cpp.s
 
 # target to generate assembly for a file
 src\imgui_impl_opengl3.cpp.s:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\imgui\CMakeFiles\imgui.dir\src\imgui_impl_opengl3.cpp.s
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : src\imgui_impl_opengl3.cpp.s
 
 src\imgui_widgets.obj: src\imgui_widgets.cpp.obj
@@ -348,9 +348,9 @@ src\imgui_widgets.obj: src\imgui_widgets.cpp.obj
 
 # target to build an object file
 src\imgui_widgets.cpp.obj:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\imgui\CMakeFiles\imgui.dir\src\imgui_widgets.cpp.obj
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : src\imgui_widgets.cpp.obj
 
 src\imgui_widgets.i: src\imgui_widgets.cpp.i
@@ -359,9 +359,9 @@ src\imgui_widgets.i: src\imgui_widgets.cpp.i
 
 # target to preprocess a source file
 src\imgui_widgets.cpp.i:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\imgui\CMakeFiles\imgui.dir\src\imgui_widgets.cpp.i
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : src\imgui_widgets.cpp.i
 
 src\imgui_widgets.s: src\imgui_widgets.cpp.s
@@ -370,9 +370,9 @@ src\imgui_widgets.s: src\imgui_widgets.cpp.s
 
 # target to generate assembly for a file
 src\imgui_widgets.cpp.s:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\imgui\CMakeFiles\imgui.dir\src\imgui_widgets.cpp.s
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : src\imgui_widgets.cpp.s
 
 # Help Target
@@ -416,8 +416,8 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\imgui
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui
 .PHONY : cmake_check_build_system
 

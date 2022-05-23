@@ -1,4 +1,4 @@
-# Install script for directory: C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator
+# Install script for directory: D:/uni/PlanetGenerator/student_projects/PlanetGenerator
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

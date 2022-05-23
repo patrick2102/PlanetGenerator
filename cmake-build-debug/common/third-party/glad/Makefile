@@ -52,10 +52,10 @@ RM = "D:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator"
+CMAKE_SOURCE_DIR = D:\uni\PlanetGenerator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug"
+CMAKE_BINARY_DIR = D:\uni\PlanetGenerator\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -118,18 +118,18 @@ list_install_components\fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glad\CMakeFiles\progress.marks"
+	cd D:\uni\PlanetGenerator\cmake-build-debug
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) common\third-party\glad\all
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glad
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\CMakeFiles" 0
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\uni\PlanetGenerator\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) common\third-party\glad\clean
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glad
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad
 .PHONY : clean
 
 # The main clean target
@@ -139,30 +139,30 @@ clean\fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) common\third-party\glad\preinstall
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glad
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall\fast:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) common\third-party\glad\preinstall
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glad
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad
 .PHONY : preinstall\fast
 
 # clear depends
 depend:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glad
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad
 .PHONY : depend
 
 # Convenience name for target.
 common\third-party\glad\CMakeFiles\glad.dir\rule:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) common\third-party\glad\CMakeFiles\glad.dir\rule
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glad
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad
 .PHONY : common\third-party\glad\CMakeFiles\glad.dir\rule
 
 # Convenience name for target.
@@ -172,9 +172,9 @@ glad: common\third-party\glad\CMakeFiles\glad.dir\rule
 
 # fast build rule for target.
 glad\fast:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\glad\CMakeFiles\glad.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\glad\CMakeFiles\glad.dir\build
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glad
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad
 .PHONY : glad\fast
 
 src\glad.obj: src\glad.c.obj
@@ -183,9 +183,9 @@ src\glad.obj: src\glad.c.obj
 
 # target to build an object file
 src\glad.c.obj:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\glad\CMakeFiles\glad.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\glad\CMakeFiles\glad.dir\src\glad.c.obj
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glad
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad
 .PHONY : src\glad.c.obj
 
 src\glad.i: src\glad.c.i
@@ -194,9 +194,9 @@ src\glad.i: src\glad.c.i
 
 # target to preprocess a source file
 src\glad.c.i:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\glad\CMakeFiles\glad.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\glad\CMakeFiles\glad.dir\src\glad.c.i
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glad
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad
 .PHONY : src\glad.c.i
 
 src\glad.s: src\glad.c.s
@@ -205,9 +205,9 @@ src\glad.s: src\glad.c.s
 
 # target to generate assembly for a file
 src\glad.c.s:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f common\third-party\glad\CMakeFiles\glad.dir\build.make /nologo -$(MAKEFLAGS) common\third-party\glad\CMakeFiles\glad.dir\src\glad.c.s
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glad
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad
 .PHONY : src\glad.c.s
 
 # Help Target
@@ -236,8 +236,8 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glad
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad
 .PHONY : cmake_check_build_system
 

@@ -8,78 +8,78 @@
 		<Option virtualFolders="CMake Files\;CMake Files\common\;CMake Files\common\third-party\;CMake Files\common\third-party\glfw\;CMake Files\common\third-party\glfw\src\;CMake Files\common\third-party\glad\;CMake Files\common\third-party\imgui\;CMake Files\common\third-party\assimp\;CMake Files\student_projects\;CMake Files\student_projects\PlanetGenerator\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug"/>
+				<Option working_dir="D:/uni/PlanetGenerator/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 all"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/local">
-				<Option working_dir="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug"/>
+				<Option working_dir="D:/uni/PlanetGenerator/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 install/local"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 install/local"/>
+					<CompileFile command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install">
-				<Option working_dir="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug"/>
+				<Option working_dir="D:/uni/PlanetGenerator/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 install"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 install"/>
+					<CompileFile command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug"/>
+				<Option working_dir="D:/uni/PlanetGenerator/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 edit_cache"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug"/>
+				<Option working_dir="D:/uni/PlanetGenerator/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="list_install_components">
-				<Option working_dir="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug"/>
+				<Option working_dir="D:/uni/PlanetGenerator/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 list_install_components"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 list_install_components"/>
+					<CompileFile command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="uninstall">
-				<Option working_dir="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw"/>
+				<Option working_dir="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile&quot; VERBOSE=1 uninstall"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile VERBOSE=1 uninstall"/>
+					<CompileFile command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="glfw">
-				<Option output="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src/glfw3.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src"/>
+				<Option output="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src/glfw3.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
@@ -87,9 +87,9 @@
 					<Add option="-D_GLFW_USE_CONFIG_H"/>
 					<Add option="-D_UNICODE"/>
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/include"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/glfw/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/glfw/src"/>
+					<Add directory="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -100,15 +100,15 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile&quot; VERBOSE=1 glfw"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile VERBOSE=1 glfw"/>
+					<CompileFile command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="glfw/fast">
-				<Option output="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src/glfw3.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src"/>
+				<Option output="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src/glfw3.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
@@ -116,9 +116,9 @@
 					<Add option="-D_GLFW_USE_CONFIG_H"/>
 					<Add option="-D_UNICODE"/>
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/include"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/glfw/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/glfw/src"/>
+					<Add directory="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -129,20 +129,20 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile&quot; VERBOSE=1 glfw/fast"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile VERBOSE=1 glfw/fast"/>
+					<CompileFile command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\src\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="glad">
-				<Option output="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glad/glad.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glad"/>
+				<Option output="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glad/glad.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glad"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glad/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/glad/include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -153,20 +153,20 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glad\Makefile&quot; VERBOSE=1 glad"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glad\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glad\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glad\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad\Makefile VERBOSE=1 glad"/>
+					<CompileFile command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="glad/fast">
-				<Option output="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glad/glad.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glad"/>
+				<Option output="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glad/glad.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glad"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glad/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/glad/include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -177,22 +177,22 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glad\Makefile&quot; VERBOSE=1 glad/fast"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glad\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glad\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glad\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad\Makefile VERBOSE=1 glad/fast"/>
+					<CompileFile command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glad\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="imgui">
-				<Option output="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/imgui/imgui.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/imgui"/>
+				<Option output="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/imgui/imgui.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/imgui"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/include"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glad/include"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/imgui/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/glad/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/glfw/include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -203,22 +203,22 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\imgui\Makefile&quot; VERBOSE=1 imgui"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\imgui\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\imgui\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\imgui\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui\Makefile VERBOSE=1 imgui"/>
+					<CompileFile command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="imgui/fast">
-				<Option output="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/imgui/imgui.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/imgui"/>
+				<Option output="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/imgui/imgui.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/imgui"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/include"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glad/include"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/imgui/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/glad/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/glfw/include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -229,15 +229,15 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\imgui\Makefile&quot; VERBOSE=1 imgui/fast"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\imgui\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\imgui\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\imgui\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui\Makefile VERBOSE=1 imgui/fast"/>
+					<CompileFile command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\imgui\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="assimp">
-				<Option output="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/assimp/assimp.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/assimp"/>
+				<Option output="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/assimp/assimp.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/assimp"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
@@ -298,12 +298,12 @@
 					<Add option="-DPLATFORM_WINDOWS"/>
 					<Add option="-DPLATFORM=WINDOWS"/>
 					<Add option="-DASSIMP_BUILD_NO_FBX_IMPORTER"/>
-					<Add directory="//C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/assimp"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/include"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/contrib/zlib"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/."/>
+					<Add directory="//D:/uni/PlanetGenerator/common/third-party/assimp"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/assimp/assimp"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/assimp/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/assimp/code"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/assimp/contrib/zlib"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/assimp/."/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -314,15 +314,15 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\assimp\Makefile&quot; VERBOSE=1 assimp"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\assimp\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\assimp\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\assimp\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp\Makefile VERBOSE=1 assimp"/>
+					<CompileFile command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="assimp/fast">
-				<Option output="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/assimp/assimp.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/assimp"/>
+				<Option output="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/assimp/assimp.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/assimp"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
@@ -383,12 +383,12 @@
 					<Add option="-DPLATFORM_WINDOWS"/>
 					<Add option="-DPLATFORM=WINDOWS"/>
 					<Add option="-DASSIMP_BUILD_NO_FBX_IMPORTER"/>
-					<Add directory="//C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/assimp"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/include"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/contrib/zlib"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/."/>
+					<Add directory="//D:/uni/PlanetGenerator/common/third-party/assimp"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/assimp/assimp"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/assimp/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/assimp/code"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/assimp/contrib/zlib"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/assimp/."/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -399,28 +399,28 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\assimp\Makefile&quot; VERBOSE=1 assimp/fast"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\assimp\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\assimp\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\assimp\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp\Makefile VERBOSE=1 assimp/fast"/>
+					<CompileFile command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\assimp\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="PlanetGenerator">
-				<Option output="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/student_projects/PlanetGenerator/PlanetGenerator.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/student_projects/PlanetGenerator"/>
+				<Option output="D:/uni/PlanetGenerator/cmake-build-debug/student_projects/PlanetGenerator/PlanetGenerator.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/uni/PlanetGenerator/cmake-build-debug/student_projects/PlanetGenerator"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/include"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glad/include"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/include"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/include"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glm"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/STBImage"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/include"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator"/>
+					<Add directory="D:/uni/PlanetGenerator/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/glad/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/glfw/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/imgui/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/glm"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/STBImage"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/assimp/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/assimp"/>
+					<Add directory="D:/uni/PlanetGenerator/student_projects/PlanetGenerator"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -431,28 +431,28 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator\Makefile&quot; VERBOSE=1 PlanetGenerator"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator\Makefile VERBOSE=1 PlanetGenerator"/>
+					<CompileFile command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="PlanetGenerator/fast">
-				<Option output="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/student_projects/PlanetGenerator/PlanetGenerator.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/student_projects/PlanetGenerator"/>
+				<Option output="D:/uni/PlanetGenerator/cmake-build-debug/student_projects/PlanetGenerator/PlanetGenerator.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/uni/PlanetGenerator/cmake-build-debug/student_projects/PlanetGenerator"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/include"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glad/include"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/include"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/include"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glm"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/STBImage"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/include"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp"/>
-					<Add directory="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator"/>
+					<Add directory="D:/uni/PlanetGenerator/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/glad/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/glfw/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/imgui/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/glm"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/STBImage"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/assimp/include"/>
+					<Add directory="D:/uni/PlanetGenerator/common/third-party/assimp"/>
+					<Add directory="D:/uni/PlanetGenerator/student_projects/PlanetGenerator"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -463,593 +463,593 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator\Makefile&quot; VERBOSE=1 PlanetGenerator/fast"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator\Makefile VERBOSE=1 PlanetGenerator/fast"/>
+					<CompileFile command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\uni\PlanetGenerator\cmake-build-debug\student_projects\PlanetGenerator\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src/glfw_config.h">
+		<Unit filename="D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw/src/glfw_config.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Assimp.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/Assimp.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/BaseImporter.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/BaseImporter.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/BaseProcess.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/BaseProcess.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/BaseProcess.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/BaseProcess.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Bitmap.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/Bitmap.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/CreateAnimMesh.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/CreateAnimMesh.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/DefaultIOStream.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/DefaultIOStream.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/DefaultIOSystem.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/DefaultIOSystem.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/DefaultLogger.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/DefaultLogger.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Exporter.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/Exporter.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Importer.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/Importer.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Importer.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/Importer.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/ImporterRegistry.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/ImporterRegistry.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/PostStepRegistry.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/PostStepRegistry.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/RemoveComments.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/RemoveComments.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/SGSpatialSort.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/SGSpatialSort.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/SceneCombiner.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/SceneCombiner.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/ScenePreprocessor.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/ScenePreprocessor.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/ScenePreprocessor.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/ScenePreprocessor.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/SkeletonMeshBuilder.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/SkeletonMeshBuilder.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/SpatialSort.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/SpatialSort.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/SplitByBoneCountProcess.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/SplitByBoneCountProcess.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/SplitByBoneCountProcess.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/SplitByBoneCountProcess.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/StandardShapes.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/StandardShapes.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Subdivision.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/Subdivision.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/TargetAnimation.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/TargetAnimation.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/TargetAnimation.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/TargetAnimation.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/Version.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/Version.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/VertexTriangleAdjacency.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/VertexTriangleAdjacency.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/VertexTriangleAdjacency.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/VertexTriangleAdjacency.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/scene.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/scene.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/simd.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/simd.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Common/simd.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Common/simd.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXAnimation.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXAnimation.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXBinaryTokenizer.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXBinaryTokenizer.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXConverter.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXConverter.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXConverter.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXConverter.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDeformer.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDeformer.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocument.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocument.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocument.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocument.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocumentUtil.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocumentUtil.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocumentUtil.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXDocumentUtil.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExportNode.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExportNode.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExportNode.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExportNode.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExportProperty.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExportProperty.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExportProperty.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExportProperty.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExporter.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExporter.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExporter.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXExporter.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXImporter.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXImporter.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXImporter.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXImporter.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXMaterial.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXMaterial.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXMeshGeometry.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXMeshGeometry.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXMeshGeometry.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXMeshGeometry.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXModel.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXModel.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXNodeAttribute.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXNodeAttribute.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXParser.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXParser.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXParser.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXParser.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXProperties.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXProperties.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXProperties.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXProperties.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXTokenizer.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXTokenizer.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXTokenizer.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXTokenizer.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXUtil.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXUtil.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/FBX/FBXUtil.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/FBX/FBXUtil.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Material/MaterialSystem.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Material/MaterialSystem.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Material/MaterialSystem.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Material/MaterialSystem.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjExporter.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Obj/ObjExporter.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjExporter.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Obj/ObjExporter.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileImporter.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileImporter.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileImporter.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileImporter.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileMtlImporter.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileMtlImporter.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileMtlImporter.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileMtlImporter.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileParser.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileParser.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileParser.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/Obj/ObjFileParser.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ArmaturePopulate.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ArmaturePopulate.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ArmaturePopulate.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ArmaturePopulate.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/CalcTangentsProcess.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/CalcTangentsProcess.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/CalcTangentsProcess.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/CalcTangentsProcess.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ComputeUVMappingProcess.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ComputeUVMappingProcess.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ComputeUVMappingProcess.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ComputeUVMappingProcess.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ConvertToLHProcess.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ConvertToLHProcess.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ConvertToLHProcess.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ConvertToLHProcess.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/DeboneProcess.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/DeboneProcess.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/DeboneProcess.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/DeboneProcess.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/DropFaceNormalsProcess.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/DropFaceNormalsProcess.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/DropFaceNormalsProcess.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/DropFaceNormalsProcess.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/EmbedTexturesProcess.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/EmbedTexturesProcess.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/EmbedTexturesProcess.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/EmbedTexturesProcess.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FindDegenerates.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FindDegenerates.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FindDegenerates.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FindDegenerates.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FindInstancesProcess.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FindInstancesProcess.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FindInstancesProcess.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FindInstancesProcess.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FindInvalidDataProcess.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FindInvalidDataProcess.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FindInvalidDataProcess.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FindInvalidDataProcess.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FixNormalsStep.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FixNormalsStep.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FixNormalsStep.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/FixNormalsStep.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/GenBoundingBoxesProcess.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/GenBoundingBoxesProcess.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/GenBoundingBoxesProcess.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/GenBoundingBoxesProcess.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/GenFaceNormalsProcess.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/GenFaceNormalsProcess.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/GenFaceNormalsProcess.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/GenFaceNormalsProcess.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/GenVertexNormalsProcess.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/GenVertexNormalsProcess.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/GenVertexNormalsProcess.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/GenVertexNormalsProcess.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ImproveCacheLocality.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ImproveCacheLocality.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ImproveCacheLocality.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ImproveCacheLocality.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/JoinVerticesProcess.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/JoinVerticesProcess.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/JoinVerticesProcess.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/JoinVerticesProcess.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/LimitBoneWeightsProcess.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/LimitBoneWeightsProcess.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/LimitBoneWeightsProcess.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/LimitBoneWeightsProcess.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/MakeVerboseFormat.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/MakeVerboseFormat.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/MakeVerboseFormat.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/MakeVerboseFormat.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/OptimizeGraph.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/OptimizeGraph.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/OptimizeGraph.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/OptimizeGraph.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/OptimizeMeshes.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/OptimizeMeshes.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/OptimizeMeshes.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/OptimizeMeshes.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/PretransformVertices.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/PretransformVertices.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/PretransformVertices.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/PretransformVertices.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ProcessHelper.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/RemoveRedundantMaterials.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/RemoveRedundantMaterials.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/RemoveRedundantMaterials.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/RemoveRedundantMaterials.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/RemoveVCProcess.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/RemoveVCProcess.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/RemoveVCProcess.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/RemoveVCProcess.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ScaleProcess.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ScaleProcess.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ScaleProcess.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ScaleProcess.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/SortByPTypeProcess.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/SortByPTypeProcess.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/SortByPTypeProcess.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/SortByPTypeProcess.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/SplitLargeMeshes.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/SplitLargeMeshes.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/SplitLargeMeshes.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/SplitLargeMeshes.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/TextureTransform.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/TextureTransform.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/TextureTransform.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/TextureTransform.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/TriangulateProcess.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/TriangulateProcess.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/TriangulateProcess.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/TriangulateProcess.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ValidateDataStructure.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ValidateDataStructure.cpp">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ValidateDataStructure.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/code/PostProcessing/ValidateDataStructure.h">
 			<Option target="assimp"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glad/src/glad.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glad/src/glad.c">
 			<Option target="glad"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/include/GLFW/glfw3.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/include/GLFW/glfw3.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/include/GLFW/glfw3native.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/include/GLFW/glfw3native.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/context.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/context.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/egl_context.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/egl_context.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/egl_context.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/egl_context.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/init.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/init.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/input.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/input.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/internal.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/internal.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/mappings.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/mappings.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/monitor.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/monitor.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/osmesa_context.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/osmesa_context.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/osmesa_context.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/osmesa_context.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/vulkan.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/vulkan.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/wgl_context.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/wgl_context.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/wgl_context.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/wgl_context.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/win32_init.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/win32_init.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/win32_joystick.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/win32_joystick.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/win32_joystick.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/win32_joystick.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/win32_monitor.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/win32_monitor.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/win32_platform.h">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/win32_platform.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/win32_thread.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/win32_thread.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/win32_time.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/win32_time.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/win32_window.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/win32_window.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/window.c">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/window.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui.cpp">
 			<Option target="imgui"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui_demo.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui_demo.cpp">
 			<Option target="imgui"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui_draw.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui_draw.cpp">
 			<Option target="imgui"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui_impl_glfw.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui_impl_glfw.cpp">
 			<Option target="imgui"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui_impl_opengl3.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui_impl_opengl3.cpp">
 			<Option target="imgui"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/src/imgui_widgets.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui_widgets.cpp">
 			<Option target="imgui"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/CubeSphere.h">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/CubeSphere.h">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/HeightMapGenerator.h">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/HeightMapGenerator.h">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/Misc.h">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Misc.h">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/Planet.h">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Planet.h">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/Sphere.h">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Sphere.h">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/Sun.h">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Sun.h">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/camera.h">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/camera.h">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/main.cpp">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/main.cpp">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shader.h">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shader.h">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/pbr_shading.frag">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/pbr_shading.frag">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/pbr_shading.vert">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/pbr_shading.vert">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/phong_shading.frag">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/phong_shading.frag">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/phong_shading.vert">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/phong_shading.vert">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/skybox.frag">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/skybox.frag">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/skybox.vert">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/skybox.vert">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/sun_shading.frag">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/sun_shading.frag">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/shaders/sun_shading.vert">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/sun_shading.vert">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/CMakeLists.txt">
+		<Unit filename="D:/uni/PlanetGenerator/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/CMakeLists.txt">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\common\third-party\glfw\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/cmake_uninstall.cmake.in">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/cmake_uninstall.cmake.in">
 			<Option virtualFolder="CMake Files\common\third-party\glfw\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/CMakeLists.txt">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\common\third-party\glfw\src\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/glfw3.pc.in">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/glfw3.pc.in">
 			<Option virtualFolder="CMake Files\common\third-party\glfw\src\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/glfw3Config.cmake.in">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/glfw3Config.cmake.in">
 			<Option virtualFolder="CMake Files\common\third-party\glfw\src\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glfw/src/glfw_config.h.in">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glfw/src/glfw_config.h.in">
 			<Option virtualFolder="CMake Files\common\third-party\glfw\src\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/glad/CMakeLists.txt">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/glad/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\common\third-party\glad\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/imgui/CMakeLists.txt">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/imgui/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\common\third-party\imgui\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/common/third-party/assimp/CMakeLists.txt">
+		<Unit filename="D:/uni/PlanetGenerator/common/third-party/assimp/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\common\third-party\assimp\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/CMakeLists.txt">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\student_projects\"/>
 		</Unit>
-		<Unit filename="C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/student_projects/PlanetGenerator/CMakeLists.txt">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\student_projects\PlanetGenerator\"/>
 		</Unit>
 	</Project>

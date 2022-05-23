@@ -47,10 +47,10 @@ RM = "D:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator"
+CMAKE_SOURCE_DIR = D:\uni\PlanetGenerator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug"
+CMAKE_BINARY_DIR = D:\uni\PlanetGenerator\cmake-build-debug
 
 # Utility rule file for uninstall.
 
@@ -58,9 +58,9 @@ CMAKE_BINARY_DIR = "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\
 include common\third-party\glfw\CMakeFiles\uninstall.dir\progress.make
 
 common\third-party\glfw\CMakeFiles\uninstall:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw
-	echo >nul && "D:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -P "C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw/cmake_uninstall.cmake"
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw
+	echo >nul && "D:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -P D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw/cmake_uninstall.cmake
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 
 uninstall: common\third-party\glfw\CMakeFiles\uninstall
 uninstall: common\third-party\glfw\CMakeFiles\uninstall.dir\build.make
@@ -73,12 +73,12 @@ common\third-party\glfw\CMakeFiles\uninstall.dir\build: uninstall
 .PHONY : common\third-party\glfw\CMakeFiles\uninstall.dir\build
 
 common\third-party\glfw\CMakeFiles\uninstall.dir\clean:
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1\common\THIRD-~1\glfw
+	cd D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw
 	$(CMAKE_COMMAND) -P CMakeFiles\uninstall.dir\cmake_clean.cmake
-	cd C:\Uni\GAMES2~1\2NDSEM~1\GRAPHI~1\PLANET~1\CMAKE-~1
+	cd D:\uni\PlanetGenerator\cmake-build-debug
 .PHONY : common\third-party\glfw\CMakeFiles\uninstall.dir\clean
 
 common\third-party\glfw\CMakeFiles\uninstall.dir\depend:
-	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\common\third-party\glfw" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw" "C:\Uni\Games 2nd Semester\2nd Semester\Graphics Programming\PlanetGenerator\cmake-build-debug\common\third-party\glfw\CMakeFiles\uninstall.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" D:\uni\PlanetGenerator D:\uni\PlanetGenerator\common\third-party\glfw D:\uni\PlanetGenerator\cmake-build-debug D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw D:\uni\PlanetGenerator\cmake-build-debug\common\third-party\glfw\CMakeFiles\uninstall.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : common\third-party\glfw\CMakeFiles\uninstall.dir\depend
 

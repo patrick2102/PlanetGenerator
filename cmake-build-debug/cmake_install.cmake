@@ -1,4 +1,4 @@
-# Install script for directory: C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator
+# Install script for directory: D:/uni/PlanetGenerator
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,11 +34,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glfw/cmake_install.cmake")
-  include("C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/glad/cmake_install.cmake")
-  include("C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/imgui/cmake_install.cmake")
-  include("C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/common/third-party/assimp/cmake_install.cmake")
-  include("C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/student_projects/cmake_install.cmake")
+  include("D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glfw/cmake_install.cmake")
+  include("D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/glad/cmake_install.cmake")
+  include("D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/imgui/cmake_install.cmake")
+  include("D:/uni/PlanetGenerator/cmake-build-debug/common/third-party/assimp/cmake_install.cmake")
+  include("D:/uni/PlanetGenerator/cmake-build-debug/student_projects/cmake_install.cmake")
 
 endif()
 
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Uni/Games 2nd Semester/2nd Semester/Graphics Programming/PlanetGenerator/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/uni/PlanetGenerator/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

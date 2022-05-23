@@ -21,6 +21,7 @@
 #include "imgui_impl_opengl3.h"
 #include "Sun.h"
 #include "Planet.h"
+#include <CubeSphere.h>
 
 using namespace std;
 
@@ -92,10 +93,12 @@ std::vector<Planet> planets;
 // Functions for solar system
 void initializeSun(int);
 void initializePlanets(int, int);
+void initializeSun2(int);
 
 void drawSolarSystem();
 void drawSun();
 void drawPlanets();
+
 
 int main()
 {
@@ -176,11 +179,12 @@ int main()
 
 
     //Details of cube
-    int cubeDivisions = 256;
+    int cubeDivisions = 32;
 
     //Initialize planets:
     int numOfPlanets = 3;
 
+    //initializeSun2(cubeDivisions);
     initializeSun(cubeDivisions);
     initializePlanets(numOfPlanets, cubeDivisions);
 
@@ -213,6 +217,7 @@ int main()
         drawSkybox();
 
         shader->use();
+        //drawSun();
         setLightUniforms();
         drawSolarSystem();
 
@@ -503,6 +508,14 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 
 void initializeSun2(int divisions)
 {
+    glm::vec3 pos = glm::vec3(0.0f);
+    glm::vec3 color = glm::vec4(0.9f);
+    float intensity = 1.0f;
+    auto sphere = CubeSphere(1, divisions);
+    Light light = Light(pos, color, intensity);
+    Material material = sunMaterial;
+
+    sun = new Sun(pos, shader, sphere, light, material);
     //auto cubeSphere = CubeSphere(1, divisions);
 }
 
