@@ -73,6 +73,18 @@ private:
                     points[j][i] = v_dir;
                 }
             }
+            /*
+            glm::vec3 p1 = GetPointOnSphere(a1, a2);
+            glm::vec3 p2 = GetPointOnSphere(a1-increment, a2);
+            glm::vec3 p3 = GetPointOnSphere(a1-increment, a2+increment);
+
+            vertices.insert(vertices.end(), {p2, p1, p3});
+
+            if(j != 0 && j != divisions-1)
+            {
+                glm::vec3 p4 = GetPointOnSphere(a1, a2+increment);
+                vertices.insert(vertices.end(), {p3, p1, p4});
+            }*/
 
             for (int i = 0; i < (pointsNum - 1); i++)
             {
@@ -83,8 +95,10 @@ private:
                     glm::vec3 p3 = points[i][j + 1];
                     glm::vec3 p4 = points[i + 1][j + 1];
 
-                    vertices.insert(vertices.end(), { p1, p2, p3 });
-                    vertices.insert(vertices.end(), { p3, p2, p4 });
+                    //vertices.insert(vertices.end(), { p1, p2, p3 });
+                    //vertices.insert(vertices.end(), { p3, p2, p4 });
+                    vertices.insert(vertices.end(), { p2, p1, p3 });
+                    vertices.insert(vertices.end(), { p3, p4, p2 });
                 }
             }
             /*

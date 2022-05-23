@@ -10,10 +10,17 @@ class Planet
 {
 public:
     Planet(glm::vec3 position, Shader *shader, Sphere sphere, Material material)
-            : sphere(sphere), material(material) {
+            : material(material) {
         this->center = position;
         this->shader = shader;
-        SetUpVertices();
+        SetUpVertices(sphere);
+        SetUpBuffers();
+    }
+    Planet(glm::vec3 position, Shader *shader, CubeSphere sphere, Material material)
+            : material(material) {
+        this->center = position;
+        this->shader = shader;
+        SetUpVertices(sphere);
         SetUpBuffers();
     }
     void Draw()
@@ -39,11 +46,32 @@ private:
 
     glm::vec3 center;
     Shader* shader;
-    Sphere sphere;
     Material material;
     std::vector<Vertex> vertices;
 
-    void SetUpVertices()
+    void SetUpVertices(CubeSphere sphere)
+    {
+        for(int i = 0; i < sphere.vertices.size(); i += 3)
+        {
+            auto p1 = sphere.vertices[i];
+            auto p2 = sphere.vertices[i+1];
+            auto p3 = sphere.vertices[i+2];
+
+            auto v1 = p2-p1;
+            auto v2 = p3-p1;
+
+            auto normal = glm::normalize(glm::cross(v1, v2));
+
+            vertices.insert(vertices.end(), {p1, normal});
+            vertices.insert(vertices.end(), {p2, normal});
+            vertices.insert(vertices.end(), {p3, normal});
+        }
+
+        //Clear sphere vertices to not use up wasteful memory.
+        sphere.vertices.clear();
+    }
+
+    void SetUpVertices(Sphere sphere)
     {
         for(int i = 0; i < sphere.vertices.size(); i += 3)
         {
