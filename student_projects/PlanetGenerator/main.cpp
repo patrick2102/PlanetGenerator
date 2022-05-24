@@ -107,14 +107,21 @@ int main()
 {
     if(testHeightMap)
     {
+        //Initial values for height map
         double seed = 0.0;
-        int frequency = 10;
-        float amplitude = 100.0f;
-        int w = 100;
-        int h = 100;
 
-        HeightMapGenerator hmg = HeightMapGenerator(frequency, amplitude, seed);
-        double** heightMap = hmg.GenerateMap(w,h);
+        HeightMapGenerator hmg = HeightMapGenerator(seed);
+
+        //For generating heightmap
+        int scale = 100;
+        float amplitude = 43.0f;
+        double persistence = 1;
+        double lacunarity = 2;
+        int w = 1000;
+        int h = 1000;
+        int iterations = 5;
+
+        double** heightMap = hmg.GenerateMap(w, h, iterations, scale, amplitude, persistence, lacunarity);
 
         hmg.OutputImage(w, h, heightMap);
         return 0;
