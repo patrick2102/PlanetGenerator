@@ -1470,6 +1470,14 @@ Misc.h
 shader.h
 -
 
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/HeightMapGenerator.h
+stdlib.h
+-
+glm/glm.hpp
+-
+time.h
+-
+
 D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Misc.h
 glm/glm.hpp
 -
@@ -1517,6 +1525,8 @@ shader.h
 D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shader.h
 camera.h
 D:/uni/PlanetGenerator/student_projects/PlanetGenerator/camera.h
+HeightMapGenerator.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/HeightMapGenerator.h
 stb_image.h
 -
 assimp/Importer.hpp

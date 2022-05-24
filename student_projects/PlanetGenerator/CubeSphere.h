@@ -52,8 +52,14 @@ private:
         const float DEG2RAD = acos(-1) / 180.0f;
 
         CubeSphereSide cubeSphereSide[] = {positiveX, negativeX, positiveY, negativeY, positiveZ, negativeZ};
+        //CubeSphereSide cubeSphereSide[] = {negativeZ};
 
-        for(int sideNum = 0; sideNum < 6; sideNum++)
+
+        int len = sizeof(cubeSphereSide)/sizeof(cubeSphereSide[0]);
+
+        //std::cout << len << std::endl;
+
+        for(int sideNum = 0; sideNum < len; sideNum++)
         {
             std::vector<std::vector<glm::vec3>> points(pointsNum, std::vector<glm::vec3>(pointsNum));
 

@@ -10,6 +10,7 @@
 //  lessons to this implementation
 #include "shader.h"
 #include "camera.h"
+#include "HeightMapGenerator.h"
 
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
@@ -59,6 +60,8 @@ float lastY = (float)SCR_HEIGHT / 2.0;
 float deltaTime;
 bool isPaused = false; // stop camera movement when GUI is open
 
+bool testHeightMap = true;
+
 // solar system variables
 // --------------------------------
 Sun* sun;
@@ -102,6 +105,20 @@ void drawPlanets();
 
 int main()
 {
+    if(testHeightMap)
+    {
+        double seed = 0.0;
+        int frequency = 40;
+        int w = 20;
+        int h = 20;
+
+        HeightMapGenerator hmg = HeightMapGenerator(frequency, 0.0, seed);
+        double** heightMap = hmg.GenerateMap(w,h);
+
+        hmg.OutputImage(w, h, heightMap);
+        return 0;
+    }
+
     // glfw: initialize and configure
     // ------------------------------
     glfwInit();
@@ -179,10 +196,10 @@ int main()
 
 
     //Details of cube
-    int cubeDivisions = 7;
+    int cubeDivisions = 1;
 
     //Initialize planets:
-    int numOfPlanets = 3;
+    int numOfPlanets = 1;
 
     //initializeSun2(cubeDivisions);
     initializeSun(cubeDivisions);
@@ -537,7 +554,7 @@ void initializePlanets(int n, int divisions)
 {
     for(int i = 0; i < n; i++)
     {
-        glm::vec3 pos = glm::vec3(3.0f * float(i) + 3.0f, 0.0f, 0.0f);
+        glm::vec3 pos = glm::vec3(3.0f * float(i) + 6.0f, 0.0f, 0.0f);
         //auto sphere = Sphere(1, divisions);
         auto sphere = CubeSphere(1, divisions);
         auto material = planetMaterial;

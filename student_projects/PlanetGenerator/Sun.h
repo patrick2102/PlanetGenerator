@@ -75,8 +75,8 @@ private:
             auto p2 = sphere.vertices[i+1];
             auto p3 = sphere.vertices[i+2];
 
-            auto v1 = p2-p1;
-            auto v2 = p3-p1;
+            auto v1 = glm::normalize(p2-p1);
+            auto v2 = glm::normalize(p3-p1);
 
             auto normal = glm::normalize(glm::cross(v1, v2));
 
