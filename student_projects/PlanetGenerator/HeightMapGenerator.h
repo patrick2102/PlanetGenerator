@@ -12,6 +12,7 @@
 class HeightMapGenerator
 {
 public:
+    /*
     constexpr static const int perm[256] = {
             151, 160, 137, 91, 90, 15,
             131, 13, 201, 95, 96, 53, 194, 233, 7, 225, 140, 36, 103, 30, 69, 142, 8, 99, 37, 240, 21, 10, 23,
@@ -38,6 +39,7 @@ public:
         const float v = h < 4 ? y : x;
         return ((h & 1) ? -u : u) + ((h & 2) ? -2.0f * v : 2.0f * v); // and compute the dot product with (x,y).
     }
+    */
 
 
     static const int ptSize = 255;
@@ -46,10 +48,10 @@ public:
                                 glm::vec3(1,0,1), glm::vec3(-1,0,1), glm::vec3(1,0,-1), glm::vec3(-1,0,-1),
                                 glm::vec3(0,1,1), glm::vec3(0,-1,1), glm::vec3(0,1,-1), glm::vec3(0,-1,-1)};
 
-    HeightMapGenerator(int frequency, float persistance, double seed)
+    HeightMapGenerator(int frequency, float amplitude, double seed)
     {
         this->frequency = (frequency+1);
-        this->persistance = persistance;
+        this->amplitude = amplitude;
         GeneratePermutationTable(seed);
     }
 
@@ -116,7 +118,7 @@ public:
         else
         {
             t0 *= t0;
-            n0 = t0 * t0 * grad(gi0, x0, y0);
+            n0 = t0 * t0 * glm::dot(grad3[gi0], glm::vec3(x0, y0, 0));
         }
 
         double t1 = 0.5 - x1*x1 - y1*y1;
@@ -125,7 +127,7 @@ public:
         else
         {
             t1 *= t1;
-            n1 = t1 * t1 * grad(gi1, x1, y1);
+            n1 = t1 * t1 * glm::dot(grad3[gi1], glm::vec3(x1, y1, 0));
         }
 
         double t2 = 0.5 - x2*x2 - y2*y2;
@@ -134,10 +136,10 @@ public:
         else
         {
             t2 *= t2;
-            n2 = t2 * t2 * grad(gi2, x2, y2);
+            n2 = t2 * t2 * glm::dot(grad3[gi2], glm::vec3(x2, y2, 0));
         }
 
-        return 45.23065 * (n0 + n1 + n2);
+        return amplitude * (n0 + n1 + n2);
     }
 
     double** GenerateMap(int w, int h)
@@ -334,7 +336,7 @@ public:
 private:
     int frequency;
     //int lacunarity;
-    float persistance;
+    float amplitude;
 
 };
 
