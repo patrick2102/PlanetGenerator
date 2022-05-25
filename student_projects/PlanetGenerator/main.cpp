@@ -44,6 +44,7 @@ const unsigned int SHADOW_WIDTH = 2048, SHADOW_HEIGHT = 2048;
 // -----------------------------------
 Shader* shader;
 Shader* phong_shading;
+Shader* simplex_shading;
 Camera camera(glm::vec3(0.0f, 1.6f, 5.0f));
 
 Shader* skyboxShader;
@@ -60,7 +61,7 @@ float lastY = (float)SCR_HEIGHT / 2.0;
 float deltaTime;
 bool isPaused = false; // stop camera movement when GUI is open
 
-bool testHeightMap = true;
+bool testHeightMap = false;
 
 // solar system variables
 // --------------------------------
@@ -108,22 +109,22 @@ int main()
     if(testHeightMap)
     {
         //Initial values for height map
-        double seed = 0.0;
+        double seed = 1.0;
 
         HeightMapGenerator hmg = HeightMapGenerator(seed);
 
         //For generating heightmap
         int scale = 100;
         float amplitude = 43.0f;
-        double persistence = 1;
+        double persistence = 0.5;
         double lacunarity = 2;
         int w = 1000;
         int h = 1000;
-        int iterations = 5;
+        int iterations = 6;
 
         double** heightMap = hmg.GenerateMap(w, h, iterations, scale, amplitude, persistence, lacunarity);
 
-        hmg.OutputImage(w, h, heightMap);
+        hmg.OutputImage(w, h, heightMap, "img.bmp");
         return 0;
     }
 
@@ -166,9 +167,12 @@ int main()
     // load the shaders and the 3D models
     // ----------------------------------
     phong_shading = new Shader("shaders/phong_shading.vert", "shaders/phong_shading.frag");
-    shader = phong_shading;
+    simplex_shading = new Shader("shaders/simplex.vert", "shaders/simplex.frag");
+    //shader = phong_shading;
+    shader = simplex_shading;
 
     // init skybox
+
     vector<std::string> faces
     {
             "skybox/right.png",
@@ -178,6 +182,18 @@ int main()
             "skybox/front.png",
             "skybox/back.png"
     };
+
+    /*
+    vector<std::string> faces
+            {
+                    "test_1.bmp",
+                    "test_1.bmp",
+                    "test_1.bmp",
+                    "test_1.bmp",
+                    "test_1.bmp",
+                    "test_1.bmp"
+            };
+            */
 
     cubemapTexture = loadCubeMap(faces);
     skyboxVAO = initSkyboxBuffers();
@@ -204,13 +220,13 @@ int main()
 
 
     //Details of cube
-    int cubeDivisions = 1;
+    int cubeDivisions = 0;
 
     //Initialize planets:
     int numOfPlanets = 1;
 
-    //initializeSun2(cubeDivisions);
-    initializeSun(cubeDivisions);
+    shader->use();
+    //initializeSun(cubeDivisions);
     initializePlanets(numOfPlanets, cubeDivisions);
 
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -229,6 +245,7 @@ int main()
         glm::mat4 viewProjection = projection * view;
 
         // set viewProjection matrix uniform
+
         shader->setMat4("viewProjection", viewProjection);
         shader->setVec3("camPosition", camera.Position);
 
@@ -242,7 +259,7 @@ int main()
         drawSkybox();
 
         shader->use();
-        setLightUniforms();
+        //setLightUniforms();
         //drawSun();
         drawSolarSystem();
 
@@ -294,7 +311,8 @@ void drawGui(){
 
         ImGui::Text("Shading model: ");
         {
-            //if (ImGui::RadioButton("phong shading", shader == phong_shading)) { shader = phong_shading; }
+            if (ImGui::RadioButton("phong shading", shader == phong_shading)) { shader = phong_shading; }
+            if (ImGui::RadioButton("simplex shading", shader == simplex_shading)) { shader = simplex_shading; }
         }
 
         ImGui::End();
@@ -402,6 +420,7 @@ unsigned int loadCubeMap(vector<std::string> faces)
         if (data)
         {
             glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+            //glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
             stbi_image_free(data);
         }
         else
@@ -562,11 +581,12 @@ void initializePlanets(int n, int divisions)
 {
     for(int i = 0; i < n; i++)
     {
-        glm::vec3 pos = glm::vec3(3.0f * float(i) + 6.0f, 0.0f, 0.0f);
+
+        glm::vec3 pos = glm::vec3(3.0f * float(i) + 0.0f, 0.0f, 0.0f);
         //auto sphere = Sphere(1, divisions);
         auto sphere = CubeSphere(1, divisions);
         auto material = planetMaterial;
-        auto planet = Planet(pos, shader, sphere, material);
+        auto planet = Planet(pos, shader, sphere, material, "test_1.bmp");
 
         planets.insert(planets.end(), planet);
     }
@@ -574,7 +594,7 @@ void initializePlanets(int n, int divisions)
 
 void drawSolarSystem()
 {
-    drawSun();
+    //drawSun();
     drawPlanets();
 }
 

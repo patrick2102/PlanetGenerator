@@ -113,6 +113,7 @@ private:
 
     void SetUpBuffers()
     {
+        GLint success = 0;
         glGenBuffers(1, &VBO);
         glBindBuffer(GL_ARRAY_BUFFER, VBO);
         glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(Vertex), &vertices[0], GL_STATIC_DRAW);
@@ -120,13 +121,17 @@ private:
         glGenVertexArrays(1, &VAO);
         glBindVertexArray(VAO);
 
+        GLenum err = glGetError();
+
         int posAttributeLocation = glGetAttribLocation(shader->ID, "vertex");
         glEnableVertexAttribArray(posAttributeLocation);
         glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) 0);
 
-        posAttributeLocation = glGetAttribLocation(shader->ID, "normal");
+        posAttributeLocation = 1;
         glEnableVertexAttribArray(posAttributeLocation);
         glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) sizeof(glm::vec3));
+
+        err = glGetError();
 
         glBindVertexArray(0);
     }
