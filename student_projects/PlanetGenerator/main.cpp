@@ -124,7 +124,7 @@ int main()
 
         double** heightMap = hmg.GenerateMap(w, h, iterations, scale, amplitude, persistence, lacunarity);
 
-        hmg.OutputImage(w, h, heightMap, "img.bmp");
+        //hmg.OutputImageFloat(w, h, heightMap, "img.bmp");
         return 0;
     }
 
@@ -195,9 +195,9 @@ int main()
             };
             */
 
-    cubemapTexture = loadCubeMap(faces);
-    skyboxVAO = initSkyboxBuffers();
-    skyboxShader = new Shader("shaders/skybox.vert", "shaders/skybox.frag");
+    //cubemapTexture = loadCubeMap(faces);
+    //skyboxVAO = initSkyboxBuffers();
+    //skyboxShader = new Shader("shaders/skybox.vert", "shaders/skybox.frag");
 
     // set up the z-buffer
     // -------------------
@@ -220,7 +220,7 @@ int main()
 
 
     //Details of cube
-    int cubeDivisions = 0;
+    int cubeDivisions = 6;
 
     //Initialize planets:
     int numOfPlanets = 1;
@@ -256,7 +256,7 @@ int main()
         glClearColor(0.3f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        drawSkybox();
+        //drawSkybox();
 
         shader->use();
         //setLightUniforms();
@@ -586,7 +586,7 @@ void initializePlanets(int n, int divisions)
         //auto sphere = Sphere(1, divisions);
         auto sphere = CubeSphere(1, divisions);
         auto material = planetMaterial;
-        auto planet = Planet(pos, shader, sphere, material, "test_1.bmp");
+        auto planet = Planet(pos, shader, sphere, material, "test_1_float.bmp");
 
         planets.insert(planets.end(), planet);
     }

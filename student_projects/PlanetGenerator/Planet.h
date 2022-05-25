@@ -125,17 +125,23 @@ private:
         HeightMapGenerator hmg = HeightMapGenerator(seed);
 
         //For generating heightmap
-        int scale = 100;
-        float amplitude = 43.0f;
+        int scale = 10;
+        float amplitude = 7500.0f;
         double persistence = 0.5;
-        double lacunarity = 2;
-        int w = 1000;
-        int h = 1000;
+        double lacunarity = 2.0;
+        int w = 100;
+        int h = 100;
+        int d = 100;
         int iterations = 1;
 
         double** heightMap = hmg.GenerateMap(w, h, iterations, scale, amplitude, persistence, lacunarity);
+        std::vector<double**> heightCubeMap = hmg.GenerateCubeMap(w, h, d, iterations, scale, amplitude, persistence, lacunarity);
 
-        hmg.OutputImage(w, h, heightMap, planetName);
+        auto outputByteFile = hmg.OutputImage(w, h, heightMap, planetName);
+        auto outputFloatFile = hmg.OutputImageFloat(w, h, heightMap, planetName);
+        auto outputFilesByte = hmg.OutputCubeMapImage(w, h, d, heightCubeMap, planetName);
+
+        //hmg.MakeVisualization(w, h, outputFloatFile.c_str());
 
         std::vector<std::string> faces
                 {
@@ -148,40 +154,24 @@ private:
                 };
 
 
-        /*
         unsigned int textureID;
         glGenTextures(1, &textureID);
         glBindTexture(GL_TEXTURE_CUBE_MAP, textureID);
 
         int width, height, nrComponents;
-        */
-        //unsigned char* data = stbi_load("test_1.bmp", &width, &height, &nrComponents, 0);
-
-        //glGenTextures(1, &texture);
-
-        //glBindTexture( GL_TEXTURE_CUBE_MAP, texture);
-        //glPixelStorei( GL_UNPACK_ALIGNMENT, 1 );
-
-        unsigned int textureID;
-        glGenTextures(1, &textureID);
-        glBindTexture(GL_TEXTURE_CUBE_MAP, textureID);
-
-        int width, height, nrComponents;
+        unsigned char* data = stbi_load(outputByteFile.c_str(), &width, &height, &nrComponents, 0);
         for (unsigned int i = 0; i < faces.size(); i++)
         {
-            unsigned char* data = stbi_load(faces[i].c_str(), &width, &height, &nrComponents, 0);
             if (data)
             {
-                //glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
                 glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-                stbi_image_free(data);
             }
             else
             {
                 std::cout << "Cubemap texture failed to load at path: " << faces[i] << std::endl;
-                stbi_image_free(data);
             }
         }
+        stbi_image_free(data);
 
         glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
         glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);

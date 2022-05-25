@@ -1477,6 +1477,8 @@ glm/glm.hpp
 -
 time.h
 -
+cmath
+-
 
 D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Misc.h
 glm/glm.hpp
