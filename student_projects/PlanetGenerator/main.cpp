@@ -61,7 +61,7 @@ float lastY = (float)SCR_HEIGHT / 2.0;
 float deltaTime;
 bool isPaused = false; // stop camera movement when GUI is open
 
-bool testHeightMap = false;
+bool testHeightMap = true;
 
 // solar system variables
 // --------------------------------
@@ -162,18 +162,6 @@ int main()
             "skybox/back.png"
     };
 
-    /*
-    vector<std::string> faces
-            {
-                    "test_1.bmp",
-                    "test_1.bmp",
-                    "test_1.bmp",
-                    "test_1.bmp",
-                    "test_1.bmp",
-                    "test_1.bmp"
-            };
-            */
-
     //cubemapTexture = loadCubeMap(faces);
     //skyboxVAO = initSkyboxBuffers();
     //skyboxShader = new Shader("shaders/skybox.vert", "shaders/skybox.frag");
@@ -199,7 +187,7 @@ int main()
 
 
     //Details of cube
-    int cubeDivisions = 0;
+    int cubeDivisions = 6;
 
     //Initialize planets:
     int numOfPlanets = 1;

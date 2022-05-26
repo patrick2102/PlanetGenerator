@@ -125,20 +125,20 @@ private:
         HeightMapGenerator hmg = HeightMapGenerator(seed);
 
         //For generating heightmap
-        int scale = 10;
+        int scale = 100;
         float amplitude = 200.0f;
         double persistence = 0.5;
         double lacunarity = 2.0;
-        int w = 100;
+        int w = 400;
         int h = w;
         int d = w;
-        int iterations = 1;
-        float r = 1;
+        int iterations = 10;
+        float r = 10;
 
         double** heightMap = hmg.GenerateMap(w, h, iterations, scale, amplitude, persistence, lacunarity);
         std::vector<double**> heightCubeMap = hmg.GenerateCubeMap(w, h, d, r, iterations, scale, amplitude, persistence, lacunarity);
 
-        //auto outputByteFile = hmg.OutputImage(w, h, heightMap, planetName);
+        auto outputByteFile = hmg.OutputImage(w, h, heightMap, planetName);
         //auto outputFloatFile = hmg.OutputImageFloat(w, h, heightMap, planetName);
         auto outputFilesByte = hmg.OutputCubeMapImage(w, h, d, heightCubeMap, planetName);
 
