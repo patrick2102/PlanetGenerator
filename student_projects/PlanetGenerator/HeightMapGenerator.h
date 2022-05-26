@@ -308,7 +308,7 @@ public:
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
 
-                    sides.at(0)[k][j] += value;
+                    sides.at(0)[d-k-1][j] += value;
 
                     //if(k == d-1 && j == 0 || k == 0 && j == 0)
                     //    std::cout << "pos x: {" << point.x << ", " << point.y << ", " << point.z << "} = " << value << " at iteration: " << counter << std::endl;
@@ -358,7 +358,7 @@ public:
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
 
-                    sides.at(2)[i][k] += value;
+                    sides.at(2)[i][d-k-1] += value;
 
                     //sides.at(2)[i][k] += SimplexNoise3D(x, y, z) * amplitude;
                     //sides.at(2)[i][k] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
@@ -427,7 +427,7 @@ public:
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
 
-                    sides.at(5)[i][j] += value;
+                    sides.at(5)[w-i-1][j] += value;
 
                     //sides.at(5)[i][j] += SimplexNoise3D(x, y, z) * amplitude;
                     //sides.at(5)[i][j] += SimplexNoise(point.x, point.y) * amplitude;

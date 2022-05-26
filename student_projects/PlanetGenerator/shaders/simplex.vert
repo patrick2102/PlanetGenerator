@@ -37,6 +37,5 @@ void main() {
 
    vec4 P = model * vec4(localPos, 1.0);
 
-
    gl_Position = viewProjection * P;
 }

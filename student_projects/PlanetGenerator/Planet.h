@@ -162,14 +162,16 @@ private:
             HeightMapGenerator hmg = HeightMapGenerator(seed);
 
             //For generating heightmap
-            int scale = 100;
-            float amplitude = 50.0f;
+            int scale = 250;
+            float amplitude = 10.0f;
             double persistence = 0.5;
             double lacunarity = 2.0;
-            int w = 400;
+            int w = 1000;
+            //int w = 10*(6^2);
+            //int w = 400;
             int h = w;
             int d = w;
-            int iterations = 1;
+            int iterations = 6;
             float r = 10;
 
             double **heightMap = hmg.GenerateMap(w, h, iterations, scale, amplitude, persistence, lacunarity);
