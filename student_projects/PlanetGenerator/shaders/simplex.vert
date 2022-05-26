@@ -33,7 +33,7 @@ void main() {
 
    vec4 displace = texture(displacementMap, TexCoords);
 
-   localPos = localPos - (normal * displace.r);
+   localPos = localPos + (normal * displace.r);
 
    vec4 P = model * vec4(localPos, 1.0);
 

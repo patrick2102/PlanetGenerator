@@ -187,7 +187,7 @@ int main()
 
 
     //Details of cube
-    int cubeDivisions = 4;
+    int cubeDivisions = 6;
 
     //Initialize planets:
     int numOfPlanets = 1;

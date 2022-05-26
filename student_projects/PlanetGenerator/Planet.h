@@ -1,6 +1,7 @@
 //
 // Created by Patrick on 28/04/2022.
 //
+#include <map>
 #include "Sphere.h"
 
 #ifndef ITU_GRAPHICS_PROGRAMMING_PLANET_H
@@ -68,6 +69,10 @@ public:
     }
 
 private:
+
+    //fixme temp solution
+    std::map<glm::vec3, glm::vec3> normalMap;
+
     unsigned int VAO;
     unsigned int VBO;
     unsigned int surfaceTexture;
@@ -82,6 +87,7 @@ private:
 
     void SetUpVertices(CubeSphere sphere)
     {
+        /*
         for(int i = 0; i < sphere.vertices.size(); i += 3)
         {
             auto p1 = sphere.vertices[i];
@@ -91,13 +97,37 @@ private:
             auto v1 = p2-p1;
             auto v2 = p3-p1;
 
-            auto normal = glm::normalize(glm::cross(v1, v2));
+            auto n1 = glm::normalize(glm::cross(p2-p1, p3-p1));
+            auto n2 = n1;
+            auto n3 = n1;
 
-            vertices.insert(vertices.end(), {p1, normal});
-            vertices.insert(vertices.end(), {p2, normal});
-            vertices.insert(vertices.end(), {p3, normal});
+            auto n1 = glm::normalize(glm::cross(p2-p1, p3-p1));
+            auto n2 = glm::normalize(glm::cross(p3-p2, p1-p2));
+            auto n3 = glm::normalize(glm::cross(p1-p3, p2-p3));
+
+            vertices.insert(vertices.end(), {p1, n1});
+            vertices.insert(vertices.end(), {p2, n2});
+            vertices.insert(vertices.end(), {p3, n3});
         }
+        */
 
+        for(int i = 0; i < sphere.vertices.size(); i += 6)
+        {
+            auto p1 = sphere.vertices[i];
+            auto p2 = sphere.vertices[i+1];
+            auto p3 = sphere.vertices[i+2];
+
+            auto p4 = sphere.vertices[i+3];
+            auto p5 = sphere.vertices[i+4];
+            auto p6 = sphere.vertices[i+5];
+
+            vertices.insert(vertices.end(), {p1, p1});
+            vertices.insert(vertices.end(), {p2, p2});
+            vertices.insert(vertices.end(), {p3, p3});
+            vertices.insert(vertices.end(), {p4, p4});
+            vertices.insert(vertices.end(), {p5, p5});
+            vertices.insert(vertices.end(), {p6, p6});
+        }
         //Clear sphere vertices to not use up wasteful memory.
         sphere.vertices.clear();
     }
@@ -133,13 +163,13 @@ private:
 
             //For generating heightmap
             int scale = 100;
-            float amplitude = 10.0f;
+            float amplitude = 50.0f;
             double persistence = 0.5;
             double lacunarity = 2.0;
             int w = 400;
             int h = w;
             int d = w;
-            int iterations = 10;
+            int iterations = 1;
             float r = 10;
 
             double **heightMap = hmg.GenerateMap(w, h, iterations, scale, amplitude, persistence, lacunarity);
