@@ -20,10 +20,19 @@ public:
                                 glm::vec3(1,0,1), glm::vec3(-1,0,1), glm::vec3(1,0,-1), glm::vec3(-1,0,-1),
                                 glm::vec3(0,1,1), glm::vec3(0,-1,1), glm::vec3(0,1,-1), glm::vec3(0,-1,-1)};
 
+    HeightMapGenerator(double seed, Shader *shader)
+    {
+        GeneratePermutationTable(seed);
+        shader->setIntArray("permTab", ptSize*2, permTab);
+        shader->setVec3Array("grad3", 12, grad3);
+    }
+
+    /*
     HeightMapGenerator(double seed)
     {
         GeneratePermutationTable(seed);
     }
+    */
 
     void GeneratePermutationTable(float seed)
     {

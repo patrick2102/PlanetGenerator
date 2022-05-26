@@ -4,6 +4,7 @@
 
 #include <glad/glad.h>
 #include <glm/glm.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 #include <string>
 #include <fstream>
@@ -161,6 +162,22 @@ public:
     {
         glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, &mat[0][0]);
     }
+    // ------------------------------------------------------------------------
+    void setIntArray(const std::string &name, int size, int variable[]) const
+    {
+        glUniform1iv(glGetUniformLocation(ID, name.c_str()), size, variable);
+    }
+    // ------------------------------------------------------------------------
+    void setFloatArray(const std::string &name, int size, float variable[]) const
+    {
+        glUniform1fv(glGetUniformLocation(ID, name.c_str()), size, variable);
+    }
+    // ------------------------------------------------------------------------
+    void setVec3Array(const std::string &name, int size, glm::vec3 variable[]) const
+    {
+        glUniform3fv(glGetUniformLocation(ID, name.c_str()), size, glm::value_ptr(variable[0]));
+    }
+
 
 private:
     // utility function for checking shader compilation/linking errors.

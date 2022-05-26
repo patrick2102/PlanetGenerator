@@ -36,16 +36,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c39d72e8-cbd4-4906-87b5-2af953ed1ddc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/planetNoise/b_cube/NegX_test_1_float.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/planetNoise/b_cube/NegX_test_1_float.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/planetNoise/b_cube/NegY_test_1_float.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/planetNoise/b_cube/NegY_test_1_float.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/planetNoise/b_cube/NegZ_test_1_float.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/planetNoise/b_cube/NegZ_test_1_float.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/planetNoise/b_cube/PosX_test_1_float.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/planetNoise/b_cube/PosX_test_1_float.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/planetNoise/b_cube/PosY_test_1_float.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/planetNoise/b_cube/PosY_test_1_float.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/planetNoise/b_cube/PosZ_test_1_float.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/planetNoise/b_cube/PosZ_test_1_float.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/planetNoise/b_test_1_float.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/planetNoise/b_test_1_float.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/CMakeFiles/PlanetGenerator.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/CMakeFiles/PlanetGenerator.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/CMakeFiles/PlanetGenerator.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/CMakeFiles/PlanetGenerator.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/CMakeFiles/PlanetGenerator.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/CMakeFiles/PlanetGenerator.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/shaders/simplex.vert" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/shaders/simplex.vert" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/HeightMapGenerator.h" beforeDir="false" afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/HeightMapGenerator.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/Planet.h" beforeDir="false" afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/Planet.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/shader.h" beforeDir="false" afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/shader.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/simplex.vert" beforeDir="false" afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/simplex.vert" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -179,7 +176,7 @@
       <workItem from="1653312679166" duration="10170000" />
       <workItem from="1653377224748" duration="25404000" />
       <workItem from="1653472227905" duration="28229000" />
-      <workItem from="1653549905903" duration="30143000" />
+      <workItem from="1653549905903" duration="33851000" />
     </task>
     <servers />
   </component>
@@ -212,49 +209,50 @@
     </state>
     <state width="672" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653315997560" />
     <state width="672" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1653565093378" />
-    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1651054682909">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="740" y="275" width="437" height="490" key="FileChooserDialogImpl" timestamp="1653584854656">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="740" y="275" width="437" height="490" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653584854656" />
     <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651054682909" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1653581578931">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1653585353995">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653575997571" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653585353995" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1653581578931" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1653581578931">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1653585353995">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653575997571" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653585353995" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1653581578931" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1653581578931">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1653585353995">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653575997571" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653585353995" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1653581578931" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1653581578931">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1653585353995">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653575997571" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653585353995" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1653581578931" />
-    <state width="1877" height="371" key="GridCell.Tab.1.bottom" timestamp="1653565281871">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="371" key="GridCell.Tab.1.bottom" timestamp="1653585353991">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="239" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653490582683" />
+    <state width="1877" height="371" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653585353991" />
     <state width="1877" height="371" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1653565281871" />
-    <state width="1877" height="371" key="GridCell.Tab.1.center" timestamp="1653565281871">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="371" key="GridCell.Tab.1.center" timestamp="1653585353991">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="239" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653490582682" />
+    <state width="1877" height="371" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653585353991" />
     <state width="1877" height="371" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1653565281871" />
-    <state width="1877" height="371" key="GridCell.Tab.1.left" timestamp="1653565281871">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="371" key="GridCell.Tab.1.left" timestamp="1653585353991">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="239" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653490582682" />
+    <state width="1877" height="371" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653585353991" />
     <state width="1877" height="371" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1653565281871" />
-    <state width="1877" height="371" key="GridCell.Tab.1.right" timestamp="1653565281871">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="371" key="GridCell.Tab.1.right" timestamp="1653585353991">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="239" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653490582682" />
+    <state width="1877" height="371" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653585353991" />
     <state width="1877" height="371" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1653565281871" />
     <state x="568" y="209" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1645021317367">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -289,33 +287,38 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/student_projects/PlanetGenerator/Planet.h</url>
-          <line>182</line>
+          <line>181</line>
           <option name="timeStamp" value="200" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/student_projects/PlanetGenerator/HeightMapGenerator.h</url>
-          <line>319</line>
+          <line>328</line>
           <option name="timeStamp" value="209" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/student_projects/PlanetGenerator/HeightMapGenerator.h</url>
-          <line>393</line>
+          <line>402</line>
           <option name="timeStamp" value="216" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/student_projects/PlanetGenerator/HeightMapGenerator.h</url>
-          <line>320</line>
+          <line>329</line>
           <option name="timeStamp" value="219" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/student_projects/PlanetGenerator/HeightMapGenerator.h</url>
-          <line>392</line>
+          <line>401</line>
           <option name="timeStamp" value="220" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/student_projects/PlanetGenerator/HeightMapGenerator.h</url>
-          <line>416</line>
+          <line>425</line>
           <option name="timeStamp" value="221" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/student_projects/PlanetGenerator/Planet.h</url>
+          <line>160</line>
+          <option name="timeStamp" value="223" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

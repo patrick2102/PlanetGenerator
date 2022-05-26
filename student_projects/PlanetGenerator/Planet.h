@@ -70,15 +70,14 @@ public:
 
 private:
 
-    //fixme temp solution
-    std::map<glm::vec3, glm::vec3> normalMap;
 
     unsigned int VAO;
     unsigned int VBO;
     unsigned int surfaceTexture;
     unsigned int displacementMap;
     const char* planetName;
-    bool loadHeightMap = false;
+    bool loadHeightMap = true;
+    bool useGPU = false;
 
     glm::vec3 center;
     Shader* shader;
@@ -154,12 +153,12 @@ private:
 
     void SetUpTextures() {
         std::vector<std::string> faces;
+        double seed = 2.0;
 
         if (!loadHeightMap) {
 
             //Initial values for height map
-            double seed = 2.0;
-            HeightMapGenerator hmg = HeightMapGenerator(seed);
+            HeightMapGenerator hmg = HeightMapGenerator(seed, shader);
 
             //For generating heightmap
             int scale = 250;
@@ -183,6 +182,7 @@ private:
             auto outputFilesByte = hmg.OutputCubeMapImage(w, h, d, heightCubeMap, planetName);
             faces = outputFilesByte;
         } else {
+            HeightMapGenerator hmg = HeightMapGenerator(seed, shader);
             faces =
                     {
                             "planetNoise/b_cube/PosX_test_1_float.bmp",
