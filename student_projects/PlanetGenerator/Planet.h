@@ -120,7 +120,7 @@ private:
     void SetUpTextures()
     {
         //Initial values for height map
-        double seed = 1.0;
+        double seed = 2.0;
 
         HeightMapGenerator hmg = HeightMapGenerator(seed);
 
@@ -138,8 +138,8 @@ private:
         double** heightMap = hmg.GenerateMap(w, h, iterations, scale, amplitude, persistence, lacunarity);
         std::vector<double**> heightCubeMap = hmg.GenerateCubeMap(w, h, d, r, iterations, scale, amplitude, persistence, lacunarity);
 
-        auto outputByteFile = hmg.OutputImage(w, h, heightMap, planetName);
-        auto outputFloatFile = hmg.OutputImageFloat(w, h, heightMap, planetName);
+        //auto outputByteFile = hmg.OutputImage(w, h, heightMap, planetName);
+        //auto outputFloatFile = hmg.OutputImageFloat(w, h, heightMap, planetName);
         auto outputFilesByte = hmg.OutputCubeMapImage(w, h, d, heightCubeMap, planetName);
 
         //hmg.MakeVisualization(w, h, outputFloatFile.c_str());

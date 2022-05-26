@@ -266,6 +266,7 @@ public:
         int nSides = 6;
         std::vector<double**> sides;
 
+
         for(int i = 0; i < nSides; i++)
         {
             //sides.at(i) = std::vector<std::vector<double>>(w);
@@ -287,33 +288,43 @@ public:
 
         for(int iter = 0; iter < iterations; iter++)
         {
+
             int i;
             int j;
             int k;
             int counter = 0;
 
             // Positive X:
-            i = w;
+            i = w-1;
             for (j = 0; j < h; j++) {
-                for (k = d-1; k >= 0; k--) {
+                for (k = 0; k < d; k++) {
+                    /*
                     double x = i/(double) scale;
                     double y = (double) j / (double) scale;
                     double z = (double) (k+1) / (double) scale;
+                    */
+                    double x = (i/2)/(double) scale;
+                    double y = ((double)(j - (h/2)))/(double) scale;
+                    double z = ((double)(k - (d/2)))/(double) scale;
 
-                    glm::vec3 point = glm::normalize(glm::vec3 (x,y,z)+glm::vec3(d/2));
+                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) + glm::normalize(glm::vec3 (1.0f));
+                    point *= 10.0f;
 
-                    auto value = SimplexNoise3D(x, y, z) * amplitude;
+                    //glm::vec3 point = glm::vec3(x, y, z)+(glm::vec3(w/2, h/2, d/2)/(float)scale);
 
+                    auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
+
+                    sides.at(0)[k][j] += value;
                     //sides.at(0)[k][j] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
                     //sides.at(0)[k][j] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
                     //sides.at(0)[k][j] += SimplexNoise(point.z, point.y) * amplitude;
 
-                    if(k == d-1 && j == 0)
-                        std::cout << "pos x: {" << x << ", " << y << ", " << z << "} = " << value << " at iteration: " << counter << std::endl;
+                    if(k == d-1 && j == 0 || k == 0 && j == 0)
+                        std::cout << "pos x: {" << point.x << ", " << point.y << ", " << point.z << "} = " << value << " at iteration: " << counter << std::endl;
                     counter++;
                 }
             }
-
+/*
             // Negative X:
             i = 0;
             for (j = 0; j < h; j++) {
@@ -364,7 +375,7 @@ public:
 
             // Positive Z:
             counter = 0;
-            k = d;
+            */
             /*
             for (i = 0; i < w; i++) {
                 for (j = 0; j < h/2; j++) {
@@ -386,6 +397,7 @@ public:
                 }
             }
             */
+            k = d-1;
             for (j = 0; j < h; j++) {
                 for (i = 0; i < w; i++) {
                     //double x = (double) i / (double) scale;
@@ -401,20 +413,28 @@ public:
                     //glm::vec3 point = glm::normalize(glm::vec3 (x,y,z)+glm::vec3(d/2));
                     //glm::vec3 point = glm::normalize(glm::vec3(x, y, z));
                     //glm::vec3 point = glm::vec3(x, y, z);
+
                     glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) + glm::normalize(glm::vec3 (1.0f));
 
                     point *= 10.0f;
+
+                    //glm::vec3 point = glm::vec3(x, y, z)+(glm::vec3(w/2, h/2, d/2)/(float)scale);
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
 
                     sides.at(4)[i][j] += value;
 
-                    if ((i == w - 1 || i == 0) && (j == w - 1 || j == 0))
-                        std::cout << "pos z: {" << point.x << ", " << point.y << ", " << point.z << "} = " << value << " at iteration: "
-                                  << counter << std::endl;
+                    //if ((i == w - 1 || i == 0) && (j == w - 1 || j == 0))
+                    //    std::cout << "pos z: {" << point.x << ", " << point.y << ", " << point.z << "} = " << value << " at iteration: "
+                    //              << counter << std::endl;
                         //std::cout << "pos z: {" << x << ", " << y << ", " << z << "} = " << value << " at iteration: "
                         //          << counter << std::endl;
+
+
                     counter++;
+
+                    if(i == w-1 && j == 0 || i == 0 && j == 0)
+                        std::cout << "pos z: {" << point.x << ", " << point.y << ", " << point.z << "} = " << value << " at iteration: " << counter << std::endl;
 
                     //sides.at(4)[i][j] += SimplexNoise(point.x, point.y) * amplitude;
                 }
