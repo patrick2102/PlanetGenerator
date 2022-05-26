@@ -61,7 +61,7 @@ float lastY = (float)SCR_HEIGHT / 2.0;
 float deltaTime;
 bool isPaused = false; // stop camera movement when GUI is open
 
-bool testHeightMap = true;
+bool testHeightMap = false;
 
 // solar system variables
 // --------------------------------
@@ -187,7 +187,7 @@ int main()
 
 
     //Details of cube
-    int cubeDivisions = 6;
+    int cubeDivisions = 4;
 
     //Initialize planets:
     int numOfPlanets = 1;

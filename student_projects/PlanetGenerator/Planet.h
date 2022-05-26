@@ -34,10 +34,14 @@ public:
         auto model = glm::mat4 (1.0f);
         model = glm::translate(model, center);
         shader->setMat4("model", model);
-        shader->setInt("surface", 0);
+        shader->setInt("surfaceTexture", 0);
+        shader->setInt("displacementMap", 0);
 
         glBindVertexArray(VAO);
-        glBindTexture(GL_TEXTURE_CUBE_MAP, texture);
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_CUBE_MAP, surfaceTexture);
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_CUBE_MAP, displacementMap);
         glDrawArrays(GL_TRIANGLES, 0, vertices.size());
         glBindVertexArray(0);
 
@@ -61,14 +65,15 @@ public:
         glDepthFunc(GL_LESS); // set depth function back to default
         */
 
-
     }
 
 private:
     unsigned int VAO;
     unsigned int VBO;
-    unsigned int texture;
+    unsigned int surfaceTexture;
+    unsigned int displacementMap;
     const char* planetName;
+    bool loadHeightMap = false;
 
     glm::vec3 center;
     Shader* shader;
@@ -117,47 +122,47 @@ private:
         glBindVertexArray(0);
     }
 
-    void SetUpTextures()
-    {
-        //Initial values for height map
-        double seed = 2.0;
+    void SetUpTextures() {
+        std::vector<std::string> faces;
 
-        HeightMapGenerator hmg = HeightMapGenerator(seed);
+        if (!loadHeightMap) {
 
-        //For generating heightmap
-        int scale = 100;
-        float amplitude = 200.0f;
-        double persistence = 0.5;
-        double lacunarity = 2.0;
-        int w = 400;
-        int h = w;
-        int d = w;
-        int iterations = 10;
-        float r = 10;
+            //Initial values for height map
+            double seed = 2.0;
+            HeightMapGenerator hmg = HeightMapGenerator(seed);
 
-        double** heightMap = hmg.GenerateMap(w, h, iterations, scale, amplitude, persistence, lacunarity);
-        std::vector<double**> heightCubeMap = hmg.GenerateCubeMap(w, h, d, r, iterations, scale, amplitude, persistence, lacunarity);
+            //For generating heightmap
+            int scale = 100;
+            float amplitude = 10.0f;
+            double persistence = 0.5;
+            double lacunarity = 2.0;
+            int w = 400;
+            int h = w;
+            int d = w;
+            int iterations = 10;
+            float r = 10;
 
-        auto outputByteFile = hmg.OutputImage(w, h, heightMap, planetName);
-        //auto outputFloatFile = hmg.OutputImageFloat(w, h, heightMap, planetName);
-        auto outputFilesByte = hmg.OutputCubeMapImage(w, h, d, heightCubeMap, planetName);
+            double **heightMap = hmg.GenerateMap(w, h, iterations, scale, amplitude, persistence, lacunarity);
+            std::vector<double **> heightCubeMap = hmg.GenerateCubeMap(w, h, d, r, iterations, scale, amplitude,
+                                                                       persistence, lacunarity);
 
-        //hmg.MakeVisualization(w, h, outputFloatFile.c_str());
+            auto outputByteFile = hmg.OutputImage(w, h, heightMap, planetName);
+            //auto outputFloatFile = hmg.OutputImageFloat(w, h, heightMap, planetName);
+            auto outputFilesByte = hmg.OutputCubeMapImage(w, h, d, heightCubeMap, planetName);
+            faces = outputFilesByte;
+        } else {
+            faces =
+                    {
+                            "planetNoise/b_cube/PosX_test_1_float.bmp",
+                            "planetNoise/b_cube/NegX_test_1_float.bmp",
+                            "planetNoise/b_cube/PosX_test_1_float.bmp",
+                            "planetNoise/b_cube/PosY_test_1_float.bmp",
+                            "planetNoise/b_cube/NegY_test_1_float.bmp",
+                            "planetNoise/b_cube/PosZ_test_1_float.bmp",
+                            "planetNoise/b_cube/NegZ_test_1_float.bmp"
+                    };
+        }
 
-
-        /*
-        std::vector<std::string> faces
-                {
-                        "test_1.bmp",
-                        "test_1.bmp",
-                        "test_1.bmp",
-                        "test_1.bmp",
-                        "test_1.bmp",
-                        "test_1.bmp"
-                };
-        */
-
-        auto faces = outputFilesByte;
 
         unsigned int textureID;
         glGenTextures(1, &textureID);
@@ -190,7 +195,8 @@ private:
 
         glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
 
-        texture = textureID;
+        surfaceTexture = textureID;
+        displacementMap = textureID;
 
         /*
         for(int i = 0; i < 5; i++)

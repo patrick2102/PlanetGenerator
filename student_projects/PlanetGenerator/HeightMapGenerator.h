@@ -298,12 +298,13 @@ public:
             i = w-1;
             for (j = 0; j < h; j++) {
                 for (k = 0; k < d; k++) {
-                    double x = (i/2)/(double) scale;
-                    double y = ((double)(j - (h/2)))/(double) scale;
-                    double z = ((double)(k - (d/2)))/(double) scale;
+                    double x = (i/2);
+                    double y = ((double)(j - (h/2)));
+                    double z = ((double)(k - (d/2)));
 
-                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) + 1.0f;
-                    point *= r;
+                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)w;
+                    point += (w);
+                    point /= (float)scale;
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
 
@@ -319,12 +320,13 @@ public:
             i = w-1;
             for (j = 0; j < h; j++) {
                 for (k = 0; k < d; k++) {
-                    double x = -(i/2)/(double) scale;
-                    double y = ((double)(j - (h/2)))/(double) scale;
-                    double z = ((double)(k - (d/2)))/(double) scale;
+                    double x = -(i/2);
+                    double y = ((double)(j - (h/2)));
+                    double z = ((double)(k - (d/2)));
 
-                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) + 1.0f;
-                    point *= 10.0f;
+                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)w;
+                    point += (w);
+                    point /= (float)scale;
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
 
@@ -351,7 +353,7 @@ public:
                     */
 
                     glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)w;
-                    point += (w/2);
+                    point += (w);
                     point /= (float)scale;
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
@@ -369,12 +371,13 @@ public:
             for (i = 0; i < w; i++) {
                 for (k = 0; k < d; k++) {
 
-                    double x = ((double)(i - (w/2)))/(double) scale;
-                    double y = -(j/2)/(double) scale;
-                    double z = ((double)(k - (d/2)))/(double) scale;
+                    double x = ((double)(i - (w/2)));
+                    double y = -(j/2);
+                    double z = ((double)(k - (d/2)));
 
-                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) + 1.0f;
-                    point *= 10.0f;
+                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)w;
+                    point += (w);
+                    point /= (float)scale;
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
 
@@ -391,13 +394,13 @@ public:
             for (j = 0; j < h; j++) {
                 for (i = 0; i < w; i++) {
                     //double x = (double) i / (double) scale;
-                    double x = ((double)(i - (w/2)))/(double) scale;
-                    double y = ((double)(j - (h/2)))/(double) scale;
-                    double z = (k/2) / (double) scale;
+                    double x = ((double)(i - (w/2)));
+                    double y = ((double)(j - (h/2)));
+                    double z = (k/2);
 
-                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) + 1.0f;
-
-                    point *= 10.0f;
+                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)w;
+                    point += (w);
+                    point /= (float)scale;
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
 
@@ -414,12 +417,13 @@ public:
             k = d-1;
             for (i = 0; i < w; i++) {
                 for (j = 0; j < h; j++) {
-                    double x = ((double)(i - (w/2)))/(double) scale;
-                    double y = ((double)(j - (h/2)))/(double) scale;
-                    double z = -(k/2) / (double) scale;
+                    double x = ((double)(i - (w/2)));
+                    double y = ((double)(j - (h/2)));
+                    double z = -(k/2);
 
-                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) + 1.0f;
-                    point *= r;
+                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)w;
+                    point += w;
+                    point /= (float)scale;
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
 

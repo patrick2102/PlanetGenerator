@@ -15,7 +15,8 @@ uniform float diffuseReflectance;
 uniform float specularReflectance;
 uniform float specularExponent;
 
-uniform samplerCube surface;
+uniform samplerCube surfaceTexture;
+uniform samplerCube displacementMap;
 
 in vec4 worldPos;
 in vec3 worldNormal;
@@ -23,6 +24,7 @@ in vec3 TexCoords;
 
 void main()
 {
+   /*
    vec4 P = worldPos;
    vec3 N = normalize(worldNormal);
 
@@ -41,8 +43,12 @@ void main()
    float distToSun = distance(sunPosition, P.xyz);
    //float attenuation = 1.0f / (distToSun * distToSun);
    float attenuation = 1.0f;
+   */
 
    //FragColor = vec4(ambient + (diffuse + specular) * attenuation, 1.0);
 
-   FragColor = texture(surface, TexCoords);
+
+
+
+   FragColor = texture(surfaceTexture, TexCoords);
 }
