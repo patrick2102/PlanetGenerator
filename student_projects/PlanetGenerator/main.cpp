@@ -106,27 +106,6 @@ void drawPlanets();
 
 int main()
 {
-    if(testHeightMap)
-    {
-        //Initial values for height map
-        double seed = 1.0;
-
-        HeightMapGenerator hmg = HeightMapGenerator(seed);
-
-        //For generating heightmap
-        int scale = 100;
-        float amplitude = 43.0f;
-        double persistence = 0.5;
-        double lacunarity = 2;
-        int w = 1000;
-        int h = 1000;
-        int iterations = 6;
-
-        double** heightMap = hmg.GenerateMap(w, h, iterations, scale, amplitude, persistence, lacunarity);
-
-        //hmg.OutputImageFloat(w, h, heightMap, "img.bmp");
-        return 0;
-    }
 
     // glfw: initialize and configure
     // ------------------------------
@@ -220,7 +199,7 @@ int main()
 
 
     //Details of cube
-    int cubeDivisions = 6;
+    int cubeDivisions = 0;
 
     //Initialize planets:
     int numOfPlanets = 1;
@@ -232,7 +211,7 @@ int main()
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     // render loop
     // -----------
-    while (!glfwWindowShouldClose(window))
+    while (!glfwWindowShouldClose(window) && !testHeightMap)
     {
         static float lastFrame = 0.0f;
         float currentFrame = (float)glfwGetTime();

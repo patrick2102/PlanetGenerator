@@ -86,7 +86,7 @@ public:
             }
         }
 
-        return n;
+        return 70.0 * n;
     }
 
     double SimplexNoise3D(double x, double y, double z)
@@ -155,7 +155,7 @@ public:
             }
         }
 
-        return n;
+        return 32.0 * n;
     }
 
     double** GenerateMap(int w, int h, int iterations, int scale, double amplitude, double persistence, double lacunarity)
@@ -258,69 +258,59 @@ public:
 
     }
 
-    std::vector<double**> GenerateCubeMap(int w, int h, int d, int iterations, int scale, double amplitude, double persistence, double lacunarity) {
+    std::vector<double**> GenerateCubeMap(int w, int h, int d, float r, int iterations, int scale, double amplitude, double persistence, double lacunarity) {
         //scale += 1;
 
         //double ***heightMap = new double **[w];
         //std::vector<std::vector<std::vector<double>>> sides(6);
-        int nSides = 1;
+        int nSides = 6;
         std::vector<double**> sides;
 
         for(int i = 0; i < nSides; i++)
         {
             //sides.at(i) = std::vector<std::vector<double>>(w);
             //sides.at(i) = (double*);
-            double** heightMap = (double**)malloc(sizeof(double*)*w);
+            //double** heightMap = (double**)malloc(sizeof(double*)*w);
+            double** heightMap = new double*[w];
             for(int j = 0; j < w; j++)
             {
-                heightMap[j] = (double*)malloc(sizeof(double)*h);
-                memset(heightMap[j],255,sizeof(double)*h);
+                heightMap[j] = new double[h];
+                //heightMap[j] = (double*)malloc(sizeof(double)*h);
+                //memset(heightMap[j],255,sizeof(double)*h);
+                for(int k = 0; k < h; k++)
+                {
+                    heightMap[j][k] = 0.0;
+                }
             }
             sides.push_back(heightMap);
         }
 
-        for (int j = 0; j < h; j++) {
-            for (int k = 0; k < d; k++) {
-                double x = (double) j / (double) scale;
-                double y = (double) k / (double) scale;
-
-                //sides.at(0)[k][j] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
-                sides.at(0)[k][j] += SimplexNoise(x, y) * amplitude;
-            }
-        }
-
-        /*
-        for (int i = 0; i < w; i++) {
-            heightMap[i] = new double*[h];
-            for(int j = 0; j < h; j++)
-            {
-                heightMap[i][j] = new double[d];
-                for(int k = 0; k < d; k++)
-                {
-                    heightMap[i][j][k] = 0.0; // just to make sure that every value in heightMap is 0 from the start.
-                }
-            }
-        }
-        */
-        /*
         for(int iter = 0; iter < iterations; iter++)
         {
             int i;
             int j;
             int k;
+            int counter = 0;
 
             // Positive X:
             i = w;
             for (j = 0; j < h; j++) {
-                for (k = 0; k < d; k++) {
-                    double x = i;
+                for (k = d-1; k >= 0; k--) {
+                    double x = i/(double) scale;
                     double y = (double) j / (double) scale;
-                    double z = (double) k / (double) scale;
+                    double z = (double) (k+1) / (double) scale;
 
-                    glm::vec3 point = glm::normalize(glm::vec3 (x,y,z));
+                    glm::vec3 point = glm::normalize(glm::vec3 (x,y,z)+glm::vec3(d/2));
+
+                    auto value = SimplexNoise3D(x, y, z) * amplitude;
 
                     //sides.at(0)[k][j] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
-                    sides.at(0)[k][j] += SimplexNoise(point.z, point.y) * amplitude;
+                    //sides.at(0)[k][j] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
+                    //sides.at(0)[k][j] += SimplexNoise(point.z, point.y) * amplitude;
+
+                    if(k == d-1 && j == 0)
+                        std::cout << "pos x: {" << x << ", " << y << ", " << z << "} = " << value << " at iteration: " << counter << std::endl;
+                    counter++;
                 }
             }
 
@@ -334,13 +324,14 @@ public:
 
                     glm::vec3 point = glm::normalize(glm::vec3 (x,y,z));
 
+                    //sides.at(1)[k][j] += SimplexNoise3D(x, y, z) * amplitude;
                     //sides.at(1)[k][j] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
-                    sides.at(1)[k][j] += SimplexNoise(point.z, point.y) * amplitude;
+                    //sides.at(1)[k][j] += SimplexNoise(point.z, point.y) * amplitude;
                 }
             }
 
             // Positive Y:
-            j = w;
+            j = d/scale;
             for (i = 0; i < w; i++) {
                 for (k = 0; k < d; k++) {
                     double x = (double) i / (double) scale;
@@ -349,8 +340,9 @@ public:
 
                     glm::vec3 point = glm::normalize(glm::vec3 (x,y,z));
 
+                    //sides.at(2)[i][k] += SimplexNoise3D(x, y, z) * amplitude;
                     //sides.at(2)[i][k] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
-                    sides.at(2)[i][k] += SimplexNoise(point.x, point.z) * amplitude;
+                    //sides.at(2)[i][k] += SimplexNoise(point.x, point.z) * amplitude;
                 }
             }
 
@@ -364,23 +356,67 @@ public:
 
                     glm::vec3 point = glm::normalize(glm::vec3 (x,y,z));
 
+                    //sides.at(3)[i][k] += SimplexNoise3D(x, y, z) * amplitude;
                     //sides.at(3)[i][k] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
-                    sides.at(3)[i][k] += SimplexNoise(point.x, point.z) * amplitude;
+                    //sides.at(3)[i][k] += SimplexNoise(point.x, point.z) * amplitude;
                 }
             }
 
             // Positive Z:
+            counter = 0;
             k = d;
+            /*
             for (i = 0; i < w; i++) {
-                for (j = 0; j < h; j++) {
+                for (j = 0; j < h/2; j++) {
                     double x = (double) i / (double) scale;
                     double y = (double) j / (double) scale;
-                    double z = k;
+                    double z = k / (double) scale;
+                    counter++;
 
                     glm::vec3 point = glm::normalize(glm::vec3 (x,y,z));
 
-                    //sides.at(4)[i][j] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
-                    sides.at(4)[i][j] += SimplexNoise(point.x, point.y) * amplitude;
+                    auto value = SimplexNoise3D(x, y, z) * amplitude;
+
+                    sides.at(4)[i][j] += SimplexNoise3D(x, y, z) * amplitude;
+
+                    if(i == w-1 && j == 0)
+                        std::cout << "pos z: {" << x << ", " << y << ", " << z << "} = " << value << " at iteration: " << counter << std::endl;
+
+                    //sides.at(4)[i][j] += SimplexNoise(point.x, point.y) * amplitude;
+                }
+            }
+            */
+            for (j = 0; j < h; j++) {
+                for (i = 0; i < w; i++) {
+                    //double x = (double) i / (double) scale;
+                    double x = ((double)(i - (w/2)))/(double) scale;
+                    double y = ((double)(j - (h/2)))/(double) scale;
+                    double z = (k/2) / (double) scale;
+                    //double x = ((double)(i-))/(double) scale;
+                    //double y = ((double)(j))/(double) scale;
+                    //double z = (k) / (double) scale;
+                    //double z = k/(double)scale;
+
+
+                    //glm::vec3 point = glm::normalize(glm::vec3 (x,y,z)+glm::vec3(d/2));
+                    //glm::vec3 point = glm::normalize(glm::vec3(x, y, z));
+                    //glm::vec3 point = glm::vec3(x, y, z);
+                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) + glm::normalize(glm::vec3 (1.0f));
+
+                    point *= 10.0f;
+
+                    auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
+
+                    sides.at(4)[i][j] += value;
+
+                    if ((i == w - 1 || i == 0) && (j == w - 1 || j == 0))
+                        std::cout << "pos z: {" << point.x << ", " << point.y << ", " << point.z << "} = " << value << " at iteration: "
+                                  << counter << std::endl;
+                        //std::cout << "pos z: {" << x << ", " << y << ", " << z << "} = " << value << " at iteration: "
+                        //          << counter << std::endl;
+                    counter++;
+
+                    //sides.at(4)[i][j] += SimplexNoise(point.x, point.y) * amplitude;
                 }
             }
 
@@ -388,273 +424,23 @@ public:
             k = 0;
             for (i = 0; i < w; i++) {
                 for (j = 0; j < h; j++) {
-                    double x = (double) i / (double) scale;
-                    double y = (double) j / (double) scale;
+                    double x = ((double) i / (double) scale);
+                    double y = ((double) j / (double) scale);
                     double z = k;
 
-                    glm::vec3 point = glm::normalize(glm::vec3 (x,y,z));
+                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (((float) d / scale)*0.5f);
 
-                    //sides.at(5)[i][j] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
-                    sides.at(5)[i][j] += SimplexNoise(point.x, point.y) * amplitude;
+                    //sides.at(5)[i][j] += SimplexNoise3D(x, y, z) * amplitude;
+                    //sides.at(5)[i][j] += SimplexNoise(point.x, point.y) * amplitude;
+
                 }
             }
             scale /= lacunarity;
             amplitude *= persistence;
         }
-         */
 
-        /*
-        for(int iter = 0; iter < iterations; iter++)
-        {
-            int i;
-            int j;
-            int k;
-
-            // Positive X:
-            i = w;
-            for (j = d-1; j >= 0; j--) {
-                for (k = d-1; k >= 0; k--) {
-                    double x = i;
-                    double y = (double) j / (double) scale;
-                    double z = (double) k / (double) scale;
-
-                    glm::vec3 point = glm::normalize(glm::vec3 (x,y,z));
-
-                    sides.at(0)[k][j] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
-                }
-            }
-
-            // Negative X:
-            i = 0;
-            for (j = d-1; j >= 0; j--) {
-                for (k = 0; k < d; k++) {
-                    double x = i;
-                    double y = (double) j / (double) scale;
-                    double z = (double) k / (double) scale;
-
-                    glm::vec3 point = glm::normalize(glm::vec3 (x,y,z));
-
-                    sides.at(1)[k][j] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
-                }
-            }
-
-            // Positive Y:
-            j = w;
-            for (i = 0; i < w; i++) {
-                for (k = 0; k < d; k++) {
-                    double x = (double) i / (double) scale;
-                    double y = j;
-                    double z = (double) k / (double) scale;
-
-                    glm::vec3 point = glm::normalize(glm::vec3 (x,y,z));
-
-                    sides.at(2)[i][k] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
-                }
-            }
-
-            // Negative Y:
-            j = 0;
-            for (i = 0; i < w; i++) {
-                for (k = d-1; k >= 0; k--) {
-                    double x = (double) i / (double) scale;
-                    double y = j;
-                    double z = (double) k / (double) scale;
-
-                    glm::vec3 point = glm::normalize(glm::vec3 (x,y,z));
-
-                    sides.at(3)[i][k] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
-                }
-            }
-
-            // Positive Z:
-            k = d;
-            for (i = 0; i < w; i++) {
-                for (j = h-1; j > 0; j--) {
-                    double x = (double) i / (double) scale;
-                    double y = (double) j / (double) scale;
-                    double z = k;
-
-                    glm::vec3 point = glm::normalize(glm::vec3 (x,y,z));
-
-                    sides.at(4)[i][j] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
-                }
-            }
-
-            // Negative Z:
-            k = 0;
-            for (i = w-1; i >= 0; i--) {
-                for (j = h-1; j >= 0; j--) {
-                    double x = (double) i / (double) scale;
-                    double y = (double) j / (double) scale;
-                    double z = k;
-
-                    glm::vec3 point = glm::normalize(glm::vec3 (x,y,z));
-
-                    sides.at(5)[j][k] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
-                }
-            }
-        }
-
-
-        for (int iter = 0; iter < iterations; iter++) {
-            int i;
-            int j;
-            int k;
-
-            // Positive X:
-            i = w;
-            for (j = 0; j < h; j++) {
-                for (k = 0; k < d; k++) {
-                    double x = i;
-                    double y = (double) j / (double) scale;
-                    double z = (double) k / (double) scale;
-
-                    glm::vec3 point = glm::normalize(glm::vec3 (x,y,z));
-
-                    heightMap[i][j][k] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
-                    sides.at(0)[j][k] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
-                }
-            }
-
-            // Negative X:
-            i = 0;
-            for (j = 0; j < h; j++) {
-                for (k = 0; k < d; k++) {
-                    double x = i;
-                    double y = (double) j / (double) scale;
-                    double z = (double) k / (double) scale;
-
-                    glm::vec3 point = glm::normalize(glm::vec3 (x,y,z));
-
-                    heightMap[i][j][k] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
-                    sides.at(0)[j][k] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
-                }
-            }
-
-            // Positive Y:
-            j = w;
-            for (i = 0; i < w; i++) {
-                for (k = 0; k < d; k++) {
-                    double x = (double) i / (double) scale;
-                    double y = j;
-                    double z = (double) k / (double) scale;
-
-                    glm::vec3 point = glm::normalize(glm::vec3 (x,y,z));
-
-                    heightMap[i][j][k] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
-                }
-            }
-
-            // Negative Y:
-            j = 0;
-            for (i = 0; i < w; i++) {
-                for (k = 0; k < d; k++) {
-                    double x = (double) i / (double) scale;
-                    double y = j;
-                    double z = (double) k / (double) scale;
-
-                    glm::vec3 point = glm::normalize(glm::vec3 (x,y,z));
-
-                    heightMap[i][j][k] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
-                }
-            }
-
-            // Positive Z:
-            k = d;
-            for (i = 0; i < w; i++) {
-                for (j = 0; j < h; j++) {
-                    double x = (double) i / (double) scale;
-                    double y = (double) j / (double) scale;
-                    double z = k;
-
-                    glm::vec3 point = glm::normalize(glm::vec3 (x,y,z));
-
-                    heightMap[i][j][k] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
-                }
-            }
-
-            // Negative Z:
-            k = 0;
-            for (i = 0; i < w; i++) {
-                for (j = 0; j < h; j++) {
-                    double x = (double) i / (double) scale;
-                    double y = (double) j / (double) scale;
-                    double z = k;
-
-                    glm::vec3 point = glm::normalize(glm::vec3 (x,y,z));
-
-                    heightMap[i][j][k] += SimplexNoise3D(point.x, point.y, point.z) * amplitude;
-                }
-            }
-
-        }
-         */
         return sides;
     }
-
-    /*
-    double Perlin(double x, double y, double z)
-    {
-
-    }
-
-
-
-    void PerlinNoiseForSphere(float radius, int divisions)
-    {
-        glm::vec2 *gradients = gradientVectors(divisions, divisions);
-
-
-
-    }
-
-    glm::vec2* gradientVectors(int w, int h)
-    {
-        glm::vec2 *gradients = (glm::vec2*) malloc(sizeof(glm::vec2)*w*h);
-
-        srand (time(NULL));
-
-        for(int i = 0; i < h; i++)
-        {
-            for(int j = 0; j < w; j++)
-            {
-                float x = (float)rand() / (float)rand();
-                float y = (float)rand() / (float)rand();
-                glm::vec2 randVector = glm::normalize(glm::vec2(x, y));
-                gradients[j + (i*h)] = randVector;
-            }
-        }
-        return gradients;
-    }
-
-    float perlin(float x, float y)
-    {
-        // Determine grid cell coordinates
-        int x0 = (int)floor(x);
-        int x1 = x0 + 1;
-        int y0 = (int)floor(y);
-        int y1 = y0 + 1;
-
-        // Determine interpolation weights
-        // Could also use higher order polynomial/s-curve here
-        float sx = x - (float)x0;
-        float sy = y - (float)y0;
-
-        // Interpolate between grid point gradients
-        float n0, n1, ix0, ix1, value;
-
-        n0 = dotGridGradient(x0, y0, x, y);
-        n1 = dotGridGradient(x1, y0, x, y);
-        ix0 = interpolate(n0, n1, sx);
-
-        n0 = dotGridGradient(x0, y1, x, y);
-        n1 = dotGridGradient(x1, y1, x, y);
-        ix1 = interpolate(n0, n1, sx);
-
-        value = interpolate(ix0, ix1, sy);
-        return value;
-    }
-     */
 
     std::string OutputImageFloat(int w, int h, double** heightMap, const char* fileName)
     {
@@ -822,6 +608,93 @@ public:
         return outputFile;
     }
 
+    std::string OutputImage2(int w, int h, double** heightMap, const char* fileName)
+    {
+        FILE *f;
+        unsigned char *img = NULL;
+        int filesize = 54 + w*h*3;  //w is your image width, h is image height, both int
+
+        img = (unsigned char *)malloc(3*w*h);
+        memset(img,0,3*w*h);
+
+        int x;
+        int y;
+        double s;
+
+        double max = -1000000, min = 1000000;
+
+        for(int i=0; i<w; i++)
+        {
+            for(int j=0; j<h; j++)
+            {
+                auto val = heightMap[i][j];
+
+                if(val > max)
+                    max = val;
+                if(min > val)
+                    min = val;
+            }
+        }
+
+        if(min < 0)
+            min *= -1;
+
+        for(int i=0; i<w; i++)
+        {
+            for(int j=0; j<h; j++)
+            {
+                x=i;
+                y=(h-1)-j;
+
+                s = heightMap[i][j] + min;
+
+                s = floor(s);
+
+                if (s > 255) s=255;
+
+                img[(x+y*w)*3+2] = (unsigned char)(s);
+                img[(x+y*w)*3+1] = (unsigned char)(s);
+                img[(x+y*w)*3+0] = (unsigned char)(s);
+            }
+            // std::cout << std::endl;
+        }
+
+        unsigned char bmpfileheader[14] = {'B','M', 0,0,0,0, 0,0, 0,0, 54,0,0,0};
+        unsigned char bmpinfoheader[40] = {40,0,0,0, 0,0,0,0, 0,0,0,0, 1,0, 24,0};
+        unsigned char bmppad[3] = {0,0,0};
+
+        bmpfileheader[ 2] = (unsigned char)(filesize    );
+        bmpfileheader[ 3] = (unsigned char)(filesize>> 8);
+        bmpfileheader[ 4] = (unsigned char)(filesize>>16);
+        bmpfileheader[ 5] = (unsigned char)(filesize>>24);
+
+        bmpinfoheader[ 4] = (unsigned char)(       w    );
+        bmpinfoheader[ 5] = (unsigned char)(       w>> 8);
+        bmpinfoheader[ 6] = (unsigned char)(       w>>16);
+        bmpinfoheader[ 7] = (unsigned char)(       w>>24);
+        bmpinfoheader[ 8] = (unsigned char)(       h    );
+        bmpinfoheader[ 9] = (unsigned char)(       h>> 8);
+        bmpinfoheader[10] = (unsigned char)(       h>>16);
+        bmpinfoheader[11] = (unsigned char)(       h>>24);
+
+        std::string outputFile = folder;
+        outputFile.append("b_");
+        outputFile.append(fileName);
+
+        f = fopen(outputFile.c_str(),"wb");
+        fwrite(bmpfileheader,1,14,f);
+        fwrite(bmpinfoheader,1,40,f);
+        for(int i=0; i<h; i++)
+        {
+            fwrite(img+(w*(h-i-1)*3),3,w,f);
+            fwrite(bmppad,1,(4-(w*3)%4)%4,f);
+        }
+
+        free(img);
+        fclose(f);
+        return outputFile;
+    }
+
     std::vector<std::string> OutputCubeMapImage(int w, int h, int d, std::vector<double**> sides, const char* fileName)
     {
         std::vector<std::string> fileNames;
@@ -829,7 +702,6 @@ public:
         std::string outputFileName= "cube/PosX_";
         outputFileName.append(fileName);
         fileNames.push_back(OutputImage(d, h, sides.at(0), outputFileName.c_str()));
-        /*
         outputFileName= "cube/NegX_";
         outputFileName.append(fileName);
         fileNames.push_back(OutputImage(d, h, sides.at(1), outputFileName.c_str()));
@@ -849,7 +721,6 @@ public:
         outputFileName= "cube/NegZ_";
         outputFileName.append(fileName);
         fileNames.push_back(OutputImage(w, h, sides.at(5), outputFileName.c_str()));
-         */
 
         return fileNames;
     }
