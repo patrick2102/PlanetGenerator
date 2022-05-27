@@ -102,9 +102,9 @@ private:
 
             auto normal = glm::normalize(glm::cross(v1, v2));
 
-            vertices.insert(vertices.end(), { p1, normal });
-            vertices.insert(vertices.end(), { p2, normal });
-            vertices.insert(vertices.end(), { p3, normal });
+            vertices.insert(vertices.end(), { p1, p1 });
+            vertices.insert(vertices.end(), { p2, p1 });
+            vertices.insert(vertices.end(), { p3, p1 });
         }
 
         //Clear sphere vertices to not use up wasteful memory.

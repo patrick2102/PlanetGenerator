@@ -88,7 +88,7 @@ float amplitude = 25.0f;
 float persistence = 0.5f;
 float lacunarity = 2.0f;
 int diameter = 100;
-int iterations = 10;
+int iterations = 20;
 
 //Displacement testDisplacement = Displacement(0.25f, 0.1f, 0.5f, 2.0f, 0.5f, 10);
 

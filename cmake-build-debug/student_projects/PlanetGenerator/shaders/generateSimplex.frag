@@ -21,18 +21,50 @@ uniform samplerCube displacementMap;
 in vec4 worldPos;
 in vec3 worldNormal;
 in vec3 TexCoords;
+in float height;
 
 vec3 surfaceColor()
 {
-   vec3 water = vec3(0, 0, 1);
+   vec3 water = vec3(0, 0, 0.8);
    vec3 ice = vec3(0.5, 0.5, 0.5);
    vec3 dirt = vec3(0.5, 0.25, 0.1);
+   vec3 grass = vec3(0.0, 0.25, 0.0);
 
-   //if(height == 0)
-   //   return water;
+   if(height == 0)
+      return water;
 
-   //return mix(height, dirt, ice);
-   return vec3(0);
+   float min = 0.00;
+   float max = 0.01;
+
+   if(height >= min && max <= 0.01)
+   {
+      float i = (height-min)/(max-min);
+      return  mix(water, grass, i);
+   }
+
+   min = max;
+   max = 0.1;
+   float h = clamp(height, min, max);
+   float i = (h-min)/(max-min);
+   return mix(grass, ice, i);
+
+/*
+   if(height >= 0.05 && height <= 0.1)
+   {
+      float min = 0.05;
+      float max = 0.1;
+      float i = (height-min)/(max-min);
+      return mix(i, water, dirt);
+   }
+   float min = 0.1;
+   float max = 0.2;
+
+   height = clamp(height, min, max);
+
+   float i = (height-min)/(max-min);
+   return mix(height, dirt, ice);
+*/
+
 }
 
 void main()
@@ -65,5 +97,10 @@ void main()
    //FragColor = texture(surfaceTexture, TexCoords);
 
    //FragColor = texture(surfaceTexture, TexCoords);
-   FragColor = vec4(TexCoords, 1);
+
+   vec3 surfaceColor = surfaceColor();
+
+   FragColor = vec4(surfaceColor, 1);
+
+   //FragColor = vec4(TexCoords, 1);
 }

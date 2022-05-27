@@ -206,7 +206,7 @@ int main()
 
     //shader = simplex_shading;
     shader->use();
-    //initializeSun(cubeDivisions);
+    initializeSun(cubeDivisions);
     initializePlanets(numOfPlanets, cubeDivisions);
 
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -560,7 +560,7 @@ void initializePlanets(int n, int divisions)
         std::string planetName = "planet";
         planetName.append(to_string(i)).append(".bmp");
 
-        glm::vec3 pos = glm::vec3(3.0f * float(i) + 0.0f, 0.0f, 0.0f);
+        glm::vec3 pos = glm::vec3(3.0f * float(i) + 5.0f, 0.0f, 0.0f);
         //auto sphere = Sphere(1, divisions);
         auto sphere = CubeSphere(1, divisions);
         //auto material = planetMaterial;
@@ -599,13 +599,16 @@ void initializePlanets(int n, int divisions)
 
 void drawSolarSystem()
 {
-    //drawSun();
+    drawSun();
     drawPlanets();
 }
 
 void drawSun()
 {
-    sun->Draw();
+    if(shader == generate_simplex_shader)
+        sun->Draw();
+    else
+        sun->Draw();
 }
 
 void drawPlanets()
