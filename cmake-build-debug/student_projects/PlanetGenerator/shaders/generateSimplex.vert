@@ -2,6 +2,13 @@
 layout (location = 0) in vec3 vertex;
 layout (location = 1) in vec3 normal;
 
+uniform int scale;
+uniform float amplitude;
+uniform float persistence;
+uniform float lacunarity;
+uniform int diameter;
+uniform int iterations;
+
 uniform mat4 model; // represents model coordinates in the world coord space
 uniform mat4 viewProjection;  // represents the view and projection matrices combined
 
@@ -18,13 +25,13 @@ float Simplex3D(vec3 coords)
 {
    float F3 = 1.0/3.0;
    float G3 = 1.0/6.0;
-   int ptSize = 255*2;
+   int ptSize = 255;
 
    float x = coords.x;
    float y = coords.y;
    float z = coords.z;
-   float s = (x+y+z)*F3;
 
+   float s = (x+y+z)*F3;
    int i = int(floor(x+s));
    int j = int(floor(y+s));
    int k = int(floor(z+s));
@@ -65,6 +72,7 @@ float Simplex3D(vec3 coords)
    float x2 = x0 - i2 + 2.0 * G3;
    float y2 = y0 - j2 + 2.0 * G3;
    float z2 = z0 - k2 + 2.0 * G3;
+
    float x3 = x0 - 1.0 + 3.0 * G3;
    float y3 = y0 - 1.0 + 3.0 * G3;
    float z3 = z0 - 1.0 + 3.0 * G3;
@@ -87,6 +95,25 @@ float Simplex3D(vec3 coords)
    return 32.0f * n;
 }
 
+float Displacement(vec3 coords)
+{
+   float freq = scale;
+   float amp = amplitude;
+   float res = 0;
+   for(int i=0;i<iterations;i++){
+      vec3 point = normalize(normal) * diameter;
+      point += diameter;
+      point /= freq;
+      res += Simplex3D(point) * amp;
+
+      freq /= lacunarity;
+      amp *= persistence;
+   }
+   res /= 255;
+   res = clamp(res, 0.0f, 1.0f);
+   return res;
+}
+
 void main() {
    /*
    // vertex in world space (for lighting computation)
@@ -100,17 +127,21 @@ void main() {
    worldNormal = N;
 
    */
-   TexCoords = vertex;
+
+   //TexCoords = vertex;
 
    vec3 localPos = vertex;
 
    //vec4 displace = texture(displacementMap, TexCoords);
    //localPos = localPos + (normal * displace.r);
 
-   float displace = Simplex3D(vertex);
+   float displace = Displacement(vertex);
    localPos = localPos + (normal * displace);
+
+   TexCoords = vec3(displace);
 
    vec4 P = model * vec4(localPos, 1.0);
 
+   //height = displace;
    gl_Position = viewProjection * P;
 }

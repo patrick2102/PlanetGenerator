@@ -155,8 +155,8 @@ int main()
     // ----------------------------------
     simplex_shading = new Shader("shaders/simplex.vert", "shaders/simplex.frag");
     generate_simplex_shader = new Shader("shaders/generateSimplex.vert", "shaders/generateSimplex.frag");
-    //shader = phong_shading;
-    shader = simplex_shading;
+    //shader = simplex_shading;
+    shader = generate_simplex_shader;
 
     // init skybox
 
@@ -204,7 +204,7 @@ int main()
     //Initialize planets:
     int numOfPlanets = 1;
 
-    shader = simplex_shading;
+    //shader = simplex_shading;
     shader->use();
     //initializeSun(cubeDivisions);
     initializePlanets(numOfPlanets, cubeDivisions);
@@ -563,35 +563,30 @@ void initializePlanets(int n, int divisions)
         glm::vec3 pos = glm::vec3(3.0f * float(i) + 0.0f, 0.0f, 0.0f);
         //auto sphere = Sphere(1, divisions);
         auto sphere = CubeSphere(1, divisions);
-        auto material = planetMaterial;
+        //auto material = planetMaterial;
+        auto pd = testPlanetData;
+        auto sd = pd.surfaceDisplacement;
+
 
         if(loadTextures)
         {
-            auto planet = Planet(pos, sphere, material, planetName.c_str());
+            auto planet = Planet(pos, sphere, pd, planetName.c_str());
             planet.LoadTextures();
             planets.insert(planets.end(), planet);
             continue;
         }
 
-        //For generating heightmap
-        int scale = 100;
-        float amplitude = 10.0f;
-        double persistence = 0.5;
-        double lacunarity = 2.0;
-        int diameter = 1000;
-        int iterations = 6;
-
         if(shader == generate_simplex_shader)
         {
-            auto planet = Planet(pos, sphere, material, planetName.c_str());
+            auto planet = Planet(pos, sphere, testPlanetData, planetName.c_str());
 
             planets.insert(planets.end(), planet);
         }
         else
         {
-            auto planet = Planet(pos, sphere, material, planetName.c_str());
+            auto planet = Planet(pos, sphere, testPlanetData, planetName.c_str());
 
-            std::vector<double **> heightCubeMap = hmg->GenerateCubeMap(diameter, iterations, scale, amplitude, persistence, lacunarity);
+            std::vector<float **> heightCubeMap = hmg->GenerateCubeMap(sd.diameter, sd.iterations, sd.scale, sd.amplitude, sd.persistence, sd.lacunarity);
             auto displacementFaces = hmg->OutputCubeMapImage(diameter, heightCubeMap, planetName.c_str());
             planet.SetUpDisplacementMap(displacementFaces);
 

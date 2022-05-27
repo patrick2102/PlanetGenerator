@@ -20,7 +20,7 @@ public:
                                 glm::vec3(1,0,1), glm::vec3(-1,0,1), glm::vec3(1,0,-1), glm::vec3(-1,0,-1),
                                 glm::vec3(0,1,1), glm::vec3(0,-1,1), glm::vec3(0,1,-1), glm::vec3(0,-1,-1)};
 
-    HeightMapGenerator(double seed, Shader *shader)
+    HeightMapGenerator(float seed, Shader *shader)
     {
         GeneratePermutationTable(seed);
 
@@ -29,7 +29,7 @@ public:
     }
 
     /*
-    HeightMapGenerator(double seed)
+    HeightMapGenerator(float seed)
     {
         GeneratePermutationTable(seed);
     }
@@ -45,18 +45,18 @@ public:
         }
     }
 
-    double SimplexNoise(double x, double y)
+    float SimplexNoise(float x, float y)
     {
-        double F2 = (sqrt(3) - 1)/2;
-        double G2 = (3.0 - sqrt(3.0))/6.0;
+        float F2 = (sqrt(3) - 1)/2;
+        float G2 = (3.0 - sqrt(3.0))/6.0;
 
-        double s = (x+y)*F2;
+        float s = (x+y)*F2;
         int i = floor(x+s);
         int j = floor(y+s);
 
-        double t = (i+j)*G2;
-        double x0 = x - (i-t);
-        double y0 = y - (j-t);
+        float t = (i+j)*G2;
+        float x0 = x - (i-t);
+        float y0 = y - (j-t);
 
         int i1, j1;
         if(x0>y0)
@@ -75,20 +75,20 @@ public:
         int gi1 = permTab[ii+i1+permTab[jj+j1]] % 12;
         int gi2 = permTab[ii+1+permTab[jj+1]] % 12;
 
-        double x1 = x0 - i1 + G2;
-        double y1 = y0 - j1 + G2;
-        double x2 = x0 - 1.0 + 2.0 * G2;
-        double y2 = y0 - 1.0 + 2.0 * G2;
+        float x1 = x0 - i1 + G2;
+        float y1 = y0 - j1 + G2;
+        float x2 = x0 - 1.0 + 2.0 * G2;
+        float y2 = y0 - 1.0 + 2.0 * G2;
 
         int giArr[3] = {gi0, gi1, gi2};
-        double xArr[3] = {x0, x1, x2};
-        double yArr[3] = {y0, y1, y2};
+        float xArr[3] = {x0, x1, x2};
+        float yArr[3] = {y0, y1, y2};
 
-        double n = 0;
+        float n = 0;
 
         for(int k = 0; k < 3; k++)
         {
-            double _t = 0.5 - xArr[k]*xArr[k] - yArr[k]*yArr[k];
+            float _t = 0.5 - xArr[k]*xArr[k] - yArr[k]*yArr[k];
             if(_t >= 0)
             {
                 _t *= _t;
@@ -99,20 +99,20 @@ public:
         return 70.0 * n;
     }
 
-    double SimplexNoise3D(double x, double y, double z)
+    float SimplexNoise3D(float x, float y, float z)
     {
-        double F3 = 1.0/3.0;
-        double G3 = 1.0/6.0;
+        float F3 = 1.0/3.0;
+        float G3 = 1.0/6.0;
 
-        double s = (x+y+z)*F3;
+        float s = (x+y+z)*F3;
         int i = floor(x+s);
         int j = floor(y+s);
         int k = floor(z+s);
 
-        double t = (i+j+k)*G3;
-        double x0 = x - (i-t);
-        double y0 = y - (j-t);
-        double z0 = z - (k-t);
+        float t = (i+j+k)*G3;
+        float x0 = x - (i-t);
+        float y0 = y - (j-t);
+        float z0 = z - (k-t);
 
         int i1, j1, k1;
         int i2, j2, k2;
@@ -138,26 +138,26 @@ public:
         int gi2 = permTab[ii+i2+permTab[jj+j2+permTab[kk+k2]]] % 12;
         int gi3 = permTab[ii+1+permTab[jj+1+permTab[kk+1]]] % 12;
 
-        double x1 = x0 - i1 + G3;
-        double y1 = y0 - j1 + G3;
-        double z1 = z0 - k1 + G3;
-        double x2 = x0 - i2 + 2.0 * G3;
-        double y2 = y0 - j2 + 2.0 * G3;
-        double z2 = z0 - k2 + 2.0 * G3;
-        double x3 = x0 - 1.0 + 3.0 * G3;
-        double y3 = y0 - 1.0 + 3.0 * G3;
-        double z3 = z0 - 1.0 + 3.0 * G3;
+        float x1 = x0 - i1 + G3;
+        float y1 = y0 - j1 + G3;
+        float z1 = z0 - k1 + G3;
+        float x2 = x0 - i2 + 2.0 * G3;
+        float y2 = y0 - j2 + 2.0 * G3;
+        float z2 = z0 - k2 + 2.0 * G3;
+        float x3 = x0 - 1.0 + 3.0 * G3;
+        float y3 = y0 - 1.0 + 3.0 * G3;
+        float z3 = z0 - 1.0 + 3.0 * G3;
 
         int giArr[4] = {gi0, gi1, gi2, gi3};
-        double xArr[4] = {x0, x1, x2, x3};
-        double yArr[4] = {y0, y1, y2, y3};
-        double zArr[4] = {z0, z1, z2, z3};
+        float xArr[4] = {x0, x1, x2, x3};
+        float yArr[4] = {y0, y1, y2, y3};
+        float zArr[4] = {z0, z1, z2, z3};
 
-        double n = 0;
+        float n = 0;
 
         for(int c = 0; c < 4; c++)
         {
-            double _t = 0.5 - xArr[c]*xArr[c] - yArr[c]*yArr[c] - zArr[c]*zArr[c];
+            float _t = 0.5 - xArr[c]*xArr[c] - yArr[c]*yArr[c] - zArr[c]*zArr[c];
             if(_t >= 0)
             {
                 _t *= _t;
@@ -168,15 +168,15 @@ public:
         return 32.0 * n;
     }
 
-    double** GenerateMap(int w, int h, int iterations, int scale, double amplitude, double persistence, double lacunarity)
+    float** GenerateMap(int w, int h, int iterations, int scale, float amplitude, float persistence, float lacunarity)
     {
         scale += 1;
 
-        double** heightMap = new double*[w];
+        float** heightMap = new float*[w];
 
         for(int i = 0; i < w; i++)
         {
-            heightMap[i] = new double[h];
+            heightMap[i] = new float[h];
             for(int j = 0; j < h; j++)
             {
                 heightMap[i][j] = 0.0; // just to make sure that every value in heightMap is 0 from the start.
@@ -189,8 +189,8 @@ public:
             {
                 for(int j = 0; j < h; j++)
                 {
-                    double x = (double)i/(double)scale;
-                    double y = (double)j/(double)scale;
+                    float x = (float)i/(float)scale;
+                    float y = (float)j/(float)scale;
                     heightMap[i][j] += SimplexNoise(x, y) * amplitude;
                 }
             }
@@ -200,18 +200,18 @@ public:
         return heightMap;
     }
 /*
-    std::vector<double**> GenerateCubeMap(int w, int h, int iterations, int scale, double amplitude, double persistence, double lacunarity, int overlap)
+    std::vector<float **> GenerateCubeMap(int w, int h, int iterations, int scale, float amplitude, float persistence, float lacunarity, int overlap)
     {
         scale += 1;
-        std::vector<double**> sides(6);
+        std::vector<float **> sides(6);
 
         for(int side = 0; side < sides.size(); side++)
         {
-            double** heightMap = new double*[h];
+            float ** heightMap = new float *[h];
 
             for(int i = 0; i < w; i++)
             {
-                heightMap[i] = new double[h];
+                heightMap[i] = new float [h];
                 for(int j = 0; j < h; j++)
                 {
                     heightMap[i][j] = 0.0; // just to make sure that every value in heightMap is 0 from the start.
@@ -224,8 +224,8 @@ public:
                 {
                     for(int j = 0; j < h; j++)
                     {
-                        double x = (double)i/(double)scale;
-                        double y = (double)j/(double)scale;
+                        float x = (float )i/(float )scale;
+                        float y = (float )j/(float )scale;
                         heightMap[i][j] += SimplexNoise(x, y) * amplitude;
                     }
                 }
@@ -242,15 +242,15 @@ public:
 
     }
 
-    void GenerateCubeMapSide(int s1, int s2, int s3, int h, int w, int d, double scale, double*** heightMap, double amplitude)
+    void GenerateCubeMapSide(int s1, int s2, int s3, int h, int w, int d, float scale, float *** heightMap, float amplitude)
     {
         int i;
         int j;
         int k = d;
 
-        double x = (double) s1 / scale;
-        double y = (double) s2 / scale;
-        double z = (double) s3 / scale;
+        float x = (float ) s1 / scale;
+        float y = (float ) s2 / scale;
+        float z = (float ) s3 / scale;
 
         glm::vec3 point = glm::normalize(glm::vec3 (x,y,z));
 
@@ -259,9 +259,9 @@ public:
             for (j = 0; j < h; j++) {
                 for (k = 0; k < d; k++)
                 {
-                    double x = (double) i / scale;
-                    double y = (double) j / scale;
-                    double z = k;
+                    float x = (float ) i / scale;
+                    float y = (float ) j / scale;
+                    float z = k;
 
                     glm::vec3 point = glm::normalize(glm::vec3 (x,y,z));
 
@@ -273,26 +273,26 @@ public:
 
     }
 
-    std::vector<double**> GenerateCubeMap(int d, int iterations, int scale, double amplitude, double persistence, double lacunarity) {
+    std::vector<float**> GenerateCubeMap(int d, int iterations, int scale, float amplitude, float persistence, float lacunarity) {
         //scale += 1;
 
-        //double ***heightMap = new double **[w];
-        //std::vector<std::vector<std::vector<double>>> sides(6);
+        //float ***heightMap = new float **[w];
+        //std::vector<std::vector<std::vector<float >>> sides(6);
         int nSides = 6;
-        std::vector<double**> sides;
+        std::vector<float**> sides;
 
 
         for(int i = 0; i < nSides; i++)
         {
-            //sides.at(i) = std::vector<std::vector<double>>(w);
-            //sides.at(i) = (double*);
-            //double** heightMap = (double**)malloc(sizeof(double*)*w);
-            double** heightMap = new double*[d];
+            //sides.at(i) = std::vector<std::vector<float >>(w);
+            //sides.at(i) = (float *);
+            //float ** heightMap = (float **)malloc(sizeof(float *)*w);
+            float** heightMap = new float*[d];
             for(int j = 0; j < d; j++)
             {
-                heightMap[j] = new double[d];
-                //heightMap[j] = (double*)malloc(sizeof(double)*h);
-                //memset(heightMap[j],255,sizeof(double)*h);
+                heightMap[j] = new float[d];
+                //heightMap[j] = (float *)malloc(sizeof(float )*h);
+                //memset(heightMap[j],255,sizeof(float )*h);
                 for(int k = 0; k < d; k++)
                 {
                     heightMap[j][k] = 0.0;
@@ -313,9 +313,9 @@ public:
             i = d-1;
             for (j = 0; j < d; j++) {
                 for (k = 0; k < d; k++) {
-                    double x = (i/2);
-                    double y = ((double)(j - (d/2)));
-                    double z = ((double)(k - (d/2)));
+                    float x = (i/2);
+                    float y = ((float)(j - (d/2)));
+                    float z = ((float)(k - (d/2)));
 
                     glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)d;
                     point += (d);
@@ -335,9 +335,9 @@ public:
             i = d-1;
             for (j = 0; j < d; j++) {
                 for (k = 0; k < d; k++) {
-                    double x = -(i/2);
-                    double y = ((double)(j - (d/2)));
-                    double z = ((double)(k - (d/2)));
+                    float x = -(i/2);
+                    float y = ((float)(j - (d/2)));
+                    float z = ((float)(k - (d/2)));
 
                     glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)d;
                     point += (d);
@@ -357,14 +357,14 @@ public:
             for (i = 0; i < d; i++) {
                 for (k = 0; k < d; k++) {
 
-                    double x = (double)(i - (d/2));
-                    double y = j/2;
-                    double z = (double)(k - (d/2));
+                    float x = (float)(i - (d/2));
+                    float y = j/2;
+                    float z = (float)(k - (d/2));
 
                     /*
-                    double x = ((double)(i - (w/2)))/(double) scale;
-                    double y = (j/2)/(double) scale;
-                    double z = ((double)(k - (d/2)))/(double) scale;
+                    float x = ((float )(i - (w/2)))/(float ) scale;
+                    float y = (j/2)/(float ) scale;
+                    float z = ((float )(k - (d/2)))/(float ) scale;
                     */
 
                     glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)d;
@@ -386,9 +386,9 @@ public:
             for (i = 0; i < d; i++) {
                 for (k = 0; k < d; k++) {
 
-                    double x = ((double)(i - (d/2)));
-                    double y = -(j/2);
-                    double z = ((double)(k - (d/2)));
+                    float x = ((float)(i - (d/2)));
+                    float y = -(j/2);
+                    float z = ((float)(k - (d/2)));
 
                     glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)d;
                     point += (d);
@@ -408,10 +408,10 @@ public:
             k = d-1;
             for (j = 0; j < d; j++) {
                 for (i = 0; i < d; i++) {
-                    //double x = (double) i / (double) scale;
-                    double x = ((double)(i - (d/2)));
-                    double y = ((double)(j - (d/2)));
-                    double z = (k/2);
+                    //float x = (float ) i / (float ) scale;
+                    float x = ((float )(i - (d/2)));
+                    float y = ((float )(j - (d/2)));
+                    float z = (k/2);
 
                     glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)d;
                     point += (d);
@@ -432,9 +432,9 @@ public:
             k = d-1;
             for (i = 0; i < d; i++) {
                 for (j = 0; j < d; j++) {
-                    double x = ((double)(i - (d/2)));
-                    double y = ((double)(j - (d/2)));
-                    double z = -(k/2);
+                    float x = ((float )(i - (d/2)));
+                    float y = ((float )(j - (d/2)));
+                    float z = -(k/2);
 
                     glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)d;
                     point += d;
@@ -457,7 +457,7 @@ public:
         return sides;
     }
 
-    std::string OutputImageFloat(int w, int h, double** heightMap, const char* fileName)
+    std::string OutputImageFloat(int w, int h, float ** heightMap, const char* fileName)
     {
         FILE *f;
         float *img = NULL;
@@ -536,7 +536,7 @@ public:
         return outputFile;
     }
 
-    std::string OutputImage(int d, double** heightMap, const char* fileName)
+    std::string OutputImage(int d, float** heightMap, const char* fileName)
     {
         FILE *f;
         unsigned char *img = NULL;
@@ -547,9 +547,9 @@ public:
 
         int x;
         int y;
-        double s;
+        float s;
 
-        double max = -1000000, min = 1000000;
+        float max = -1000000, min = 1000000;
 
         for(int i=0; i<d; i++)
         {
@@ -622,7 +622,7 @@ public:
         return outputFile;
     }
 
-    std::string OutputImage2(int w, int h, double** heightMap, const char* fileName)
+    std::string OutputImage2(int w, int h, float ** heightMap, const char* fileName)
     {
         FILE *f;
         unsigned char *img = NULL;
@@ -633,9 +633,9 @@ public:
 
         int x;
         int y;
-        double s;
+        float s;
 
-        double max = -1000000, min = 1000000;
+        float max = -1000000, min = 1000000;
 
         for(int i=0; i<w; i++)
         {
@@ -709,7 +709,7 @@ public:
         return outputFile;
     }
 
-    std::vector<std::string> OutputCubeMapImage(int d, std::vector<double**> sides, const char* fileName)
+    std::vector<std::string> OutputCubeMapImage(int d, std::vector<float**> sides, const char* fileName)
     {
         std::vector<std::string> fileNames;
 
@@ -753,7 +753,7 @@ public:
 
         int x;
         int y;
-        double s;
+        float s;
 
         float** heightMap = new float*[h];
 

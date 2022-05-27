@@ -15,8 +15,8 @@ enum PlanetNames
 class Planet
 {
 public:
-    Planet(glm::vec3 position, CubeSphere sphere, Material material, const char* planetName)
-            : material(material) {
+    Planet(glm::vec3 position, CubeSphere sphere, PlanetData planetData, const char* planetName)
+            : planetData(planetData) {
         this->center = position;
         this->planetName = planetName;
         SetUpVertices(sphere);
@@ -26,11 +26,22 @@ public:
 
     void DrawUsingGPU(Shader *shader)
     {
+        Material material = planetData.material;
+
         shader->setVec3("reflectionColor", material.reflectionColor);
         shader->setFloat("ambientReflectance", material.ambientReflectance);
         shader->setFloat("diffuseReflectance", material.diffuseReflectance);
         shader->setFloat("specularReflectance", material.specularReflectance);
         shader->setFloat("specularExponent", material.specularExponent);
+
+        Displacement displacement = planetData.surfaceDisplacement;
+
+        shader->setInt("scale", displacement.scale);
+        shader->setFloat("amplitude", displacement.amplitude);
+        shader->setFloat("persistence", displacement.persistence);
+        shader->setFloat("lacunarity", displacement.lacunarity);
+        shader->setInt("diameter", displacement.diameter);
+        shader->setInt("iterations", displacement.iterations);
 
         auto model = glm::mat4 (1.0f);
         model = glm::translate(model, center);
@@ -46,6 +57,8 @@ public:
 
     void Draw(Shader *shader)
     {
+        Material material = planetData.material;
+
         shader->setVec3("reflectionColor", material.reflectionColor);
         shader->setFloat("ambientReflectance", material.ambientReflectance);
         shader->setFloat("diffuseReflectance", material.diffuseReflectance);
@@ -183,13 +196,14 @@ private:
     unsigned int VBO;
     unsigned int surfaceTexture;
     unsigned int displacementMap;
+
     const char* planetName;
     bool loadHeightMap = true;
     bool useGPU = false;
     const char* folder = "planetNoise/";
 
     glm::vec3 center;
-    Material material;
+    PlanetData planetData;
     std::vector<Vertex> vertices;
 
     void SetUpVertices(CubeSphere sphere)
@@ -262,7 +276,7 @@ private:
 
     void SetUpTextures(Shader *shader) {
         std::vector<std::string> faces;
-        double seed = 2.0;
+        float seed = 2.0;
 
         if (!loadHeightMap) {
 
@@ -272,16 +286,16 @@ private:
             //For generating heightmap
             int scale = 250;
             float amplitude = 10.0f;
-            double persistence = 0.5;
-            double lacunarity = 2.0;
+            float persistence = 0.5;
+            float lacunarity = 2.0;
             int w = 1000;
             int h = w;
             int d = w;
             int iterations = 6;
             float r = 10;
 
-            double **heightMap = hmg.GenerateMap(w, h, iterations, scale, amplitude, persistence, lacunarity);
-            std::vector<double **> heightCubeMap = hmg.GenerateCubeMap(d, iterations, scale, amplitude,
+            float **heightMap = hmg.GenerateMap(w, h, iterations, scale, amplitude, persistence, lacunarity);
+            std::vector<float **> heightCubeMap = hmg.GenerateCubeMap(d, iterations, scale, amplitude,
                                                                        persistence, lacunarity);
 
             auto outputByteFile = hmg.OutputImage(d, heightMap, planetName);

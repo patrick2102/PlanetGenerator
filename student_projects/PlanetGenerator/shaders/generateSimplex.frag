@@ -22,8 +22,23 @@ in vec4 worldPos;
 in vec3 worldNormal;
 in vec3 TexCoords;
 
+vec3 surfaceColor()
+{
+   vec3 water = vec3(0, 0, 1);
+   vec3 ice = vec3(0.5, 0.5, 0.5);
+   vec3 dirt = vec3(0.5, 0.25, 0.1);
+
+   //if(height == 0)
+   //   return water;
+
+   //return mix(height, dirt, ice);
+   return vec3(0);
+}
+
 void main()
 {
+   //vec3 albedo =
+
    /*
    vec4 P = worldPos;
    vec3 N = normalize(worldNormal);
@@ -47,8 +62,8 @@ void main()
 
    //FragColor = vec4(ambient + (diffuse + specular) * attenuation, 1.0);
 
+   //FragColor = texture(surfaceTexture, TexCoords);
 
-
-
-   FragColor = texture(surfaceTexture, TexCoords);
+   //FragColor = texture(surfaceTexture, TexCoords);
+   FragColor = vec4(TexCoords, 1);
 }
