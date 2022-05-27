@@ -42,9 +42,6 @@ const unsigned int SHADOW_WIDTH = 2048, SHADOW_HEIGHT = 2048;
 
 // global variables used for rendering
 // -----------------------------------
-Shader* shader;
-Shader* phong_shading;
-Shader* simplex_shading;
 Camera camera(glm::vec3(0.0f, 1.6f, 5.0f));
 
 Shader* skyboxShader;
@@ -54,18 +51,13 @@ unsigned int cubemapTexture; // skybox texture handle
 unsigned int shadowMap, shadowMapFBO;
 glm::mat4 lightSpaceMatrix;
 
+
 // global variables used for control
 // ---------------------------------
 float lastX = (float)SCR_WIDTH / 2.0;
 float lastY = (float)SCR_HEIGHT / 2.0;
 float deltaTime;
 bool isPaused = false; // stop camera movement when GUI is open
-
-bool testHeightMap = false;
-
-// solar system variables
-// --------------------------------
-Sun* sun;
 
 struct Config {
 
@@ -91,18 +83,34 @@ void drawSkybox();
 unsigned int initSkyboxBuffers();
 unsigned int loadCubeMap(vector<std::string> faces);
 
+//-------------------//
+// MY OWN CODE BELOW //
+//-------------------//
+
+//Shaders:
+Shader* shader;
+Shader* simplex_shading;
+Shader* generate_simplex_shader;
+
+
 // Variables for solar system
 std::vector<Planet> planets;
+Sun* sun;
+HeightMapGenerator* hmg;
+float seed = 0.0f;
+bool use_GPU_for_generation = false;
+bool loadTextures = false;
 
 // Functions for solar system
+void initializeHeightmapGenerator();
 void initializeSun(int);
 void initializePlanets(int, int);
-void initializeSun2(int);
-
 void drawSolarSystem();
 void drawSun();
 void drawPlanets();
 
+// Debugging variables:
+bool testHeightMap = false;
 
 int main()
 {
@@ -145,8 +153,8 @@ int main()
 
     // load the shaders and the 3D models
     // ----------------------------------
-    phong_shading = new Shader("shaders/phong_shading.vert", "shaders/phong_shading.frag");
     simplex_shading = new Shader("shaders/simplex.vert", "shaders/simplex.frag");
+    generate_simplex_shader = new Shader("shaders/generateSimplex.vert", "shaders/generateSimplex.frag");
     //shader = phong_shading;
     shader = simplex_shading;
 
@@ -185,6 +193,9 @@ int main()
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 330 core");
 
+    generate_simplex_shader->use();
+    //Initialize height map generator
+    initializeHeightmapGenerator();
 
     //Details of cube
     int cubeDivisions = 6;
@@ -278,7 +289,6 @@ void drawGui(){
 
         ImGui::Text("Shading model: ");
         {
-            if (ImGui::RadioButton("phong shading", shader == phong_shading)) { shader = phong_shading; }
             if (ImGui::RadioButton("simplex shading", shader == simplex_shading)) { shader = simplex_shading; }
         }
 
@@ -517,19 +527,10 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     glViewport(0, 0, width, height);
 }
 
-void initializeSun2(int divisions)
+void initializeHeightmapGenerator()
 {
-    glm::vec3 pos = glm::vec3(0.0f);
-    glm::vec3 color = glm::vec4(0.9f);
-    float intensity = 1.0f;
-    auto sphere = CubeSphere(1, divisions);
-    Light light = Light(pos, color, intensity);
-    Material material = sunMaterial;
-
-    sun = new Sun(pos, shader, sphere, light, material);
-    //auto cubeSphere = CubeSphere(1, divisions);
+    hmg = new HeightMapGenerator(seed, shader);
 }
-
 
 void initializeSun(int divisions)
 {
@@ -548,14 +549,54 @@ void initializePlanets(int n, int divisions)
 {
     for(int i = 0; i < n; i++)
     {
+        //std::string planetName = "test_1_float.bmp";
+        std::string planetName = "planet";
+        planetName.append(to_string(i)).append(".bmp");
 
         glm::vec3 pos = glm::vec3(3.0f * float(i) + 0.0f, 0.0f, 0.0f);
         //auto sphere = Sphere(1, divisions);
         auto sphere = CubeSphere(1, divisions);
         auto material = planetMaterial;
-        auto planet = Planet(pos, shader, sphere, material, "test_1_float.bmp");
 
-        planets.insert(planets.end(), planet);
+        if(loadTextures)
+        {
+            auto planet = Planet(pos, shader, sphere, material, planetName.c_str());
+            planet.LoadTextures();
+            planets.insert(planets.end(), planet);
+            continue;
+        }
+
+        if(use_GPU_for_generation)
+        {
+            auto planet = Planet(pos, shader, sphere, material, planetName.c_str());
+
+
+
+            planets.insert(planets.end(), planet);
+        }
+        else
+        {
+            auto planet = Planet(pos, shader, sphere, material, planetName.c_str());
+
+            //For generating heightmap
+            int scale = 100;
+            float amplitude = 10.0f;
+            double persistence = 0.5;
+            double lacunarity = 2.0;
+            int size = 1000;
+            int iterations = 6;
+
+            std::vector<double **> heightCubeMap = hmg->GenerateCubeMap(size, iterations, scale, amplitude,
+                                                                       persistence, lacunarity);
+
+            auto displacementFaces = hmg->OutputCubeMapImage(size, heightCubeMap, planetName.c_str());
+
+            planet.SetUpDisplacementMap(displacementFaces);
+
+            planets.insert(planets.end(), planet);
+        }
+
+
     }
 }
 

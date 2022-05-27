@@ -992,16 +992,10 @@
 		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shader.h">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/pbr_shading.frag">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/generateSimplex.frag">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/pbr_shading.vert">
-			<Option target="PlanetGenerator"/>
-		</Unit>
-		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/phong_shading.frag">
-			<Option target="PlanetGenerator"/>
-		</Unit>
-		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/phong_shading.vert">
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/generateSimplex.vert">
 			<Option target="PlanetGenerator"/>
 		</Unit>
 		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/simplex.frag">
@@ -1014,12 +1008,6 @@
 			<Option target="PlanetGenerator"/>
 		</Unit>
 		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/skybox.vert">
-			<Option target="PlanetGenerator"/>
-		</Unit>
-		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/sun_shading.frag">
-			<Option target="PlanetGenerator"/>
-		</Unit>
-		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/sun_shading.vert">
 			<Option target="PlanetGenerator"/>
 		</Unit>
 		<Unit filename="D:/uni/PlanetGenerator/CMakeLists.txt">

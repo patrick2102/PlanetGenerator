@@ -104,11 +104,11 @@ void main() {
 
    vec3 localPos = vertex;
 
-   //vec4 displace = texture(displacementMap, TexCoords);
-   //localPos = localPos + (normal * displace.r);
+   vec4 displace = texture(displacementMap, TexCoords);
+   localPos = localPos + (normal * displace.r);
 
-   float displace = Simplex3D(vertex);
-   localPos = localPos + (normal * displace);
+   //float displace = Simplex3D(vertex);
+   //localPos = localPos + (normal * displace);
 
    vec4 P = model * vec4(localPos, 1.0);
 

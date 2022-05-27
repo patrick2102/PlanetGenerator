@@ -23,6 +23,9 @@ public:
     HeightMapGenerator(double seed, Shader *shader)
     {
         GeneratePermutationTable(seed);
+
+
+
         shader->setIntArray("permTab", ptSize*2, permTab);
         shader->setVec3Array("grad3", 12, grad3);
     }
@@ -236,6 +239,11 @@ public:
     }
   */
 
+    void GenerateCubeMapUsingGPU(int size, int iterations, int scale, float amplitude, float persistence, float lacunarity)
+    {
+
+    }
+
     void GenerateCubeMapSide(int s1, int s2, int s3, int h, int w, int d, double scale, double*** heightMap, double amplitude)
     {
         int i;
@@ -267,7 +275,7 @@ public:
 
     }
 
-    std::vector<double**> GenerateCubeMap(int w, int h, int d, float r, int iterations, int scale, double amplitude, double persistence, double lacunarity) {
+    std::vector<double**> GenerateCubeMap(int d, int iterations, int scale, double amplitude, double persistence, double lacunarity) {
         //scale += 1;
 
         //double ***heightMap = new double **[w];
@@ -281,13 +289,13 @@ public:
             //sides.at(i) = std::vector<std::vector<double>>(w);
             //sides.at(i) = (double*);
             //double** heightMap = (double**)malloc(sizeof(double*)*w);
-            double** heightMap = new double*[w];
-            for(int j = 0; j < w; j++)
+            double** heightMap = new double*[d];
+            for(int j = 0; j < d; j++)
             {
-                heightMap[j] = new double[h];
+                heightMap[j] = new double[d];
                 //heightMap[j] = (double*)malloc(sizeof(double)*h);
                 //memset(heightMap[j],255,sizeof(double)*h);
-                for(int k = 0; k < h; k++)
+                for(int k = 0; k < d; k++)
                 {
                     heightMap[j][k] = 0.0;
                 }
@@ -304,15 +312,15 @@ public:
             int counter = 0;
 
             // Positive X:
-            i = w-1;
-            for (j = 0; j < h; j++) {
+            i = d-1;
+            for (j = 0; j < d; j++) {
                 for (k = 0; k < d; k++) {
                     double x = (i/2);
-                    double y = ((double)(j - (h/2)));
+                    double y = ((double)(j - (d/2)));
                     double z = ((double)(k - (d/2)));
 
-                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)w;
-                    point += (w);
+                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)d;
+                    point += (d);
                     point /= (float)scale;
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
@@ -326,15 +334,15 @@ public:
             }
 
             // Negative X:
-            i = w-1;
-            for (j = 0; j < h; j++) {
+            i = d-1;
+            for (j = 0; j < d; j++) {
                 for (k = 0; k < d; k++) {
                     double x = -(i/2);
-                    double y = ((double)(j - (h/2)));
+                    double y = ((double)(j - (d/2)));
                     double z = ((double)(k - (d/2)));
 
-                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)w;
-                    point += (w);
+                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)d;
+                    point += (d);
                     point /= (float)scale;
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
@@ -347,11 +355,11 @@ public:
                 }
             }
             // Positive Y:
-            j = h-1;
-            for (i = 0; i < w; i++) {
+            j = d-1;
+            for (i = 0; i < d; i++) {
                 for (k = 0; k < d; k++) {
 
-                    double x = (double)(i - (w/2));
+                    double x = (double)(i - (d/2));
                     double y = j/2;
                     double z = (double)(k - (d/2));
 
@@ -361,8 +369,8 @@ public:
                     double z = ((double)(k - (d/2)))/(double) scale;
                     */
 
-                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)w;
-                    point += (w);
+                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)d;
+                    point += (d);
                     point /= (float)scale;
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
@@ -376,16 +384,16 @@ public:
             }
 
             // Negative Y:
-            j = h-1;
-            for (i = 0; i < w; i++) {
+            j = d-1;
+            for (i = 0; i < d; i++) {
                 for (k = 0; k < d; k++) {
 
-                    double x = ((double)(i - (w/2)));
+                    double x = ((double)(i - (d/2)));
                     double y = -(j/2);
                     double z = ((double)(k - (d/2)));
 
-                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)w;
-                    point += (w);
+                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)d;
+                    point += (d);
                     point /= (float)scale;
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
@@ -400,15 +408,15 @@ public:
 
             // Positive Z
             k = d-1;
-            for (j = 0; j < h; j++) {
-                for (i = 0; i < w; i++) {
+            for (j = 0; j < d; j++) {
+                for (i = 0; i < d; i++) {
                     //double x = (double) i / (double) scale;
-                    double x = ((double)(i - (w/2)));
-                    double y = ((double)(j - (h/2)));
+                    double x = ((double)(i - (d/2)));
+                    double y = ((double)(j - (d/2)));
                     double z = (k/2);
 
-                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)w;
-                    point += (w);
+                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)d;
+                    point += (d);
                     point /= (float)scale;
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
@@ -424,19 +432,19 @@ public:
 
             // Negative Z:
             k = d-1;
-            for (i = 0; i < w; i++) {
-                for (j = 0; j < h; j++) {
-                    double x = ((double)(i - (w/2)));
-                    double y = ((double)(j - (h/2)));
+            for (i = 0; i < d; i++) {
+                for (j = 0; j < d; j++) {
+                    double x = ((double)(i - (d/2)));
+                    double y = ((double)(j - (d/2)));
                     double z = -(k/2);
 
-                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)w;
-                    point += w;
+                    glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)d;
+                    point += d;
                     point /= (float)scale;
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
 
-                    sides.at(5)[w-i-1][j] += value;
+                    sides.at(5)[d-i-1][j] += value;
 
                     //sides.at(5)[i][j] += SimplexNoise3D(x, y, z) * amplitude;
                     //sides.at(5)[i][j] += SimplexNoise(point.x, point.y) * amplitude;
@@ -530,14 +538,14 @@ public:
         return outputFile;
     }
 
-    std::string OutputImage(int w, int h, double** heightMap, const char* fileName)
+    std::string OutputImage(int d, double** heightMap, const char* fileName)
     {
         FILE *f;
         unsigned char *img = NULL;
-        int filesize = 54 + w*h*3;  //w is your image width, h is image height, both int
+        int filesize = 54 + d*d*3;  //w is your image width, h is image height, both int
 
-        img = (unsigned char *)malloc(3*w*h);
-        memset(img,0,3*w*h);
+        img = (unsigned char *)malloc(3*d*d);
+        memset(img,0,3*d*d);
 
         int x;
         int y;
@@ -545,9 +553,9 @@ public:
 
         double max = -1000000, min = 1000000;
 
-        for(int i=0; i<w; i++)
+        for(int i=0; i<d; i++)
         {
-            for(int j=0; j<h; j++)
+            for(int j=0; j<d; j++)
             {
                 auto val = heightMap[i][j];
 
@@ -561,12 +569,12 @@ public:
         if(min < 0)
             min *= -1;
 
-        for(int i=0; i<w; i++)
+        for(int i=0; i<d; i++)
         {
-            for(int j=0; j<h; j++)
+            for(int j=0; j<d; j++)
             {
                 x=i;
-                y=(h-1)-j;
+                y=(d-1)-j;
 
                 s = heightMap[i][j] + min;
 
@@ -574,9 +582,9 @@ public:
 
                 if (s > 255) s=255;
 
-                img[(x+y*w)*3+2] = (unsigned char)(s);
-                img[(x+y*w)*3+1] = (unsigned char)(s);
-                img[(x+y*w)*3+0] = (unsigned char)(s);
+                img[(x+y*d)*3+2] = (unsigned char)(s);
+                img[(x+y*d)*3+1] = (unsigned char)(s);
+                img[(x+y*d)*3+0] = (unsigned char)(s);
             }
             // std::cout << std::endl;
         }
@@ -590,26 +598,25 @@ public:
         bmpfileheader[ 4] = (unsigned char)(filesize>>16);
         bmpfileheader[ 5] = (unsigned char)(filesize>>24);
 
-        bmpinfoheader[ 4] = (unsigned char)(       w    );
-        bmpinfoheader[ 5] = (unsigned char)(       w>> 8);
-        bmpinfoheader[ 6] = (unsigned char)(       w>>16);
-        bmpinfoheader[ 7] = (unsigned char)(       w>>24);
-        bmpinfoheader[ 8] = (unsigned char)(       h    );
-        bmpinfoheader[ 9] = (unsigned char)(       h>> 8);
-        bmpinfoheader[10] = (unsigned char)(       h>>16);
-        bmpinfoheader[11] = (unsigned char)(       h>>24);
+        bmpinfoheader[ 4] = (unsigned char)(       d    );
+        bmpinfoheader[ 5] = (unsigned char)(       d>> 8);
+        bmpinfoheader[ 6] = (unsigned char)(       d>>16);
+        bmpinfoheader[ 7] = (unsigned char)(       d>>24);
+        bmpinfoheader[ 8] = (unsigned char)(       d    );
+        bmpinfoheader[ 9] = (unsigned char)(       d>> 8);
+        bmpinfoheader[10] = (unsigned char)(       d>>16);
+        bmpinfoheader[11] = (unsigned char)(       d>>24);
 
         std::string outputFile = folder;
-        outputFile.append("b_");
         outputFile.append(fileName);
 
         f = fopen(outputFile.c_str(),"wb");
         fwrite(bmpfileheader,1,14,f);
         fwrite(bmpinfoheader,1,40,f);
-        for(int i=0; i<h; i++)
+        for(int i=0; i<d; i++)
         {
-            fwrite(img+(w*(h-i-1)*3),3,w,f);
-            fwrite(bmppad,1,(4-(w*3)%4)%4,f);
+            fwrite(img+(d*(d-i-1)*3),3,d,f);
+            fwrite(bmppad,1,(4-(d*3)%4)%4,f);
         }
 
         free(img);
@@ -704,32 +711,34 @@ public:
         return outputFile;
     }
 
-    std::vector<std::string> OutputCubeMapImage(int w, int h, int d, std::vector<double**> sides, const char* fileName)
+    std::vector<std::string> OutputCubeMapImage(int d, std::vector<double**> sides, const char* fileName)
     {
         std::vector<std::string> fileNames;
 
         std::string outputFileName= "cube/PosX_";
         outputFileName.append(fileName);
-        fileNames.push_back(OutputImage(d, h, sides.at(0), outputFileName.c_str()));
+        fileNames.push_back(OutputImage(d, sides.at(0), outputFileName.c_str()));
+
         outputFileName= "cube/NegX_";
         outputFileName.append(fileName);
-        fileNames.push_back(OutputImage(d, h, sides.at(1), outputFileName.c_str()));
+        fileNames.push_back(OutputImage(d, sides.at(1), outputFileName.c_str()));
+
 
 
         outputFileName= "cube/PosY_";
         outputFileName.append(fileName);
-        fileNames.push_back(OutputImage(w, d, sides.at(2), outputFileName.c_str()));
+        fileNames.push_back(OutputImage(d, sides.at(2), outputFileName.c_str()));
         outputFileName= "cube/NegY_";
         outputFileName.append(fileName);
-        fileNames.push_back(OutputImage(w, d, sides.at(3), outputFileName.c_str()));
+        fileNames.push_back(OutputImage(d, sides.at(3), outputFileName.c_str()));
 
 
         outputFileName= "cube/PosZ_";
         outputFileName.append(fileName);
-        fileNames.push_back(OutputImage(w, h, sides.at(4), outputFileName.c_str()));
+        fileNames.push_back(OutputImage(d, sides.at(4), outputFileName.c_str()));
         outputFileName= "cube/NegZ_";
         outputFileName.append(fileName);
-        fileNames.push_back(OutputImage(w, h, sides.at(5), outputFileName.c_str()));
+        fileNames.push_back(OutputImage(d, sides.at(5), outputFileName.c_str()));
 
         return fileNames;
     }

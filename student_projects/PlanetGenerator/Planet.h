@@ -22,7 +22,7 @@ public:
         this->planetName = planetName;
         SetUpVertices(sphere);
         SetUpBuffers();
-        SetUpTextures();
+        //SetUpTextures();
     }
     void Draw()
     {
@@ -45,27 +45,115 @@ public:
         glBindTexture(GL_TEXTURE_CUBE_MAP, displacementMap);
         glDrawArrays(GL_TRIANGLES, 0, vertices.size());
         glBindVertexArray(0);
+    }
 
+    void SetUpDisplacementMap(std::vector<std::string> displacementFaces)
+    {
+        unsigned int textureID;
+        glGenTextures(1, &textureID);
+        glBindTexture(GL_TEXTURE_CUBE_MAP, textureID);
 
-        /*
-        // render skybox
-        glDepthFunc(GL_LEQUAL);  // change depth function so depth test passes when values are equal to depth buffer's content
-        skyboxShader->use();
-        glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-        glm::mat4 view = camera.GetViewMatrix();
-        skyboxShader->setMat4("projection", projection);
-        skyboxShader->setMat4("view", view);
-        skyboxShader->setInt("skybox", 0);
+        //unsigned char* data = stbi_load(outputByteFile.c_str(), &width, &height, &nrComponents, 0);
+        for (unsigned int i = 0; i < displacementFaces.size(); i++)
+        {
+            int width, height, nrComponents;
+            unsigned char* data = stbi_load(displacementFaces[i].c_str(), &width, &height, &nrComponents, 0);
+            if (data)
+            {
+                glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+                stbi_image_free(data);
+            }
+            else
+            {
+                std::cout << "Cubemap texture failed to load at path: " << displacementFaces[i] << std::endl;
+                stbi_image_free(data);
+            }
+        }
 
-        // skybox cube
-        glBindVertexArray(skyboxVAO);
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-        glBindVertexArray(0);
-        glDepthFunc(GL_LESS); // set depth function back to default
-        */
+        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
 
+        glGenerateMipmap(GL_TEXTURE_CUBE_MAP);
+
+        glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
+
+        displacementMap = textureID;
+        surfaceTexture = textureID;
+    }
+
+    void SetUpSurfaceTexture(std::vector<std::string> surfaceFaces)
+    {
+        unsigned int textureID;
+        glGenTextures(1, &textureID);
+        glBindTexture(GL_TEXTURE_CUBE_MAP, textureID);
+
+        //unsigned char* data = stbi_load(outputByteFile.c_str(), &width, &height, &nrComponents, 0);
+        for (unsigned int i = 0; i < surfaceFaces.size(); i++)
+        {
+            int width, height, nrComponents;
+            unsigned char* data = stbi_load(surfaceFaces[i].c_str(), &width, &height, &nrComponents, 0);
+            if (data)
+            {
+                glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+                stbi_image_free(data);
+            }
+            else
+            {
+                std::cout << "Cubemap texture failed to load at path: " << surfaceFaces[i] << std::endl;
+                stbi_image_free(data);
+            }
+        }
+
+        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
+
+        glGenerateMipmap(GL_TEXTURE_CUBE_MAP);
+
+        glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
+
+        surfaceTexture = textureID;
+    }
+
+    void LoadTextures()
+    {
+        std::vector<std::string> fileNames;
+        std::string outputFileName= folder;
+        outputFileName.append("cube/PosX_");
+        outputFileName.append(planetName);
+        fileNames.push_back(outputFileName);
+
+        outputFileName= folder;
+        outputFileName.append("cube/NegX_");
+        outputFileName.append(planetName);
+        fileNames.push_back(outputFileName);
+
+        outputFileName= folder;
+        outputFileName.append("cube/PosY_");
+        outputFileName.append(planetName);
+        fileNames.push_back(outputFileName);
+
+        outputFileName= folder;
+        outputFileName.append("cube/NegY_");
+        outputFileName.append(planetName);
+        fileNames.push_back(outputFileName);
+
+        outputFileName= folder;
+        outputFileName.append("cube/PosZ_");
+        outputFileName.append(planetName);
+        fileNames.push_back(outputFileName);
+
+        outputFileName= folder;
+        outputFileName.append("cube/NegZ_");
+        outputFileName.append(planetName);
+        fileNames.push_back(outputFileName);
+
+        SetUpDisplacementMap(fileNames);
     }
 
 private:
@@ -78,6 +166,7 @@ private:
     const char* planetName;
     bool loadHeightMap = true;
     bool useGPU = false;
+    const char* folder = "planetNoise/";
 
     glm::vec3 center;
     Shader* shader;
@@ -151,6 +240,7 @@ private:
         glBindVertexArray(0);
     }
 
+
     void SetUpTextures() {
         std::vector<std::string> faces;
         double seed = 2.0;
@@ -166,20 +256,18 @@ private:
             double persistence = 0.5;
             double lacunarity = 2.0;
             int w = 1000;
-            //int w = 10*(6^2);
-            //int w = 400;
             int h = w;
             int d = w;
             int iterations = 6;
             float r = 10;
 
             double **heightMap = hmg.GenerateMap(w, h, iterations, scale, amplitude, persistence, lacunarity);
-            std::vector<double **> heightCubeMap = hmg.GenerateCubeMap(w, h, d, r, iterations, scale, amplitude,
+            std::vector<double **> heightCubeMap = hmg.GenerateCubeMap(d, iterations, scale, amplitude,
                                                                        persistence, lacunarity);
 
-            auto outputByteFile = hmg.OutputImage(w, h, heightMap, planetName);
+            auto outputByteFile = hmg.OutputImage(d, heightMap, planetName);
             //auto outputFloatFile = hmg.OutputImageFloat(w, h, heightMap, planetName);
-            auto outputFilesByte = hmg.OutputCubeMapImage(w, h, d, heightCubeMap, planetName);
+            auto outputFilesByte = hmg.OutputCubeMapImage(d, heightCubeMap, planetName);
             faces = outputFilesByte;
         } else {
             HeightMapGenerator hmg = HeightMapGenerator(seed, shader);
@@ -187,7 +275,6 @@ private:
                     {
                             "planetNoise/b_cube/PosX_test_1_float.bmp",
                             "planetNoise/b_cube/NegX_test_1_float.bmp",
-                            "planetNoise/b_cube/PosX_test_1_float.bmp",
                             "planetNoise/b_cube/PosY_test_1_float.bmp",
                             "planetNoise/b_cube/NegY_test_1_float.bmp",
                             "planetNoise/b_cube/PosZ_test_1_float.bmp",
