@@ -24,8 +24,6 @@ public:
     {
         GeneratePermutationTable(seed);
 
-
-
         shader->setIntArray("permTab", ptSize*2, permTab);
         shader->setVec3Array("grad3", 12, grad3);
     }
@@ -239,7 +237,7 @@ public:
     }
   */
 
-    void GenerateCubeMapUsingGPU(int size, int iterations, int scale, float amplitude, float persistence, float lacunarity)
+    void GenerateCubeMapUsingGPU(int diameter, int iterations, int scale, float amplitude, float persistence, float lacunarity)
     {
 
     }

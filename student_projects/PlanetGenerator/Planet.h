@@ -15,16 +15,36 @@ enum PlanetNames
 class Planet
 {
 public:
-    Planet(glm::vec3 position, Shader *shader, CubeSphere sphere, Material material, const char* planetName)
+    Planet(glm::vec3 position, CubeSphere sphere, Material material, const char* planetName)
             : material(material) {
         this->center = position;
-        this->shader = shader;
         this->planetName = planetName;
         SetUpVertices(sphere);
         SetUpBuffers();
         //SetUpTextures();
     }
-    void Draw()
+
+    void DrawUsingGPU(Shader *shader)
+    {
+        shader->setVec3("reflectionColor", material.reflectionColor);
+        shader->setFloat("ambientReflectance", material.ambientReflectance);
+        shader->setFloat("diffuseReflectance", material.diffuseReflectance);
+        shader->setFloat("specularReflectance", material.specularReflectance);
+        shader->setFloat("specularExponent", material.specularExponent);
+
+        auto model = glm::mat4 (1.0f);
+        model = glm::translate(model, center);
+        shader->setMat4("model", model);
+        shader->setInt("surfaceTexture", 0);
+
+        glBindVertexArray(VAO);
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_CUBE_MAP, surfaceTexture);
+        glDrawArrays(GL_TRIANGLES, 0, vertices.size());
+        glBindVertexArray(0);
+    }
+
+    void Draw(Shader *shader)
     {
         shader->setVec3("reflectionColor", material.reflectionColor);
         shader->setFloat("ambientReflectance", material.ambientReflectance);
@@ -169,7 +189,6 @@ private:
     const char* folder = "planetNoise/";
 
     glm::vec3 center;
-    Shader* shader;
     Material material;
     std::vector<Vertex> vertices;
 
@@ -229,7 +248,7 @@ private:
         glGenVertexArrays(1, &VAO);
         glBindVertexArray(VAO);
 
-        int posAttributeLocation = glGetAttribLocation(shader->ID, "vertex");
+        int posAttributeLocation = 0;
         glEnableVertexAttribArray(posAttributeLocation);
         glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) 0);
 
@@ -241,7 +260,7 @@ private:
     }
 
 
-    void SetUpTextures() {
+    void SetUpTextures(Shader *shader) {
         std::vector<std::string> faces;
         double seed = 2.0;
 

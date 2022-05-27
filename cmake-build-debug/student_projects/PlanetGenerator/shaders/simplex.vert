@@ -108,6 +108,7 @@ void main() {
    localPos = localPos + (normal * displace.r);
 
    //float displace = Simplex3D(vertex);
+
    //localPos = localPos + (normal * displace);
 
    vec4 P = model * vec4(localPos, 1.0);
