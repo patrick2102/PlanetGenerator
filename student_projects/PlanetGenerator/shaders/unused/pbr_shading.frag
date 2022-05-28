@@ -224,7 +224,6 @@ void main()
    F0 = mix(F0, albedo, metalness);
 
    diffuse = mix(diffuse, vec3(0), metalness);
-   ambient = mix(ambient, vec3(0), metalness);
 
    vec3 FAmbient = FresnelSchlick(F0, max(dot(N, V), 0.0));
 

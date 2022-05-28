@@ -240,7 +240,7 @@ int main()
         //drawSkybox();
 
         shader->use();
-        //setLightUniforms();
+        setLightUniforms();
         //drawSun();
         drawSolarSystem();
 
@@ -541,15 +541,8 @@ void initializeHeightmapGenerator()
 
 void initializeSun(int divisions)
 {
-    glm::vec3 pos = glm::vec3(0.0f);
-    glm::vec3 color = glm::vec4(0.9f);
-    float intensity = 1.0f;
-    //auto sphere = Sphere(1, divisions);
     auto sphere = CubeSphere(1, divisions);
-    Light light = Light(pos, color, intensity);
-    Material material = sunMaterial;
-
-    sun = new Sun(pos, shader, sphere, light, material);
+    sun = new Sun(pos, sphere, starData);
 }
 
 void initializePlanets(int n, int divisions)
@@ -606,9 +599,9 @@ void drawSolarSystem()
 void drawSun()
 {
     if(shader == generate_simplex_shader)
-        sun->Draw();
+        sun->DrawUsingGPU(shader);
     else
-        sun->Draw();
+        sun->Draw(shader);
 }
 
 void drawPlanets()

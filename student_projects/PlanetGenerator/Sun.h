@@ -12,7 +12,7 @@
 class Sun
 {
 public:
-
+    /*
     Sun(glm::vec3 position, Shader *shader, Sphere sphere, Light light, Material material)
             :light(light), material(material) {
         this->center = position;
@@ -28,9 +28,54 @@ public:
         SetUpVerticesCubeSphere(cubeSphere);
         SetUpBuffers();
     }
+    */
 
-    void Draw()
+    Sun(glm::vec3 position, CubeSphere cubeSphere, StarData starData)
+            : starData(starData) {
+        this->center = position;
+        SetUpVerticesCubeSphere(cubeSphere);
+        SetUpBuffers();
+    }
+
+    void DrawUsingGPU(Shader* shader)
     {
+        Material material = starData.material;
+
+        shader->setVec3("ambientLightColor", light.lightColor * light.lightIntensity);
+
+        shader->setVec3("reflectionColor", material.reflectionColor);
+        shader->setFloat("ambientReflectance", material.ambientReflectance);
+        shader->setFloat("diffuseReflectance", material.diffuseReflectance);
+        shader->setFloat("specularReflectance", material.specularReflectance);
+        shader->setFloat("specularExponent", material.specularExponent);
+        shader->setFloat("roughness", material.roughness);
+        shader->setFloat("metalness", material.metalness);
+
+
+        Displacement displacement = starData.displacement;
+
+        shader->setInt("scale", displacement.scale);
+        shader->setFloat("amplitude", displacement.amplitude);
+        shader->setFloat("persistence", displacement.persistence);
+        shader->setFloat("lacunarity", displacement.lacunarity);
+        shader->setInt("diameter", displacement.diameter);
+        shader->setInt("iterations", displacement.iterations);
+
+        auto model = glm::mat4 (1.0f);
+        model = glm::translate(model, center);
+        shader->setMat4("model", model);
+
+
+        glBindVertexArray(VAO);
+        glDrawArrays(GL_TRIANGLES, 0, vertices.size());
+        glBindVertexArray(0);
+
+        shader->setVec3("ambientLightColor", glm::vec3(0.0f));
+    }
+
+    void Draw(Shader* shader)
+    {
+        Material material = starData.material;
 
         shader->setVec3("ambientLightColor", light.lightColor * light.lightIntensity);
 
@@ -60,12 +105,10 @@ public:
 private:
     unsigned int VAO;
     unsigned int VBO;
-
-    Light light;
     glm::vec3 center;
-    Shader* shader;
     std::vector<Vertex> vertices;
-    Material material;
+    StarData starData;
+
 
     void SetUpVerticesSphere(Sphere sphere)
     {
@@ -113,7 +156,6 @@ private:
 
     void SetUpBuffers()
     {
-        GLint success = 0;
         glGenBuffers(1, &VBO);
         glBindBuffer(GL_ARRAY_BUFFER, VBO);
         glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(Vertex), &vertices[0], GL_STATIC_DRAW);
@@ -121,17 +163,13 @@ private:
         glGenVertexArrays(1, &VAO);
         glBindVertexArray(VAO);
 
-        GLenum err = glGetError();
-
-        int posAttributeLocation = glGetAttribLocation(shader->ID, "vertex");
+        int posAttributeLocation = 0;
         glEnableVertexAttribArray(posAttributeLocation);
         glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) 0);
 
         posAttributeLocation = 1;
         glEnableVertexAttribArray(posAttributeLocation);
         glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) sizeof(glm::vec3));
-
-        err = glGetError();
 
         glBindVertexArray(0);
     }

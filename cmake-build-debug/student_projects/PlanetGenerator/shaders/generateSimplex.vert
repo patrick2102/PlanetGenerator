@@ -19,7 +19,6 @@ uniform vec3 grad3[12];
 
 out vec4 worldPos;
 out vec3 worldNormal;
-out vec3 TexCoords;
 out float height;
 
 float Simplex3D(vec3 coords)
@@ -116,32 +115,18 @@ float Displacement(vec3 coords)
 }
 
 void main() {
-   /*
-   // vertex in world space (for lighting computation)
-   vec4 P = model * vec4(vertex, 1.0);
-   // normal in world space (for lighting computation)
-   vec3 N = normalize(model * vec4(normal, 0.0)).xyz;
-
-   TexCoords = vertex;
-
-   worldPos = P;
-   worldNormal = N;
-
-   */
-
-   //TexCoords = vertex;
 
    vec3 localPos = vertex;
-
-   //vec4 displace = texture(displacementMap, TexCoords);
-   //localPos = localPos + (normal * displace.r);
 
    float displace = Displacement(vertex);
    localPos = localPos + (normal * displace);
 
-   TexCoords = vec3(displace);
-
    vec4 P = model * vec4(localPos, 1.0);
+
+   vec3 N = normalize(model * vec4(normal, 0.0)).xyz;
+
+   worldPos = P;
+   worldNormal = N;
 
    height = displace;
    gl_Position = viewProjection * P;

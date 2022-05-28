@@ -33,6 +33,8 @@ public:
         shader->setFloat("diffuseReflectance", material.diffuseReflectance);
         shader->setFloat("specularReflectance", material.specularReflectance);
         shader->setFloat("specularExponent", material.specularExponent);
+        shader->setFloat("roughness", material.roughness);
+        shader->setFloat("metalness", material.metalness);
 
         Displacement displacement = planetData.surfaceDisplacement;
 
