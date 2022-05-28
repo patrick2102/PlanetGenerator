@@ -27,10 +27,27 @@ in float height;
 
 const float PI = 3.14159265359;
 
+const int water = 0;
+const int grass = 1;
+const int ice = 2;
+const int desert = 3;
+const int rock = 4;
+
+/*
+float GetTemperature()
+{
+   vec3 P = worldPos.xyz;
+
+   float distToStar = length(P - sunPosition);
+}
+*/
+
+
+
 vec3 surfaceColor()
 {
    vec3 water = vec3(0, 0, 0.8);
-   vec3 ice = vec3(0.5, 0.5, 0.5);
+   vec3 ice = vec3(0.0, 0.0, 0.0);
    vec3 dirt = vec3(0.5, 0.25, 0.1);
    vec3 grass = vec3(0.0, 0.25, 0.0);
 
@@ -176,23 +193,25 @@ vec3 PBR()
    vec3 albedo = surfaceColor();
    albedo *= reflectionColor;
 
-   vec3 ambient = ambientLightColor * ambientReflectance * reflectionColor;
+   //vec3 ambient = ambientLightColor * ambientReflectance * reflectionColor;
    vec3 diffuse = OrenNayar(N, L, V, albedo);
    vec3 specular = GetCookTorranceSpecularLighting(N, L, V);
-   vec3 lightRadiance = lightColor;
+   //vec3 lightRadiance = lightColor;
 
-   vec3 F0 = vec3(0.04f);
+   vec3 F0 = vec3(0.01f);
    F0 = mix(F0, albedo, metalness);
 
-   diffuse = mix(diffuse, vec3(0), metalness);
+   //diffuse = mix(diffuse, vec3(0), metalness);
 
    vec3 F = FresnelSchlick(F0, max(dot(H, V), 0.0));
-   vec3 FAmbient = FresnelSchlick(F0, max(dot(N, V), 0.0));
+   //vec3 FAmbient = FresnelSchlick(F0, max(dot(N, V), 0.0));
 
-   vec3 indirectLight = mix(ambient, FAmbient, 0.5);
+   //vec3 indirectLight = mix(ambient, FAmbient, 0.5);
    vec3 directLight = mix(diffuse, specular, F);
+   //vec3 directLight = mix(diffuse, specular, F);
 
-   vec3 light = directLight + indirectLight;
+   //vec3 light = directLight + indirectLight;
+   vec3 light = directLight;
    return light;
 }
 
