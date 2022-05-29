@@ -1010,6 +1010,12 @@
 		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/skybox.vert">
 			<Option target="PlanetGenerator"/>
 		</Unit>
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/starShader.frag">
+			<Option target="PlanetGenerator"/>
+		</Unit>
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/starShader.vert">
+			<Option target="PlanetGenerator"/>
+		</Unit>
 		<Unit filename="D:/uni/PlanetGenerator/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

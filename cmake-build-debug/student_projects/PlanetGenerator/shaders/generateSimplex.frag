@@ -97,6 +97,7 @@ vec3 FresnelSchlick(vec3 F0, float cosTheta)
 {
    return F0 + (1.0 - F0) * pow(clamp(1.0 - cosTheta, 0.0, 1.0), 5.0);
 }
+
 float DistributionGGX(vec3 N, vec3 H, float a)
 {
    float a2 = a*a;

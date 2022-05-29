@@ -64,6 +64,7 @@ public:
         auto model = glm::mat4 (1.0f);
         model = glm::translate(model, center);
         shader->setMat4("model", model);
+        shader->setInt("surfaceTexture", 0);
 
 
         glBindVertexArray(VAO);

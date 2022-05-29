@@ -51,8 +51,6 @@ public:
         shader->setInt("surfaceTexture", 0);
 
         glBindVertexArray(VAO);
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_CUBE_MAP, surfaceTexture);
         glDrawArrays(GL_TRIANGLES, 0, vertices.size());
         glBindVertexArray(0);
     }
@@ -283,7 +281,7 @@ private:
         if (!loadHeightMap) {
 
             //Initial values for height map
-            HeightMapGenerator hmg = HeightMapGenerator(seed, shader);
+            HeightMapGenerator hmg = HeightMapGenerator(seed);
 
             //For generating heightmap
             int scale = 250;
@@ -305,7 +303,7 @@ private:
             auto outputFilesByte = hmg.OutputCubeMapImage(d, heightCubeMap, planetName);
             faces = outputFilesByte;
         } else {
-            HeightMapGenerator hmg = HeightMapGenerator(seed, shader);
+            HeightMapGenerator hmg = HeightMapGenerator(seed);
             faces =
                     {
                             "planetNoise/b_cube/PosX_test_1_float.bmp",

@@ -77,8 +77,11 @@ struct Config {
 // function declarations
 // ---------------------
 void setLightUniforms();
+void setUniforms();
+void useShader(Shader*);
 void drawObjects();
 void drawGui();
+void drawRTGui();
 void drawSkybox();
 unsigned int initSkyboxBuffers();
 unsigned int loadCubeMap(vector<std::string> faces);
@@ -91,15 +94,16 @@ unsigned int loadCubeMap(vector<std::string> faces);
 Shader* shader;
 Shader* simplex_shading;
 Shader* generate_simplex_shader;
+Shader* star_shader;
+
 
 
 // Variables for solar system
 std::vector<Planet> planets;
 Sun* sun;
 HeightMapGenerator* hmg;
-float seed = 0.0f;
 //bool use_GPU_for_generation = true;
-bool loadTextures = true;
+bool loadTextures = false;
 
 // Functions for solar system
 void initializeHeightmapGenerator();
@@ -155,8 +159,10 @@ int main()
     // ----------------------------------
     simplex_shading = new Shader("shaders/simplex.vert", "shaders/simplex.frag");
     generate_simplex_shader = new Shader("shaders/generateSimplex.vert", "shaders/generateSimplex.frag");
+    star_shader = new Shader("shaders/starShader.vert", "shaders/starShader.frag");
     //shader = simplex_shading;
     shader = generate_simplex_shader;
+    //shader = star_shader;
 
     // init skybox
 
@@ -193,9 +199,9 @@ int main()
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 330 core");
 
+    //Initialize height map generator
     shader = generate_simplex_shader;
     shader->use();
-    //Initialize height map generator
     initializeHeightmapGenerator();
 
     //Details of cube
@@ -204,10 +210,8 @@ int main()
     //Initialize planets:
     int numOfPlanets = 1;
 
-    //shader = simplex_shading;
-    shader->use();
-    initializeSun(cubeDivisions);
     initializePlanets(numOfPlanets, cubeDivisions);
+    initializeSun(cubeDivisions);
 
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     // render loop
@@ -219,34 +223,24 @@ int main()
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
 
-        // camera parameters
-        glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-        glm::mat4 view = camera.GetViewMatrix();
-        glm::mat4 viewProjection = projection * view;
-
-        // set viewProjection matrix uniform
-
-        shader->use();
-        shader->setMat4("viewProjection", viewProjection);
-        shader->setVec3("camPosition", camera.Position);
-
-        //sun_shading->setMat4("viewProjection", viewProjection);
-
         processInput(window);
 
         glClearColor(0.3f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        //drawSkybox();
+        //drawSkybox();drawSolarSystem
 
-        shader->use();
-        setLightUniforms();
+        useShader(generate_simplex_shader);
+        setUniforms();
+        //setLightUniforms();
         //drawSun();
         drawSolarSystem();
 
         if (isPaused) {
             drawGui();
-        }
+        } else {
+            drawRTGui();
+            }
 
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         glfwSwapBuffers(window);
@@ -270,6 +264,33 @@ int main()
     return 0;
 }
 
+void drawRTGui()
+{
+    glDisable(GL_FRAMEBUFFER_SRGB);
+    // Start the Dear ImGui frame
+    ImGui_ImplOpenGL3_NewFrame();
+    ImGui_ImplGlfw_NewFrame();
+    ImGui::NewFrame();
+
+    {
+        ImGui::Begin("Camera position");
+        string pos = std::to_string(camera.Position.x) + ", " +
+                     std::to_string(camera.Position.y) + ", " +
+                     std::to_string(camera.Position.z);
+
+        ImGui::Text("%s", pos.data());
+        ImGui::End();
+
+        ImGui::Begin("Speed");
+        string speed = std::to_string(camera.MovementSpeed);
+        ImGui::Text("%s", speed.data());
+        ImGui::End();
+    }
+
+    ImGui::Render();
+    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+    glEnable(GL_FRAMEBUFFER_SRGB);
+}
 
 void drawGui(){
     glDisable(GL_FRAMEBUFFER_SRGB);
@@ -306,6 +327,22 @@ void drawGui(){
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
     glEnable(GL_FRAMEBUFFER_SRGB);
+}
+
+void useShader(Shader *newShader)
+{
+    shader = newShader;
+    shader->use();
+}
+
+void setUniforms()
+{
+    glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
+    glm::mat4 view = camera.GetViewMatrix();
+    glm::mat4 viewProjection = projection * view;
+    shader->setMat4("viewProjection", viewProjection);
+    shader->setVec3("camPosition", camera.Position);
+    setLightUniforms();
 }
 
 void setLightUniforms()
@@ -536,17 +573,21 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 
 void initializeHeightmapGenerator()
 {
-    hmg = new HeightMapGenerator(seed, shader);
+    float seed = 0.0f;
+    hmg = new HeightMapGenerator(seed);
+    hmg->CopyToShader(shader);
 }
 
 void initializeSun(int divisions)
 {
+    useShader(star_shader);
     auto sphere = CubeSphere(1, divisions);
     sun = new Sun(pos, sphere, starData);
 }
 
 void initializePlanets(int n, int divisions)
 {
+    useShader(generate_simplex_shader);
     for(int i = 0; i < n; i++)
     {
         //std::string planetName = "test_1_float.bmp";
@@ -598,14 +639,15 @@ void drawSolarSystem()
 
 void drawSun()
 {
-    if(shader == generate_simplex_shader)
-        sun->DrawUsingGPU(shader);
-    else
-        sun->Draw(shader);
+    useShader(star_shader);
+    sun->DrawUsingGPU(shader);
+    setUniforms();
 }
 
 void drawPlanets()
 {
+    useShader(generate_simplex_shader);
+    setUniforms();
     for(auto p : planets)
     {
         if(shader == generate_simplex_shader)

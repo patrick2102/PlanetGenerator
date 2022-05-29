@@ -20,10 +20,13 @@ public:
                                 glm::vec3(1,0,1), glm::vec3(-1,0,1), glm::vec3(1,0,-1), glm::vec3(-1,0,-1),
                                 glm::vec3(0,1,1), glm::vec3(0,-1,1), glm::vec3(0,1,-1), glm::vec3(0,-1,-1)};
 
-    HeightMapGenerator(float seed, Shader *shader)
+    HeightMapGenerator(float seed)
     {
         GeneratePermutationTable(seed);
+    }
 
+    void CopyToShader(Shader *shader)
+    {
         shader->setIntArray("permTab", ptSize*2, permTab);
         shader->setVec3Array("grad3", 12, grad3);
     }
@@ -198,48 +201,6 @@ public:
             amplitude *= persistence;
         }
         return heightMap;
-    }
-/*
-    std::vector<float **> GenerateCubeMap(int w, int h, int iterations, int scale, float amplitude, float persistence, float lacunarity, int overlap)
-    {
-        scale += 1;
-        std::vector<float **> sides(6);
-
-        for(int side = 0; side < sides.size(); side++)
-        {
-            float ** heightMap = new float *[h];
-
-            for(int i = 0; i < w; i++)
-            {
-                heightMap[i] = new float [h];
-                for(int j = 0; j < h; j++)
-                {
-                    heightMap[i][j] = 0.0; // just to make sure that every value in heightMap is 0 from the start.
-                }
-            }
-
-            for (int iter = 0; iter < iterations; iter++)
-            {
-                for(int i = 0; i < w; i++)
-                {
-                    for(int j = 0; j < h; j++)
-                    {
-                        float x = (float )i/(float )scale;
-                        float y = (float )j/(float )scale;
-                        heightMap[i][j] += SimplexNoise(x, y) * amplitude;
-                    }
-                }
-                scale /= lacunarity;
-                amplitude *= persistence;
-            }
-        }
-        return sides;
-    }
-  */
-
-    void GenerateCubeMapUsingGPU(int diameter, int iterations, int scale, float amplitude, float persistence, float lacunarity)
-    {
-
     }
 
     void GenerateCubeMapSide(int s1, int s2, int s3, int h, int w, int d, float scale, float *** heightMap, float amplitude)
@@ -622,93 +583,6 @@ public:
         return outputFile;
     }
 
-    std::string OutputImage2(int w, int h, float ** heightMap, const char* fileName)
-    {
-        FILE *f;
-        unsigned char *img = NULL;
-        int filesize = 54 + w*h*3;  //w is your image width, h is image height, both int
-
-        img = (unsigned char *)malloc(3*w*h);
-        memset(img,0,3*w*h);
-
-        int x;
-        int y;
-        float s;
-
-        float max = -1000000, min = 1000000;
-
-        for(int i=0; i<w; i++)
-        {
-            for(int j=0; j<h; j++)
-            {
-                auto val = heightMap[i][j];
-
-                if(val > max)
-                    max = val;
-                if(min > val)
-                    min = val;
-            }
-        }
-
-        if(min < 0)
-            min *= -1;
-
-        for(int i=0; i<w; i++)
-        {
-            for(int j=0; j<h; j++)
-            {
-                x=i;
-                y=(h-1)-j;
-
-                s = heightMap[i][j] + min;
-
-                s = floor(s);
-
-                if (s > 255) s=255;
-
-                img[(x+y*w)*3+2] = (unsigned char)(s);
-                img[(x+y*w)*3+1] = (unsigned char)(s);
-                img[(x+y*w)*3+0] = (unsigned char)(s);
-            }
-            // std::cout << std::endl;
-        }
-
-        unsigned char bmpfileheader[14] = {'B','M', 0,0,0,0, 0,0, 0,0, 54,0,0,0};
-        unsigned char bmpinfoheader[40] = {40,0,0,0, 0,0,0,0, 0,0,0,0, 1,0, 24,0};
-        unsigned char bmppad[3] = {0,0,0};
-
-        bmpfileheader[ 2] = (unsigned char)(filesize    );
-        bmpfileheader[ 3] = (unsigned char)(filesize>> 8);
-        bmpfileheader[ 4] = (unsigned char)(filesize>>16);
-        bmpfileheader[ 5] = (unsigned char)(filesize>>24);
-
-        bmpinfoheader[ 4] = (unsigned char)(       w    );
-        bmpinfoheader[ 5] = (unsigned char)(       w>> 8);
-        bmpinfoheader[ 6] = (unsigned char)(       w>>16);
-        bmpinfoheader[ 7] = (unsigned char)(       w>>24);
-        bmpinfoheader[ 8] = (unsigned char)(       h    );
-        bmpinfoheader[ 9] = (unsigned char)(       h>> 8);
-        bmpinfoheader[10] = (unsigned char)(       h>>16);
-        bmpinfoheader[11] = (unsigned char)(       h>>24);
-
-        std::string outputFile = folder;
-        outputFile.append("b_");
-        outputFile.append(fileName);
-
-        f = fopen(outputFile.c_str(),"wb");
-        fwrite(bmpfileheader,1,14,f);
-        fwrite(bmpinfoheader,1,40,f);
-        for(int i=0; i<h; i++)
-        {
-            fwrite(img+(w*(h-i-1)*3),3,w,f);
-            fwrite(bmppad,1,(4-(w*3)%4)%4,f);
-        }
-
-        free(img);
-        fclose(f);
-        return outputFile;
-    }
-
     std::vector<std::string> OutputCubeMapImage(int d, std::vector<float**> sides, const char* fileName)
     {
         std::vector<std::string> fileNames;
@@ -837,7 +711,6 @@ public:
         free(img);
         fclose(f);
     }
-
 
 private:
 
