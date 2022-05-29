@@ -176,9 +176,9 @@ int main()
             "skybox/back.png"
     };
 
-    //cubemapTexture = loadCubeMap(faces);
-    //skyboxVAO = initSkyboxBuffers();
-    //skyboxShader = new Shader("shaders/skybox.vert", "shaders/skybox.frag");
+    cubemapTexture = loadCubeMap(faces);
+    skyboxVAO = initSkyboxBuffers();
+    skyboxShader = new Shader("shaders/skybox.vert", "shaders/skybox.frag");
 
     // set up the z-buffer
     // -------------------
@@ -228,7 +228,7 @@ int main()
         glClearColor(0.3f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        //drawSkybox();drawSolarSystem
+        drawSkybox();
 
         useShader(generate_simplex_shader);
         setUniforms();
