@@ -110,7 +110,7 @@ float Displacement(vec3 coords)
       amp *= persistence;
    }
    res /= 255;
-   res = clamp(res, 0.0f, 1.0f);
+   res = clamp(res, -1.0f, 1.0f);
    return res;
 }
 

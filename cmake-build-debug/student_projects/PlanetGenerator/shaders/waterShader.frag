@@ -204,7 +204,7 @@ vec3 OrenNayar(vec3 N, vec3 L, vec3 V, vec3 albedo)
    diffuse *= (A+B*max(0, gamma)*sin(alpha)*tan(beta));
 
    float diffuseModulation = max(dot(N, L), 0.0);
-   //diffuse *= diffuseModulation;
+   diffuse *= diffuseModulation;
    return diffuse;
 }
 
@@ -215,9 +215,6 @@ vec3 PBR()
    vec3 L = normalize(sunPosition - P.xyz);
    vec3 V = normalize(camPosition - P.xyz);
    vec3 H = normalize(L + V);
-
-   //vec3 albedo = surfaceColor();
-   //albedo *= reflectionColor;
 
    vec3 albedo = reflectionColor;
 
@@ -235,8 +232,7 @@ vec3 PBR()
    //vec3 FAmbient = FresnelSchlick(F0, max(dot(N, V), 0.0));
 
    //vec3 indirectLight = mix(ambient, FAmbient, 0.5);
-   //vec3 directLight = mix(diffuse, specular, F);
-   vec3 directLight = diffuse;
+   vec3 directLight = mix(diffuse, specular, F);
    //vec3 directLight = mix(diffuse, specular, F);
 
    //vec3 light = directLight + indirectLight;

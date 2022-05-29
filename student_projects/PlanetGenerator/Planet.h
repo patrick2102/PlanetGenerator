@@ -19,14 +19,18 @@ public:
             : planetData(planetData) {
         this->center = position;
         this->planetName = planetName;
-        SetUpVertices(sphere);
+        //SetUpVertices(sphere);
+        //SetUpOceanVertices(sphere);
         SetUpBuffers();
+        SetUpOceanBuffers();
         //SetUpTextures();
     }
 
-    void DrawUsingGPU(Shader *shader)
+    void DrawOceanUsingGPU(Shader *shader)
     {
-        Material material = planetData.material;
+        unsigned int VAO = planetData.ocean.material.VAO;
+        auto vertices = planetData.ocean.material.points;
+        Material material = planetData.ocean.material;
 
         shader->setVec3("reflectionColor", material.reflectionColor);
         shader->setFloat("ambientReflectance", material.ambientReflectance);
@@ -36,14 +40,14 @@ public:
         shader->setFloat("roughness", material.roughness);
         shader->setFloat("metalness", material.metalness);
 
-        Displacement displacement = planetData.surfaceDisplacement;
+        Displacement displacement = planetData.displacement;
 
         shader->setInt("scale", displacement.scale);
         shader->setFloat("amplitude", displacement.amplitude);
         shader->setFloat("persistence", displacement.persistence);
         shader->setFloat("lacunarity", displacement.lacunarity);
         shader->setInt("diameter", displacement.diameter);
-        shader->setInt("iterations", displacement.iterations);
+        shader->setInt("iterations", 0);
 
         auto model = glm::mat4 (1.0f);
         model = glm::translate(model, center);
@@ -55,29 +59,74 @@ public:
         glBindVertexArray(0);
     }
 
+    void DrawUsingGPU(Shader *shader)
+    {
+        Displacement displacement = planetData.displacement;
+
+        for(Material material : planetData.materials)
+        {
+            if(material.points.size() == 0)
+                continue;
+
+            unsigned int VAO = material.VAO;
+            auto vertices = material.points;
+
+            shader->setVec3("reflectionColor", material.reflectionColor);
+            shader->setFloat("ambientReflectance", material.ambientReflectance);
+            shader->setFloat("diffuseReflectance", material.diffuseReflectance);
+            shader->setFloat("specularReflectance", material.specularReflectance);
+            shader->setFloat("specularExponent", material.specularExponent);
+            shader->setFloat("roughness", material.roughness);
+            shader->setFloat("metalness", material.metalness);
+
+
+            shader->setInt("scale", displacement.scale);
+            shader->setFloat("amplitude", displacement.amplitude);
+            shader->setFloat("persistence", displacement.persistence);
+            shader->setFloat("lacunarity", displacement.lacunarity);
+            shader->setInt("diameter", displacement.diameter);
+            shader->setInt("iterations", displacement.iterations);
+
+            auto model = glm::mat4 (1.0f);
+            model = glm::translate(model, center);
+            shader->setMat4("model", model);
+            shader->setInt("surfaceTexture", 0);
+
+            glBindVertexArray(VAO);
+            glDrawArrays(GL_TRIANGLES, 0, vertices.size());
+            glBindVertexArray(0);
+        }
+    }
+
     void Draw(Shader *shader)
     {
-        Material material = planetData.material;
+        Displacement displacement = planetData.displacement;
 
-        shader->setVec3("reflectionColor", material.reflectionColor);
-        shader->setFloat("ambientReflectance", material.ambientReflectance);
-        shader->setFloat("diffuseReflectance", material.diffuseReflectance);
-        shader->setFloat("specularReflectance", material.specularReflectance);
-        shader->setFloat("specularExponent", material.specularExponent);
+        for(Material material : planetData.materials) {
 
-        auto model = glm::mat4 (1.0f);
-        model = glm::translate(model, center);
-        shader->setMat4("model", model);
-        shader->setInt("surfaceTexture", 0);
-        shader->setInt("displacementMap", 0);
+            unsigned int VAO = material.VAO;
+            auto vertices = material.points;
 
-        glBindVertexArray(VAO);
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_CUBE_MAP, surfaceTexture);
-        glActiveTexture(GL_TEXTURE1);
-        glBindTexture(GL_TEXTURE_CUBE_MAP, displacementMap);
-        glDrawArrays(GL_TRIANGLES, 0, vertices.size());
-        glBindVertexArray(0);
+            shader->setVec3("reflectionColor", material.reflectionColor);
+            shader->setFloat("ambientReflectance", material.ambientReflectance);
+            shader->setFloat("diffuseReflectance", material.diffuseReflectance);
+            shader->setFloat("specularReflectance", material.specularReflectance);
+            shader->setFloat("specularExponent", material.specularExponent);
+
+            auto model = glm::mat4(1.0f);
+            model = glm::translate(model, center);
+            shader->setMat4("model", model);
+            shader->setInt("surfaceTexture", 0);
+            shader->setInt("displacementMap", 0);
+
+            glBindVertexArray(VAO);
+            glActiveTexture(GL_TEXTURE0);
+            glBindTexture(GL_TEXTURE_CUBE_MAP, surfaceTexture);
+            glActiveTexture(GL_TEXTURE1);
+            glBindTexture(GL_TEXTURE_CUBE_MAP, displacementMap);
+            glDrawArrays(GL_TRIANGLES, 0, vertices.size());
+            glBindVertexArray(0);
+        }
     }
 
     void SetUpDisplacementMap(std::vector<std::string> displacementFaces)
@@ -190,10 +239,6 @@ public:
     }
 
 private:
-
-
-    unsigned int VAO;
-    unsigned int VBO;
     unsigned int surfaceTexture;
     unsigned int displacementMap;
 
@@ -204,34 +249,10 @@ private:
 
     glm::vec3 center;
     PlanetData planetData;
-    std::vector<Vertex> vertices;
+    std::vector<Vertex> oceanVertices;
 
-    void SetUpVertices(CubeSphere sphere)
+    void SetUpOceanVertices(CubeSphere sphere)
     {
-        /*
-        for(int i = 0; i < sphere.vertices.size(); i += 3)
-        {
-            auto p1 = sphere.vertices[i];
-            auto p2 = sphere.vertices[i+1];
-            auto p3 = sphere.vertices[i+2];
-
-            auto v1 = p2-p1;
-            auto v2 = p3-p1;
-
-            auto n1 = glm::normalize(glm::cross(p2-p1, p3-p1));
-            auto n2 = n1;
-            auto n3 = n1;
-
-            auto n1 = glm::normalize(glm::cross(p2-p1, p3-p1));
-            auto n2 = glm::normalize(glm::cross(p3-p2, p1-p2));
-            auto n3 = glm::normalize(glm::cross(p1-p3, p2-p3));
-
-            vertices.insert(vertices.end(), {p1, n1});
-            vertices.insert(vertices.end(), {p2, n2});
-            vertices.insert(vertices.end(), {p3, n3});
-        }
-        */
-
         for(int i = 0; i < sphere.vertices.size(); i += 6)
         {
             auto p1 = sphere.vertices[i];
@@ -242,25 +263,25 @@ private:
             auto p5 = sphere.vertices[i+4];
             auto p6 = sphere.vertices[i+5];
 
-            vertices.insert(vertices.end(), {p1, p1});
-            vertices.insert(vertices.end(), {p2, p2});
-            vertices.insert(vertices.end(), {p3, p3});
-            vertices.insert(vertices.end(), {p4, p4});
-            vertices.insert(vertices.end(), {p5, p5});
-            vertices.insert(vertices.end(), {p6, p6});
+            oceanVertices.insert(oceanVertices.end(), {p1, p1});
+            oceanVertices.insert(oceanVertices.end(), {p2, p2});
+            oceanVertices.insert(oceanVertices.end(), {p3, p3});
+            oceanVertices.insert(oceanVertices.end(), {p4, p4});
+            oceanVertices.insert(oceanVertices.end(), {p5, p5});
+            oceanVertices.insert(oceanVertices.end(), {p6, p6});
         }
-        //Clear sphere vertices to not use up wasteful memory.
-        sphere.vertices.clear();
     }
 
-    void SetUpBuffers()
+    void SetUpOceanBuffers()
     {
+        unsigned int VBO;
+
         glGenBuffers(1, &VBO);
         glBindBuffer(GL_ARRAY_BUFFER, VBO);
-        glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(Vertex), &vertices[0], GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, planetData.ocean.material.points.size() * sizeof(Vertex), &planetData.ocean.material.points[0], GL_STATIC_DRAW);
 
-        glGenVertexArrays(1, &VAO);
-        glBindVertexArray(VAO);
+        glGenVertexArrays(1, &planetData.ocean.material.VAO);
+        glBindVertexArray(planetData.ocean.material.VAO);
 
         int posAttributeLocation = 0;
         glEnableVertexAttribArray(posAttributeLocation);
@@ -273,7 +294,35 @@ private:
         glBindVertexArray(0);
     }
 
+    void SetUpBuffers()
+    {
+        for(int i = 0; i < planetData.materials.size(); i++)
+        {
+            if(planetData.materials[i].points.size() == 0)
+                continue;
 
+            unsigned int VBO;
+
+            glGenBuffers(1, &VBO);
+            glBindBuffer(GL_ARRAY_BUFFER, VBO);
+            glBufferData(GL_ARRAY_BUFFER, planetData.materials[i].points.size() * sizeof(Vertex), &planetData.materials[i].points[0], GL_STATIC_DRAW);
+
+            glGenVertexArrays(1, &planetData.materials[i].VAO);
+            glBindVertexArray(planetData.materials[i].VAO);
+
+            int posAttributeLocation = 0;
+            glEnableVertexAttribArray(posAttributeLocation);
+            glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) 0);
+
+            posAttributeLocation = 1;
+            glEnableVertexAttribArray(posAttributeLocation);
+            glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) sizeof(glm::vec3));
+
+            glBindVertexArray(0);
+        }
+    }
+
+/*
     void SetUpTextures(Shader *shader) {
         std::vector<std::string> faces;
         float seed = 2.0;
@@ -349,24 +398,7 @@ private:
 
         surfaceTexture = textureID;
         displacementMap = textureID;
-
-        /*
-        for(int i = 0; i < 5; i++)
-        {
-            glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGB, w, h, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-        }
-        stbi_image_free(data);
-        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
-
-        glGenerateMipmap(GL_TEXTURE_CUBE_MAP);
-
-        glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
-         */
     }
-
+*/
 };
 #endif //ITU_GRAPHICS_PROGRAMMING_PLANET_H

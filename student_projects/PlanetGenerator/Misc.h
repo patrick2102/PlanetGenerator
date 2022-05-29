@@ -3,9 +3,20 @@
 //
 
 #include <glm/glm.hpp>
+#include "vector"
+
 
 #ifndef ITU_GRAPHICS_PROGRAMMING_MISC_H
 #define ITU_GRAPHICS_PROGRAMMING_MISC_H
+
+struct Vertex
+{
+    // Position
+    glm::vec3 Position;
+    // Normal
+    glm::vec3 Normal;
+};
+
 
 struct Material
 {
@@ -19,6 +30,9 @@ struct Material
         this->roughness = roughness;
         this->metalness = metalness;
     }
+
+    unsigned int VAO;
+    std::vector<Vertex> points;
 
     glm::vec3 reflectionColor;
     float ambientReflectance;
@@ -43,12 +57,13 @@ struct Light
     float lightIntensity;
 };
 
-struct Vertex
+struct Ocean
 {
-    // Position
-    glm::vec3 Position;
-    // Normal
-    glm::vec3 Normal;
+    Ocean(Material material) : material(material)
+    {
+        this->material = material;
+    }
+    Material material = material;
 };
 
 struct Displacement
@@ -86,24 +101,42 @@ struct StarData
 
 };
 
+/*
 struct PlanetData
 {
-    PlanetData(Displacement surfaceDisplacement, Material material)
-            : material(material), surfaceDisplacement(surfaceDisplacement) {
+    PlanetData(Displacement surfaceDisplacement, Material material, Ocean ocean)
+            : material(material), surfaceDisplacement(surfaceDisplacement), ocean(ocean) {
         this->surfaceDisplacement = surfaceDisplacement;
         this->material = material;
+        this->ocean = ocean;
     }
     Displacement surfaceDisplacement;
     Material material;
+    Ocean ocean;
+};
+*/
+
+struct PlanetData
+{
+    PlanetData(std::vector<Material> materials, Displacement displacement, Ocean ocean) : displacement(displacement), ocean(ocean) {
+        this->materials = materials;
+        this->displacement = displacement;
+        this->ocean = ocean;
+    }
+    std::vector<Material> materials;
+    Ocean ocean;
+    Displacement displacement;
 };
 
-//Material sunMaterial;
-//sun
+//Material types:
+Material waterMaterial = Material(glm::vec3(0, 0, 1.0f), 1.0f, 0.25f, 0.0f, 0.1f, 0.0f, 0.0f);
 
 Material sunMaterial = Material(glm::vec3(1.0f), 1.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f);
 //Material planetMaterial = Material(glm::vec3(0.50f, 0.25f, 0.10f), 0.25f, 0.25f, 0.0f, 0.1f);
 //Material planetMaterial = Material(glm::vec3(1.0f), 0.0f, 0.25f, 0.0f, 0.1f, 1.0f, 0.0f);
 Material planetMaterial = Material(glm::vec3(1.0f), 0.0f, 0.25f, 0.0f, 0.1f, 1.0f, 0.0f);
+
+Ocean planetOcean = Ocean(waterMaterial);
 
 //TODO should be randomized
 int scale = 50;
@@ -113,13 +146,11 @@ float lacunarity = 2.0f;
 int diameter = 100;
 int iterations = 20;
 
-//Displacement testDisplacement = Displacement(0.25f, 0.1f, 0.5f, 2.0f, 0.5f, 10);
-
 Displacement testDisplacement = Displacement(scale, amplitude, persistence, lacunarity, diameter, iterations);
 
-PlanetData testPlanetData = PlanetData(testDisplacement, planetMaterial);
+std::vector<Material> planetMaterials {planetMaterial};
 
-Displacement starDisplacement = Displacement(scale, amplitude, persistence, lacunarity, diameter, iterations);
+PlanetData testPlanetData = PlanetData(planetMaterials, testDisplacement, planetOcean);
 
 glm::vec3 pos = glm::vec3(0.0f);
 glm::vec3 color = glm::vec4(0.9f);
@@ -127,7 +158,6 @@ float intensity = 1.0f;
 Light light = Light(pos, color, intensity);
 
 Displacement sunDisplacement = Displacement(scale, amplitude, persistence, lacunarity, diameter, 0);
-
 StarData starData = StarData(light, sunDisplacement, sunMaterial);
 
 #endif //ITU_GRAPHICS_PROGRAMMING_MISC_H

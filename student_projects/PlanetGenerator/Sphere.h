@@ -7,6 +7,15 @@
 #ifndef ITU_GRAPHICS_PROGRAMMING_SPHERE_H
 #define ITU_GRAPHICS_PROGRAMMING_SPHERE_H
 
+static glm::vec3 GetPointOnSphere(float a1, float a2, float radius)
+{
+    float x = radius * glm::cos(a1) * glm::cos(a2);
+    float y = radius * glm::sin(a1);
+    float z = radius * glm::cos(a1) * glm::sin(a2);
+
+    return glm::vec3(x, y, z);
+}
+
 
 class Sphere
 {
@@ -32,15 +41,6 @@ public:
         return glm::vec3(x, y, z);
     }*/
 
-    glm::vec3 GetPointOnSphere(float a1, float a2)
-    {
-        float x = radius * glm::cos(a1) * glm::cos(a2);
-        float y = radius * glm::sin(a1);
-        float z = radius * glm::cos(a1) * glm::sin(a2);
-
-        return glm::vec3(x, y, z);
-    }
-
     void CreateSphere(int divisions)
     {
         float increment = pi * (1.0f/(float)divisions);
@@ -53,15 +53,15 @@ public:
             {
                 float a2 = pi * ((float)i)/(float)divisions;
 
-                glm::vec3 p1 = GetPointOnSphere(a1, a2);
-                glm::vec3 p2 = GetPointOnSphere(a1-increment, a2);
-                glm::vec3 p3 = GetPointOnSphere(a1-increment, a2+increment);
+                glm::vec3 p1 = GetPointOnSphere(a1, a2, radius);
+                glm::vec3 p2 = GetPointOnSphere(a1-increment, a2, radius);
+                glm::vec3 p3 = GetPointOnSphere(a1-increment, a2+increment, radius);
 
                 vertices.insert(vertices.end(), {p2, p1, p3});
 
                 if(j != 0 && j != divisions-1)
                 {
-                    glm::vec3 p4 = GetPointOnSphere(a1, a2+increment);
+                    glm::vec3 p4 = GetPointOnSphere(a1, a2+increment, radius);
                     vertices.insert(vertices.end(), {p3, p1, p4});
                 }
             }

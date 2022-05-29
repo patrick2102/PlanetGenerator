@@ -1752,6 +1752,14 @@ Misc.h
 shader.h
 -
 
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/BiomeGenerator.h
+vector
+-
+glm/glm.hpp
+-
+Misc.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Misc.h
+
 D:/uni/PlanetGenerator/student_projects/PlanetGenerator/HeightMapGenerator.h
 stdlib.h
 -
@@ -1765,6 +1773,8 @@ cmath
 D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Misc.h
 glm/glm.hpp
 -
+vector
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/vector
 
 D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Planet.h
 map
@@ -1811,8 +1821,6 @@ shader.h
 D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shader.h
 camera.h
 D:/uni/PlanetGenerator/student_projects/PlanetGenerator/camera.h
-HeightMapGenerator.h
-D:/uni/PlanetGenerator/student_projects/PlanetGenerator/HeightMapGenerator.h
 stb_image.h
 -
 assimp/Importer.hpp
@@ -1833,6 +1841,10 @@ Planet.h
 D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Planet.h
 CubeSphere.h
 -
+HeightMapGenerator.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/HeightMapGenerator.h
+BiomeGenerator.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/BiomeGenerator.h
 
 D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shader.h
 glad/glad.h

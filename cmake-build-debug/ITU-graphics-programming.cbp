@@ -965,6 +965,9 @@
 		<Unit filename="D:/uni/PlanetGenerator/common/third-party/imgui/src/imgui_widgets.cpp">
 			<Option target="imgui"/>
 		</Unit>
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/BiomeGenerator.h">
+			<Option target="PlanetGenerator"/>
+		</Unit>
 		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/CubeSphere.h">
 			<Option target="PlanetGenerator"/>
 		</Unit>
@@ -998,12 +1001,6 @@
 		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/generateSimplex.vert">
 			<Option target="PlanetGenerator"/>
 		</Unit>
-		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/simplex.frag">
-			<Option target="PlanetGenerator"/>
-		</Unit>
-		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/simplex.vert">
-			<Option target="PlanetGenerator"/>
-		</Unit>
 		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/skybox.frag">
 			<Option target="PlanetGenerator"/>
 		</Unit>
@@ -1014,6 +1011,12 @@
 			<Option target="PlanetGenerator"/>
 		</Unit>
 		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/starShader.vert">
+			<Option target="PlanetGenerator"/>
+		</Unit>
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/waterShader.frag">
+			<Option target="PlanetGenerator"/>
+		</Unit>
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/waterShader.vert">
 			<Option target="PlanetGenerator"/>
 		</Unit>
 		<Unit filename="D:/uni/PlanetGenerator/CMakeLists.txt">

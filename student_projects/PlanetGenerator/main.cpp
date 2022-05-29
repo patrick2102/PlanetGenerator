@@ -10,7 +10,6 @@
 //  lessons to this implementation
 #include "shader.h"
 #include "camera.h"
-#include "HeightMapGenerator.h"
 
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
@@ -23,6 +22,8 @@
 #include "Sun.h"
 #include "Planet.h"
 #include <CubeSphere.h>
+#include "HeightMapGenerator.h"
+#include "BiomeGenerator.h"
 
 using namespace std;
 
@@ -92,8 +93,8 @@ unsigned int loadCubeMap(vector<std::string> faces);
 
 //Shaders:
 Shader* shader;
-Shader* simplex_shading;
 Shader* generate_simplex_shader;
+Shader* water_shader;
 Shader* star_shader;
 
 
@@ -102,6 +103,7 @@ Shader* star_shader;
 std::vector<Planet> planets;
 Sun* sun;
 HeightMapGenerator* hmg;
+//TerrainGenerator* tg;
 //bool use_GPU_for_generation = true;
 bool loadTextures = false;
 
@@ -109,6 +111,7 @@ bool loadTextures = false;
 void initializeHeightmapGenerator();
 void initializeSun(int);
 void initializePlanets(int, int);
+PlanetData generatePlanetData(float, float, int, int);
 void drawSolarSystem();
 void drawSun();
 void drawPlanets();
@@ -157,8 +160,8 @@ int main()
 
     // load the shaders and the 3D models
     // ----------------------------------
-    simplex_shading = new Shader("shaders/simplex.vert", "shaders/simplex.frag");
     generate_simplex_shader = new Shader("shaders/generateSimplex.vert", "shaders/generateSimplex.frag");
+    water_shader = new Shader("shaders/waterShader.vert", "shaders/waterShader.frag");
     star_shader = new Shader("shaders/starShader.vert", "shaders/starShader.frag");
     //shader = simplex_shading;
     shader = generate_simplex_shader;
@@ -176,9 +179,9 @@ int main()
             "skybox/back.png"
     };
 
-    cubemapTexture = loadCubeMap(faces);
-    skyboxVAO = initSkyboxBuffers();
-    skyboxShader = new Shader("shaders/skybox.vert", "shaders/skybox.frag");
+    //cubemapTexture = loadCubeMap(faces);
+    //skyboxVAO = initSkyboxBuffers();
+    //skyboxShader = new Shader("shaders/skybox.vert", "shaders/skybox.frag");
 
     // set up the z-buffer
     // -------------------
@@ -203,6 +206,7 @@ int main()
     shader = generate_simplex_shader;
     shader->use();
     initializeHeightmapGenerator();
+    //initializeTerrainGenerator();
 
     //Details of cube
     int cubeDivisions = 6;
@@ -228,7 +232,7 @@ int main()
         glClearColor(0.3f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        drawSkybox();
+        //drawSkybox();
 
         useShader(generate_simplex_shader);
         setUniforms();
@@ -313,7 +317,6 @@ void drawGui(){
 
         ImGui::Text("Shading model: ");
         {
-            if (ImGui::RadioButton("simplex shading", shader == simplex_shading)) { shader = simplex_shading; }
             if (ImGui::RadioButton("GPU simplex shading", shader == generate_simplex_shader))
             {
                 shader = generate_simplex_shader;
@@ -585,40 +588,73 @@ void initializeSun(int divisions)
     sun = new Sun(pos, sphere, starData);
 }
 
+PlanetData generatePlanetData(float seed, float radius, int divisions, int nCells)
+{
+    PlanetType pt = earthLike;
+
+    Ocean ocean = planetOcean;
+    Displacement displacement = testDisplacement;
+    //std::vector<Material> materials = planetMaterials;
+    auto sphere = CubeSphere(radius, divisions);
+
+    for(int i = 0; i < sphere.vertices.size(); i += 6)
+    {
+        auto p1 = sphere.vertices[i];
+
+        ocean.material.points.insert(ocean.material.points.end(), {p1, p1});
+    }
+
+    std::vector<Vertex> coords;
+
+    for(int i = 0; i < sphere.vertices.size(); i++)
+    {
+        auto p = sphere.vertices[i];
+        auto n = glm::normalize(p);
+
+        coords.insert(coords.end(), {p, n});
+    }
+    auto tg = BiomeGenerator();
+
+    std::vector<Material> materials = tg.CreateMaterialsNaive(seed, nCells, radius, coords, pt);
+    return PlanetData(materials, displacement, ocean);
+}
+
 void initializePlanets(int n, int divisions)
 {
     useShader(generate_simplex_shader);
     for(int i = 0; i < n; i++)
     {
-        //std::string planetName = "test_1_float.bmp";
+        float seed = 0.0f;
+
         std::string planetName = "planet";
         planetName.append(to_string(i)).append(".bmp");
 
         glm::vec3 pos = glm::vec3(3.0f * float(i) + 5.0f, 0.0f, 0.0f);
-        //auto sphere = Sphere(1, divisions);
-        auto sphere = CubeSphere(1, divisions);
-        //auto material = planetMaterial;
-        auto pd = testPlanetData;
-        auto sd = pd.surfaceDisplacement;
 
+        auto planetData = generatePlanetData(seed, 0.5f, divisions, 100);
+        auto sphere = CubeSphere(1, divisions);
+        //auto planetData = testPlanetData;
+
+        auto sd = planetData.displacement;
 
         if(loadTextures)
         {
-            auto planet = Planet(pos, sphere, pd, planetName.c_str());
+            auto planet = Planet(pos, sphere, planetData, planetName.c_str());
             planet.LoadTextures();
             planets.insert(planets.end(), planet);
             continue;
         }
 
+
         if(shader == generate_simplex_shader)
         {
-            auto planet = Planet(pos, sphere, testPlanetData, planetName.c_str());
+            auto planet = Planet(pos, sphere, planetData, planetName.c_str());
 
             planets.insert(planets.end(), planet);
         }
         else
         {
-            auto planet = Planet(pos, sphere, testPlanetData, planetName.c_str());
+            auto planet = Planet(pos, sphere, planetData, planetName.c_str());
 
             std::vector<float **> heightCubeMap = hmg->GenerateCubeMap(sd.diameter, sd.iterations, sd.scale, sd.amplitude, sd.persistence, sd.lacunarity);
             auto displacementFaces = hmg->OutputCubeMapImage(diameter, heightCubeMap, planetName.c_str());
@@ -650,10 +686,13 @@ void drawPlanets()
     setUniforms();
     for(auto p : planets)
     {
-        if(shader == generate_simplex_shader)
             p.DrawUsingGPU(shader);
-        else
-            p.Draw(shader);
     }
 
+    useShader(water_shader);
+    setUniforms();
+    for(auto p : planets)
+    {
+        //p.DrawOceanUsingGPU(shader);
+    }
 }

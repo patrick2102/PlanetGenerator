@@ -42,8 +42,32 @@ float GetTemperature()
 }
 */
 
+vec3 surfaceColor()
+{
+   vec3 ice = vec3(0.0, 0.0, 0.0);
+   vec3 dirt = vec3(0.5, 0.25, 0.1);
+   vec3 grass = vec3(0.0, 0.25, 0.0);
 
+   if(height <= 0)
+   return dirt;
 
+   float min = 0.00;
+   float max = 0.01;
+
+   if(height >= min && max <= 0.01)
+   {
+      float i = (height-min)/(max-min);
+      return  mix(dirt, grass, i);
+   }
+
+   min = max;
+   max = 0.1;
+   float h = clamp(height, min, max);
+   float i = (h-min)/(max-min);
+   return mix(grass, ice, i);
+}
+
+/*
 vec3 surfaceColor()
 {
    vec3 water = vec3(0, 0, 0.8);
@@ -69,6 +93,7 @@ vec3 surfaceColor()
    float i = (h-min)/(max-min);
    return mix(grass, ice, i);
 }
+*/
 
 vec3 Phong()
 {
@@ -179,7 +204,7 @@ vec3 OrenNayar(vec3 N, vec3 L, vec3 V, vec3 albedo)
    diffuse *= (A+B*max(0, gamma)*sin(alpha)*tan(beta));
 
    float diffuseModulation = max(dot(N, L), 0.0);
-   diffuse *= diffuseModulation;
+   //diffuse *= diffuseModulation;
    return diffuse;
 }
 
@@ -191,8 +216,10 @@ vec3 PBR()
    vec3 V = normalize(camPosition - P.xyz);
    vec3 H = normalize(L + V);
 
-   vec3 albedo = surfaceColor();
-   albedo *= reflectionColor;
+   //vec3 albedo = surfaceColor();
+   //albedo *= reflectionColor;
+
+   vec3 albedo = reflectionColor;
 
    //vec3 ambient = ambientLightColor * ambientReflectance * reflectionColor;
    vec3 diffuse = OrenNayar(N, L, V, albedo);
@@ -208,7 +235,8 @@ vec3 PBR()
    //vec3 FAmbient = FresnelSchlick(F0, max(dot(N, V), 0.0));
 
    //vec3 indirectLight = mix(ambient, FAmbient, 0.5);
-   vec3 directLight = mix(diffuse, specular, F);
+   //vec3 directLight = mix(diffuse, specular, F);
+   vec3 directLight = diffuse;
    //vec3 directLight = mix(diffuse, specular, F);
 
    //vec3 light = directLight + indirectLight;
