@@ -291,6 +291,10 @@ private:
         glEnableVertexAttribArray(posAttributeLocation);
         glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) sizeof(glm::vec3));
 
+        posAttributeLocation = 2;
+        glEnableVertexAttribArray(posAttributeLocation);
+        glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) (sizeof(glm::vec3)*2));
+
         glBindVertexArray(0);
     }
 
@@ -317,6 +321,10 @@ private:
             posAttributeLocation = 1;
             glEnableVertexAttribArray(posAttributeLocation);
             glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) sizeof(glm::vec3));
+
+            posAttributeLocation = 2;
+            glEnableVertexAttribArray(posAttributeLocation);
+            glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) (sizeof(glm::vec3)*2));
 
             glBindVertexArray(0);
         }

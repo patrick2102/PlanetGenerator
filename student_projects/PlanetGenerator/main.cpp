@@ -597,25 +597,41 @@ PlanetData generatePlanetData(float seed, float radius, int divisions, int nCell
     //std::vector<Material> materials = planetMaterials;
     auto sphere = CubeSphere(radius, divisions);
 
-    for(int i = 0; i < sphere.vertices.size(); i += 6)
+    for(int i = 0; i < sphere.vertices.size(); i += 1)
     {
         auto p1 = sphere.vertices[i];
 
-        ocean.material.points.insert(ocean.material.points.end(), {p1, p1});
+        ocean.material.points.insert(ocean.material.points.end(), {p1, p1, glm::vec3(0,0,1.0)});
     }
 
-    std::vector<Vertex> coords;
-
-    for(int i = 0; i < sphere.vertices.size(); i++)
-    {
-        auto p = sphere.vertices[i];
-        auto n = glm::normalize(p);
-
-        coords.insert(coords.end(), {p, n});
-    }
     auto tg = BiomeGenerator();
+    std::vector<Vertex> coords;
+    std::vector<Material> materials = tg.SetupMaterials(nCells, pt);
 
-    std::vector<Material> materials = tg.CreateMaterialsNaive(seed, nCells, radius, coords, pt);
+    auto voronoiPoints = tg.DistributePointsRandom(seed, nCells, radius);
+
+    std::vector<std::vector<Vertex>> vertexPairs(nCells);
+
+    for(int i = 0; i < sphere.vertices.size(); i += 3)
+    {
+        auto p1 = sphere.vertices[i];
+        auto p2 = sphere.vertices[i+1];
+        auto p3 = sphere.vertices[i+2];
+
+        std::vector<Vertex> vertices;
+        int pIndex;
+
+        std::tie(vertices, pIndex) = tg.AssignMaterialsMix(p1, p2, p3, materials, voronoiPoints);
+        vertexPairs[pIndex].insert(vertexPairs[pIndex].end(), vertices.begin(), vertices.end());
+
+        //materials[pIndex].points.insert(materials[pIndex].points.end(), vertices.begin(), vertices.end());
+    }
+
+    for(int i = 0; i < vertexPairs.size(); i++)
+    {
+        materials[i].points.insert(materials[i].points.end(), vertexPairs[i].begin(), vertexPairs[i].end());
+    }
+
     return PlanetData(materials, displacement, ocean);
 }
 
@@ -631,7 +647,7 @@ void initializePlanets(int n, int divisions)
 
         glm::vec3 pos = glm::vec3(3.0f * float(i) + 5.0f, 0.0f, 0.0f);
 
-        auto planetData = generatePlanetData(seed, 0.5f, divisions, 100);
+        auto planetData = generatePlanetData(seed, 0.5f, divisions, 10);
         auto sphere = CubeSphere(1, divisions);
         //auto planetData = testPlanetData;
 

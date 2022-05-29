@@ -24,6 +24,7 @@ uniform samplerCube displacementMap;
 in vec4 worldPos;
 in vec3 worldNormal;
 in float height;
+in vec3 outColor;
 
 const float PI = 3.14159265359;
 
@@ -216,10 +217,12 @@ vec3 PBR()
    vec3 V = normalize(camPosition - P.xyz);
    vec3 H = normalize(L + V);
 
-   //vec3 albedo = surfaceColor();
+   vec3 albedo = surfaceColor();
    //albedo *= reflectionColor;
 
-   vec3 albedo = reflectionColor;
+   //vec3 albedo = reflectionColor;
+   //albedo *= surfaceColor();
+   //albedo *= surfaceColor();
 
    //vec3 ambient = ambientLightColor * ambientReflectance * reflectionColor;
    vec3 diffuse = OrenNayar(N, L, V, albedo);

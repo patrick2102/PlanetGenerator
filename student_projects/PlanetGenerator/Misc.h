@@ -15,13 +15,15 @@ struct Vertex
     glm::vec3 Position;
     // Normal
     glm::vec3 Normal;
+    // Color
+    glm::vec3 Color;
 };
 
 
 struct Material
 {
     Material(glm::vec3 reflectionColor, float ambientReflectance, float diffuseReflectance,
-             float specularReflectance, float specularExponent, float roughness, float metalness) {
+             float specularReflectance, float specularExponent, float roughness, float metalness, std::string name) {
         this->reflectionColor = reflectionColor;
         this->ambientReflectance = ambientReflectance;
         this->diffuseReflectance = diffuseReflectance;
@@ -29,6 +31,7 @@ struct Material
         this->specularExponent = specularExponent;
         this->roughness = roughness;
         this->metalness = metalness;
+        this->name = name;
     }
 
     unsigned int VAO;
@@ -39,6 +42,7 @@ struct Material
     float diffuseReflectance;
     float specularReflectance;
     float specularExponent;
+    std::string name;
 
     float roughness;
     float metalness;
@@ -129,12 +133,12 @@ struct PlanetData
 };
 
 //Material types:
-Material waterMaterial = Material(glm::vec3(0, 0, 1.0f), 1.0f, 0.25f, 0.0f, 0.1f, 0.0f, 0.0f);
+Material waterMaterial = Material(glm::vec3(0, 0, 1.0f), 1.0f, 0.25f, 0.0f, 0.1f, 0.0f, 0.0f, "water");
 
-Material sunMaterial = Material(glm::vec3(1.0f), 1.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f);
+Material sunMaterial = Material(glm::vec3(1.0f), 1.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, "sun");
 //Material planetMaterial = Material(glm::vec3(0.50f, 0.25f, 0.10f), 0.25f, 0.25f, 0.0f, 0.1f);
 //Material planetMaterial = Material(glm::vec3(1.0f), 0.0f, 0.25f, 0.0f, 0.1f, 1.0f, 0.0f);
-Material planetMaterial = Material(glm::vec3(1.0f), 0.0f, 0.25f, 0.0f, 0.1f, 1.0f, 0.0f);
+Material planetMaterial = Material(glm::vec3(1.0f), 0.0f, 0.25f, 0.0f, 0.1f, 1.0f, 0.0f, "planet");
 
 Ocean planetOcean = Ocean(waterMaterial);
 

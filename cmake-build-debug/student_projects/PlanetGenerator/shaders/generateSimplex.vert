@@ -1,6 +1,7 @@
 #version 330 core
 layout (location = 0) in vec3 vertex;
 layout (location = 1) in vec3 normal;
+layout (location = 2) in vec3 color;
 
 uniform int scale;
 uniform float amplitude;
@@ -20,6 +21,7 @@ uniform vec3 grad3[12];
 out vec4 worldPos;
 out vec3 worldNormal;
 out float height;
+out vec3 outColor;
 
 float Simplex3D(vec3 coords)
 {
@@ -128,6 +130,7 @@ void main() {
    worldPos = P;
    worldNormal = N;
 
+   outColor = color;
    height = displace;
    gl_Position = viewProjection * P;
 }
