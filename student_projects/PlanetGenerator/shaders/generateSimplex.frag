@@ -28,12 +28,6 @@ in vec3 outColor;
 
 const float PI = 3.14159265359;
 
-const int water = 0;
-const int grass = 1;
-const int ice = 2;
-const int desert = 3;
-const int rock = 4;
-
 /*
 float GetTemperature()
 {
@@ -45,27 +39,69 @@ float GetTemperature()
 
 vec3 surfaceColor()
 {
-   vec3 ice = vec3(0.0, 0.0, 0.0);
+   vec3 ice = vec3(1.0f);
    vec3 dirt = vec3(0.5, 0.25, 0.1);
    vec3 grass = vec3(0.0, 0.25, 0.0);
+   vec3 water = vec3(0.004, 0.086, 0.2f);
 
-   if(height <= 0)
-   return dirt;
+   float min = -0.005f;
 
-   float min = 0.00;
-   float max = 0.01;
+   // Underwater:
+   if(height <= min)
+      return water;
 
-   if(height >= min && max <= 0.01)
+   // Coastline:
+   float max = 0.0025f;
+   if(min <= height && height <= max)
    {
       float i = (height-min)/(max-min);
-      return  mix(dirt, grass, i);
+      return  mix(water, dirt, i);
    }
 
+   // Moving inlands
+   min = max;
+   max = 0.005;
+   if(min <= height  && height <= max)
+   {
+      float i = (height-min)/(max-min);
+      return  mix(dirt, outColor, i);
+   }
+
+   // Inland
+   min = max;
+   max = 0.025;
+   if(min <= height && height <= max)
+   {
+      return outColor;
+   }
+
+   // Mountains:
+   min = max;
+   max = 0.05;
+   float h = clamp(height, min, max);
+   float i = (h-min)/(max-min);
+   return mix(outColor, ice, i);
+   /*
+   if(height >= min && max <= height)
+   {
+      float i = (height-min)/(max-min);
+      return  mix(dirt, outColor, i);
+   }
+
+   min = 0.01;
+   max = 0.02;
+   float h = clamp(height, min, max);
+   float i = (h-min)/(max-min);
+   return mix(outColor, ice, i);
+   */
+   /*
    min = max;
    max = 0.1;
    float h = clamp(height, min, max);
    float i = (h-min)/(max-min);
    return mix(grass, ice, i);
+   */
+   return vec3(1.0f);
 }
 
 /*
@@ -96,28 +132,6 @@ vec3 surfaceColor()
 }
 */
 
-vec3 Phong()
-{
-   vec4 P = worldPos;
-   vec3 N = normalize(worldNormal);
-
-   vec3 ambient = ambientLightColor * ambientReflectance * reflectionColor;
-
-   vec3 L = normalize(sunPosition - P.xyz);
-   float diffuseModulation = max(dot(N, L), 0.0);
-   vec3 diffuse = sunColor * diffuseReflectance * diffuseModulation * reflectionColor;
-
-   vec3 V = normalize(camPosition - P.xyz);
-   vec3 H = normalize(L + V);
-   float specModulation = pow(max(dot(H, N), 0.0), specularExponent);
-
-   vec3 specular = sunColor * specularReflectance * specModulation;
-
-   float distToSun = distance(sunPosition, P.xyz);
-   //float attenuation = 1.0f / (distToSun * distToSun);
-   float attenuation = 1.0f;
-   return vec3(ambient + (diffuse + specular) * attenuation);
-}
 
 vec3 FresnelSchlick(vec3 F0, float cosTheta)
 {
@@ -220,8 +234,7 @@ vec3 PBR()
    vec3 albedo = surfaceColor();
    //albedo *= reflectionColor;
 
-   //vec3 albedo = reflectionColor;
-   //albedo *= surfaceColor();
+   //vec3 albedo = outColor;
    //albedo *= surfaceColor();
 
    //vec3 ambient = ambientLightColor * ambientReflectance * reflectionColor;

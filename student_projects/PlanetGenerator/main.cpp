@@ -591,8 +591,7 @@ void initializeSun(int divisions)
 PlanetData generatePlanetData(float seed, float radius, int divisions, int nCells)
 {
     PlanetType pt = earthLike;
-
-    Ocean ocean = planetOcean;
+    Ocean ocean = Ocean(waterMaterial);
     Displacement displacement = testDisplacement;
     //std::vector<Material> materials = planetMaterials;
     auto sphere = CubeSphere(radius, divisions);
@@ -623,7 +622,6 @@ PlanetData generatePlanetData(float seed, float radius, int divisions, int nCell
 
         std::tie(vertices, pIndex) = tg.AssignMaterialsMix(p1, p2, p3, materials, voronoiPoints);
         vertexPairs[pIndex].insert(vertexPairs[pIndex].end(), vertices.begin(), vertices.end());
-
         //materials[pIndex].points.insert(materials[pIndex].points.end(), vertices.begin(), vertices.end());
     }
 
@@ -647,7 +645,7 @@ void initializePlanets(int n, int divisions)
 
         glm::vec3 pos = glm::vec3(3.0f * float(i) + 5.0f, 0.0f, 0.0f);
 
-        auto planetData = generatePlanetData(seed, 0.5f, divisions, 10);
+        auto planetData = generatePlanetData(seed, 1.0f, divisions, 100);
         auto sphere = CubeSphere(1, divisions);
         //auto planetData = testPlanetData;
 
@@ -709,6 +707,6 @@ void drawPlanets()
     setUniforms();
     for(auto p : planets)
     {
-        //p.DrawOceanUsingGPU(shader);
+        p.DrawOceanUsingGPU(shader);
     }
 }

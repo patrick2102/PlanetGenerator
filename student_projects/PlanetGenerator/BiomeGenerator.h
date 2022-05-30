@@ -6,8 +6,10 @@
 #define ITU_GRAPHICS_PROGRAMMING_BIOMEGENERATOR_H
 
 #include <vector>
+#include <limits>
 #include <glm/glm.hpp>
 #include "Misc.h"
+using namespace std;
 
 struct PlanetType
 {
@@ -17,12 +19,16 @@ struct PlanetType
     }
     std::vector<Material> materialsAllowed;
 };
+Material waterMaterial = Material(glm::vec3(0.004, 0.086, 0.2f), 1.0f, 0.25f, 0.25f, 0.25f, 0.5f, 0.5f, "water");
 
 Material dirtMaterial = Material(glm::vec3(0.4, 0.1, 0.0f), 1.0f, 0.25f, 0.0f, 0.1f, 0.0f, 0.0f, "dirt");
 Material rockMaterial = Material(glm::vec3(0.5, 0.4, 0.4f), 1.0f, 0.25f, 0.0f, 0.1f, 0.0f, 0.0f, "rock");
 Material iceMaterial = Material(glm::vec3(0, 0, 1.0f), 1.0f, 0.25f, 0.0f, 0.1f, 0.0f, 0.0f, "ice");
 Material grassMaterial = Material(glm::vec3(0, 0.8, 0.0f), 1.0f, 0.25f, 0.0f, 0.1f, 0.0f, 0.0f, "grass");
 Material desertMaterial = Material(glm::vec3(1.0, 0.9, 0.7f), 1.0f, 0.25f, 0.0f, 0.1f, 0.0f, 0.0f, "desert");
+Material jungleMaterial = Material(glm::vec3(0.13, 0.235, 0.043f), 1.0f, 0.25f, 0.0f, 0.1f, 0.0f, 0.0f, "jungle");
+Material temperateForestMaterial = Material(glm::vec3(0.27, 0.325, 0.117f), 1.0f, 0.25f, 0.0f, 0.1f, 0.0f, 0.0f, "forest");
+
 
 Material redMaterial = Material(glm::vec3(1.0, 0, 0), 1.0f, 0.25f, 0.0f, 0.1f, 0.0f, 0.0f, "red");
 Material greenMaterial = Material(glm::vec3(0.0, 1.0, 0.0f), 1.0f, 0.25f, 0.0f, 0.1f, 0.0f, 0.0f, "green");
@@ -30,9 +36,10 @@ Material blueMaterial = Material(glm::vec3(0.0, 0.9, 1.0f), 1.0f, 0.25f, 0.0f, 0
 
 
 //PlanetType earthLike = PlanetType(std::vector<Material>{dirtMaterial, rockMaterial, iceMaterial, grassMaterial, desertMaterial});
-PlanetType earthLike = PlanetType(std::vector<Material>{dirtMaterial, rockMaterial, grassMaterial, desertMaterial});
+//PlanetType earthLike = PlanetType(std::vector<Material>{dirtMaterial, rockMaterial, grassMaterial, desertMaterial});
 //PlanetType earthLike = PlanetType(std::vector<Material>{redMaterial, greenMaterial, blueMaterial});
 //PlanetType earthLike = PlanetType(std::vector<Material>{redMaterial, greenMaterial, blueMaterial});
+PlanetType earthLike = PlanetType(std::vector<Material>{jungleMaterial, temperateForestMaterial});
 
 class BiomeGenerator {
 public:
@@ -127,7 +134,7 @@ public:
         return nearestIndex;
     }
 
-    std::vector<int> NearestThreePoints(glm::vec3 p1, glm::vec3 p2, glm::vec3 p3, std::vector<glm::vec3> voronoiPoints)
+    vector<int> NearestThreePoints(glm::vec3 p1, glm::vec3 p2, glm::vec3 p3, std::vector<glm::vec3> voronoiPoints)
     {
         float nearestDist = 999999999.0f;
         float secondNearestDist = 999999999.0f;
@@ -166,6 +173,45 @@ public:
         std::vector<int> nearestIndices = {nearestIndex, secondNearestIndex, thirdNearestIndex};
 
         return nearestIndices;
+    }
+
+    std::vector<std::tuple<float, int>> NearestNPoints(tuple<glm::vec3, glm::vec3, glm::vec3> vertices, std::vector<glm::vec3> voronoiPoints, int n)
+    {
+        float max = numeric_limits<float>::max();
+
+        std::vector<std::tuple<float, int>> nearestPoints;
+
+        for(int i = 0; i < n; i++)
+        {
+            auto tuple = make_tuple(max, 0);
+            nearestPoints.push_back(tuple);
+        }
+
+        for(int i = 0; i < voronoiPoints.size(); i++)
+        {
+            glm::vec3 voronoiPoint = voronoiPoints[i];
+            float dist1 = glm::distance(voronoiPoint, get<0>(vertices));
+            float dist2 = glm::distance(voronoiPoint, get<1>(vertices));
+            float dist3 = glm::distance(voronoiPoint, get<2>(vertices));
+            float dist = (dist1+dist2+dist3)/3;
+
+            for(int j = 0; j < n; j++)
+            {
+                float nearestDist = get<0>(nearestPoints[j]);
+
+                if(dist < nearestDist)
+                {
+                    for(int k = n-1; k > j; k--)
+                    {
+                        nearestPoints[k] = nearestPoints[k-1];
+                    }
+                    auto tuple = make_tuple(dist, i);
+                    nearestPoints[j] = tuple;
+                    break;
+                }
+            }
+        }
+        return nearestPoints;
     }
 
     std::vector<Material> SetupMaterials(int nCells, PlanetType pt)
@@ -218,15 +264,75 @@ public:
 
         */
 
-        auto nearestPoints = NearestThreePoints(p1, p2, p3, voronoiPoints);
-        int pIndex = nearestPoints[0];
+        //auto nearestPoints = NearestThreePoints(p1, p2, p3, voronoiPoints);
 
-        auto v1 = Vertex{p1, p1, p1};
-        auto v2 = Vertex{p2, p2, p2};
-        auto v3 = Vertex{p3, p3, p3};
+        int n = 3;
+
+        auto pointsTuple = make_tuple(p1,p2,p3);
+
+        auto nearestPoints = NearestNPoints(pointsTuple, voronoiPoints, n);
+
+        Material m1 = materials[get<1>(nearestPoints[0])];
+        Material m2 = materials[get<1>(nearestPoints[1])];
+        Material m3 = materials[get<1>(nearestPoints[2])];
+
+
+        auto n1 = glm::normalize(p1);
+        auto n2 = glm::normalize(p2);
+        auto n3 = glm::normalize(p3);
+
+        float border = 0.2;
+        float distToNearest = get<0>(nearestPoints[0]);
+        glm::vec3 c = m1.reflectionColor;
+        for(int i = 1; i < n; i++)
+        {
+            float distToOtherBiome = get<0>(nearestPoints[i]);
+            if((distToNearest*(1+border)) > distToOtherBiome)
+            {
+                float combinedDist = distToNearest+distToOtherBiome;
+                //float distDiff = dist1-dist0;
+                float min = combinedDist * (0.50-border);
+                float max = combinedDist * (0.50+border);
+                float p = (distToNearest-min)/(max-min);
+
+                c = glm::mix(c, materials[get<1>(nearestPoints[i])].reflectionColor, p);
+            }
+        }
+
+        /*
+        float dist0 = get<0>(nearestPoints[0]);
+        float dist1 = get<0>(nearestPoints[1]);
+
+        glm::vec3 c;
+
+        if((dist0*(1+border)) > dist1)
+        {
+            float combinedDist = dist0+dist1;
+            //float distDiff = dist1-dist0;
+            float min = combinedDist * (0.50-border);
+            float max = combinedDist * (0.50+border);
+            float p = (dist0-min)/(max-min);
+
+            c = glm::mix(m1.reflectionColor, m2.reflectionColor, p);
+        }
+        else
+        {
+            c = m1.reflectionColor;
+        }
+
+        auto c1 = m1.reflectionColor;
+        auto c2 = m1.reflectionColor;
+        auto c3 = m1.reflectionColor;
+        */
+
+
+        auto v1 = Vertex{p1, n1, c};
+        auto v2 = Vertex{p2, n2, c};
+        auto v3 = Vertex{p3, n3, c};
 
         std::vector<Vertex> vertices{v1, v2, v3};
 
+        int pIndex = get<1>(nearestPoints[0]);
         return std::make_tuple(vertices, pIndex);
     }
 
