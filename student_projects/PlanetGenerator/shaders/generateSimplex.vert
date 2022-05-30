@@ -22,6 +22,8 @@ out vec4 worldPos;
 out vec3 worldNormal;
 out float height;
 out vec3 outColor;
+out vec3 localPos;
+out vec3 localNormal;
 
 float Simplex3D(vec3 coords)
 {
@@ -127,6 +129,9 @@ void main() {
 
    vec3 N = normalize(model * vec4(normal, 0.0)).xyz;
 
+
+   localPos = vertex;
+   localNormal = normal;
    worldPos = P;
    worldNormal = N;
 

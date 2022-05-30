@@ -69,10 +69,7 @@ public:
             auto vertices = material.points;
 
             shader->setVec3("reflectionColor", material.reflectionColor);
-            shader->setFloat("ambientReflectance", material.ambientReflectance);
             shader->setFloat("diffuseReflectance", material.diffuseReflectance);
-            shader->setFloat("specularReflectance", material.specularReflectance);
-            shader->setFloat("specularExponent", material.specularExponent);
             shader->setFloat("roughness", material.roughness);
             shader->setFloat("metalness", material.metalness);
 
@@ -90,6 +87,8 @@ public:
             shader->setInt("surfaceTexture", 0);
 
             glBindVertexArray(VAO);
+            glActiveTexture(GL_TEXTURE0);
+            glBindTexture(GL_TEXTURE_CUBE_MAP, surfaceTexture);
             glDrawArrays(GL_TRIANGLES, 0, vertices.size());
             glBindVertexArray(0);
         }
@@ -105,10 +104,9 @@ public:
             auto vertices = material.points;
 
             shader->setVec3("reflectionColor", material.reflectionColor);
-            shader->setFloat("ambientReflectance", material.ambientReflectance);
             shader->setFloat("diffuseReflectance", material.diffuseReflectance);
-            shader->setFloat("specularReflectance", material.specularReflectance);
-            shader->setFloat("specularExponent", material.specularExponent);
+            shader->setFloat("roughness", material.roughness);
+            shader->setFloat("metalness", material.metalness);
 
             auto model = glm::mat4(1.0f);
             model = glm::translate(model, center);

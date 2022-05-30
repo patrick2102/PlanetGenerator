@@ -39,7 +39,7 @@ public:
 
     void DrawUsingGPU(Shader* shader)
     {
-        Material material = starData.material;
+        StarMaterial material = starData.material;
 
         shader->setVec3("ambientLightColor", light.lightColor * light.lightIntensity);
 
@@ -76,7 +76,7 @@ public:
 
     void Draw(Shader* shader)
     {
-        Material material = starData.material;
+        StarMaterial material = starData.material;
 
         shader->setVec3("ambientLightColor", light.lightColor * light.lightIntensity);
 

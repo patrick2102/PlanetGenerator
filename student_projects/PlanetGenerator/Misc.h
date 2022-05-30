@@ -22,8 +22,27 @@ struct Vertex
 
 struct Material
 {
-    Material(glm::vec3 reflectionColor, float ambientReflectance, float diffuseReflectance,
-             float specularReflectance, float specularExponent, float roughness, float metalness, std::string name) {
+    Material( std::string name, glm::vec3 reflectionColor, float diffuseReflectance, float roughness, float metalness) {
+        this->name = name;
+        this->reflectionColor = reflectionColor;
+        this->diffuseReflectance = diffuseReflectance;
+        this->roughness = roughness;
+        this->metalness = metalness;
+    }
+    std::string name;
+    unsigned int VAO;
+    std::vector<Vertex> points;
+
+    glm::vec3 reflectionColor;
+    float diffuseReflectance;
+    float roughness;
+    float metalness;
+};
+
+struct StarMaterial
+{
+    StarMaterial(glm::vec3 reflectionColor, float ambientReflectance, float diffuseReflectance,
+    float specularReflectance, float specularExponent, float roughness, float metalness, std::string name) {
         this->reflectionColor = reflectionColor;
         this->ambientReflectance = ambientReflectance;
         this->diffuseReflectance = diffuseReflectance;
@@ -50,15 +69,17 @@ struct Material
 
 struct Light
 {
-    Light(glm::vec3 p, glm::vec3 lc, float li) {
+    Light(glm::vec3 p, glm::vec3 lc, float li, float lr) {
         position = p;
         lightColor = lc;
         lightIntensity = li;
+        lightRadius = lr;
     }
 
     glm::vec3 position;
     glm::vec3 lightColor;
     float lightIntensity;
+    float lightRadius;
 };
 
 struct Ocean
@@ -92,7 +113,7 @@ struct Displacement
 
 struct StarData
 {
-    StarData(Light light, Displacement displacement, Material material)
+    StarData(Light light, Displacement displacement, StarMaterial material)
         : light(light), displacement(displacement), material(material)
     {
         this->light = light;
@@ -101,24 +122,9 @@ struct StarData
     }
     Light light;
     Displacement displacement;
-    Material material;
+    StarMaterial material;
 
 };
-
-/*
-struct PlanetData
-{
-    PlanetData(Displacement surfaceDisplacement, Material material, Ocean ocean)
-            : material(material), surfaceDisplacement(surfaceDisplacement), ocean(ocean) {
-        this->surfaceDisplacement = surfaceDisplacement;
-        this->material = material;
-        this->ocean = ocean;
-    }
-    Displacement surfaceDisplacement;
-    Material material;
-    Ocean ocean;
-};
-*/
 
 struct PlanetData
 {
@@ -133,14 +139,9 @@ struct PlanetData
 };
 
 //Material types:
-//Material waterMaterial = Material(glm::vec3(0, 0, 1.0f), 1.0f, 0.25f, 0.0f, 0.1f, 0.0f, 0.0f, "water");
-
-Material sunMaterial = Material(glm::vec3(1.0f), 1.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, "sun");
-//Material planetMaterial = Material(glm::vec3(0.50f, 0.25f, 0.10f), 0.25f, 0.25f, 0.0f, 0.1f);
-//Material planetMaterial = Material(glm::vec3(1.0f), 0.0f, 0.25f, 0.0f, 0.1f, 1.0f, 0.0f);
-Material planetMaterial = Material(glm::vec3(1.0f), 0.0f, 0.25f, 0.0f, 0.1f, 1.0f, 0.0f, "planet");
-
-//Ocean planetOcean = Ocean(waterMaterial);
+StarMaterial sunMaterial = StarMaterial(glm::vec3(1.0f), 1.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, "sun");
+//Material sunMaterial = Material("sun", glm::vec3(1.0f), 1.0f, 0.0f, 0.0f);
+Material planetMaterial = Material("planet", glm::vec3(1.0f), 0.25f, 1.0f, 0.0f);
 
 //TODO should be randomized
 int scale = 50;
@@ -154,12 +155,11 @@ Displacement testDisplacement = Displacement(scale, amplitude, persistence, lacu
 
 std::vector<Material> planetMaterials {planetMaterial};
 
-//PlanetData testPlanetData = PlanetData(planetMaterials, testDisplacement, planetOcean);
-
 glm::vec3 pos = glm::vec3(0.0f);
 glm::vec3 color = glm::vec4(0.9f);
-float intensity = 1.0f;
-Light light = Light(pos, color, intensity);
+float intensity = 10.0f;
+float lightRadius = 10.0f;
+Light light = Light(pos, color, intensity, lightRadius);
 
 Displacement sunDisplacement = Displacement(scale, amplitude, persistence, lacunarity, diameter, 0);
 StarData starData = StarData(light, sunDisplacement, sunMaterial);

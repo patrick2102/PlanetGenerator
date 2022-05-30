@@ -20,6 +20,8 @@ uniform vec3 grad3[12];
 out vec4 worldPos;
 out vec3 worldNormal;
 out float height;
+out vec3 localPos;
+out vec3 localNormal;
 
 float Simplex3D(vec3 coords)
 {
@@ -128,6 +130,8 @@ void main() {
    worldPos = P;
    worldNormal = N;
 
+   localPos = vertex;
+   localNormal = normal;
    height = displace;
    gl_Position = viewProjection * P;
 }

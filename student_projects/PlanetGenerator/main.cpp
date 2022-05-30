@@ -355,6 +355,8 @@ void setLightUniforms()
     shader->setVec3("ambientLightColor", glm::vec3(0.0f));
     shader->setVec3("sunPosition", sun->getLight().position);
     shader->setVec3("sunColor", sun->getLight().lightColor);
+    shader->setFloat("lightIntensity", sun->getLight().lightIntensity);
+    shader->setFloat("lightRadius", sun->getLight().lightRadius);
 }
 
 // init the VAO of the skybox
@@ -610,6 +612,7 @@ PlanetData generatePlanetData(float seed, float radius, int divisions, int nCell
     auto voronoiPoints = tg.DistributePointsRandom(seed, nCells, radius);
 
     std::vector<std::vector<Vertex>> vertexPairs(nCells);
+    int n = 1;
 
     for(int i = 0; i < sphere.vertices.size(); i += 3)
     {
@@ -620,7 +623,7 @@ PlanetData generatePlanetData(float seed, float radius, int divisions, int nCell
         std::vector<Vertex> vertices;
         int pIndex;
 
-        std::tie(vertices, pIndex) = tg.AssignMaterialsMix(p1, p2, p3, materials, voronoiPoints);
+        std::tie(vertices, pIndex) = tg.AssignMaterialsMix(p1, p2, p3, materials, voronoiPoints, n);
         vertexPairs[pIndex].insert(vertexPairs[pIndex].end(), vertices.begin(), vertices.end());
         //materials[pIndex].points.insert(materials[pIndex].points.end(), vertices.begin(), vertices.end());
     }
@@ -645,7 +648,7 @@ void initializePlanets(int n, int divisions)
 
         glm::vec3 pos = glm::vec3(3.0f * float(i) + 5.0f, 0.0f, 0.0f);
 
-        auto planetData = generatePlanetData(seed, 1.0f, divisions, 100);
+        auto planetData = generatePlanetData(seed, 1.0f, divisions, 1);
         auto sphere = CubeSphere(1, divisions);
         //auto planetData = testPlanetData;
 
@@ -663,6 +666,11 @@ void initializePlanets(int n, int divisions)
         if(shader == generate_simplex_shader)
         {
             auto planet = Planet(pos, sphere, planetData, planetName.c_str());
+
+            std::vector<float **> heightCubeMap = hmg->GenerateCubeMap(sd.diameter, sd.iterations, sd.scale, sd.amplitude, sd.persistence, sd.lacunarity);
+
+            auto surfaceCubeMap = hmg->OutputCubeMapImage(diameter, heightCubeMap, planetName.c_str());
+            planet.SetUpSurfaceTexture(surfaceCubeMap);
 
             planets.insert(planets.end(), planet);
         }
@@ -707,6 +715,6 @@ void drawPlanets()
     setUniforms();
     for(auto p : planets)
     {
-        p.DrawOceanUsingGPU(shader);
+        //p.DrawOceanUsingGPU(shader);
     }
 }
