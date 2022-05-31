@@ -598,6 +598,8 @@ void initializeSun(int divisions)
 {
     useShader(star_shader);
     auto sphere = CubeSphere(1, divisions);
+
+    glm::vec3 pos = glm::vec3(-3.0f, 0.0f, 0.0f);
     sun = new Sun(pos, sphere, starData);
 }
 
@@ -715,7 +717,7 @@ void drawSolarSystem()
 void drawSun()
 {
     useShader(star_shader);
-    //sun->DrawUsingGPU(shader);
+    sun->DrawUsingGPU(shader);
     setUniforms();
 }
 
@@ -723,7 +725,6 @@ void drawPlanets()
 {
     useShader(generate_simplex_shader);
     setUniforms();
-    /*
     for(auto p : planets)
     {
         if(shader == generate_simplex_shader)
@@ -731,7 +732,6 @@ void drawPlanets()
         else
             p.Draw(shader);
     }
-    */
 
     useShader(water_shader);
     setUniforms();

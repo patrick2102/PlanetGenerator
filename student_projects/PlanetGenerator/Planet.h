@@ -38,8 +38,11 @@ public:
         shader->setVec3("sunPosition", planetData.atmosphere.sunPosition);
 
         auto model = glm::mat4 (1.0f);
+        auto localSpace = glm::mat4 (1.0f);
         model = glm::translate(model, center);
+        localSpace = glm::translate(model, -center);
         shader->setMat4("model", model);
+        shader->setMat4("localSpace", localSpace);
 
         glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, vertices.size());
