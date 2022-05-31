@@ -103,6 +103,11 @@ public:
         return light;
     }
 
+    glm::vec3 GetPosition()
+    {
+        return center;
+    }
+
 private:
     unsigned int VAO;
     unsigned int VBO;

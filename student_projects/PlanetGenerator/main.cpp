@@ -97,8 +97,9 @@ Shader* generate_simplex_shader;
 Shader* water_shader;
 Shader* star_shader;
 Shader* simplex_shader;
-Shader* generate_simplex_shader_3;
+//Shader* generate_simplex_shader_3;
 //Shader* generate_simplex_shader_2;
+Shader* atmosphere_shader;
 
 
 
@@ -167,6 +168,9 @@ int main()
     water_shader = new Shader("shaders/waterShader.vert", "shaders/waterShader.frag");
     star_shader = new Shader("shaders/starShader.vert", "shaders/starShader.frag");
     simplex_shader = new Shader("shaders/simplex.vert", "shaders/simplex.frag");
+    atmosphere_shader = new Shader("shaders/atmosphereShader.vert", "shaders/atmosphereShader.frag");
+
+    //shader = generate_simplex_shader;
 
     //generate_simplex_shader_3 = new Shader("shaders/generateSimplex3.vert", "shaders/generateSimplex3.frag");
     //shader = simplex_shading;
@@ -220,8 +224,8 @@ int main()
     //Initialize planets:
     int numOfPlanets = 1;
 
-    initializePlanets(numOfPlanets, cubeDivisions);
     initializeSun(cubeDivisions);
+    initializePlanets(numOfPlanets, cubeDivisions);
 
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     // render loop
@@ -597,11 +601,12 @@ void initializeSun(int divisions)
     sun = new Sun(pos, sphere, starData);
 }
 
-PlanetData generatePlanetData(float seed, float radius, int divisions, int nCells)
+PlanetData generatePlanetData(float seed, float radius, int divisions, int nCells, glm::vec3 center, glm::vec3 sunPosition)
 {
     PlanetType pt = earthLike;
     Ocean ocean = Ocean(waterMaterial);
     Displacement displacement = testDisplacement;
+    Atmosphere testAtmosphere = Atmosphere("earthlike", center, sunPosition, radius, radius*1.1f, 8, 80);
     //std::vector<Material> materials = planetMaterials;
     auto sphere = CubeSphere(radius, divisions);
 
@@ -610,6 +615,7 @@ PlanetData generatePlanetData(float seed, float radius, int divisions, int nCell
         auto p1 = sphere.vertices[i];
 
         ocean.material.points.insert(ocean.material.points.end(), {p1, p1, glm::vec3(0,0,1.0)});
+        testAtmosphere.points.insert(testAtmosphere.points.end(), {p1, p1, glm::vec3(0,0,1.0)}); //fix up later
     }
 
     auto tg = BiomeGenerator();
@@ -640,7 +646,7 @@ PlanetData generatePlanetData(float seed, float radius, int divisions, int nCell
         materials[i].points.insert(materials[i].points.end(), vertexPairs[i].begin(), vertexPairs[i].end());
     }
 
-    return PlanetData(materials, displacement, ocean);
+    return PlanetData(materials, displacement, ocean, testAtmosphere);
 }
 
 void initializePlanets(int n, int divisions)
@@ -653,9 +659,9 @@ void initializePlanets(int n, int divisions)
         std::string planetName = "planet";
         planetName.append(to_string(i)).append(".bmp");
 
-        glm::vec3 pos = glm::vec3(3.0f * float(i) + 5.0f, 0.0f, 0.0f);
+        glm::vec3 pos = glm::vec3(3.0f * float(i) + 0.0f, 0.0f, 0.0f);
 
-        auto planetData = generatePlanetData(seed, 1.0f, divisions, 1);
+        auto planetData = generatePlanetData(seed, 1.0f, divisions, 1, pos, sun->GetPosition());
         auto sphere = CubeSphere(1, divisions);
         //auto planetData = testPlanetData;
 
@@ -709,7 +715,7 @@ void drawSolarSystem()
 void drawSun()
 {
     useShader(star_shader);
-    sun->DrawUsingGPU(shader);
+    //sun->DrawUsingGPU(shader);
     setUniforms();
 }
 
@@ -717,6 +723,7 @@ void drawPlanets()
 {
     useShader(generate_simplex_shader);
     setUniforms();
+    /*
     for(auto p : planets)
     {
         if(shader == generate_simplex_shader)
@@ -724,11 +731,19 @@ void drawPlanets()
         else
             p.Draw(shader);
     }
+    */
 
     useShader(water_shader);
     setUniforms();
     for(auto p : planets)
     {
-        p.DrawOceanUsingGPU(shader);
+        //p.DrawOceanUsingGPU(shader);
+    }
+
+    useShader(atmosphere_shader);
+    setUniforms();
+    for(auto p : planets)
+    {
+        p.DrawAtmosphereUsingGPU(shader);
     }
 }

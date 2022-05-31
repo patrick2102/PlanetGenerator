@@ -21,11 +21,25 @@ struct Vertex
 
 struct Atmosphere
 {
-    Atmosphere( std::string name) {
+    Atmosphere(std::string name, glm::vec3 center, glm::vec3 sunPosition, float inner_radius, float outer_radius,
+               int in_scatter, int out_scatter) {
         this->name = name;
+        this->center = center;
+        this->sunPosition = sunPosition;
+        this->inner_radius = inner_radius;
+        this->outer_radius = outer_radius;
+        this->in_scatter = in_scatter;
+        this->out_scatter = out_scatter;
     }
-    std::vector<Vertex> points;
     std::string name;
+    unsigned int VAO;
+    std::vector<Vertex> points;
+    glm::vec3 center;
+    glm::vec3 sunPosition;
+    float inner_radius;
+    float outer_radius;
+    int in_scatter;
+    int out_scatter;
 };
 
 
@@ -137,14 +151,16 @@ struct StarData
 
 struct PlanetData
 {
-    PlanetData(std::vector<Material> materials, Displacement displacement, Ocean ocean) : displacement(displacement), ocean(ocean) {
+    PlanetData(std::vector<Material> materials, Displacement displacement, Ocean ocean, Atmosphere atmosphere) : displacement(displacement), ocean(ocean), atmosphere(atmosphere) {
         this->materials = materials;
         this->displacement = displacement;
         this->ocean = ocean;
+        this->atmosphere = atmosphere;
     }
     std::vector<Material> materials;
     Ocean ocean;
     Displacement displacement;
+    Atmosphere atmosphere;
 };
 
 //Material types:

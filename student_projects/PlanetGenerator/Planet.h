@@ -23,7 +23,27 @@ public:
         //SetUpOceanVertices(sphere);
         SetUpBuffers();
         SetUpOceanBuffers();
+        SetUpAtmosphereBuffers();
         //SetUpTextures();
+    }
+
+    void DrawAtmosphereUsingGPU(Shader *shader)
+    {
+        unsigned int VAO = planetData.atmosphere.VAO;
+        auto vertices = planetData.atmosphere.points;
+
+        shader->setVec3("center", planetData.atmosphere.center);
+        shader->setFloat("inner_radius", planetData.atmosphere.inner_radius);
+        shader->setFloat("outer_radius", planetData.atmosphere.outer_radius);
+        shader->setVec3("sunPosition", planetData.atmosphere.sunPosition);
+
+        auto model = glm::mat4 (1.0f);
+        model = glm::translate(model, center);
+        shader->setMat4("model", model);
+
+        glBindVertexArray(VAO);
+        glDrawArrays(GL_TRIANGLES, 0, vertices.size());
+        glBindVertexArray(0);
     }
 
     void DrawOceanUsingGPU(Shader *shader)
@@ -265,6 +285,32 @@ private:
             oceanVertices.insert(oceanVertices.end(), {p5, p5});
             oceanVertices.insert(oceanVertices.end(), {p6, p6});
         }
+    }
+
+    void SetUpAtmosphereBuffers()
+    {
+        unsigned int VBO;
+
+        glGenBuffers(1, &VBO);
+        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+        glBufferData(GL_ARRAY_BUFFER, planetData.atmosphere.points.size() * sizeof(Vertex), &planetData.atmosphere.points[0], GL_STATIC_DRAW);
+
+        glGenVertexArrays(1, &planetData.atmosphere.VAO);
+        glBindVertexArray(planetData.atmosphere.VAO);
+
+        int posAttributeLocation = 0;
+        glEnableVertexAttribArray(posAttributeLocation);
+        glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) 0);
+
+        posAttributeLocation = 1;
+        glEnableVertexAttribArray(posAttributeLocation);
+        glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) sizeof(glm::vec3));
+
+        posAttributeLocation = 2;
+        glEnableVertexAttribArray(posAttributeLocation);
+        glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) (sizeof(glm::vec3)*2));
+
+        glBindVertexArray(0);
     }
 
     void SetUpOceanBuffers()
