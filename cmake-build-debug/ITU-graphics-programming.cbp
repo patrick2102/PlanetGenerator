@@ -995,6 +995,12 @@
 		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shader.h">
 			<Option target="PlanetGenerator"/>
 		</Unit>
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/atmosphereShader.frag">
+			<Option target="PlanetGenerator"/>
+		</Unit>
+		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/atmosphereShader.vert">
+			<Option target="PlanetGenerator"/>
+		</Unit>
 		<Unit filename="D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shaders/generateSimplex.frag">
 			<Option target="PlanetGenerator"/>
 		</Unit>

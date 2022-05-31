@@ -28,6 +28,8 @@ public:
 
     void DrawOceanUsingGPU(Shader *shader)
     {
+        Displacement displacement = planetData.displacement;
+
         unsigned int VAO = planetData.ocean.material.VAO;
         auto vertices = planetData.ocean.material.points;
         Material material = planetData.ocean.material;
@@ -37,19 +39,16 @@ public:
         shader->setFloat("roughness", material.roughness);
         shader->setFloat("metalness", material.metalness);
 
-        Displacement displacement = planetData.displacement;
-
         shader->setInt("scale", displacement.scale);
         shader->setFloat("amplitude", displacement.amplitude);
         shader->setFloat("persistence", displacement.persistence);
         shader->setFloat("lacunarity", displacement.lacunarity);
         shader->setInt("diameter", displacement.diameter);
-        shader->setInt("iterations", 0);
+        shader->setInt("iterations", displacement.iterations);
 
         auto model = glm::mat4 (1.0f);
         model = glm::translate(model, center);
         shader->setMat4("model", model);
-        shader->setInt("surfaceTexture", 0);
 
         glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, vertices.size());
@@ -87,8 +86,8 @@ public:
             shader->setInt("surfaceTexture", 0);
 
             glBindVertexArray(VAO);
-            glActiveTexture(GL_TEXTURE0);
-            glBindTexture(GL_TEXTURE_CUBE_MAP, surfaceTexture);
+            //glActiveTexture(GL_TEXTURE0);
+            //glBindTexture(GL_TEXTURE_CUBE_MAP, surfaceTexture);
             glDrawArrays(GL_TRIANGLES, 0, vertices.size());
             glBindVertexArray(0);
         }
@@ -236,6 +235,7 @@ public:
 private:
     unsigned int surfaceTexture;
     unsigned int displacementMap;
+    unsigned int frameBuffer;
 
     const char* planetName;
     bool loadHeightMap = true;
@@ -323,6 +323,34 @@ private:
 
             glBindVertexArray(0);
         }
+    }
+
+    void SetupFrameBuffer(int d)
+    {
+        //GLuint fbo_handle;
+        GLuint FBO;
+
+        unsigned int textureID;
+        glGenTextures(1, &textureID);
+        glBindTexture(GL_TEXTURE_CUBE_MAP, textureID);
+        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
+
+        for (unsigned int i = 0; i < 6; i++)
+        {
+            glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGB, d, d, 0, GL_RGB, GL_UNSIGNED_BYTE, 0);
+        }
+
+        glGenFramebuffers(1, &FBO);
+        glBindFramebuffer(GL_FRAMEBUFFER, FBO);
+        glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, textureID, 0);
+
+        glBindFramebuffer(GL_FRAMEBUFFER, 0);
+
+        displacementMap = textureID;
     }
 
 /*

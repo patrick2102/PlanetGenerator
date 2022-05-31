@@ -96,6 +96,9 @@ Shader* shader;
 Shader* generate_simplex_shader;
 Shader* water_shader;
 Shader* star_shader;
+Shader* simplex_shader;
+Shader* generate_simplex_shader_3;
+//Shader* generate_simplex_shader_2;
 
 
 
@@ -163,8 +166,11 @@ int main()
     generate_simplex_shader = new Shader("shaders/generateSimplex.vert", "shaders/generateSimplex.frag");
     water_shader = new Shader("shaders/waterShader.vert", "shaders/waterShader.frag");
     star_shader = new Shader("shaders/starShader.vert", "shaders/starShader.frag");
+    simplex_shader = new Shader("shaders/simplex.vert", "shaders/simplex.frag");
+
+    //generate_simplex_shader_3 = new Shader("shaders/generateSimplex3.vert", "shaders/generateSimplex3.frag");
     //shader = simplex_shading;
-    shader = generate_simplex_shader;
+    //shader = generate_simplex_shader_2;
     //shader = star_shader;
 
     // init skybox
@@ -580,6 +586,7 @@ void initializeHeightmapGenerator()
 {
     float seed = 0.0f;
     hmg = new HeightMapGenerator(seed);
+
     hmg->CopyToShader(shader);
 }
 
@@ -665,15 +672,19 @@ void initializePlanets(int n, int divisions)
 
         if(shader == generate_simplex_shader)
         {
+            /*
+            useShader(generate_simplex_shader);
+            float seed = 0.0f;
+            hmg = new HeightMapGenerator(seed);
+            hmg->GenerateCubeMapUsingGPU(sphere, planetData, shader);
+            */
+
+
+            useShader(generate_simplex_shader);
             auto planet = Planet(pos, sphere, planetData, planetName.c_str());
-
-            std::vector<float **> heightCubeMap = hmg->GenerateCubeMap(sd.diameter, sd.iterations, sd.scale, sd.amplitude, sd.persistence, sd.lacunarity);
-
-            auto surfaceCubeMap = hmg->OutputCubeMapImage(diameter, heightCubeMap, planetName.c_str());
-            planet.SetUpSurfaceTexture(surfaceCubeMap);
-
             planets.insert(planets.end(), planet);
         }
+
         else
         {
             auto planet = Planet(pos, sphere, planetData, planetName.c_str());
@@ -708,13 +719,16 @@ void drawPlanets()
     setUniforms();
     for(auto p : planets)
     {
+        if(shader == generate_simplex_shader)
             p.DrawUsingGPU(shader);
+        else
+            p.Draw(shader);
     }
 
     useShader(water_shader);
     setUniforms();
     for(auto p : planets)
     {
-        //p.DrawOceanUsingGPU(shader);
+        p.DrawOceanUsingGPU(shader);
     }
 }

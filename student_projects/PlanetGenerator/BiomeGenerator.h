@@ -26,7 +26,7 @@ Material blueMaterial = Material(glm::vec3(0.0, 0.9, 1.0f), 1.0f, 0.25f, 0.0f, 0
 */
 
 //Material waterMaterial = Material("water", glm::vec3(0.004, 0.086, 0.6f), 1.0f, 0.35f, 0.65f);
-Material waterMaterial = Material("water", glm::vec3(0.004, 0.086, 0.6f), 1.0f, 0.0f, 0.0f);
+Material waterMaterial = Material("water", glm::vec3(0.004, 0.086, 0.2f), 1.0f, 0.25f, 0.5f);
 
 /*
 Material dirtMaterial = Material(glm::vec3(0.4, 0.1, 0.0f), 1.0f, 0.25f, 0.0f, 0.1f, 0.0f, 0.0f, "dirt");

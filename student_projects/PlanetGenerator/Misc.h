@@ -19,6 +19,15 @@ struct Vertex
     glm::vec3 Color;
 };
 
+struct Atmosphere
+{
+    Atmosphere( std::string name) {
+        this->name = name;
+    }
+    std::vector<Vertex> points;
+    std::string name;
+};
+
 
 struct Material
 {
@@ -144,12 +153,12 @@ StarMaterial sunMaterial = StarMaterial(glm::vec3(1.0f), 1.0f, 0.0f, 0.0f, 1.0f,
 Material planetMaterial = Material("planet", glm::vec3(1.0f), 0.25f, 1.0f, 0.0f);
 
 //TODO should be randomized
-int scale = 50;
+int scale = 400;
 float amplitude = 25.0f;
 float persistence = 0.5f;
 float lacunarity = 2.0f;
-int diameter = 100;
-int iterations = 20;
+int diameter = 1000;
+int iterations = 10;
 
 Displacement testDisplacement = Displacement(scale, amplitude, persistence, lacunarity, diameter, iterations);
 

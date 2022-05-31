@@ -3,15 +3,14 @@
 uniform vec3 camPosition; // so we can compute the view vector
 out vec4 FragColor; // the output color of this fragment
 
-// simplex uniform variables
+uniform vec3 fib_sphere[1000];
+
 uniform int scale;
 uniform float amplitude;
 uniform float persistence;
 uniform float lacunarity;
 uniform int diameter;
 uniform int iterations;
-uniform int permTab[255*2];
-uniform vec3 grad3[12];
 
 // light uniform variables
 uniform vec3 ambientLightColor;
@@ -29,13 +28,42 @@ uniform float metalness;
 uniform samplerCube surfaceTexture;
 uniform samplerCube displacementMap;
 
+uniform int permTab[255*2];
+uniform vec3 grad3[12];
+
 in vec4 worldPos;
 in vec3 worldNormal;
 in float height;
+in vec3 outColor;
 in vec3 localPos;
 in vec3 localNormal;
 
 const float PI = 3.14159265359;
+
+vec4 heights[1000];
+
+
+
+float sampleHeight(vec3 coord)
+{
+   if(0.0f < coord.x)
+   {
+
+   }
+   else
+   {
+
+   }
+}
+
+/*
+float GetTemperature()
+{
+   vec3 P = worldPos.xyz;
+
+   float distToStar = length(P - sunPosition);
+}
+*/
 
 float Simplex3D(vec3 coords)
 {
@@ -131,7 +159,6 @@ float Displacement(vec3 coords)
    return res;
 }
 
-
 vec3 surfaceColor(float height)
 {
    vec3 ice = vec3(1.0f);
@@ -146,14 +173,36 @@ vec3 surfaceColor(float height)
    return water;
 
    // Coastline:
-   float max = 0.000f;
+   float max = 0.0025f;
    if(min <= height && height <= max)
    {
       float i = (height-min)/(max-min);
       return  mix(water, dirt, i);
    }
 
-   return vec3(0.0f);
+   // Moving inlands
+   min = max;
+   max = 0.005;
+   if(min <= height  && height <= max)
+   {
+      float i = (height-min)/(max-min);
+      return  mix(dirt, outColor, i);
+   }
+
+   // Inland
+   min = max;
+   max = 0.025;
+   if(min <= height && height <= max)
+   {
+      return outColor;
+   }
+
+   // Mountains:
+   min = max;
+   max = 0.05;
+   float h = clamp(height, min, max);
+   float i = (h-min)/(max-min);
+   return mix(outColor, ice, i);
 }
 
 float GetAttenuation(vec4 P)
@@ -161,9 +210,9 @@ float GetAttenuation(vec4 P)
    float distToLight = distance(sunPosition, P.xyz);
    float attenuation = 1.0f / (distToLight * distToLight);
 
-   float falloff = smoothstep(lightRadius, lightRadius*0.5f, distToLight);
+   //float falloff = smoothstep(lightRadius, lightRadius*0.5f, distToLight);
 
-   return attenuation * falloff;
+   return attenuation;
 }
 
 vec3 FresnelSchlick(vec3 F0, float cosTheta)
@@ -252,7 +301,7 @@ vec3 OrenNayar(vec3 N, vec3 L, vec3 V, vec3 albedo)
    diffuse *= (A+B*max(0, gamma)*sin(alpha)*tan(beta));
 
    float diffuseModulation = max(dot(N, L), 0.0);
-   diffuse *= diffuseModulation;
+   //diffuse *= diffuseModulation;
    return diffuse;
 }
 
@@ -264,25 +313,43 @@ vec3 PBR()
    vec3 V = normalize(camPosition - P.xyz);
    vec3 H = normalize(L + V);
 
-   vec3 albedo = reflectionColor;
+   //float tHeight = texture(surfaceTexture, TexCoords).r;
+   //normal = normalize(normal * 2.0 - 1.0);
+
+   //vec3 albedo = texture(texture_diffuse1, textureCoordinates).xyz;
+   //vec3 albedo = texture()
+   //vec3 albedo = surfaceColor();
+   //albedo += vec3(height);
+   float displace = Displacement(localPos);
+   vec3 albedo = surfaceColor(displace);
 
 
-   vec3 diffuse = OrenNayar(N, L, V, albedo);
+   //vec3 grey = vec3(0.5, 0.5, 0.5);
+   //vec3 albedo = vec3(grey * displace);
+   //float displace = Displacement(vertex);
+   //localPos = localPos + (normal * displace);
+   //albedo += vec3(height);
+
+   //vec3 diffuse = OrenNayar(N, L, V, albedo);
+   vec3 diffuse = albedo;
    vec3 specular = GetCookTorranceSpecularLighting(N, L, V);
 
    vec3 lightRadiance = sunColor;
    float attenuation = GetAttenuation(P);
    lightRadiance *= attenuation;
    lightRadiance *= lightIntensity;
-   lightRadiance *= max(dot(N, L), 0.0);
+   //lightRadiance *= max(dot(N, L), 0.0);
 
-   vec3 F0 = vec3(0.02f);
+   vec3 F0 = vec3(0.01f);
+   F0 = mix(F0, albedo, metalness);
+   diffuse = mix(diffuse, vec3(0), metalness);
    vec3 F = FresnelSchlick(F0, max(dot(H, V), 0.0));
-   vec3 directLight = diffuse * (1-F) + specular * (F);
 
+   vec3 directLight = mix(diffuse, specular, F);
    directLight *= lightRadiance;
 
-   vec3 light = directLight;
+   //vec3 light = directLight;
+   vec3 light = diffuse;
    return light;
 }
 

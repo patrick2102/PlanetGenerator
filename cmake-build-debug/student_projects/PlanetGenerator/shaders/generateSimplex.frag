@@ -29,6 +29,13 @@ uniform samplerCube displacementMap;
 uniform int permTab[255*2];
 uniform vec3 grad3[12];
 
+
+//Terrain colors:
+//vec3 water = vec3(0.004, 0.086, 0.2f);
+//RGB values for terrain, alpha channel is for storing height for when terrain should start. Max 10 per biome type.
+//uniform vec4 terrain[10];
+//uniform float maxHeight;
+
 in vec4 worldPos;
 in vec3 worldNormal;
 in float height;
@@ -37,6 +44,9 @@ in vec3 localPos;
 in vec3 localNormal;
 
 const float PI = 3.14159265359;
+const float heightMultiplier = 20.0f;
+
+
 
 
 /*
@@ -45,6 +55,21 @@ float GetTemperature()
    vec3 P = worldPos.xyz;
 
    float distToStar = length(P - sunPosition);
+}
+*/
+/*
+vec3 surfaceColor(float height)
+{
+   float min = 0;
+   float max = 0;
+   for(int i = 0; i < 10; i++)
+   {
+      vec3 t = terrain[i].rgb;
+      float h = terrain[i].a;
+
+      float m
+   }
+   return vec3(1); //Just return white if no terrain type was found
 }
 */
 
@@ -156,7 +181,7 @@ vec3 surfaceColor(float height)
       return water;
 
    // Coastline:
-   float max = 0.0025f;
+   float max = 0.003f;
    if(min <= height && height <= max)
    {
       float i = (height-min)/(max-min);
@@ -165,11 +190,11 @@ vec3 surfaceColor(float height)
 
    // Moving inlands
    min = max;
-   max = 0.005;
+   max = 0.006;
    if(min <= height  && height <= max)
    {
       float i = (height-min)/(max-min);
-      return  mix(dirt, outColor, i);
+      return  mix(dirt, outColor, i) * (height*heightMultiplier);
    }
 
    // Inland
@@ -177,7 +202,7 @@ vec3 surfaceColor(float height)
    max = 0.025;
    if(min <= height && height <= max)
    {
-      return outColor;
+      return outColor * (height*heightMultiplier);
    }
 
    // Mountains:
@@ -185,7 +210,7 @@ vec3 surfaceColor(float height)
    max = 0.05;
    float h = clamp(height, min, max);
    float i = (h-min)/(max-min);
-   return mix(outColor, ice, i);
+   return mix(outColor, ice, i) * (height*heightMultiplier);
 }
 
 float GetAttenuation(vec4 P)

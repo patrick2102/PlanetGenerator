@@ -3,15 +3,12 @@
 uniform vec3 camPosition; // so we can compute the view vector
 out vec4 FragColor; // the output color of this fragment
 
-// simplex uniform variables
 uniform int scale;
 uniform float amplitude;
 uniform float persistence;
 uniform float lacunarity;
 uniform int diameter;
 uniform int iterations;
-uniform int permTab[255*2];
-uniform vec3 grad3[12];
 
 // light uniform variables
 uniform vec3 ambientLightColor;
@@ -29,6 +26,9 @@ uniform float metalness;
 uniform samplerCube surfaceTexture;
 uniform samplerCube displacementMap;
 
+uniform int permTab[255*2];
+uniform vec3 grad3[12];
+
 in vec4 worldPos;
 in vec3 worldNormal;
 in float height;
@@ -37,6 +37,20 @@ in vec3 localNormal;
 
 const float PI = 3.14159265359;
 
+const int water = 0;
+const int grass = 1;
+const int ice = 2;
+const int desert = 3;
+const int rock = 4;
+
+/*
+float GetTemperature()
+{
+   vec3 P = worldPos.xyz;
+
+   float distToStar = length(P - sunPosition);
+}
+*/
 float Simplex3D(vec3 coords)
 {
    float F3 = 1.0/3.0;
@@ -131,7 +145,6 @@ float Displacement(vec3 coords)
    return res;
 }
 
-
 vec3 surfaceColor(float height)
 {
    vec3 ice = vec3(1.0f);
@@ -146,13 +159,12 @@ vec3 surfaceColor(float height)
    return water;
 
    // Coastline:
-   float max = 0.000f;
+   float max = 0.0025f;
    if(min <= height && height <= max)
    {
       float i = (height-min)/(max-min);
       return  mix(water, dirt, i);
    }
-
    return vec3(0.0f);
 }
 
@@ -264,10 +276,13 @@ vec3 PBR()
    vec3 V = normalize(camPosition - P.xyz);
    vec3 H = normalize(L + V);
 
-   vec3 albedo = reflectionColor;
+   //vec3 albedo = surfaceColor();
+   float displace = Displacement(localPos);
+   vec3 albedo = surfaceColor(displace);
 
 
-   vec3 diffuse = OrenNayar(N, L, V, albedo);
+   //vec3 diffuse = OrenNayar(N, L, V, albedo);
+   vec3 diffuse = albedo;
    vec3 specular = GetCookTorranceSpecularLighting(N, L, V);
 
    vec3 lightRadiance = sunColor;
@@ -276,13 +291,16 @@ vec3 PBR()
    lightRadiance *= lightIntensity;
    lightRadiance *= max(dot(N, L), 0.0);
 
-   vec3 F0 = vec3(0.02f);
+   vec3 F0 = vec3(0.01f);
+   F0 = mix(F0, albedo, metalness);
+   diffuse = mix(diffuse, vec3(0), metalness);
    vec3 F = FresnelSchlick(F0, max(dot(H, V), 0.0));
-   vec3 directLight = diffuse * (1-F) + specular * (F);
 
+   vec3 directLight = mix(diffuse, specular, F);
    directLight *= lightRadiance;
 
-   vec3 light = directLight;
+   //vec3 light = directLight;
+   vec3 light = diffuse;
    return light;
 }
 
