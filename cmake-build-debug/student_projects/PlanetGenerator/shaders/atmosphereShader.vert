@@ -14,7 +14,7 @@ uniform vec3 center;
 uniform float inner_radius;
 uniform float outer_radius;
 
-const float H0_ray = 0.05;
+const float H0_ray = 0.01;
 const int sample_count = 10;
 const vec3 k_ray = vec3( 3.8, 13.5, 33.1 ); //Amount of light scatter
 
@@ -135,7 +135,7 @@ vec3 atmosphereScatter()
 vec3 atmosphereScatter2()
 {
    //P is the point on the outer radius,
-   vec3 P = vertex;
+   vec3 P = vertex * outer_radius;
    vec3 C = camPosition;
    //We move the camera such that the coords of the center of the sphere can be treated as (0,0,0),
    //done to simplify the math in some later functions
@@ -193,18 +193,18 @@ vec3 atmosphereScatter2()
 void main()
 {
    //atmosColor = pow(atmosphereScatter(), vec3( 1.0 / 2.2 ) );
-   //vec3 localPos = vertex;
-   //localPos = localPos * outer_radius;
-   vec4 P = model * vec4(vertex, 1.0);
+   vec3 lpos = vertex;
+   lpos = vertex * outer_radius; // * outer_radius;
+   vec4 P = model * vec4(lpos, 1.0);
 
    vec3 N = normalize(model * vec4(normal, 0.0)).xyz;
 
-   localPos = vertex * outer_radius;
    //localNormal = normal;
+   localPos = lpos;
    worldPos = P;
    worldNormal = N;
    //atmosColor = pow(atmosphereScatter(), vec3( 1.0 / 2.2 ) );
-   atmosColor = atmosphereScatter2();
+   //atmosColor = atmosphereScatter2();
 
    gl_Position = viewProjection * P;
 }

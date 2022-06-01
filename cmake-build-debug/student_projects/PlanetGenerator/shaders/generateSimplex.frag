@@ -338,15 +338,16 @@ vec3 PBR()
    //localPos = localPos + (normal * displace);
    //albedo += vec3(height);
 
-   //vec3 diffuse = OrenNayar(N, L, V, albedo);
-   vec3 diffuse = albedo;
+   vec3 diffuse = OrenNayar(N, L, V, albedo);
+   diffuse *= albedo;
+   //vec3 diffuse = albedo;
    vec3 specular = GetCookTorranceSpecularLighting(N, L, V);
 
    vec3 lightRadiance = sunColor;
    float attenuation = GetAttenuation(P);
    lightRadiance *= attenuation;
    lightRadiance *= lightIntensity;
-   //lightRadiance *= max(dot(N, L), 0.0);
+   lightRadiance *= max(dot(N, L), 0.0);
 
    vec3 F0 = vec3(0.01f);
    F0 = mix(F0, albedo, metalness);
@@ -356,8 +357,8 @@ vec3 PBR()
    vec3 directLight = mix(diffuse, specular, F);
    directLight *= lightRadiance;
 
-   //vec3 light = directLight;
-   vec3 light = diffuse;
+   vec3 light = directLight;
+   //vec3 light = diffuse;
    return light;
 }
 

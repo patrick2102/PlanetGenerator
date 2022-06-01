@@ -189,9 +189,9 @@ int main()
             "skybox/back.png"
     };
 
-    //cubemapTexture = loadCubeMap(faces);
-    //skyboxVAO = initSkyboxBuffers();
-    //skyboxShader = new Shader("shaders/skybox.vert", "shaders/skybox.frag");
+    cubemapTexture = loadCubeMap(faces);
+    skyboxVAO = initSkyboxBuffers();
+    skyboxShader = new Shader("shaders/skybox.vert", "shaders/skybox.frag");
 
     // set up the z-buffer
     // -------------------
@@ -242,7 +242,7 @@ int main()
         glClearColor(0.3f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        //drawSkybox();
+        drawSkybox();
 
         useShader(generate_simplex_shader);
         setUniforms();
@@ -609,7 +609,7 @@ PlanetData generatePlanetData(float seed, float radius, int divisions, int nCell
     PlanetType pt = earthLike;
     Ocean ocean = Ocean(waterMaterial);
     Displacement displacement = testDisplacement;
-    Atmosphere testAtmosphere = Atmosphere("earthlike", center, sunPosition, radius/2.0f, radius, 8, 80);
+    Atmosphere testAtmosphere = Atmosphere("earthlike", center, sunPosition, radius, 1.5f, 8, 80);
     //std::vector<Material> materials = planetMaterials;
     auto sphere = CubeSphere(radius, divisions);
 
@@ -662,7 +662,7 @@ void initializePlanets(int n, int divisions)
         std::string planetName = "planet";
         planetName.append(to_string(i)).append(".bmp");
 
-        glm::vec3 pos = glm::vec3(3.0f * float(i) + 0.0f, 0.0f, 0.0f);
+        glm::vec3 pos = glm::vec3(3.0f * float(i) + 5.0f, 0.0f, 0.0f);
 
         auto planetData = generatePlanetData(seed, 1.0f, divisions, 1, pos, sun->GetPosition());
         auto sphere = CubeSphere(1, divisions);
@@ -711,7 +711,7 @@ void initializePlanets(int n, int divisions)
 
 void drawSolarSystem()
 {
-    //drawSun();
+    drawSun();
     drawPlanets();
 }
 
@@ -724,6 +724,8 @@ void drawSun()
 
 void drawPlanets()
 {
+    //glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    //glBlendFunc();
     useShader(generate_simplex_shader);
     setUniforms();
     for(auto p : planets)
@@ -738,13 +740,22 @@ void drawPlanets()
     setUniforms();
     for(auto p : planets)
     {
-        //p.DrawOceanUsingGPU(shader);
+        p.DrawOceanUsingGPU(shader);
     }
 
+    glDisable(GL_DEPTH_TEST);
+    glEnable(GL_BLEND);
+    //glBlendFunc(GL_ONE_MINUS_SRC_COLOR, GL_ONE);
+    //glBlendFunc(GL_ONE, GL_ONE);
+    glBlendFunc(GL_ONE, GL_ONE);
+    //glBlendFunc(GL_ONE, GL_ONE);
+    //glBlendFunc(GL_DST_COLOR, GL_ZERO);
     useShader(atmosphere_shader);
     setUniforms();
     for(auto p : planets)
     {
         p.DrawAtmosphereUsingGPU(shader);
     }
+    glEnable(GL_DEPTH_TEST);
+    glDisable(GL_BLEND);
 }

@@ -20,7 +20,7 @@ uniform float outer_radius;
 //const float outer_radius = 1.0f;
 //const vec3 center = vec3(0.0);
 
-const float H0_ray = 0.05;
+const float H0_ray = 0.01;
 const int sample_count = 20;
 const vec3 k_ray = vec3( 3.8, 13.5, 33.1 ); //Amount of light scatter
 
@@ -140,12 +140,12 @@ vec3 atmosphereScatter2()
    float cc = c * c;
    vec3 scatter = sum_ray * k_ray * rayleighPhase( cc );
 
-   return 1.0 * scatter;
+   return 0.01 * scatter;
 }
 
 void trying()
 {
-   vec3 lightColor = atmosphereScatter2();
+   vec3 lightColor = pow(atmosphereScatter2(), vec3( 1.0 / 2.2 ) );
    FragColor = vec4(lightColor, 1.0f);
 }
 
