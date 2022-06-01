@@ -8,6 +8,7 @@
 #include <vector>
 #include <limits>
 #include <glm/glm.hpp>
+#include <random>
 #include "Misc.h"
 using namespace std;
 
@@ -153,11 +154,17 @@ public:
     {
         std::vector<Material> materials;
 
-        srand(time(NULL));
+        //srand(time(NULL));
+
+        std::random_device rd;
+        std::default_random_engine eng(rd());
+        std::uniform_real_distribution<> distr(0, pt.materialsAllowed.size());
+
 
         for(int i = 0; i < nCells; i++)
         {
-            int index = rand()%pt.materialsAllowed.size();
+            //int index = rand()%pt.materialsAllowed.size();
+            int index = distr(eng);
 
             Material am = pt.materialsAllowed[index];
 
