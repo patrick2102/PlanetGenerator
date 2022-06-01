@@ -1783,6 +1783,8 @@ map
 -
 Sphere.h
 D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Sphere.h
+HeightMapGenerator.h
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/HeightMapGenerator.h
 
 D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Sphere.h
 shader.h
@@ -1843,10 +1845,10 @@ Planet.h
 D:/uni/PlanetGenerator/student_projects/PlanetGenerator/Planet.h
 CubeSphere.h
 -
-HeightMapGenerator.h
-D:/uni/PlanetGenerator/student_projects/PlanetGenerator/HeightMapGenerator.h
 BiomeGenerator.h
 D:/uni/PlanetGenerator/student_projects/PlanetGenerator/BiomeGenerator.h
+random
+D:/uni/PlanetGenerator/student_projects/PlanetGenerator/random
 
 D:/uni/PlanetGenerator/student_projects/PlanetGenerator/shader.h
 glad/glad.h

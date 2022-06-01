@@ -153,7 +153,7 @@ public:
     {
         std::vector<Material> materials;
 
-        srand(time(NULL));
+        //srand(time(NULL));
 
         for(int i = 0; i < nCells; i++)
         {
@@ -216,7 +216,7 @@ public:
         auto voronoiPoints = DistributePointsRandom(seed, nCells, radius);
         std::vector<Material> materials;
 
-        srand(time(NULL));
+        //srand(time(NULL));
 
         for(int i = 0; i < nCells; i++)
         {

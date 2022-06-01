@@ -3,6 +3,7 @@
 //
 #include <map>
 #include "Sphere.h"
+#include "HeightMapGenerator.h"
 
 #ifndef ITU_GRAPHICS_PROGRAMMING_PLANET_H
 #define ITU_GRAPHICS_PROGRAMMING_PLANET_H
@@ -15,8 +16,8 @@ enum PlanetNames
 class Planet
 {
 public:
-    Planet(glm::vec3 position, CubeSphere sphere, PlanetData planetData, const char* planetName)
-            : planetData(planetData) {
+    Planet(glm::vec3 position, CubeSphere sphere, PlanetData planetData, const char* planetName, HeightMapGenerator hmg)
+            : planetData(planetData), hmg(hmg) {
         this->center = position;
         this->planetName = planetName;
         //SetUpVertices(sphere);
@@ -24,11 +25,13 @@ public:
         SetUpBuffers();
         SetUpOceanBuffers();
         SetUpAtmosphereBuffers();
+        this->hmg = hmg;
         //SetUpTextures();
     }
 
     void DrawAtmosphereUsingGPU(Shader *shader)
     {
+        //hmg.CopyToShader(shader);
         unsigned int VAO = planetData.atmosphere.VAO;
         auto vertices = planetData.atmosphere.points;
 
@@ -52,6 +55,7 @@ public:
     void DrawOceanUsingGPU(Shader *shader)
     {
         Displacement displacement = planetData.displacement;
+        //hmg.CopyToShader(shader);
 
         unsigned int VAO = planetData.ocean.material.VAO;
         auto vertices = planetData.ocean.material.points;
@@ -81,6 +85,7 @@ public:
     void DrawUsingGPU(Shader *shader)
     {
         Displacement displacement = planetData.displacement;
+        //hmg.CopyToShader(shader);
 
         for(Material material : planetData.materials)
         {
@@ -109,10 +114,10 @@ public:
             shader->setInt("surfaceTexture", 0);
 
             glBindVertexArray(VAO);
-            glActiveTexture(GL_TEXTURE0);
-            glBindTexture(GL_TEXTURE_CUBE_MAP, surfaceTexture);
-            glActiveTexture(GL_TEXTURE1);
-            glBindTexture(GL_TEXTURE_CUBE_MAP, displacementMap);
+            //glActiveTexture(GL_TEXTURE0);
+            //glBindTexture(GL_TEXTURE_CUBE_MAP, surfaceTexture);
+            //glActiveTexture(GL_TEXTURE1);
+            //glBindTexture(GL_TEXTURE_CUBE_MAP, displacementMap);
             glDrawArrays(GL_TRIANGLES, 0, vertices.size());
             glBindVertexArray(0);
         }
@@ -121,6 +126,7 @@ public:
     void Draw(Shader *shader)
     {
         Displacement displacement = planetData.displacement;
+        //hmg.CopyToShader(shader);
 
         for(Material material : planetData.materials) {
 
@@ -261,6 +267,7 @@ private:
     unsigned int surfaceTexture;
     unsigned int displacementMap;
     unsigned int frameBuffer;
+    HeightMapGenerator hmg;
 
     const char* planetName;
     bool loadHeightMap = true;
@@ -403,84 +410,5 @@ private:
 
         displacementMap = textureID;
     }
-
-/*
-    void SetUpTextures(Shader *shader) {
-        std::vector<std::string> faces;
-        float seed = 2.0;
-
-        if (!loadHeightMap) {
-
-            //Initial values for height map
-            HeightMapGenerator hmg = HeightMapGenerator(seed);
-
-            //For generating heightmap
-            int scale = 250;
-            float amplitude = 10.0f;
-            float persistence = 0.5;
-            float lacunarity = 2.0;
-            int w = 1000;
-            int h = w;
-            int d = w;
-            int iterations = 6;
-            float r = 10;
-
-            float **heightMap = hmg.GenerateMap(w, h, iterations, scale, amplitude, persistence, lacunarity);
-            std::vector<float **> heightCubeMap = hmg.GenerateCubeMap(d, iterations, scale, amplitude,
-                                                                       persistence, lacunarity);
-
-            auto outputByteFile = hmg.OutputImage(d, heightMap, planetName);
-            //auto outputFloatFile = hmg.OutputImageFloat(w, h, heightMap, planetName);
-            auto outputFilesByte = hmg.OutputCubeMapImage(d, heightCubeMap, planetName);
-            faces = outputFilesByte;
-        } else {
-            HeightMapGenerator hmg = HeightMapGenerator(seed);
-            faces =
-                    {
-                            "planetNoise/b_cube/PosX_test_1_float.bmp",
-                            "planetNoise/b_cube/NegX_test_1_float.bmp",
-                            "planetNoise/b_cube/PosY_test_1_float.bmp",
-                            "planetNoise/b_cube/NegY_test_1_float.bmp",
-                            "planetNoise/b_cube/PosZ_test_1_float.bmp",
-                            "planetNoise/b_cube/NegZ_test_1_float.bmp"
-                    };
-        }
-
-
-        unsigned int textureID;
-        glGenTextures(1, &textureID);
-        glBindTexture(GL_TEXTURE_CUBE_MAP, textureID);
-
-        //unsigned char* data = stbi_load(outputByteFile.c_str(), &width, &height, &nrComponents, 0);
-        for (unsigned int i = 0; i < faces.size(); i++)
-        {
-            int width, height, nrComponents;
-            unsigned char* data = stbi_load(faces[i].c_str(), &width, &height, &nrComponents, 0);
-            if (data)
-            {
-                glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-                stbi_image_free(data);
-            }
-            else
-            {
-                std::cout << "Cubemap texture failed to load at path: " << faces[i] << std::endl;
-                stbi_image_free(data);
-            }
-        }
-
-        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
-
-        glGenerateMipmap(GL_TEXTURE_CUBE_MAP);
-
-        glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
-
-        surfaceTexture = textureID;
-        displacementMap = textureID;
-    }
-*/
 };
 #endif //ITU_GRAPHICS_PROGRAMMING_PLANET_H

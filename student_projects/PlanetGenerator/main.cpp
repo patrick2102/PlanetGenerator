@@ -22,8 +22,8 @@
 #include "Sun.h"
 #include "Planet.h"
 #include <CubeSphere.h>
-#include "HeightMapGenerator.h"
 #include "BiomeGenerator.h"
+#include "random"
 
 using namespace std;
 
@@ -107,13 +107,14 @@ Shader* atmosphere_shader;
 // Variables for solar system
 std::vector<Planet> planets;
 Sun* sun;
-HeightMapGenerator* hmg;
+//HeightMapGenerator* hmg;
 //TerrainGenerator* tg;
 //bool use_GPU_for_generation = true;
 bool loadTextures = false;
+bool render_atmosphere = true;
 
 // Functions for solar system
-void initializeHeightmapGenerator();
+//void initializeHeightmapGenerator();
 void initializeSun(int);
 void initializePlanets(int, int);
 PlanetData generatePlanetData(float, float, int, int);
@@ -215,9 +216,9 @@ int main()
     ImGui_ImplOpenGL3_Init("#version 330 core");
 
     //Initialize height map generator
-    shader = generate_simplex_shader;
-    shader->use();
-    initializeHeightmapGenerator();
+    //shader = generate_simplex_shader;
+    //shader->use();
+    //nitializeHeightmapGenerator();
     //initializeTerrainGenerator();
 
     //Details of cube
@@ -337,6 +338,14 @@ void drawGui(){
             */
         }
 
+        ImGui::Text("Planet settings");
+        {
+            if (ImGui::RadioButton("Render atmosphere", render_atmosphere))
+            {
+                render_atmosphere = !render_atmosphere;
+            }
+        }
+
         ImGui::End();
     }
 
@@ -354,7 +363,7 @@ void useShader(Shader *newShader)
 
 void setUniforms()
 {
-    glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
+    glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.01f, 100.0f);
     glm::mat4 view = camera.GetViewMatrix();
     glm::mat4 viewProjection = projection * view;
     shader->setMat4("viewProjection", viewProjection);
@@ -591,14 +600,6 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     glViewport(0, 0, width, height);
 }
 
-void initializeHeightmapGenerator()
-{
-    float seed = 0.0f;
-    hmg = new HeightMapGenerator(seed);
-
-    hmg->CopyToShader(shader);
-}
-
 void initializeSun(int divisions)
 {
     useShader(star_shader);
@@ -616,18 +617,45 @@ void initializeSun(int divisions)
 
         testAtmosphere.points.insert(testAtmosphere.points.end(), {p1, p1, glm::vec3(0,0,1.0)}); //fix up later
     }
+    int scale = 40;
+    float amplitude = 20.0f;
+    float persistence = 0.5f;
+    float lacunarity = 2.0f;
+    int diameter = 100;
+    int iterations = 10;
 
+    Displacement sunDisplacement = Displacement(scale, amplitude, persistence, lacunarity, diameter, 0);
 
     StarData starData = StarData(light, sunDisplacement, sunMaterial,testAtmosphere);
     sun = new Sun(pos, sphere, starData);
 }
 
+Displacement generateDisplacement()
+{
+    std::random_device rd;
+    std::default_random_engine eng(rd());
+    std::uniform_real_distribution<> distrAmp(0.5, 3.0);
+    std::uniform_real_distribution<> distrPers(0.5, 2.0);
+    std::uniform_real_distribution<> distrLac(0.5, 2.0);
+    std::uniform_real_distribution<> distrDia(0.5, 1.5);
+
+    int scale = 400 * distrDia(eng);
+    float amplitude = 10.0 * distrAmp(eng);
+    float persistence = 0.5f;
+    float lacunarity = 1.8f * distrLac(eng);
+    int diameter = 1000 * distrDia(eng);
+    int iterations = 10;
+
+    return Displacement(scale, amplitude, persistence, lacunarity, diameter, iterations);
+}
+
+
 PlanetData generatePlanetData(float seed, float radius, int divisions, int nCells, glm::vec3 center, glm::vec3 sunPosition)
 {
     PlanetType pt = earthLike;
     Ocean ocean = Ocean(waterMaterial);
-    Displacement displacement = testDisplacement;
-    Atmosphere testAtmosphere = Atmosphere("earthlike", center, sunPosition, radius, 1.5f, 8, 80);
+    Displacement displacement = generateDisplacement();
+    Atmosphere testAtmosphere = Atmosphere("earthlike", center, sunPosition, radius*1.1f, 1.5f, 8, 80);
     //std::vector<Material> materials = planetMaterials;
     auto sphere = CubeSphere(radius, divisions);
 
@@ -667,19 +695,37 @@ PlanetData generatePlanetData(float seed, float radius, int divisions, int nCell
         materials[i].points.insert(materials[i].points.end(), vertexPairs[i].begin(), vertexPairs[i].end());
     }
 
-    return PlanetData(materials, displacement, ocean, testAtmosphere);
+    /*
+    bool hasWater = rand() % 2;
+
+    float wx = static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(1.0f)));
+    float wy = static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(1.0f)));
+    float wz = static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(1.0f)));
+
+    glm::vec3 waterColor = glm::vec3(wx, wy, wz);
+    */
+
+    return PlanetData(materials, displacement, ocean, testAtmosphere, true, glm::vec3(0,0,0));
 }
 
 void initializePlanets(int n, int divisions)
 {
+    std::random_device rd;
+    std::default_random_engine eng(rd());
+    std::uniform_real_distribution<> distr(0, 99999);
+
     useShader(generate_simplex_shader);
     for(int i = 0; i < n; i++)
     {
-        float seed = 0.0f;
+        //float seed = 1.0f;
+        float seed = distr(eng);
+
+        std::cout << "seed: " << seed << std::endl;
 
         std::string planetName = "planet";
         planetName.append(to_string(i)).append(".bmp");
 
+        //glm::vec3 pos = glm::vec3(3.0f * float(i) + 6.0f, 0.0f, 0.0f);
         glm::vec3 pos = glm::vec3(3.0f * float(i) + 6.0f, 0.0f, 0.0f);
 
         auto planetData = generatePlanetData(seed, 1.0f, divisions, 1, pos, sun->GetPosition());
@@ -690,7 +736,10 @@ void initializePlanets(int n, int divisions)
 
         if(loadTextures)
         {
-            auto planet = Planet(pos, sphere, planetData, planetName.c_str());
+            HeightMapGenerator hmg = HeightMapGenerator(seed);
+            hmg.CopyToShader(shader);
+            //auto planet = Planet(pos, sphere, planetData, hmg, planetName.c_str());
+            auto planet = Planet(pos, sphere, planetData, planetName.c_str(), hmg);
             planet.LoadTextures();
             planets.insert(planets.end(), planet);
             continue;
@@ -700,24 +749,32 @@ void initializePlanets(int n, int divisions)
         if(shader == generate_simplex_shader)
         {
             useShader(generate_simplex_shader);
-            auto planet = Planet(pos, sphere, planetData, planetName.c_str());
-            float seed = 0.0f;
-            hmg = new HeightMapGenerator(seed);
-            hmg->CopyToShader(shader);
-            std::vector<double **> heightCubeMap = hmg->GenerateCubeMap(sd.diameter, sd.iterations, sd.scale, sd.amplitude, sd.persistence, sd.lacunarity);
-            auto displacementFaces = hmg->OutputCubeMapImage(diameter, heightCubeMap, planetName.c_str());
-            planet.SetUpDisplacementMap(displacementFaces);
+            //HeightMapGenerator hmg = HeightMapGenerator(seed);
+            //hmg.CopyToShader(shader);
+
+            //auto planet = Planet(pos, sphere, planetData, hmg, planetName.c_str());
+            HeightMapGenerator hmg = HeightMapGenerator(seed);
+            hmg.CopyToShader(shader);
+            auto planet = Planet(pos, sphere, planetData, planetName.c_str(), hmg);
+
+            //std::vector<double **> heightCubeMap = hmg->GenerateCubeMap(sd.diameter, sd.iterations, sd.scale, sd.amplitude, sd.persistence, sd.lacunarity);
+            //auto displacementFaces = hmg->OutputCubeMapImage(diameter, heightCubeMap, planetName.c_str());
+            //planet.SetUpDisplacementMap(displacementFaces);
 
             planets.insert(planets.end(), planet);
         }
 
         else
         {
-            auto planet = Planet(pos, sphere, planetData, planetName.c_str());
+            useShader(generate_simplex_shader);
+            HeightMapGenerator hmg = HeightMapGenerator(seed);
+            hmg.CopyToShader(shader);
+            //auto planet = Planet(pos, sphere, planetData, hmg, planetName.c_str());
+            auto planet = Planet(pos, sphere, planetData, planetName.c_str(), hmg);
 
-            std::vector<double **> heightCubeMap = hmg->GenerateCubeMap(sd.diameter, sd.iterations, sd.scale, sd.amplitude, sd.persistence, sd.lacunarity);
-            auto displacementFaces = hmg->OutputCubeMapImage(diameter, heightCubeMap, planetName.c_str());
-            planet.SetUpDisplacementMap(displacementFaces);
+            //std::vector<double **> heightCubeMap = hmg.GenerateCubeMap(sd.diameter, sd.iterations, sd.scale, sd.amplitude, sd.persistence, sd.lacunarity);
+            //auto displacementFaces = hmg.OutputCubeMapImage(diameter, heightCubeMap, planetName.c_str());
+            //planet.SetUpDisplacementMap(displacementFaces);
 
             planets.insert(planets.end(), planet);
         }
@@ -759,21 +816,26 @@ void drawPlanets()
     {
         //p.DrawOceanUsingGPU(shader);
     }
-/*
-    glDisable(GL_DEPTH_TEST);
-    glEnable(GL_BLEND);
-    //glBlendFunc(GL_ONE_MINUS_SRC_COLOR, GL_ONE);
-    //glBlendFunc(GL_ONE, GL_ONE);
-    glBlendFunc(GL_ONE, GL_ONE);
-    //glBlendFunc(GL_ONE, GL_ONE);
-    //glBlendFunc(GL_DST_COLOR, GL_ZERO);
-    useShader(atmosphere_shader);
-    setUniforms();
-    for(auto p : planets)
+
+    if(render_atmosphere)
     {
-        p.DrawAtmosphereUsingGPU(shader);
+        glDisable(GL_DEPTH_TEST);
+        glEnable(GL_BLEND);
+        //glBlendFunc(GL_ONE_MINUS_SRC_COLOR, GL_ONE);
+        //glBlendFunc(GL_ONE, GL_ONE);
+        glBlendFunc(GL_ONE, GL_ONE);
+        //glBlendFunc(GL_ONE, GL_ONE);
+        //glBlendFunc(GL_DST_COLOR, GL_ZERO);
+        useShader(atmosphere_shader);
+        setUniforms();
+        for(auto p : planets)
+        {
+            p.DrawAtmosphereUsingGPU(shader);
+        }
+        glEnable(GL_DEPTH_TEST);
+        glDisable(GL_BLEND);
+
+
     }
-    glEnable(GL_DEPTH_TEST);
-    glDisable(GL_BLEND);
-    */
+
 }

@@ -43,19 +43,6 @@ const float PI = 3.14159265359;
 vec4 heights[1000];
 
 
-
-float sampleHeight(vec3 coord)
-{
-   if(0.0f < coord.x)
-   {
-
-   }
-   else
-   {
-
-   }
-}
-
 /*
 float GetTemperature()
 {

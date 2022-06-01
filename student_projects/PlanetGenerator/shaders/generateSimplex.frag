@@ -29,8 +29,8 @@ uniform samplerCube displacementMap;
 uniform int permTab[255*2];
 uniform vec3 grad3[12];
 
-//uniform bool hasWater;
-//uniform vec3 waterColor;
+uniform bool hasWater;
+uniform vec3 waterColor;
 
 
 
@@ -185,7 +185,7 @@ vec3 surfaceColor(float height)
       return water;
 
    // Coastline:
-   float max = 0.003f;
+   float max = 0.001f;
    if(min <= height && height <= max)
    {
       float i = (height-min)/(max-min);

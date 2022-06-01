@@ -152,16 +152,22 @@ struct StarData
 
 struct PlanetData
 {
-    PlanetData(std::vector<Material> materials, Displacement displacement, Ocean ocean, Atmosphere atmosphere) : displacement(displacement), ocean(ocean), atmosphere(atmosphere) {
+    PlanetData(std::vector<Material> materials, Displacement displacement, Ocean ocean, Atmosphere atmosphere,
+               bool hasWater, glm::vec3 waterColor)
+    : displacement(displacement), ocean(ocean), atmosphere(atmosphere) {
         this->materials = materials;
         this->displacement = displacement;
         this->ocean = ocean;
         this->atmosphere = atmosphere;
+        this->hasWater = hasWater;
+        this->waterColor = waterColor;
     }
     std::vector<Material> materials;
     Ocean ocean;
     Displacement displacement;
     Atmosphere atmosphere;
+    bool hasWater;
+    glm::vec3 waterColor;
 };
 
 //Material types:
@@ -170,14 +176,16 @@ StarMaterial sunMaterial = StarMaterial(glm::vec3(1.0f), 1.0f, 0.0f, 0.0f, 1.0f,
 Material planetMaterial = Material("planet", glm::vec3(1.0f), 0.25f, 1.0f, 0.0f);
 
 //TODO should be randomized
+/*
 int scale = 40;
 float amplitude = 20.0f;
 float persistence = 0.5f;
 float lacunarity = 2.0f;
 int diameter = 100;
 int iterations = 10;
+*/
 
-Displacement testDisplacement = Displacement(scale, amplitude, persistence, lacunarity, diameter, iterations);
+//Displacement testDisplacement = Displacement(scale, amplitude, persistence, lacunarity, diameter, iterations);
 
 std::vector<Material> planetMaterials {planetMaterial};
 
@@ -187,6 +195,6 @@ float intensity = 10.0f;
 float lightRadius = 10.0f;
 Light light = Light(pos, color, intensity, lightRadius);
 
-Displacement sunDisplacement = Displacement(scale, amplitude, persistence, lacunarity, diameter, 0);
+//Displacement sunDisplacement = Displacement(scale, amplitude, persistence, lacunarity, diameter, 0);
 
 #endif //ITU_GRAPHICS_PROGRAMMING_MISC_H
