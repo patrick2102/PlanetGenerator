@@ -83,42 +83,43 @@ vec3 atmosphereScatter()
 
    vec3 V = normalize(P - C);
    vec3 L = normalize(sunPosition - P);
-   vec3 eye = C;
 
-   vec2 intersect = sphereIntersections(eye, V, outer_radius);
+   //The intersections of the atmosphere, vec2 represent the two results from the ray entering and leaving the atmosphere
+   vec2 intersect = sphereIntersections(C, V, outer_radius);
 
-   vec2 innerIntersection = sphereIntersections(eye, V, inner_radius);
+   //Check the inner radius to see if ray touches the ground or leaves the atmosphere.
+   vec2 innerIntersection = sphereIntersections(C, V, inner_radius);
 
+   //Set the endpoint of the ray intersection with the atmosphere to be the start of ground intersection.
    intersect.y = min(intersect.y, innerIntersection.x);
 
+   //Length of each segment that we sample a scatter point from.
    float len = (intersect.y - intersect.x)/float(sample_count);
-
-   vec3 s = V * len;
 
    vec3 sum_ray = vec3( 0.0 );
 
    float n_ray0 = 0.0;
 
-   vec3 v = eye + V * ( intersect.x + len * 0.5 );
+   vec3 sample_point = C + V * ( intersect.x + len * 0.5 );
 
    for(int i = 0; i < sample_count; i++)
    {
       //float h = max(0.0, distance(v, c2) - inner_radius);
-      float h = max(0.0, length(v) - inner_radius);
+      float h = max(0.0, length(sample_point) - inner_radius);
       //float h = max(0.0, 1.0f - inner_radius);
       //float h = 0.1;
       float d_ray = outScattering(h) * len;
 
       n_ray0 += d_ray;
 
-      vec2 f = sphereIntersections( v, L, outer_radius );
+      vec2 f = sphereIntersections( sample_point, L, outer_radius );
 
-      vec3 u = v + L * f.y;
+      vec3 u = sample_point + L * f.y;
 
-      float n_ray1 = optic(v, u);
+      float n_ray1 = optic(sample_point, u);
       vec3 att = exp( - ( n_ray0 + n_ray1 ) * k_ray);
       sum_ray += d_ray * att;
-      v += s;
+      sample_point += (V * len);
    }
 
    float c  = dot( V, -L );
