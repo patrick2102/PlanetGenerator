@@ -35,13 +35,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c39d72e8-cbd4-4906-87b5-2af953ed1ddc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/unused/generateSimplex.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/unused/generateSimplex.vert" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/shaders/atmosphereShader.frag" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/shaders/atmosphereShader.frag" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/shaders/starShader.frag" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/shaders/starShader.frag" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/shaders/starShader.vert" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/shaders/starShader.vert" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/Misc.h" beforeDir="false" afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/Misc.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/Sun.h" beforeDir="false" afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/Sun.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/atmosphereShader.frag" beforeDir="false" afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/atmosphereShader.frag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/atmosphereShader.vert" beforeDir="false" afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/atmosphereShader.vert" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/starShader.frag" beforeDir="false" afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/starShader.frag" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/starShader.vert" beforeDir="false" afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/starShader.vert" afterDir="false" />
     </list>
@@ -184,7 +187,7 @@
       <workItem from="1653816158004" duration="32981000" />
       <workItem from="1653894985427" duration="48295000" />
       <workItem from="1653981140891" duration="51758000" />
-      <workItem from="1654070351109" duration="22640000" />
+      <workItem from="1654070351109" duration="26583000" />
     </task>
     <servers />
   </component>
@@ -222,46 +225,46 @@
     </state>
     <state x="740" y="275" width="437" height="490" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653584854656" />
     <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654033794578" />
-    <state width="1877" height="173" key="GridCell.Tab.0.bottom" timestamp="1654093858074">
+    <state width="1877" height="95" key="GridCell.Tab.0.bottom" timestamp="1654097693681">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="173" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1654092333884" />
-    <state width="1877" height="173" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654093858074" />
-    <state width="1877" height="173" key="GridCell.Tab.0.center" timestamp="1654093858074">
+    <state width="1877" height="410" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1654095204526" />
+    <state width="1877" height="95" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654097693681" />
+    <state width="1877" height="95" key="GridCell.Tab.0.center" timestamp="1654097693681">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="173" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1654092333884" />
-    <state width="1877" height="173" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654093858074" />
-    <state width="1877" height="173" key="GridCell.Tab.0.left" timestamp="1654093858074">
+    <state width="1877" height="410" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1654095204526" />
+    <state width="1877" height="95" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654097693681" />
+    <state width="1877" height="95" key="GridCell.Tab.0.left" timestamp="1654097693681">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="173" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1654092333884" />
-    <state width="1877" height="173" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654093858074" />
-    <state width="1877" height="173" key="GridCell.Tab.0.right" timestamp="1654093858074">
+    <state width="1877" height="410" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1654095204526" />
+    <state width="1877" height="95" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654097693681" />
+    <state width="1877" height="95" key="GridCell.Tab.0.right" timestamp="1654097693681">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="173" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1654092333884" />
-    <state width="1877" height="173" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654093858074" />
-    <state width="1877" height="288" key="GridCell.Tab.1.bottom" timestamp="1654027175863">
+    <state width="1877" height="410" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1654095204526" />
+    <state width="1877" height="95" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654097693681" />
+    <state width="1877" height="288" key="GridCell.Tab.1.bottom" timestamp="1654095340105">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="288" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653941158230" />
-    <state width="1877" height="288" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654027175863" />
-    <state width="1877" height="288" key="GridCell.Tab.1.center" timestamp="1654027175863">
+    <state width="1877" height="288" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654095340105" />
+    <state width="1877" height="288" key="GridCell.Tab.1.center" timestamp="1654095340105">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="288" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653941158230" />
-    <state width="1877" height="288" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654027175863" />
-    <state width="1877" height="288" key="GridCell.Tab.1.left" timestamp="1654027175863">
+    <state width="1877" height="288" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654095340105" />
+    <state width="1877" height="288" key="GridCell.Tab.1.left" timestamp="1654095340104">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="288" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653941158230" />
-    <state width="1877" height="288" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654027175863" />
-    <state width="1877" height="288" key="GridCell.Tab.1.right" timestamp="1654027175863">
+    <state width="1877" height="288" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654095340104" />
+    <state width="1877" height="288" key="GridCell.Tab.1.right" timestamp="1654095340105">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="288" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1653941158230" />
-    <state width="1877" height="288" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654027175863" />
+    <state width="1877" height="288" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654095340105" />
     <state x="2777" y="277" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1653933423589">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

@@ -69,16 +69,26 @@ float optic( vec3 p, vec3 q) {
 //Used to find the amount of light scattered towards the camera position
 float rayleighPhase(float angle)
 {
-   //return (3/4)*(1+(cos(angle)*cos(angle)));
    return (3.0/4.0)*(1.0+angle);
 }
 
+//Returns a vector containing the two intersections
+//Math described in: http://paulbourke.net/geometry/circlesphere/
 vec2 sphereIntersections(vec3 origin, vec3 dir, float r)
 {
    float a = dot(dir, dir);
    float b = 2.0f * dot(origin, dir);
    float c = dot(origin, origin) - (r*r);
-   float d = sqrt(b*b - 4.0f*a*c);
+   float d = b*b - 4.0f*a*c;
+   //float d = sqrt(b*b - 4.0f*a*c);
+   /*
+   if(d <= 0)
+   {
+      return vec2(0);
+   }
+   */
+
+   d = sqrt(d);
 
    return vec2((-b -d)/(2.0f*a), (-b + d)/(2.0f*a));
 }
@@ -87,21 +97,31 @@ vec3 atmosphereScatter2()
 {
    //P is the point on the outer radius,
    vec3 P = localPos;
-   vec3 C = camPosition;
-   C -= center;
 
    //We move the camera such that the coords of the center of the sphere can be treated as (0,0,0),
    //done to simplify the math in some later functions
-   //C -= center;
+   vec3 C = camPosition;
+   C -= center;
+
+   //Move the sun for the same reason as above.
+   vec3 S = sunPosition;
+   S -=center;
 
    vec3 V = normalize(P - C);
-   vec3 L = normalize(sunPosition - P);
+   vec3 L = normalize(S - P);
 
    //The intersections of the atmosphere, vec2 represent the two results from the ray entering and leaving the atmosphere
    vec2 intersect = sphereIntersections(C, V, outer_radius);
 
+   /*
+   if ( intersect.x > intersect.y ) {
+      return vec3( 0.0, 0.0, 0.0);
+   }
+   */
+
    //Check the inner radius to see if ray touches the ground or leaves the atmosphere.
    vec2 innerIntersection = sphereIntersections(C, V, inner_radius);
+
 
    //Set the endpoint of the ray intersection with the atmosphere to be the start of ground intersection.
    intersect.y = min(intersect.y, innerIntersection.x);
@@ -120,7 +140,6 @@ vec3 atmosphereScatter2()
    {
       //Height from ground. length of is used because we treat the sphere as having a center in (0,0,0).
       float h = max(0.0, length(sample_point) - inner_radius);
-
 
       float d_ray = outScattering(h) * len;
 
@@ -143,44 +162,8 @@ vec3 atmosphereScatter2()
    return 0.01 * scatter;
 }
 
-void trying()
-{
-   vec3 lightColor = pow(atmosphereScatter2(), vec3( 1.0 / 2.2 ) );
-   FragColor = vec4(lightColor, 1.0f);
-}
-
 void main()
 {
-   if(true)
-   {
-      trying();
-      return;
-   }
-
-   //vec3 lightColor = atmosColor;
-   //vec3 lightColor = vec3(1.0f);
-   //vec3 lightColor = atmosphereScatter();
-   //vec3 lightColor = atmosphereScatter2();
-   //FragColor = vec4( pow( lightColor, vec3( 1.0 / 2.2 ) ), 1.0 );
-   //FragColor = vec4(1.0f);
-
-   //vec3 lightColor = atmosColor;
-   //FragColor = vec4(lightColor, 1.0f);
-
-   //vec3 lightColor = pow(atmosphereScatter(), vec3( 1.0 / 2.2 ));
-  // vec3 lightColor = atmosColor;
-
-   vec3 P = localPos;
-   vec3 C = camPosition;
-   C -= center;
-   vec3 V = normalize(P - C);
-   vec3 L = normalize(sunPosition - P);
-
-   float c  = dot( V, -L );
-   float cc = c * c;
-   vec3 lightColor = atmosColor;//*rayleighPhase(cc);
-   //lightColor = 1.0 - exp(lightColor * -hdr);
-   lightColor;// *= k_ray;
-
+   vec3 lightColor = pow(atmosphereScatter2(), vec3( 1.0 / 2.2 ) );
    FragColor = vec4(lightColor, 1.0f);
 }

@@ -13,15 +13,16 @@ uniform vec3 sunColor;
 uniform float lightIntensity;
 uniform float lightRadius;
 
-uniform vec3 center;
-uniform float inner_radius;
-uniform float outer_radius;
-//const float inner_radius = 0.05f;
-//const float outer_radius = 1.0f;
-//const vec3 center = vec3(0.0);
+//uniform vec3 center;
+//uniform float inner_radius;
+//uniform float outer_radius;
+const float inner_radius = 1.0f;
+const float outer_radius = 1.4f;
+const vec3 center = vec3(-3, 0, 0.0);
 
-const float H0_ray = 0.01;
-const int sample_count = 20;
+const float H0_ray = 0.03;
+const int sample_count = 1;
+const vec3 k_ray = vec3( 30, 30, 30 ); //Amount of light scatter
 
 // math const
 const float PI = 3.14159265359;
@@ -87,15 +88,14 @@ vec3 atmosphereScatter2()
    //P is the point on the outer radius,
    vec3 P = localPos;
    vec3 C = camPosition;
-   C -= center;
+   //C -= center;
 
    //We move the camera such that the coords of the center of the sphere can be treated as (0,0,0),
    //done to simplify the math in some later functions
    //C -= center;
 
    vec3 V = normalize(P - C);
-   vec3 L = vec3(-1,0,0);
-   //vec3 L = normalize(sunPosition - P);
+   vec3 L = vec3(0,0,-1);
 
    //The intersections of the atmosphere, vec2 represent the two results from the ray entering and leaving the atmosphere
    vec2 intersect = sphereIntersections(C, V, outer_radius);
@@ -104,7 +104,7 @@ vec3 atmosphereScatter2()
    vec2 innerIntersection = sphereIntersections(C, V, inner_radius);
 
    //Set the endpoint of the ray intersection with the atmosphere to be the start of ground intersection.
-   intersect.y = min(intersect.y, innerIntersection.x);
+   //intersect.y = min(intersect.y, innerIntersection.x);
 
    //Length of each segment that we sample a scatter point from.
    float len = (intersect.y - intersect.x)/float(sample_count);
@@ -121,6 +121,7 @@ vec3 atmosphereScatter2()
       //Height from ground. length of is used because we treat the sphere as having a center in (0,0,0).
       float h = max(0.0, length(sample_point) - inner_radius);
 
+
       float d_ray = outScattering(h) * len;
 
       n_ray0 += d_ray;
@@ -130,21 +131,57 @@ vec3 atmosphereScatter2()
       vec3 u = sample_point + L * f.y;
 
       float n_ray1 = optic(sample_point, u);
-      //vec3 att = exp( - ( n_ray0 + n_ray1 ) * k_ray);
+      vec3 att = exp( - ( n_ray0 + n_ray1 ) * k_ray);
+      //sum_ray += d_ray * att;
       sum_ray += d_ray;
       sample_point += (V * len);
    }
 
    float c  = dot( V, -L );
    float cc = c * c;
-   vec3 scatter = vec3(100.0f) * vec3(100.0f) * rayleighPhase( cc );
+   vec3 scatter = sum_ray * k_ray * rayleighPhase( cc );
 
-   //return 1.0f * scatter;
-   return 1.0f * scatter;
+   return 0.01 * scatter;
+}
+
+void trying()
+{
+   vec3 lightColor = pow(atmosphereScatter2(), vec3( 1.0 / 2.2 ) );
+   FragColor = vec4(lightColor, 1.0f);
 }
 
 void main()
 {
-   vec3 lightColor = pow(atmosphereScatter2(), vec3( 1.0 / 2.2 ) );
+   if(true)
+   {
+      trying();
+      return;
+   }
+
+   //vec3 lightColor = atmosColor;
+   //vec3 lightColor = vec3(1.0f);
+   //vec3 lightColor = atmosphereScatter();
+   //vec3 lightColor = atmosphereScatter2();
+   //FragColor = vec4( pow( lightColor, vec3( 1.0 / 2.2 ) ), 1.0 );
+   //FragColor = vec4(1.0f);
+
+   //vec3 lightColor = atmosColor;
+   //FragColor = vec4(lightColor, 1.0f);
+
+   //vec3 lightColor = pow(atmosphereScatter(), vec3( 1.0 / 2.2 ));
+   // vec3 lightColor = atmosColor;
+
+   vec3 P = localPos;
+   vec3 C = camPosition;
+   C -= center;
+   vec3 V = normalize(P - C);
+   vec3 L = normalize(sunPosition - P);
+
+   float c  = dot( V, -L );
+   float cc = c * c;
+   vec3 lightColor = atmosColor;//*rayleighPhase(cc);
+   //lightColor = 1.0 - exp(lightColor * -hdr);
+   lightColor;// *= k_ray;
+
    FragColor = vec4(lightColor, 1.0f);
 }

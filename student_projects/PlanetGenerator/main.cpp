@@ -189,9 +189,9 @@ int main()
             "skybox/back.png"
     };
 
-    cubemapTexture = loadCubeMap(faces);
-    skyboxVAO = initSkyboxBuffers();
-    skyboxShader = new Shader("shaders/skybox.vert", "shaders/skybox.frag");
+   // cubemapTexture = loadCubeMap(faces);
+    //skyboxVAO = initSkyboxBuffers();
+    //skyboxShader = new Shader("shaders/skybox.vert", "shaders/skybox.frag");
 
     // set up the z-buffer
     // -------------------
@@ -242,7 +242,7 @@ int main()
         glClearColor(0.3f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        drawSkybox();
+        //drawSkybox();
 
         useShader(generate_simplex_shader);
         setUniforms();
@@ -603,8 +603,8 @@ void initializeSun(int divisions)
 
     auto sphere = CubeSphere(sunRadius, divisions);
 
-    glm::vec3 pos = glm::vec3(-3.0f, 0.0f, 0.0f);
-    Atmosphere testAtmosphere = Atmosphere("sun", pos, pos, sunRadius, 1.5f, 8, 80);
+    glm::vec3 pos = glm::vec3(0.0f, 0.0f, 0.0f);
+    Atmosphere testAtmosphere = Atmosphere("sun", pos, pos, sunRadius, 1.0f, 8, 80);
 
     for(int i = 0; i < sphere.vertices.size(); i += 1)
     {
@@ -676,7 +676,7 @@ void initializePlanets(int n, int divisions)
         std::string planetName = "planet";
         planetName.append(to_string(i)).append(".bmp");
 
-        glm::vec3 pos = glm::vec3(3.0f * float(i) + 5.0f, 0.0f, 0.0f);
+        glm::vec3 pos = glm::vec3(3.0f * float(i) + 10.0f, 0.0f, 0.0f);
 
         auto planetData = generatePlanetData(seed, 1.0f, divisions, 1, pos, sun->GetPosition());
         auto sphere = CubeSphere(1, divisions);

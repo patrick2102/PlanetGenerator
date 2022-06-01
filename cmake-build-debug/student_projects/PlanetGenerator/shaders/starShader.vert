@@ -20,13 +20,17 @@ out vec3 localPos;
 void main() {
    //atmosColor = pow(atmosphereScatter(), vec3( 1.0 / 2.2 ) );
    vec3 lpos = vertex;
+   lpos = vertex * 1.4; // * outer_radius;
    vec4 P = model * vec4(lpos, 1.0);
 
    vec3 N = normalize(model * vec4(normal, 0.0)).xyz;
 
+   //localNormal = normal;
+   localPos = lpos;
    worldPos = P;
    worldNormal = N;
-   localPos = lpos;
+   //atmosColor = pow(atmosphereScatter(), vec3( 1.0 / 2.2 ) );
+   //atmosColor = atmosphereScatter2();
 
    gl_Position = viewProjection * P;
 }
