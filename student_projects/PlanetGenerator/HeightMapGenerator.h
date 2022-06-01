@@ -499,13 +499,13 @@ public:
 
     }
 
-    std::vector<float**> GenerateCubeMap(int d, int iterations, int scale, float amplitude, float persistence, float lacunarity) {
+    std::vector<double**> GenerateCubeMap(int d, int iterations, int scale, double amplitude, double persistence, double lacunarity) {
         //scale += 1;
 
         //float ***heightMap = new float **[w];
         //std::vector<std::vector<std::vector<float >>> sides(6);
         int nSides = 6;
-        std::vector<float**> sides;
+        std::vector<double**> sides;
 
 
         for(int i = 0; i < nSides; i++)
@@ -513,10 +513,10 @@ public:
             //sides.at(i) = std::vector<std::vector<float >>(w);
             //sides.at(i) = (float *);
             //float ** heightMap = (float **)malloc(sizeof(float *)*w);
-            float** heightMap = new float*[d];
+            double** heightMap = new double*[d];
             for(int j = 0; j < d; j++)
             {
-                heightMap[j] = new float[d];
+                heightMap[j] = new double[d];
                 //heightMap[j] = (float *)malloc(sizeof(float )*h);
                 //memset(heightMap[j],255,sizeof(float )*h);
                 for(int k = 0; k < d; k++)
@@ -539,13 +539,13 @@ public:
             i = d-1;
             for (j = 0; j < d; j++) {
                 for (k = 0; k < d; k++) {
-                    float x = (i/2);
-                    float y = ((float)(j - (d/2)));
-                    float z = ((float)(k - (d/2)));
+                    double x = (i/2);
+                    double y = ((double)(j - (d/2)));
+                    double z = ((double)(k - (d/2)));
 
                     glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)d;
                     point += (d);
-                    point /= (float)scale;
+                    point /= (double)scale;
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
 
@@ -561,13 +561,13 @@ public:
             i = d-1;
             for (j = 0; j < d; j++) {
                 for (k = 0; k < d; k++) {
-                    float x = -(i/2);
-                    float y = ((float)(j - (d/2)));
-                    float z = ((float)(k - (d/2)));
+                    double x = -(i/2);
+                    double y = ((double)(j - (d/2)));
+                    double z = ((double)(k - (d/2)));
 
                     glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)d;
                     point += (d);
-                    point /= (float)scale;
+                    point /= (double)scale;
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
 
@@ -583,9 +583,9 @@ public:
             for (i = 0; i < d; i++) {
                 for (k = 0; k < d; k++) {
 
-                    float x = (float)(i - (d/2));
-                    float y = j/2;
-                    float z = (float)(k - (d/2));
+                    double x = (double)(i - (d/2));
+                    double y = j/2;
+                    double z = (double)(k - (d/2));
 
                     /*
                     float x = ((float )(i - (w/2)))/(float ) scale;
@@ -595,7 +595,7 @@ public:
 
                     glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)d;
                     point += (d);
-                    point /= (float)scale;
+                    point /= (double)scale;
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
 
@@ -612,13 +612,13 @@ public:
             for (i = 0; i < d; i++) {
                 for (k = 0; k < d; k++) {
 
-                    float x = ((float)(i - (d/2)));
-                    float y = -(j/2);
-                    float z = ((float)(k - (d/2)));
+                    double x = ((double)(i - (d/2)));
+                    double y = -(j/2);
+                    double z = ((double)(k - (d/2)));
 
                     glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)d;
                     point += (d);
-                    point /= (float)scale;
+                    point /= (double)scale;
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
 
@@ -635,13 +635,13 @@ public:
             for (j = 0; j < d; j++) {
                 for (i = 0; i < d; i++) {
                     //float x = (float ) i / (float ) scale;
-                    float x = ((float )(i - (d/2)));
-                    float y = ((float )(j - (d/2)));
-                    float z = (k/2);
+                    double x = ((double )(i - (d/2)));
+                    double y = ((double )(j - (d/2)));
+                    double z = (k/2);
 
                     glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)d;
                     point += (d);
-                    point /= (float)scale;
+                    point /= (double)scale;
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
 
@@ -658,13 +658,13 @@ public:
             k = d-1;
             for (i = 0; i < d; i++) {
                 for (j = 0; j < d; j++) {
-                    float x = ((float )(i - (d/2)));
-                    float y = ((float )(j - (d/2)));
-                    float z = -(k/2);
+                    double x = ((double )(i - (d/2)));
+                    double y = ((double )(j - (d/2)));
+                    double z = -(k/2);
 
                     glm::vec3 point = glm::normalize(glm::vec3(x, y, z)) * (float)d;
                     point += d;
-                    point /= (float)scale;
+                    point /= (double)scale;
 
                     auto value = SimplexNoise3D(point.x, point.y, point.z) * amplitude;
 
@@ -762,7 +762,7 @@ public:
         return outputFile;
     }
 
-    std::string OutputImage(int d, float** heightMap, const char* fileName)
+    std::string OutputImage(int d, double** heightMap, const char* fileName)
     {
         FILE *f;
         unsigned char *img = NULL;
@@ -775,7 +775,7 @@ public:
         int y;
         float s;
 
-        float max = -1000000, min = 1000000;
+        double max = -1000000, min = 1000000;
 
         for(int i=0; i<d; i++)
         {
@@ -914,7 +914,7 @@ public:
         return outputFile;
     }
 
-    std::vector<std::string> OutputCubeMapImage(int d, std::vector<float**> sides, const char* fileName)
+    std::vector<std::string> OutputCubeMapImage(int d, std::vector<double**> sides, const char* fileName)
     {
         std::vector<std::string> fileNames;
 

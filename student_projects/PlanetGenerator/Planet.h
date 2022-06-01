@@ -109,8 +109,10 @@ public:
             shader->setInt("surfaceTexture", 0);
 
             glBindVertexArray(VAO);
-            //glActiveTexture(GL_TEXTURE0);
-            //glBindTexture(GL_TEXTURE_CUBE_MAP, surfaceTexture);
+            glActiveTexture(GL_TEXTURE0);
+            glBindTexture(GL_TEXTURE_CUBE_MAP, surfaceTexture);
+            glActiveTexture(GL_TEXTURE1);
+            glBindTexture(GL_TEXTURE_CUBE_MAP, displacementMap);
             glDrawArrays(GL_TRIANGLES, 0, vertices.size());
             glBindVertexArray(0);
         }

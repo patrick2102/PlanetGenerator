@@ -100,6 +100,7 @@ Shader* simplex_shader;
 //Shader* generate_simplex_shader_3;
 //Shader* generate_simplex_shader_2;
 Shader* atmosphere_shader;
+//Shader* planet_shader;
 
 
 
@@ -169,6 +170,7 @@ int main()
     star_shader = new Shader("shaders/starShader.vert", "shaders/starShader.frag");
     simplex_shader = new Shader("shaders/simplex.vert", "shaders/simplex.frag");
     atmosphere_shader = new Shader("shaders/atmosphereShader.vert", "shaders/atmosphereShader.frag");
+    //planet_shader = new Shader("shaders/planetShader.vert", "shaders/planetShader.frag");
 
     //shader = generate_simplex_shader;
 
@@ -189,7 +191,7 @@ int main()
             "skybox/back.png"
     };
 
-   // cubemapTexture = loadCubeMap(faces);
+    //cubemapTexture = loadCubeMap(faces);
     //skyboxVAO = initSkyboxBuffers();
     //skyboxShader = new Shader("shaders/skybox.vert", "shaders/skybox.frag");
 
@@ -327,10 +329,12 @@ void drawGui(){
 
         ImGui::Text("Shading model: ");
         {
+            /*
             if (ImGui::RadioButton("GPU simplex shading", shader == generate_simplex_shader))
             {
                 shader = generate_simplex_shader;
             }
+            */
         }
 
         ImGui::End();
@@ -676,7 +680,7 @@ void initializePlanets(int n, int divisions)
         std::string planetName = "planet";
         planetName.append(to_string(i)).append(".bmp");
 
-        glm::vec3 pos = glm::vec3(3.0f * float(i) + 10.0f, 0.0f, 0.0f);
+        glm::vec3 pos = glm::vec3(3.0f * float(i) + 6.0f, 0.0f, 0.0f);
 
         auto planetData = generatePlanetData(seed, 1.0f, divisions, 1, pos, sun->GetPosition());
         auto sphere = CubeSphere(1, divisions);
@@ -695,16 +699,15 @@ void initializePlanets(int n, int divisions)
 
         if(shader == generate_simplex_shader)
         {
-            /*
-            useShader(generate_simplex_shader);
-            float seed = 0.0f;
-            hmg = new HeightMapGenerator(seed);
-            hmg->GenerateCubeMapUsingGPU(sphere, planetData, shader);
-            */
-
-
             useShader(generate_simplex_shader);
             auto planet = Planet(pos, sphere, planetData, planetName.c_str());
+            float seed = 0.0f;
+            hmg = new HeightMapGenerator(seed);
+            hmg->CopyToShader(shader);
+            std::vector<double **> heightCubeMap = hmg->GenerateCubeMap(sd.diameter, sd.iterations, sd.scale, sd.amplitude, sd.persistence, sd.lacunarity);
+            auto displacementFaces = hmg->OutputCubeMapImage(diameter, heightCubeMap, planetName.c_str());
+            planet.SetUpDisplacementMap(displacementFaces);
+
             planets.insert(planets.end(), planet);
         }
 
@@ -712,7 +715,7 @@ void initializePlanets(int n, int divisions)
         {
             auto planet = Planet(pos, sphere, planetData, planetName.c_str());
 
-            std::vector<float **> heightCubeMap = hmg->GenerateCubeMap(sd.diameter, sd.iterations, sd.scale, sd.amplitude, sd.persistence, sd.lacunarity);
+            std::vector<double **> heightCubeMap = hmg->GenerateCubeMap(sd.diameter, sd.iterations, sd.scale, sd.amplitude, sd.persistence, sd.lacunarity);
             auto displacementFaces = hmg->OutputCubeMapImage(diameter, heightCubeMap, planetName.c_str());
             planet.SetUpDisplacementMap(displacementFaces);
 
@@ -754,9 +757,9 @@ void drawPlanets()
     setUniforms();
     for(auto p : planets)
     {
-        p.DrawOceanUsingGPU(shader);
+        //p.DrawOceanUsingGPU(shader);
     }
-
+/*
     glDisable(GL_DEPTH_TEST);
     glEnable(GL_BLEND);
     //glBlendFunc(GL_ONE_MINUS_SRC_COLOR, GL_ONE);
@@ -772,4 +775,5 @@ void drawPlanets()
     }
     glEnable(GL_DEPTH_TEST);
     glDisable(GL_BLEND);
+    */
 }

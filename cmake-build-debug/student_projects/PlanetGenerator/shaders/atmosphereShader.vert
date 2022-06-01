@@ -192,7 +192,6 @@ vec3 atmosphereScatter2()
 
 void main()
 {
-   //atmosColor = pow(atmosphereScatter(), vec3( 1.0 / 2.2 ) );
    vec3 lpos = vertex;
    lpos = vertex * outer_radius; // * outer_radius;
    vec4 P = model * vec4(lpos, 1.0);
@@ -203,8 +202,6 @@ void main()
    localPos = lpos;
    worldPos = P;
    worldNormal = N;
-   //atmosColor = pow(atmosphereScatter(), vec3( 1.0 / 2.2 ) );
-   //atmosColor = atmosphereScatter2();
 
    gl_Position = viewProjection * P;
 }

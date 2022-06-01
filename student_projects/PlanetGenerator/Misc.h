@@ -170,11 +170,11 @@ StarMaterial sunMaterial = StarMaterial(glm::vec3(1.0f), 1.0f, 0.0f, 0.0f, 1.0f,
 Material planetMaterial = Material("planet", glm::vec3(1.0f), 0.25f, 1.0f, 0.0f);
 
 //TODO should be randomized
-int scale = 400;
-float amplitude = 25.0f;
+int scale = 40;
+float amplitude = 20.0f;
 float persistence = 0.5f;
 float lacunarity = 2.0f;
-int diameter = 1000;
+int diameter = 100;
 int iterations = 10;
 
 Displacement testDisplacement = Displacement(scale, amplitude, persistence, lacunarity, diameter, iterations);

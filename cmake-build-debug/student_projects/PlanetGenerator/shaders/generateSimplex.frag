@@ -19,15 +19,19 @@ uniform float lightRadius;
 
 // material properties
 uniform vec3 reflectionColor;
-uniform float diffuseReflectance;
-uniform float roughness;
-uniform float metalness;
+//uniform float diffuseReflectance;
+//uniform float roughness;
+//uniform float metalness;
 
 uniform samplerCube surfaceTexture;
 uniform samplerCube displacementMap;
 
 uniform int permTab[255*2];
 uniform vec3 grad3[12];
+
+//uniform bool hasWater;
+//uniform vec3 waterColor;
+
 
 
 //Terrain colors:
@@ -251,25 +255,25 @@ float GeometrySchlickGGX(float cosAngle, float a)
    return num / denom;
 }
 
-float GeometrySmith(vec3 N, vec3 V, vec3 L, float a)
+float GeometrySmith(vec3 N, vec3 V, vec3 L, float a, float rough)
 {
    float NdotV = max(dot(N, V), 0.0);
    float NdotL = max(dot(N, L), 0.0);
-   float ggx2  = GeometrySchlickGGX(NdotV, roughness);
-   float ggx1  = GeometrySchlickGGX(NdotL, roughness);
+   float ggx2  = GeometrySchlickGGX(NdotV, rough);
+   float ggx1  = GeometrySchlickGGX(NdotL, rough);
 
    return ggx1 * ggx2;
 }
 
-vec3 GetCookTorranceSpecularLighting(vec3 N, vec3 L, vec3 V)
+vec3 GetCookTorranceSpecularLighting(vec3 N, vec3 L, vec3 V, float rough)
 {
    vec3 H = normalize(L + V);
 
    // Remap alpha parameter to roughness^2
-   float a = roughness * roughness;
+   float a = rough * rough;
 
    float D = DistributionGGX(N, H, a);
-   float G = GeometrySmith(N, V, L, a);
+   float G = GeometrySmith(N, V, L, a, rough);
 
    float cosI = max(dot(N, L), 0.0);
    float cosO = max(dot(N, V), 0.0);
@@ -280,7 +284,7 @@ vec3 GetCookTorranceSpecularLighting(vec3 N, vec3 L, vec3 V)
    return vec3(specular);
 }
 
-vec3 GetLambertianDiffuseLighting(vec3 albedo)
+vec3 GetLambertianDiffuseLighting(vec3 albedo, float diffuseReflectance)
 {
    vec3 diffuse = diffuseReflectance * albedo;
 
@@ -289,7 +293,7 @@ vec3 GetLambertianDiffuseLighting(vec3 albedo)
    return diffuse;
 }
 
-vec3 OrenNayar(vec3 N, vec3 L, vec3 V, vec3 albedo)
+vec3 OrenNayar(vec3 N, vec3 L, vec3 V, vec3 albedo, float rough, float diffuseReflectance)
 {
    vec3 diffuse = diffuseReflectance * albedo;
    diffuse /= PI;
@@ -302,7 +306,7 @@ vec3 OrenNayar(vec3 N, vec3 L, vec3 V, vec3 albedo)
    float beta = min(angleNV, angleLN);
    float gamma = cos(angleNV - angleLN);
 
-   float r2 = roughness * roughness;
+   float r2 = rough * rough;
    float A = 1 - 0.5*(r2/(r2+0.33));
    float B = 0.45*(r2/(r2+0.33));
 
@@ -321,27 +325,34 @@ vec3 PBR()
    vec3 V = normalize(camPosition - P.xyz);
    vec3 H = normalize(L + V);
 
-   //float tHeight = texture(surfaceTexture, TexCoords).r;
-   //normal = normalize(normal * 2.0 - 1.0);
-
-   //vec3 albedo = texture(texture_diffuse1, textureCoordinates).xyz;
-   //vec3 albedo = texture()
-   //vec3 albedo = surfaceColor();
-   //albedo += vec3(height);
    float displace = Displacement(localPos);
    vec3 albedo = surfaceColor(displace);
 
+   vec3 F0;
 
-   //vec3 grey = vec3(0.5, 0.5, 0.5);
-   //vec3 albedo = vec3(grey * displace);
-   //float displace = Displacement(vertex);
-   //localPos = localPos + (normal * displace);
-   //albedo += vec3(height);
+   float roughness;
+   float metalness;
+   float diffuseReflectance;
 
-   vec3 diffuse = OrenNayar(N, L, V, albedo);
-   diffuse *= albedo;
+   if(displace <= 0.0)
+   {
+      F0 = vec3(0.02f);
+      roughness = 0.25f;
+      metalness = 0.5f;
+      diffuseReflectance = 1.0f;
+
+   }
+   else
+   {
+      F0 = vec3(0.01f);
+      roughness = 0.0f;
+      metalness = 0.0f;
+      diffuseReflectance = 1.0f;
+   }
+
+   vec3 diffuse = OrenNayar(N, L, V, albedo, roughness, diffuseReflectance);
    //vec3 diffuse = albedo;
-   vec3 specular = GetCookTorranceSpecularLighting(N, L, V);
+   vec3 specular = GetCookTorranceSpecularLighting(N, L, V, roughness);
 
    vec3 lightRadiance = sunColor;
    float attenuation = GetAttenuation(P);
@@ -349,7 +360,7 @@ vec3 PBR()
    lightRadiance *= lightIntensity;
    lightRadiance *= max(dot(N, L), 0.0);
 
-   vec3 F0 = vec3(0.01f);
+   //vec3 F0 = vec3(0.01f);
    F0 = mix(F0, albedo, metalness);
    diffuse = mix(diffuse, vec3(0), metalness);
    vec3 F = FresnelSchlick(F0, max(dot(H, V), 0.0));

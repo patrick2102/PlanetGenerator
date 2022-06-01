@@ -37,10 +37,12 @@ Material desertMaterial = Material(glm::vec3(1.0, 0.9, 0.7f), 1.0f, 0.25f, 0.0f,
  */
 Material jungleMaterial = Material("jungle", glm::vec3(0.13, 0.235, 0.043f), 1.0f, 0.0f, 0.0f);
 Material temperateForestMaterial = Material("forest", glm::vec3(0.27, 0.325, 0.117f), 1.0f, 0.0f, 0.0f);
+Material desertMaterial = Material("desert", glm::vec3(1.0, 0.9, 0.7f), 1.0f, 0.0f, 0.0f);
+//Material iceMaterial = Material("ice", glm::vec3(0, 0, 1.0f), 1.0f, 0.0f, 0.0f);
 
 //PlanetType earthLike = PlanetType(std::vector<Material>{dirtMaterial, rockMaterial, iceMaterial, grassMaterial, desertMaterial});
 //PlanetType earthLike = PlanetType(std::vector<Material>{dirtMaterial, rockMaterial, grassMaterial, desertMaterial});
-PlanetType earthLike = PlanetType(std::vector<Material>{jungleMaterial, temperateForestMaterial});
+PlanetType earthLike = PlanetType(std::vector<Material>{jungleMaterial, temperateForestMaterial, desertMaterial});
 
 class BiomeGenerator {
 public:
