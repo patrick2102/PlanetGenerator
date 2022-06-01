@@ -143,7 +143,7 @@ void main()
    //localNormal = normal;
    worldPos = P;
    worldNormal = N;
-   &&atmosColor = pow(atmosphereScatter(), vec3( 1.0 / 2.2 ) );
+   //atmosColor = pow(atmosphereScatter(), vec3( 1.0 / 2.2 ) );
    atmosColor = pow(atmosphereScatter(), vec3( 1.0 / 2.2 ) );
 
    gl_Position = viewProjection * P;

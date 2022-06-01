@@ -100,14 +100,15 @@ vec3 atmosphereScatter()
 
    float n_ray0 = 0.0;
 
+   //Sample point for sampling the atmosphere scattering. Start from the first intersection + segment length/2
    vec3 sample_point = C + V * ( intersect.x + len * 0.5 );
 
    for(int i = 0; i < sample_count; i++)
    {
-      //float h = max(0.0, distance(v, c2) - inner_radius);
+      //Height from ground. length of is used because we treat the sphere as having a center in (0,0,0).
       float h = max(0.0, length(sample_point) - inner_radius);
-      //float h = max(0.0, 1.0f - inner_radius);
-      //float h = 0.1;
+
+
       float d_ray = outScattering(h) * len;
 
       n_ray0 += d_ray;
@@ -142,6 +143,7 @@ void main()
    //localNormal = normal;
    worldPos = P;
    worldNormal = N;
+   //atmosColor = pow(atmosphereScatter(), vec3( 1.0 / 2.2 ) );
    atmosColor = pow(atmosphereScatter(), vec3( 1.0 / 2.2 ) );
 
    gl_Position = viewProjection * P;

@@ -35,8 +35,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c39d72e8-cbd4-4906-87b5-2af953ed1ddc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/shaders/atmosphereShader.vert" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/student_projects/PlanetGenerator/shaders/atmosphereShader.vert" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/atmosphereShader.vert" beforeDir="false" afterPath="$PROJECT_DIR$/student_projects/PlanetGenerator/shaders/atmosphereShader.vert" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +176,7 @@
       <workItem from="1653816158004" duration="32981000" />
       <workItem from="1653894985427" duration="48295000" />
       <workItem from="1653981140891" duration="51758000" />
-      <workItem from="1654070351109" duration="15175000" />
+      <workItem from="1654070351109" duration="15206000" />
     </task>
     <servers />
   </component>
