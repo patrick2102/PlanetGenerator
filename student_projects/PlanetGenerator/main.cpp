@@ -662,7 +662,7 @@ void initializePlanets(int n, int divisions)
         std::string planetName = "planet";
         planetName.append(to_string(i)).append(".bmp");
 
-        glm::vec3 pos = glm::vec3(3.0f * float(i) + 3.0f, 0.0f, 0.0f);
+        glm::vec3 pos = glm::vec3(3.0f * float(i) + 0.0f, 0.0f, 0.0f);
 
         auto planetData = generatePlanetData(seed, 1.0f, divisions, 1, pos, sun->GetPosition());
         auto sphere = CubeSphere(1, divisions);
@@ -726,7 +726,6 @@ void drawPlanets()
 {
     useShader(generate_simplex_shader);
     setUniforms();
-    /*
     for(auto p : planets)
     {
         if(shader == generate_simplex_shader)
@@ -734,7 +733,6 @@ void drawPlanets()
         else
             p.Draw(shader);
     }
-     */
 
     useShader(water_shader);
     setUniforms();

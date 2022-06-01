@@ -72,6 +72,7 @@ vec2 sphereIntersections(vec3 origin, vec3 dir, float r)
    return vec2((-b -d)/(2.0f*a), (-b + d)/(2.0f*a));
 }
 
+/*
 vec3 atmosphereScatter()
 {
    //P is the point on the outer radius,
@@ -127,24 +128,83 @@ vec3 atmosphereScatter()
    float cc = c * c;
    vec3 scatter = sum_ray * k_ray * rayleighPhase( cc );
 
-   return 1.0 * scatter;
+   return scatter;
+}
+*/
+
+vec3 atmosphereScatter2()
+{
+   //P is the point on the outer radius,
+   vec3 P = vertex;
+   vec3 C = camPosition;
+   //We move the camera such that the coords of the center of the sphere can be treated as (0,0,0),
+   //done to simplify the math in some later functions
+   C -= center;
+
+   vec3 V = normalize(P - C);
+   vec3 L = normalize(sunPosition - P);
+
+   //The intersections of the atmosphere, vec2 represent the two results from the ray entering and leaving the atmosphere
+   vec2 intersect = sphereIntersections(C, V, outer_radius);
+
+   //Check the inner radius to see if ray touches the ground or leaves the atmosphere.
+   vec2 innerIntersection = sphereIntersections(C, V, inner_radius);
+
+   //Set the endpoint of the ray intersection with the atmosphere to be the start of ground intersection.
+   intersect.y = min(intersect.y, innerIntersection.x);
+
+   //Length of each segment that we sample a scatter point from.
+   float len = (intersect.y - intersect.x)/float(sample_count);
+
+   vec3 sum_ray = vec3( 0.0 );
+
+   float n_ray0 = 0.0;
+
+   //Sample point for sampling the atmosphere scattering. Start from the first intersection + segment length/2
+   vec3 sample_point = C + V * ( intersect.x + len * 0.5 );
+
+   for(int i = 0; i < sample_count; i++)
+   {
+      //Height from ground. length of is used because we treat the sphere as having a center in (0,0,0).
+      float h = max(0.0, length(sample_point) - inner_radius);
+
+
+      float d_ray = outScattering(h) * len;
+
+      n_ray0 += d_ray;
+
+      vec2 f = sphereIntersections( sample_point, L, outer_radius );
+
+      vec3 u = sample_point + L * f.y;
+
+      float n_ray1 = optic(sample_point, u);
+      vec3 att = exp( - ( n_ray0 + n_ray1 ) * k_ray);
+      sum_ray += d_ray * att;
+      sample_point += (V * len);
+   }
+
+   //float c  = dot( V, -L );
+   //float cc = c * c;
+   //vec3 scatter = sum_ray * k_ray * rayleighPhase( cc );
+
+   return sum_ray;
 }
 
 void main()
 {
    //atmosColor = pow(atmosphereScatter(), vec3( 1.0 / 2.2 ) );
-   vec3 localPos = vertex;
+   //vec3 localPos = vertex;
    //localPos = localPos * outer_radius;
-   vec4 P = model * vec4(localPos, 1.0);
+   vec4 P = model * vec4(vertex, 1.0);
 
    vec3 N = normalize(model * vec4(normal, 0.0)).xyz;
 
-   localPos = vertex;
+   localPos = vertex * outer_radius;
    //localNormal = normal;
    worldPos = P;
    worldNormal = N;
    //atmosColor = pow(atmosphereScatter(), vec3( 1.0 / 2.2 ) );
-   atmosColor = pow(atmosphereScatter(), vec3( 1.0 / 2.2 ) );
+   atmosColor = atmosphereScatter2();
 
    gl_Position = viewProjection * P;
 }
