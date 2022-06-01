@@ -43,7 +43,7 @@ const unsigned int SHADOW_WIDTH = 2048, SHADOW_HEIGHT = 2048;
 
 // global variables used for rendering
 // -----------------------------------
-Camera camera(glm::vec3(0.0f, 1.6f, 5.0f));
+Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
 
 Shader* skyboxShader;
 unsigned int skyboxVAO; // skybox handle
@@ -295,10 +295,10 @@ void drawRTGui()
         ImGui::Text("%s", pos.data());
         ImGui::End();
 
-        ImGui::Begin("Speed");
-        string speed = std::to_string(camera.MovementSpeed);
-        ImGui::Text("%s", speed.data());
-        ImGui::End();
+       // ImGui::Begin("Speed");
+        //string speed = std::to_string(camera.MovementSpeed);
+        //ImGui::Text("%s", speed.data());
+        //ImGui::End();
     }
 
     ImGui::Render();
@@ -355,6 +355,7 @@ void setUniforms()
     glm::mat4 viewProjection = projection * view;
     shader->setMat4("viewProjection", viewProjection);
     shader->setVec3("camPosition", camera.Position);
+    shader->setVec3("camFront", camera.Front);
     setLightUniforms();
 }
 
@@ -608,7 +609,7 @@ PlanetData generatePlanetData(float seed, float radius, int divisions, int nCell
     PlanetType pt = earthLike;
     Ocean ocean = Ocean(waterMaterial);
     Displacement displacement = testDisplacement;
-    Atmosphere testAtmosphere = Atmosphere("earthlike", center, sunPosition, radius, radius*1.1f, 8, 80);
+    Atmosphere testAtmosphere = Atmosphere("earthlike", center, sunPosition, radius/2.0f, radius, 8, 80);
     //std::vector<Material> materials = planetMaterials;
     auto sphere = CubeSphere(radius, divisions);
 
@@ -661,7 +662,7 @@ void initializePlanets(int n, int divisions)
         std::string planetName = "planet";
         planetName.append(to_string(i)).append(".bmp");
 
-        glm::vec3 pos = glm::vec3(3.0f * float(i) + 1.0f, 0.0f, 0.0f);
+        glm::vec3 pos = glm::vec3(3.0f * float(i) + 3.0f, 0.0f, 0.0f);
 
         auto planetData = generatePlanetData(seed, 1.0f, divisions, 1, pos, sun->GetPosition());
         auto sphere = CubeSphere(1, divisions);
@@ -710,7 +711,7 @@ void initializePlanets(int n, int divisions)
 
 void drawSolarSystem()
 {
-    drawSun();
+    //drawSun();
     drawPlanets();
 }
 
@@ -725,6 +726,7 @@ void drawPlanets()
 {
     useShader(generate_simplex_shader);
     setUniforms();
+    /*
     for(auto p : planets)
     {
         if(shader == generate_simplex_shader)
@@ -732,6 +734,7 @@ void drawPlanets()
         else
             p.Draw(shader);
     }
+     */
 
     useShader(water_shader);
     setUniforms();

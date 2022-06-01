@@ -2,6 +2,7 @@
 layout (location = 0) in vec3 vertex;
 layout (location = 1) in vec3 normal;
 
+//uniform vec3 camFront; // so we can compute the view vector
 uniform vec3 camPosition; // so we can compute the view vector
 uniform mat4 model; // represents model coordinates in the world coord space
 uniform mat4 localSpace; // represents model coordinates in the local coord space
@@ -9,7 +10,7 @@ uniform mat4 viewProjection;  // represents the view and projection matrices com
 
 uniform vec3 sunPosition;
 
-//uniform vec3 center;
+uniform vec3 center;
 uniform float inner_radius;
 uniform float outer_radius;
 
@@ -73,48 +74,37 @@ vec2 sphereIntersections(vec3 origin, vec3 dir, float r)
 
 vec3 atmosphereScatter()
 {
-   vec3 P = vertex;
-   vec3 C = (localSpace * vec4(camPosition,1)).xyz;
-   vec3 V = (P - C);
-   //vec3 L = vec4(model vec3(0,0,1.0));
-   //vec3 L = vec3(-1,0,0.0);
-   //vec3 L = normalize((localSpace * vec4(sunPosition,1)).xyz - P);
+   //P is the point on the outer radius,
+   vec3 P = vertex * outer_radius;
+   vec3 C = camPosition;
+   //We move the camera such that the coords of the center of the sphere can be treated as (0,0,0),
+   //done to simplify the math in some later functions
+   C -= center;
+
+   vec3 V = normalize(P - C);
    vec3 L = normalize(sunPosition - P);
-   //vec3 L = normalize(sunPosition);
-   //vec3 L = normalize(V);
-   vec3 dir = normalize(V);
-   //vec3 dir = vec3(0.0,-1.6,-5.0);
-   //vec3 eye = vec3(0.0,1.6,5.0);
    vec3 eye = C;
 
-   vec2 intersect = sphereIntersections(eye, dir, outer_radius);
+   vec2 intersect = sphereIntersections(eye, V, outer_radius);
 
-   /*
-   if(intersect.x <= 0)
-      return vec3(0.0f);
-   */
+   vec2 innerIntersection = sphereIntersections(eye, V, inner_radius);
 
-   vec2 innerIntersection = sphereIntersections(eye, dir, inner_radius);
    intersect.y = min(intersect.y, innerIntersection.x);
 
    float len = (intersect.y - intersect.x)/float(sample_count);
 
-   vec3 s = dir * len;
+   vec3 s = V * len;
 
    vec3 sum_ray = vec3( 0.0 );
 
    float n_ray0 = 0.0;
 
-   vec3 v = eye + dir * ( intersect.x + len * 0.5 );
+   vec3 v = eye + V * ( intersect.x + len * 0.5 );
 
    for(int i = 0; i < sample_count; i++)
    {
-      //float h = max(0.0, distance(v, center) - inner_radius);
-
-      vec3 c2 = vec3(0,0,0);
-
       //float h = max(0.0, distance(v, c2) - inner_radius);
-      float h = max(0.0, distance(v, c2) - inner_radius);
+      float h = max(0.0, length(v) - inner_radius);
       //float h = max(0.0, 1.0f - inner_radius);
       //float h = 0.1;
       float d_ray = outScattering(h) * len;
@@ -126,15 +116,12 @@ vec3 atmosphereScatter()
       vec3 u = v + L * f.y;
 
       float n_ray1 = optic(v, u);
-
       vec3 att = exp( - ( n_ray0 + n_ray1 ) * k_ray);
-
       sum_ray += d_ray * att;
-      //sum_ray += d_ray;
       v += s;
    }
 
-   float c  = dot( dir, -L );
+   float c  = dot( V, -L );
    float cc = c * c;
    vec3 scatter = sum_ray * k_ray * rayleighPhase( cc );
 
@@ -145,16 +132,16 @@ void main()
 {
    //atmosColor = pow(atmosphereScatter(), vec3( 1.0 / 2.2 ) );
    vec3 localPos = vertex;
-   localPos = localPos * outer_radius;
+   //localPos = localPos * outer_radius;
    vec4 P = model * vec4(localPos, 1.0);
 
-   //vec3 N = normalize(model * vec4(normal, 0.0)).xyz;
+   vec3 N = normalize(model * vec4(normal, 0.0)).xyz;
 
    localPos = vertex;
    //localNormal = normal;
-   //atmosColor = pow(atmosphereScatter(), vec3( 1.0 / 2.2 ) );
-   //worldPos = P;
-   //worldNormal = N;
+   worldPos = P;
+   worldNormal = N;
+   atmosColor = pow(atmosphereScatter(), vec3( 1.0 / 2.2 ) );
 
    gl_Position = viewProjection * P;
 }
