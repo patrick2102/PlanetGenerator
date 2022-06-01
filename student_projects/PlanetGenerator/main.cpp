@@ -222,10 +222,10 @@ int main()
     //initializeTerrainGenerator();
 
     //Details of cube
-    int cubeDivisions = 6;
+    int cubeDivisions = 5;
 
     //Initialize planets:
-    int numOfPlanets = 1;
+    int numOfPlanets = 3;
 
     initializeSun(cubeDivisions);
     initializePlanets(numOfPlanets, cubeDivisions);
@@ -635,13 +635,14 @@ Displacement generateDisplacement()
     std::random_device rd;
     std::default_random_engine eng(rd());
     std::uniform_real_distribution<> distrAmp(0.5, 3.0);
-    std::uniform_real_distribution<> distrPers(0.5, 2.0);
-    std::uniform_real_distribution<> distrLac(0.5, 2.0);
+    std::uniform_real_distribution<> distrPers(0.25, 0.75);
+    std::uniform_real_distribution<> distrLac(1.0, 2.0);
     std::uniform_real_distribution<> distrDia(0.5, 1.5);
 
     int scale = 400 * distrDia(eng);
     float amplitude = 10.0 * distrAmp(eng);
-    float persistence = 0.5f;
+    //float persistence = 0.5f;
+    float persistence = distrPers(eng);
     float lacunarity = 1.8f * distrLac(eng);
     int diameter = 1000 * distrDia(eng);
     int iterations = 10;
@@ -655,7 +656,7 @@ PlanetData generatePlanetData(float seed, float radius, int divisions, int nCell
     PlanetType pt = earthLike;
     Ocean ocean = Ocean(waterMaterial);
     Displacement displacement = generateDisplacement();
-    Atmosphere testAtmosphere = Atmosphere("earthlike", center, sunPosition, radius*1.1f, 1.5f, 8, 80);
+    Atmosphere testAtmosphere = Atmosphere("earthlike", center, sunPosition, radius*1.1f, 1.5f, 8, 8);
     //std::vector<Material> materials = planetMaterials;
     auto sphere = CubeSphere(radius, divisions);
 
@@ -726,7 +727,7 @@ void initializePlanets(int n, int divisions)
         planetName.append(to_string(i)).append(".bmp");
 
         //glm::vec3 pos = glm::vec3(3.0f * float(i) + 6.0f, 0.0f, 0.0f);
-        glm::vec3 pos = glm::vec3(3.0f * float(i) + 6.0f, 0.0f, 0.0f);
+        glm::vec3 pos = glm::vec3(6.0f, 0.0f, 3.0f * float(i) - 3.0f);
 
         auto planetData = generatePlanetData(seed, 1.0f, divisions, 1, pos, sun->GetPosition());
         auto sphere = CubeSphere(1, divisions);
@@ -791,9 +792,14 @@ void drawSolarSystem()
 
 void drawSun()
 {
+    glDisable(GL_DEPTH_TEST);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_ONE, GL_ONE);
     useShader(star_shader);
     sun->DrawUsingGPU(shader);
     setUniforms();
+    glEnable(GL_DEPTH_TEST);
+    glDisable(GL_BLEND);
 }
 
 void drawPlanets()
@@ -819,7 +825,7 @@ void drawPlanets()
 
     if(render_atmosphere)
     {
-        glDisable(GL_DEPTH_TEST);
+        //glDisable(GL_DEPTH_TEST);
         glEnable(GL_BLEND);
         //glBlendFunc(GL_ONE_MINUS_SRC_COLOR, GL_ONE);
         //glBlendFunc(GL_ONE, GL_ONE);
@@ -832,7 +838,7 @@ void drawPlanets()
         {
             p.DrawAtmosphereUsingGPU(shader);
         }
-        glEnable(GL_DEPTH_TEST);
+        //glEnable(GL_DEPTH_TEST);
         glDisable(GL_BLEND);
 
 
