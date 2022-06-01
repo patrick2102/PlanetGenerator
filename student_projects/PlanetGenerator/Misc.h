@@ -136,16 +136,17 @@ struct Displacement
 
 struct StarData
 {
-    StarData(Light light, Displacement displacement, StarMaterial material)
-        : light(light), displacement(displacement), material(material)
-    {
+    StarData(Light light, Displacement displacement, StarMaterial material, Atmosphere atmosphere)
+        : light(light), displacement(displacement), material(material), atmosphere(atmosphere) {
         this->light = light;
         this->displacement = displacement;
         this->material = material;
+        this->atmosphere = atmosphere;
     }
     Light light;
     Displacement displacement;
     StarMaterial material;
+    Atmosphere atmosphere;
 
 };
 
@@ -187,6 +188,5 @@ float lightRadius = 10.0f;
 Light light = Light(pos, color, intensity, lightRadius);
 
 Displacement sunDisplacement = Displacement(scale, amplitude, persistence, lacunarity, diameter, 0);
-StarData starData = StarData(light, sunDisplacement, sunMaterial);
 
 #endif //ITU_GRAPHICS_PROGRAMMING_MISC_H

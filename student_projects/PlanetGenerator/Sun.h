@@ -110,7 +110,6 @@ public:
 
 private:
     unsigned int VAO;
-    unsigned int VBO;
     glm::vec3 center;
     std::vector<Vertex> vertices;
     StarData starData;
@@ -162,12 +161,39 @@ private:
 
     void SetUpBuffers()
     {
+        unsigned int VBO;
         glGenBuffers(1, &VBO);
         glBindBuffer(GL_ARRAY_BUFFER, VBO);
         glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(Vertex), &vertices[0], GL_STATIC_DRAW);
 
         glGenVertexArrays(1, &VAO);
         glBindVertexArray(VAO);
+
+        int posAttributeLocation = 0;
+        glEnableVertexAttribArray(posAttributeLocation);
+        glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) 0);
+
+        posAttributeLocation = 1;
+        glEnableVertexAttribArray(posAttributeLocation);
+        glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) sizeof(glm::vec3));
+
+        posAttributeLocation = 2;
+        glEnableVertexAttribArray(posAttributeLocation);
+        glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) (sizeof(glm::vec3)*2));
+
+        glBindVertexArray(0);
+    }
+
+    void SetUpAtmosphereBuffers()
+    {
+        unsigned int VBO;
+
+        glGenBuffers(1, &VBO);
+        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+        glBufferData(GL_ARRAY_BUFFER, starData.atmosphere.points.size() * sizeof(Vertex), &starData.atmosphere.points[0], GL_STATIC_DRAW);
+
+        glGenVertexArrays(1, &starData.atmosphere.VAO);
+        glBindVertexArray(starData.atmosphere.VAO);
 
         int posAttributeLocation = 0;
         glEnableVertexAttribArray(posAttributeLocation);

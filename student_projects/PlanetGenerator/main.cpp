@@ -598,9 +598,23 @@ void initializeHeightmapGenerator()
 void initializeSun(int divisions)
 {
     useShader(star_shader);
-    auto sphere = CubeSphere(1, divisions);
+
+    float sunRadius = 1.0f;
+
+    auto sphere = CubeSphere(sunRadius, divisions);
 
     glm::vec3 pos = glm::vec3(-3.0f, 0.0f, 0.0f);
+    Atmosphere testAtmosphere = Atmosphere("sun", pos, pos, sunRadius, 1.5f, 8, 80);
+
+    for(int i = 0; i < sphere.vertices.size(); i += 1)
+    {
+        auto p1 = sphere.vertices[i];
+
+        testAtmosphere.points.insert(testAtmosphere.points.end(), {p1, p1, glm::vec3(0,0,1.0)}); //fix up later
+    }
+
+
+    StarData starData = StarData(light, sunDisplacement, sunMaterial,testAtmosphere);
     sun = new Sun(pos, sphere, starData);
 }
 

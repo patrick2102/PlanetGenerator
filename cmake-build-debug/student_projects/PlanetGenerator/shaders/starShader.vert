@@ -15,15 +15,18 @@ uniform mat4 viewProjection;  // represents the view and projection matrices com
 
 out vec4 worldPos;
 out vec3 worldNormal;
+out vec3 localPos;
 
 void main() {
+   //atmosColor = pow(atmosphereScatter(), vec3( 1.0 / 2.2 ) );
+   vec3 lpos = vertex;
+   vec4 P = model * vec4(lpos, 1.0);
 
-   vec3 localPos = vertex;
-   vec4 P = model * vec4(localPos, 1.0);
    vec3 N = normalize(model * vec4(normal, 0.0)).xyz;
 
    worldPos = P;
    worldNormal = N;
+   localPos = lpos;
 
    gl_Position = viewProjection * P;
 }
