@@ -94,13 +94,8 @@ unsigned int loadCubeMap(vector<std::string> faces);
 //Shaders:
 Shader* shader;
 Shader* generate_simplex_shader;
-Shader* water_shader;
 Shader* star_shader;
-Shader* simplex_shader;
-//Shader* generate_simplex_shader_3;
-//Shader* generate_simplex_shader_2;
 Shader* atmosphere_shader;
-//Shader* planet_shader;
 
 
 
@@ -167,9 +162,7 @@ int main()
     // load the shaders and the 3D models
     // ----------------------------------
     generate_simplex_shader = new Shader("shaders/generateSimplex.vert", "shaders/generateSimplex.frag");
-    water_shader = new Shader("shaders/waterShader.vert", "shaders/waterShader.frag");
     star_shader = new Shader("shaders/starShader.vert", "shaders/starShader.frag");
-    simplex_shader = new Shader("shaders/simplex.vert", "shaders/simplex.frag");
     atmosphere_shader = new Shader("shaders/atmosphereShader.vert", "shaders/atmosphereShader.frag");
     //planet_shader = new Shader("shaders/planetShader.vert", "shaders/planetShader.frag");
 
@@ -230,7 +223,8 @@ int main()
     initializeSun(cubeDivisions);
     initializePlanets(numOfPlanets, cubeDivisions);
 
-    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    //glPolygonMode(GL_FRONT_AND_BACK , GL_LINE);
+    //lPolygonMode(GL_FRONT, GL_POINT);
     // render loop
     // -----------
     while (!glfwWindowShouldClose(window) && !testHeightMap)
@@ -242,7 +236,8 @@ int main()
 
         processInput(window);
 
-        glClearColor(0.3f, 0.3f, 0.3f, 1.0f);
+        //glClearColor(0.3f, 0.3f, 0.3f, 1.0f);
+        glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         drawSkybox();
@@ -656,8 +651,7 @@ PlanetData generatePlanetData(float seed, float radius, int divisions, int nCell
     PlanetType pt = earthLike;
     Ocean ocean = Ocean(waterMaterial);
     Displacement displacement = generateDisplacement();
-    Atmosphere testAtmosphere = Atmosphere("earthlike", center, sunPosition, radius*1.1f, 1.5f, 8, 8);
-    //std::vector<Material> materials = planetMaterials;
+    Atmosphere testAtmosphere = Atmosphere("earthlike", center, sunPosition, radius*1.f, 1.5f, 8, 8);
     auto sphere = CubeSphere(radius, divisions);
 
     for(int i = 0; i < sphere.vertices.size(); i += 1)
@@ -688,23 +682,12 @@ PlanetData generatePlanetData(float seed, float radius, int divisions, int nCell
 
         std::tie(vertices, pIndex) = tg.AssignMaterialsMix(p1, p2, p3, materials, voronoiPoints, n);
         vertexPairs[pIndex].insert(vertexPairs[pIndex].end(), vertices.begin(), vertices.end());
-        //materials[pIndex].points.insert(materials[pIndex].points.end(), vertices.begin(), vertices.end());
     }
 
     for(int i = 0; i < vertexPairs.size(); i++)
     {
         materials[i].points.insert(materials[i].points.end(), vertexPairs[i].begin(), vertexPairs[i].end());
     }
-
-    /*
-    bool hasWater = rand() % 2;
-
-    float wx = static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(1.0f)));
-    float wy = static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(1.0f)));
-    float wz = static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(1.0f)));
-
-    glm::vec3 waterColor = glm::vec3(wx, wy, wz);
-    */
 
     return PlanetData(materials, displacement, ocean, testAtmosphere, true, glm::vec3(0,0,0));
 }
@@ -721,64 +704,18 @@ void initializePlanets(int n, int divisions)
         //float seed = 1.0f;
         float seed = distr(eng);
 
-        std::cout << "seed: " << seed << std::endl;
-
         std::string planetName = "planet";
         planetName.append(to_string(i)).append(".bmp");
 
-        //glm::vec3 pos = glm::vec3(3.0f * float(i) + 6.0f, 0.0f, 0.0f);
-        glm::vec3 pos = glm::vec3(6.0f, 0.0f, 3.0f * float(i) - 3.0f);
+        glm::vec3 pos = glm::vec3(6.0f, 0.0f, 6.0f * float(i) - 6.0f);
 
         auto planetData = generatePlanetData(seed, 1.0f, divisions, 1, pos, sun->GetPosition());
-        auto sphere = CubeSphere(1, divisions);
-        //auto planetData = testPlanetData;
 
-        auto sd = planetData.displacement;
+        HeightMapGenerator hmg = HeightMapGenerator(seed);
+        hmg.CopyToShader(shader);
+        auto planet = Planet(pos, planetData, planetName.c_str(), hmg);
 
-        if(loadTextures)
-        {
-            HeightMapGenerator hmg = HeightMapGenerator(seed);
-            hmg.CopyToShader(shader);
-            //auto planet = Planet(pos, sphere, planetData, hmg, planetName.c_str());
-            auto planet = Planet(pos, sphere, planetData, planetName.c_str(), hmg);
-            planet.LoadTextures();
-            planets.insert(planets.end(), planet);
-            continue;
-        }
-
-
-        if(shader == generate_simplex_shader)
-        {
-            useShader(generate_simplex_shader);
-            //HeightMapGenerator hmg = HeightMapGenerator(seed);
-            //hmg.CopyToShader(shader);
-
-            //auto planet = Planet(pos, sphere, planetData, hmg, planetName.c_str());
-            HeightMapGenerator hmg = HeightMapGenerator(seed);
-            hmg.CopyToShader(shader);
-            auto planet = Planet(pos, sphere, planetData, planetName.c_str(), hmg);
-
-            //std::vector<double **> heightCubeMap = hmg->GenerateCubeMap(sd.diameter, sd.iterations, sd.scale, sd.amplitude, sd.persistence, sd.lacunarity);
-            //auto displacementFaces = hmg->OutputCubeMapImage(diameter, heightCubeMap, planetName.c_str());
-            //planet.SetUpDisplacementMap(displacementFaces);
-
-            planets.insert(planets.end(), planet);
-        }
-
-        else
-        {
-            useShader(generate_simplex_shader);
-            HeightMapGenerator hmg = HeightMapGenerator(seed);
-            hmg.CopyToShader(shader);
-            //auto planet = Planet(pos, sphere, planetData, hmg, planetName.c_str());
-            auto planet = Planet(pos, sphere, planetData, planetName.c_str(), hmg);
-
-            //std::vector<double **> heightCubeMap = hmg.GenerateCubeMap(sd.diameter, sd.iterations, sd.scale, sd.amplitude, sd.persistence, sd.lacunarity);
-            //auto displacementFaces = hmg.OutputCubeMapImage(diameter, heightCubeMap, planetName.c_str());
-            //planet.SetUpDisplacementMap(displacementFaces);
-
-            planets.insert(planets.end(), planet);
-        }
+        planets.insert(planets.end(), planet);
 
 
     }
@@ -804,41 +741,25 @@ void drawSun()
 
 void drawPlanets()
 {
-    //glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    //glBlendFunc();
     useShader(generate_simplex_shader);
     setUniforms();
     for(auto p : planets)
     {
-        if(shader == generate_simplex_shader)
-            p.DrawUsingGPU(shader);
-        else
-            p.Draw(shader);
-    }
-
-    useShader(water_shader);
-    setUniforms();
-    for(auto p : planets)
-    {
-        //p.DrawOceanUsingGPU(shader);
+        p.DrawUsingGPU(shader);
     }
 
     if(render_atmosphere)
     {
-        //glDisable(GL_DEPTH_TEST);
+        glDisable(GL_DEPTH_TEST);
         glEnable(GL_BLEND);
-        //glBlendFunc(GL_ONE_MINUS_SRC_COLOR, GL_ONE);
-        //glBlendFunc(GL_ONE, GL_ONE);
         glBlendFunc(GL_ONE, GL_ONE);
-        //glBlendFunc(GL_ONE, GL_ONE);
-        //glBlendFunc(GL_DST_COLOR, GL_ZERO);
         useShader(atmosphere_shader);
         setUniforms();
         for(auto p : planets)
         {
             p.DrawAtmosphereUsingGPU(shader);
         }
-        //glEnable(GL_DEPTH_TEST);
+        glEnable(GL_DEPTH_TEST);
         glDisable(GL_BLEND);
 
 

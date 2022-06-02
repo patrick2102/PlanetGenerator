@@ -310,7 +310,7 @@ vec3 OrenNayar(vec3 N, vec3 L, vec3 V, vec3 albedo, float rough, float diffuseRe
    float A = 1 - 0.5*(r2/(r2+0.33));
    float B = 0.45*(r2/(r2+0.33));
 
-   diffuse *= (A+B*max(0, gamma)*sin(alpha)*tan(beta));
+   diffuse *= (A+B*max(0, gamma)*sin(alpha)*tan(beta)) * 2.0f;
 
    float diffuseModulation = max(dot(N, L), 0.0);
    //diffuse *= diffuseModulation;

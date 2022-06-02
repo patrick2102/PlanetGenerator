@@ -42,14 +42,12 @@ public:
 	}
 
 private:
-	void CreateCubeSphere(int divisions)
+	void CreateCubeSphere(int divisions, float r = 1)
 	{
 		float latAngle;
 		float lonAngle;
 
 		int pointsNum = (int)pow(2, divisions) + 1;
-
-        const float DEG2RAD = acos(-1) / 180.0f;
 
         CubeSphereSide cubeSphereSide[] = {positiveX, negativeX, positiveY, negativeY, positiveZ, negativeZ};
 
@@ -61,16 +59,17 @@ private:
 
             for (int i = 0; i < pointsNum; ++i)
             {
-                latAngle = DEG2RAD * (45.0f - 90.0f * i / (pointsNum - 1));
+                latAngle = (0.25*pi - 0.5*pi * i/(pointsNum - 1));
+
                 glm::vec3 latNormal = glm::vec3(-sin(latAngle), glm::cos(latAngle), 0);
                 for (int j = 0; j < pointsNum; ++j)
                 {
-                    lonAngle = DEG2RAD * (-45.0f + 90.0f * j / (pointsNum - 1));
+                    lonAngle = ((-0.25 * pi) + (0.5 * pi) * j / (pointsNum - 1));
                     glm::vec3 lonNormal = glm::vec3(-glm::sin(lonAngle), 0, -glm::cos(lonAngle));
 
                     glm::vec3 v_dir = glm::normalize(glm::cross(lonNormal, latNormal));
 
-                    v_dir = RotateToSide(cubeSphereSide[sideNum], v_dir);
+                    v_dir = RotateToSide(cubeSphereSide[sideNum], v_dir) * r;
 
                     points[j][i] = v_dir;
                 }

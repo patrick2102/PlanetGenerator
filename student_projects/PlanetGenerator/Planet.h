@@ -16,17 +16,13 @@ enum PlanetNames
 class Planet
 {
 public:
-    Planet(glm::vec3 position, CubeSphere sphere, PlanetData planetData, const char* planetName, HeightMapGenerator hmg)
+    Planet(glm::vec3 position, PlanetData planetData, const char* planetName, HeightMapGenerator hmg)
             : planetData(planetData), hmg(hmg) {
         this->center = position;
         this->planetName = planetName;
-        //SetUpVertices(sphere);
-        //SetUpOceanVertices(sphere);
         SetUpBuffers();
-        SetUpOceanBuffers();
         SetUpAtmosphereBuffers();
         this->hmg = hmg;
-        //SetUpTextures();
     }
 
     void DrawAtmosphereUsingGPU(Shader *shader)
@@ -118,37 +114,6 @@ public:
             //glBindTexture(GL_TEXTURE_CUBE_MAP, surfaceTexture);
             //glActiveTexture(GL_TEXTURE1);
             //glBindTexture(GL_TEXTURE_CUBE_MAP, displacementMap);
-            glDrawArrays(GL_TRIANGLES, 0, vertices.size());
-            glBindVertexArray(0);
-        }
-    }
-
-    void Draw(Shader *shader)
-    {
-        Displacement displacement = planetData.displacement;
-        //hmg.CopyToShader(shader);
-
-        for(Material material : planetData.materials) {
-
-            unsigned int VAO = material.VAO;
-            auto vertices = material.points;
-
-            shader->setVec3("reflectionColor", material.reflectionColor);
-            shader->setFloat("diffuseReflectance", material.diffuseReflectance);
-            shader->setFloat("roughness", material.roughness);
-            shader->setFloat("metalness", material.metalness);
-
-            auto model = glm::mat4(1.0f);
-            model = glm::translate(model, center);
-            shader->setMat4("model", model);
-            shader->setInt("surfaceTexture", 0);
-            shader->setInt("displacementMap", 0);
-
-            glBindVertexArray(VAO);
-            glActiveTexture(GL_TEXTURE0);
-            glBindTexture(GL_TEXTURE_CUBE_MAP, surfaceTexture);
-            glActiveTexture(GL_TEXTURE1);
-            glBindTexture(GL_TEXTURE_CUBE_MAP, displacementMap);
             glDrawArrays(GL_TRIANGLES, 0, vertices.size());
             glBindVertexArray(0);
         }
@@ -278,27 +243,6 @@ private:
     PlanetData planetData;
     std::vector<Vertex> oceanVertices;
 
-    void SetUpOceanVertices(CubeSphere sphere)
-    {
-        for(int i = 0; i < sphere.vertices.size(); i += 6)
-        {
-            auto p1 = sphere.vertices[i];
-            auto p2 = sphere.vertices[i+1];
-            auto p3 = sphere.vertices[i+2];
-
-            auto p4 = sphere.vertices[i+3];
-            auto p5 = sphere.vertices[i+4];
-            auto p6 = sphere.vertices[i+5];
-
-            oceanVertices.insert(oceanVertices.end(), {p1, p1});
-            oceanVertices.insert(oceanVertices.end(), {p2, p2});
-            oceanVertices.insert(oceanVertices.end(), {p3, p3});
-            oceanVertices.insert(oceanVertices.end(), {p4, p4});
-            oceanVertices.insert(oceanVertices.end(), {p5, p5});
-            oceanVertices.insert(oceanVertices.end(), {p6, p6});
-        }
-    }
-
     void SetUpAtmosphereBuffers()
     {
         unsigned int VBO;
@@ -309,32 +253,6 @@ private:
 
         glGenVertexArrays(1, &planetData.atmosphere.VAO);
         glBindVertexArray(planetData.atmosphere.VAO);
-
-        int posAttributeLocation = 0;
-        glEnableVertexAttribArray(posAttributeLocation);
-        glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) 0);
-
-        posAttributeLocation = 1;
-        glEnableVertexAttribArray(posAttributeLocation);
-        glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) sizeof(glm::vec3));
-
-        posAttributeLocation = 2;
-        glEnableVertexAttribArray(posAttributeLocation);
-        glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) (sizeof(glm::vec3)*2));
-
-        glBindVertexArray(0);
-    }
-
-    void SetUpOceanBuffers()
-    {
-        unsigned int VBO;
-
-        glGenBuffers(1, &VBO);
-        glBindBuffer(GL_ARRAY_BUFFER, VBO);
-        glBufferData(GL_ARRAY_BUFFER, planetData.ocean.material.points.size() * sizeof(Vertex), &planetData.ocean.material.points[0], GL_STATIC_DRAW);
-
-        glGenVertexArrays(1, &planetData.ocean.material.VAO);
-        glBindVertexArray(planetData.ocean.material.VAO);
 
         int posAttributeLocation = 0;
         glEnableVertexAttribArray(posAttributeLocation);
@@ -381,34 +299,6 @@ private:
 
             glBindVertexArray(0);
         }
-    }
-
-    void SetupFrameBuffer(int d)
-    {
-        //GLuint fbo_handle;
-        GLuint FBO;
-
-        unsigned int textureID;
-        glGenTextures(1, &textureID);
-        glBindTexture(GL_TEXTURE_CUBE_MAP, textureID);
-        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-        glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
-
-        for (unsigned int i = 0; i < 6; i++)
-        {
-            glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGB, d, d, 0, GL_RGB, GL_UNSIGNED_BYTE, 0);
-        }
-
-        glGenFramebuffers(1, &FBO);
-        glBindFramebuffer(GL_FRAMEBUFFER, FBO);
-        glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, textureID, 0);
-
-        glBindFramebuffer(GL_FRAMEBUFFER, 0);
-
-        displacementMap = textureID;
     }
 };
 #endif //ITU_GRAPHICS_PROGRAMMING_PLANET_H

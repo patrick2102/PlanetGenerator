@@ -19,7 +19,8 @@ uniform float outer_radius;
 
 const float H0_ray = 0.01;
 //const int sample_count = 100;
-const vec3 scatter_colors = vec3( 3.8, 13.5, 33.1 ); // Light spectrum colors scattered
+//const vec3 scatter_colors = vec3( 3.8, 13.5, 33.1 ); // Light spectrum colors scattered
+const vec3 scatter_colors = vec3( 4.0, 13.0, 33.0 ); // Light spectrum colors scattered
 
 // math const
 const float PI = 3.14159265359;
@@ -58,7 +59,6 @@ float outScattering(vec3 sp, vec3 ep) {
       p += s_len;
    }
    total_scatter *= length(s_len);
-
    return total_scatter;
 }
 
@@ -77,10 +77,7 @@ vec2 sphereIntersections(vec3 origin, vec3 dir, float r)
    float b = 2.0f * dot(origin, dir);
    float c = dot(origin, origin) - (r*r);
    float d = b*b - 4.0f*a*c;
-   //float d = sqrt(b*b - 4.0f*a*c);
-
    d = sqrt(d);
-
    return vec2((-b -d)/(2.0f*a), (-b + d)/(2.0f*a));
 }
 
@@ -99,8 +96,8 @@ vec3 atmosphereScatter()
    S -=center;
 
    vec3 V = normalize(P - C);
-   //vec3 L = normalize(S - P);
-   vec3 L = vec3(-1,0,0);
+   vec3 L = normalize(S - P);
+   //vec3 L = vec3(-1,0,0);
 
    //The intersections of the atmosphere, vec2 represent the two results from the ray entering and leaving the atmosphere
    vec2 intersect = sphereIntersections(C, V, outer_radius);
@@ -130,22 +127,26 @@ vec3 atmosphereScatter()
       float d = density(h) * len;
       in_scatter += d;
 
-      //Find point where ray leaves atmosphere and calculate the outscatter
+      //Find point where ray leaves the atmosphere towards the light source.
       vec3 point_out = sample_point + L * sphereIntersections(sample_point, L, outer_radius).y;
       float out_scatter = outScattering(sample_point, point_out);
 
-      //Calculate attenuation from both in and out scattering. Multiplied by
-      vec3 att = exp( - ( in_scatter + out_scatter ) * scatter_colors * 1.25f);
+      //Calculate attenuation from both in and out scattering.
+      vec3 att = exp( - ( in_scatter + out_scatter ) * scatter_colors);
 
-      ray_color += d * att;
+      //ay_color += d * att;
+      //ray_color += att/1000.0f;
+      ray_color += d * att * scatter_colors;
       sample_point += (V * len);
    }
-   ray_color *= scatter_colors;
+   //ray_color *= scatter_colors;
 
    float cos_angle  = dot( V, -L );
-   vec3 scatter = ray_color * rayleighPhase(cos_angle*cos_angle);
+   vec3 scatter = ray_color;
 
-   return 0.01 * scatter;
+   scatter *= rayleighPhase(cos_angle*cos_angle);
+
+   return 0.001f * scatter;
 }
 
 void main()

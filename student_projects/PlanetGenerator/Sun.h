@@ -12,24 +12,6 @@
 class Sun
 {
 public:
-    /*
-    Sun(glm::vec3 position, Shader *shader, Sphere sphere, Light light, Material material)
-            :light(light), material(material) {
-        this->center = position;
-        this->shader = shader;
-        SetUpVerticesSphere(sphere);
-        SetUpBuffers();
-    }
-
-    Sun(glm::vec3 position, Shader* shader, CubeSphere cubeSphere, Light light, Material material)
-        : light(light), material(material) {
-        this->center = position;
-        this->shader = shader;
-        SetUpVerticesCubeSphere(cubeSphere);
-        SetUpBuffers();
-    }
-    */
-
     Sun(glm::vec3 position, CubeSphere cubeSphere, StarData starData)
             : starData(starData) {
         this->center = position;
