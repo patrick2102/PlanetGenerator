@@ -630,16 +630,16 @@ Displacement generateDisplacement()
     std::random_device rd;
     std::default_random_engine eng(rd());
     std::uniform_real_distribution<> distrAmp(0.5, 3.0);
-    std::uniform_real_distribution<> distrPers(0.25, 0.75);
+    std::uniform_real_distribution<> distrPers(0.45, 0.75);
     std::uniform_real_distribution<> distrLac(1.0, 2.0);
-    std::uniform_real_distribution<> distrDia(0.5, 1.5);
+    std::uniform_real_distribution<> distrDia(0.5, 2.0);
 
     int scale = 400 * distrDia(eng);
     float amplitude = 10.0 * distrAmp(eng);
     //float persistence = 0.5f;
     float persistence = distrPers(eng);
     float lacunarity = 1.8f * distrLac(eng);
-    int diameter = 1000 * distrDia(eng);
+    int diameter = 1000;
     int iterations = 10;
 
     return Displacement(scale, amplitude, persistence, lacunarity, diameter, iterations);
