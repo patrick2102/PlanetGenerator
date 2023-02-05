@@ -50,10 +50,6 @@ include_directories(
         )
 
 ## add the actual projects to build
-IF(EXISTS ${CMAKE_SOURCE_DIR}/student_projects)
-    add_subdirectory(${CMAKE_SOURCE_DIR}/student_projects)
-ENDIF()
-
-IF(EXISTS ${CMAKE_SOURCE_DIR}/assignments)
-    add_subdirectory(${CMAKE_SOURCE_DIR}/assignments)
+IF(EXISTS ${CMAKE_SOURCE_DIR}/Source)
+    add_subdirectory(${CMAKE_SOURCE_DIR}/Source)
 ENDIF()

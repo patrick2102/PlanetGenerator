@@ -1,0 +1,237 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						3,
+						4,
+						5,
+						6
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.3"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "common/third-party/glfw",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-common.third-party.glfw-Debug-756bc27d2a04aa635492.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "common/third-party/glfw",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "common/third-party/glfw/src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-common.third-party.glfw.src-Debug-60fee4f67620de290a2f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "common/third-party/glfw/src",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "common/third-party/glad",
+					"jsonFile" : "directory-common.third-party.glad-Debug-0473126b4fc367893ea9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.3"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "common/third-party/glad",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "common/third-party/imgui",
+					"jsonFile" : "directory-common.third-party.imgui-Debug-3e5622d8fc9eaf81a47a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.3"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "common/third-party/imgui",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "common/third-party/assimp",
+					"jsonFile" : "directory-common.third-party.assimp-Debug-8a1dc0de47079d73bfe6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.3"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "common/third-party/assimp",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "Source",
+					"childIndexes" : 
+					[
+						7
+					],
+					"jsonFile" : "directory-Source-Debug-93ebefb0dc4084c9ccf4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.3"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Source"
+				},
+				{
+					"build" : "Source/PlanetGenerator",
+					"jsonFile" : "directory-Source.PlanetGenerator-Debug-2f0bac37577db6d45ff5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.3"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 0,
+					"source" : "Source/PlanetGenerator",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						3,
+						4,
+						5,
+						6,
+						7
+					],
+					"name" : "ITU-graphics-programming",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2
+					],
+					"name" : "GLFW",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 7,
+					"id" : "PlanetGenerator::@99875ede07590d138ba5",
+					"jsonFile" : "target-PlanetGenerator-Debug-40d137dea1e5f3f3598a.json",
+					"name" : "PlanetGenerator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "assimp::@e4efb69a17b32da1db8a",
+					"jsonFile" : "target-assimp-Debug-f5b11137a35a4aa8c3b5.json",
+					"name" : "assimp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "glad::@0e9427c8fa045f976263",
+					"jsonFile" : "target-glad-Debug-4bc232bcee6183c3b3f6.json",
+					"name" : "glad",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "glfw::@c776322c4f291981a324",
+					"jsonFile" : "target-glfw-Debug-517352ed8e46d3908b16.json",
+					"name" : "glfw",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "imgui::@c6c90c25753c6d6deddc",
+					"jsonFile" : "target-imgui-Debug-7e921757af9d9173844e.json",
+					"name" : "imgui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "uninstall::@067219e4d72d99ef81b0",
+					"jsonFile" : "target-uninstall-Debug-af2fcd3c0f3189e07e33.json",
+					"name" : "uninstall",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/projects/OpenGL/PlanetGenerator/out/build/x64-Debug",
+		"source" : "D:/projects/OpenGL/PlanetGenerator"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
