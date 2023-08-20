@@ -20,7 +20,6 @@ public:
         this->center = position;
         this->planetName = planetName;
         SetUpBuffers();
-        SetUpAtmosphereBuffers();
     }
 
     void DrawAtmosphere(Shader *shader)
@@ -91,40 +90,14 @@ private:
     glm::vec3 center;
     PlanetData planetData;
 
-    void SetUpAtmosphereBuffers()
+    void SetUpBuffers()
     {
         unsigned int VBO;
 
-        glGenBuffers(1, &VBO);
-        glBindBuffer(GL_ARRAY_BUFFER, VBO);
-        glBufferData(GL_ARRAY_BUFFER, planetData.atmosphere.points.size() * sizeof(Vertex), &planetData.atmosphere.points[0], GL_STATIC_DRAW);
-
-        glGenVertexArrays(1, &planetData.atmosphere.VAO);
-        glBindVertexArray(planetData.atmosphere.VAO);
-
-        int posAttributeLocation = 0;
-        glEnableVertexAttribArray(posAttributeLocation);
-        glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) 0);
-
-        posAttributeLocation = 1;
-        glEnableVertexAttribArray(posAttributeLocation);
-        glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) sizeof(glm::vec3));
-
-        posAttributeLocation = 2;
-        glEnableVertexAttribArray(posAttributeLocation);
-        glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *) (sizeof(glm::vec3)*2));
-
-        glBindVertexArray(0);
-    }
-
-    void SetUpBuffers()
-    {
         for(int i = 0; i < planetData.materials.size(); i++)
         {
             if(planetData.materials[i].points.size() == 0)
                 continue;
-
-            unsigned int VBO;
 
             glGenBuffers(1, &VBO);
             glBindBuffer(GL_ARRAY_BUFFER, VBO);
@@ -147,6 +120,27 @@ private:
 
             glBindVertexArray(0);
         }
+
+        glGenBuffers(1, &VBO);
+        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+        glBufferData(GL_ARRAY_BUFFER, planetData.atmosphere.points.size() * sizeof(Vertex), &planetData.atmosphere.points[0], GL_STATIC_DRAW);
+
+        glGenVertexArrays(1, &planetData.atmosphere.VAO);
+        glBindVertexArray(planetData.atmosphere.VAO);
+
+        int posAttributeLocation = 0;
+        glEnableVertexAttribArray(posAttributeLocation);
+        glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)0);
+
+        posAttributeLocation = 1;
+        glEnableVertexAttribArray(posAttributeLocation);
+        glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)sizeof(glm::vec3));
+
+        posAttributeLocation = 2;
+        glEnableVertexAttribArray(posAttributeLocation);
+        glVertexAttribPointer(posAttributeLocation, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)(sizeof(glm::vec3) * 2));
+
+        glBindVertexArray(0);
     }
 };
 #endif //ITU_GRAPHICS_PROGRAMMING_PLANET_H

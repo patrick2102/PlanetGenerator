@@ -105,7 +105,7 @@ bool render_atmosphere = true;
 // Functions for solar system
 void initializeSun(int);
 void initializePlanets(int, int);
-PlanetData generatePlanetData(float, float, int, int);
+PlanetData generatePlanetData(float, float, int, int, glm::vec3, glm::vec3);
 void drawSolarSystem();
 void drawSun();
 void drawPlanets();
