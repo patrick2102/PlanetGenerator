@@ -99,6 +99,10 @@ private:
             if(planetData.materials[i].points.size() == 0)
                 continue;
 
+            /*
+            Compute shader to calculate positions for the vertices on the surface of the planet.
+            */
+
             glGenBuffers(1, &VBO);
             glBindBuffer(GL_ARRAY_BUFFER, VBO);
             glBufferData(GL_ARRAY_BUFFER, planetData.materials[i].points.size() * sizeof(Vertex), &planetData.materials[i].points[0], GL_STATIC_DRAW);

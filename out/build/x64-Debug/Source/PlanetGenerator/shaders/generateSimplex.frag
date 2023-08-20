@@ -1,4 +1,4 @@
-#version 330 core
+#version 460 core
 
 uniform vec3 camPosition; // so we can compute the view vector
 out vec4 FragColor; // the output color of this fragment
