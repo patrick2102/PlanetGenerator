@@ -152,7 +152,7 @@ int main()
 
     // load the shaders
     // ----------------------------------
-    generate_simplex_shader = new Shader("shaders/generateSimplex.vert", "shaders/generateSimplex.frag");
+    generate_simplex_shader = new Shader("shaders/generateSimplex.vert", "shaders/generateSimplex.frag", "shaders/generateSimplex.geo");
     star_shader = new Shader("shaders/starShader.vert", "shaders/starShader.frag");
     atmosphere_shader = new Shader("shaders/atmosphereShader.vert", "shaders/atmosphereShader.frag");
 
